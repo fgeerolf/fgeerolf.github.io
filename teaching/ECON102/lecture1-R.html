@@ -130,15 +130,18 @@ devtools::install_github(&quot;dbnomics/rdbnomics&quot;)
 pklist &lt;- c(&quot;tidyverse&quot;, &quot;lubridate&quot;, &quot;rdbnomics&quot;)
 source(&quot;https://fgeerolf.github.io/datasets/load-packages.R&quot;)
 options(tibble.print_max = 100)</code></pre>
-<div id="gdp-the-product-side" class="section level1">
-<h1>GDP: The Product Side</h1>
-<p>Let us start with what is perhaps the most important accounting identity in macro: <span class="math display">\[ Y = C + I + G + X -M.\]</span> Note that very often we denote net exports <span class="math inline">\(NX\)</span> as <span class="math inline">\(NX = X- M\)</span> so that GDP is simply: <span class="math display">\[ Y = C + I + G + NX.\]</span> In some textbooks, imports are also denoted by <span class="math inline">\(IM\)</span> instead of <span class="math inline">\(M\)</span>.</p>
-<p>Thus, GDP is the sum of: - Consumption (C)<br />
-- Investment (I)<br />
-- Government Purchases (G)<br />
-- Exports (X)<br />
-- Imports (M)</p>
-<div id="personal-consumption-expenditures---consumption-c" class="section level2">
+<div id="gdp-product" class="section level1">
+<h1>GDP: The Product Approach</h1>
+<p>We first Let us start with what is perhaps the most important accounting identity in macroeconomics: <span class="math display">\[ Y = C + I + G + X -M.\]</span></p>
+<p>Note that very often we denote net exports <span class="math inline">\(NX\)</span> as <span class="math inline">\(NX = X- M\)</span> so that GDP is simply:</p>
+<p><span class="math display">\[ Y = C + I + G + NX.\]</span></p>
+<p>In some textbooks, imports are also denoted by <span class="math inline">\(IM\)</span> instead of <span class="math inline">\(M\)</span>.</p>
+<p>We look at each component of GDP in turn:<br />
+- <a href="#cons">Consumption (C)</a><br />
+- <a href="#inv">Investment (I)</a><br />
+- <a href="#gov">Government Purchases (G)</a><br />
+- <a href="#net-exports">Net Exports (NX)</a></p>
+<div id="cons" class="section level2">
 <h2>Personal Consumption Expenditures - Consumption (C)</h2>
 <p>Figure  plots GDP from the BEA, as well as PCE, in millions of dollars. US GDP being in the vicinity of USD 20 trillion dollars (or USD 20,000 billions, or USD 20,000,000 millions), this looks about right. On this figure, data for GDP is taken from the Bureau of Economic Analysis’s National Income and Product Accounts (NIPA) <a href="https://db.nomics.world/BEA/NIPA-T10105/A191RC-Q">here</a> and data for Personal Consumption Expenditures is taken from <a href="https://db.nomics.world/BEA/NIPA-T10105/DPCERC-Q">there</a>.</p>
 <pre class="r"><code>rdb(ids = c('BEA/NIPA-T10105/A191RC-Q', &quot;BEA/NIPA-T10105/DPCERC-Q&quot;)) %&gt;%
@@ -207,7 +210,7 @@ Goods and Services Consumption as a share of GDP from NIPA (BEA)
 </p>
 </div>
 </div>
-<div id="gross-private-domestic-investment---investment-i" class="section level2">
+<div id="inv" class="section level2">
 <h2>Gross private domestic investment - Investment (I)</h2>
 <p>Investment has two components: - non residential investment is the purchase of new capital goods by firms: structures, new plants.<br />
 - residential investment is the purchase of new houses.</p>
@@ -234,7 +237,7 @@ Investment as a share of GDP from NIPA (BEA)
 </p>
 </div>
 </div>
-<div id="government-purchases-g" class="section level2">
+<div id="gov" class="section level2">
 <h2>Government Purchases (G)</h2>
 <p>Government purchases are composed of purchases of goods by the government plus the compensation of government employees. Overall, they comprise about approximately 20% of GDP, as can be seen on Figure . Note however that they do not include transfers from the government of interest payments on government debt.</p>
 <pre class="r"><code>rdb(ids = c('BEA/NIPA-T10105/A191RC-Q', &quot;BEA/NIPA-T10105/A822RC-Q&quot;)) %&gt;%
@@ -259,7 +262,7 @@ Government Purchases as a share of GDP from NIPA (BEA)
 </p>
 </div>
 </div>
-<div id="net-exports-nx" class="section level2">
+<div id="net-exports" class="section level2">
 <h2>Net Exports (NX)</h2>
 <p>Net exports of goods and services are approximately <strong>-2 to -6 % of GDP</strong>, at least in the modern period (and in the United States), as you can see on Figure .</p>
 <pre class="r"><code>rdb(ids = c('BEA/NIPA-T10105/A191RC-Q', &quot;BEA/NIPA-T10105/A019RC-Q&quot;)) %&gt;%
@@ -286,10 +289,10 @@ Net Exports as a share of GDP from NIPA (BEA)
 </div>
 </div>
 </div>
-<div id="gdp-the-income-side" class="section level1">
-<h1>GDP: The Income Side</h1>
-<div id="cobb-douglas-production-function." class="section level2">
-<h2>Cobb Douglas Production function.</h2>
+<div id="gdp-the-income-approach" class="section level1">
+<h1>GDP: The Income Approach</h1>
+<div id="cobb-douglas-production-function" class="section level2">
+<h2>Cobb Douglas Production function</h2>
 <p>In order to organize our thinking, let’s write out a Cobb-Douglas production function, defined as: <span class="math display">\[Y_t = A_t K_t^{\alpha} L_t^{1-\alpha},\]</span> where <span class="math inline">\(\alpha\)</span> is a number between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>. Let us think of a firm who chooses the amount of labor it uses <span class="math inline">\(L_t\)</span> as well as the amount of capital it uses <span class="math inline">\(K_t\)</span> in order to maximize its profits: <span class="math display">\[\max_{K_t, L_t} \quad A_t K_t^{\alpha} L_t^{1-\alpha} - r K_t - w L_t.\]</span> From Econ 101, it should be clear that a way to solve this problem is simply to set the derivatives of the profit function equal to <span class="math inline">\(0\)</span> with respect to <span class="math inline">\(K_t\)</span> and <span class="math inline">\(L_t\)</span> which gives: <span class="math display">\[\alpha A_t K_t^{\alpha-1} L_t^{1-\alpha} - r = 0\]</span> when differentiating with respect to <span class="math inline">\(K_t\)</span> and <span class="math display">\[(1-\alpha) A_t K_t^{\alpha} L_t^{-\alpha} - w = 0\]</span> when differentiating with respect to <span class="math inline">\(L_t\)</span>.</p>
 <p>The total wage bill <span class="math inline">\(w L_t\)</span> is then given by: <span class="math display">\[w L_t = (1-\alpha) A_t K_t^{\alpha} L_t^{-\alpha} * L_t = (1-\alpha) Y_t.\]</span></p>
 <p>The total income going to capital <span class="math inline">\(r K_t\)</span> is given by: <span class="math display">\[r K_t = \alpha A_t K_t^{\alpha-1} L_t^{1-\alpha} * K_t = \alpha Y_t.\]</span></p>
