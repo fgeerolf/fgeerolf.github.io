@@ -135,19 +135,24 @@ $(document).ready(function () {
 <p>Again, you do not have to, but you might want use Econ 102 as an excuse to teach yourself some elements of R. Macroeconomic data is constantly evolving in real-time, and R allows you to retrieve real-time data from up-to-date sources, as well as work with these datasets, quite easily. Learning a statistical software would also help you think critically about macroeconomic analysis that is typically found in the <em>Wall Street Journal</em>, the <em>New York Times</em>, and other reliable source of information, which often make heavy use of data. R make computations easy (such as transforming values to growth rate), detrending, as well as presenting data in the best way possible (such as plotting the time series of economic quantities, etc.).</p>
 <p>Moreover, California is currently experiencing a shortage for data science skills. Even the consulting and the finance industry increasingly require knowing how to manipulate datasets. I view macroeconomics as an occasion to teach you these general purpose skills. Finally, these skills might also prove useful when you take Economics 103, in which you will learn more thoroughly the tools of regression analysis (if you have not already). Again, you do not at all need to learn R in order to succeed in this class, I am only providing you some material for those who are interested and want to do more.</p>
 </div>
-<div id="downloading-r-statistical-software" class="section level2">
-<h2>Downloading R Statistical Software</h2>
-<p>You need to install <code>R</code> and <code>Rstudio</code>:</p>
+<div id="getting-started-with-r-statistical-software" class="section level2">
+<h2>Getting started with R Statistical Software</h2>
+<p><strong>Downloading.</strong> You need to install <code>R</code> and <code>Rstudio</code>:</p>
 <ol style="list-style-type: decimal">
 <li><p>First you must get the <strong>R statistical software</strong>, which you may download on the UCLA website <a href="http://cran.stat.ucla.edu/">here</a>. The latest release (2018-07-02, Feather Spray) is version 3.5.1. For Mac OSX: <a href="http://cran.stat.ucla.edu/bin/macosx/R-3.5.1.pkg">download here</a>. For Windows: <a href="http://cran.stat.ucla.edu/bin/windows/base/R-3.5.1-win.exe">download here</a>.</p></li>
 <li><p>Second, I recommend you use a Graphical User Interface (GNU) for R such as <strong>R Studio</strong>. R Studio’s latest release is 1.1.456: <a href="https://www.rstudio.com/products/rstudio/download/#download">download here</a>.</p></li>
 </ol>
+<p><strong>Introduction to R.</strong> Cheatsheets are a great way to get started on R. Many are available <a href="https://www.rstudio.com/resources/cheatsheets/">here</a>, but the 2 main cheatsheets are:</p>
+<ul>
+<li><p>Base R <a href="https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf">Cheatsheet</a>.</p></li>
+<li><p>Advanced R <a href="https://www.rstudio.com/wp-content/uploads/2016/02/advancedR.pdf">Cheatsheet</a></p></li>
+</ul>
 </div>
 <div id="packages" class="section level2">
 <h2>Packages</h2>
 <p>I use <code>tidyverse</code>, from <a href="http://hadley.nz">Hadley Wickham</a>, for data manipulation as well as plotting data. <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Tidyverse+Cheat+Sheet.pdf">This cheatsheet</a> has a beginner’s introduction to <code>tidyverse</code>. <code>tidyverse</code> is a powerful collection of R packages that are data tools for transforming and visualizing data. <a href="https://www.datacamp.com/">Datacamp</a> has a <a href="https://www.datacamp.com/courses/introduction-to-the-tidyverse">free tutorial</a> for <code>tidyverse</code>, which can get you started. The following packages are particularly useful:</p>
 <ul>
-<li><code>dplyr</code> for data manipulation. <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">Cheatsheet</a>. Note, in particular, the use of pipes %&gt;%:
+<li><code>dplyr</code> for data manipulation. <a href="https://ugoproto.github.io/ugo_r_doc/dplyr.pdf">Cheatsheet</a>. Note, in particular, the use of pipes %&gt;%:
 <ul>
 <li>x %&gt;% f(y) is the same as f(x, y).</li>
 <li>y %&gt;% f(x, ., z) is the same as f(x, y, z).</li>
@@ -166,16 +171,17 @@ $(document).ready(function () {
 ## 3 setosa      3.43</code></pre>
 <ul>
 <li><p><code>ggplot2</code> for data visualization. <a href="https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf">Cheatsheet</a>.</p></li>
-<li><p><code>stringr</code> for string manipulation. <a href="http://edrub.in/CheatSheets/cheatSheetStringr.pdf">Cheatsheet</a>.</p></li>
+<li><p><code>stringr</code> for string manipulation. <a href="http://edrub.in/CheatSheets/cheatSheetStringr.pdf">Cheatsheet</a>. <a href="https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf">Cheatsheet on Regular Expressions</a>.</p></li>
 </ul>
 <p>In addition to the <code>tidyverse</code> collection of R packages, I also use the following packages:</p>
 <ul>
 <li><code>lubridate</code> for working with dates (very useful in macroeconomics !). <a href="https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_lubridate.pdf">Cheatsheet</a>.</li>
 </ul>
+<p><code>tidyverse</code> also contains <code>readr</code> which allows to read in data. <a href="https://ugoproto.github.io/ugo_r_doc/data-import.pdf">Cheatsheet</a></p>
 </div>
 <div id="r-markdown" class="section level2">
 <h2>R-markdown</h2>
-<p>My lecture notes are created using <code>R-markdown</code>, which you can learn using <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">this cheatsheet</a>.</p>
+<p>My lecture notes are created using <code>R-markdown</code>, which you can learn using <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">this cheatsheet</a>, as well as <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">this reference guide</a>.</p>
 </div>
 <div id="an-example-from-lecture-1" class="section level2">
 <h2>An example from Lecture 1</h2>
