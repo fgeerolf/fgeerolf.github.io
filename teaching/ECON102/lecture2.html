@@ -125,14 +125,19 @@ $(document).ready(function () {
 </div>
 
 
-<p>The first part of this note considers the case of a Solow growth model with a <a href="#general-production-f">general production function</a>. The second part of the note looks more particularly at a case with a <a href="#cobb">Cobb-Douglas production function</a>.</p>
+<p>The first part of this note considers the case of a <span class="citation">Solow (1956)</span> growth model with a <a href="#general-production-f">general production function</a>. The second part of the note looks at a special case of the <span class="citation">Solow (1956)</span> growth model for a case of a <a href="#cobb">Cobb-Douglas production function</a>.</p>
 <div id="general-production-f" class="section level1">
 <h1>General Production Function</h1>
 <div id="assumptions" class="section level2">
 <h2>Assumptions</h2>
-<p>We start from the following production function, with constant returns to scale with respect to capital and labor: <span class="math display">\[\frac{Y}{L}=F\left(\frac{K}{L},1\right)=f\left(\frac{K}{L}\right)\]</span> with <span class="math display">\[f(x)\equiv F(x,1).\]</span></p>
-<p>There is no public saving, therefore total saving, which is equal to private saving et time <span class="math inline">\(t\)</span> <span class="math inline">\(S_{t}\)</span> equals investment at time <span class="math inline">\(t\)</span> <span class="math inline">\(I_{t}\)</span>: <span class="math display">\[S_{t}=I_{t}\]</span></p>
-<p>Saving is assumed to be a constant fraction s of output Y_{t}, therefore: <span class="math display">\[S_{t}=sY_{t}\]</span></p>
+<p><span class="citation">Solow (1956)</span> starts from a general production function, giving at any point in time output <span class="math inline">\(Y_t\)</span> as a function of inputs, capital <span class="math inline">\(K_t\)</span> and labor <span class="math inline">\(L_t\)</span>: <span class="math display">\[Y_t=F\left(K_t,L_t\right).\]</span> For simplicity, we shall assume from now on that the quantity of labor is fixed with <span class="math inline">\(L_t=L\)</span>, so that the production function becomes <span class="math inline">\(Y_t=F(K_t, L)\)</span>. A very important assumption is also constant returns to scale with respect to capital and labor, so that for any factor <span class="math inline">\(a\)</span>:</p>
+<p><span class="math display">\[F(aK_t, aL_t) = aF(K_t, L_t).\]</span></p>
+<p>Because of constant returns to scale with respect to capital and labor, we have: <span class="math display">\[\frac{Y_t}{L}=F\left(\frac{K_t}{L},1\right)=f\left(\frac{K_t}{L}\right)\]</span></p>
+<p>with <span class="math display">\[f(x)\equiv F(x,1).\]</span></p>
+<p>An example of such a production function is the <span class="citation">Cobb and Douglas (1928)</span> production function, which we started studying in <a href="lecture1.html">Lecture 1</a>. This function has constant returns to scale.</p>
+<p><span class="citation">Solow (1956)</span> abstracts from public saving, so that <strong>total saving</strong> equals <strong>private saving</strong> <span class="math inline">\(S_{t}\)</span> at time <span class="math inline">\(t\)</span>, which also equals investment <span class="math inline">\(I_{t}\)</span> at time <span class="math inline">\(t\)</span> : <span class="math display">\[S_{t}=I_{t}.\]</span></p>
+<p>Saving is assumed to be a constant fraction <span class="math inline">\(s\)</span> of output <span class="math inline">\(Y_{t}\)</span>, and therefore: <span class="math display">\[S_{t}=sY_{t}.\]</span></p>
+<p>This constant saving rate my seem a bit ad-hoc; it is. We will investigate more in detail the determinants of saving and consumption behavior in the next lectures.</p>
 <p>Depreciation of capital is given by <span class="math inline">\(\delta\)</span>. Therefore, the capital stock evolves according to:</p>
 <p><span class="math display">\[K_{t+1}=\left(1-\delta\right)K_{t}+I_{t}\]</span></p>
 </div>
@@ -149,15 +154,15 @@ $(document).ready(function () {
 <h2>Three cases</h2>
 <p>There are 3 cases:</p>
 <ol style="list-style-type: decimal">
-<li>If capital per worker is relatively low initially, that is <span class="math inline">\(K_{t}/N&lt;K^{*}/N\)</span>, then the green curve is above the maroon curve, which means that investment per worker is larger than depreciation per worker, and therefore from the above equation, capital per worker increases:</li>
+<li>If capital per worker is relatively low initially, that is <span class="math inline">\(K_{t}/N&lt;K^{*}/N\)</span>, then investment per worker is larger than depreciation per worker, and therefore from the above equation, capital per worker increases:</li>
 </ol>
 <p><span class="math display">\[\frac{K_{t+1}}{L}&gt;\frac{K_{t}}{L}\]</span></p>
 <ol start="2" style="list-style-type: decimal">
-<li>If capital per worker is exactly equal to steady state capital per worker, that is <span class="math inline">\(K_{t}/N=K^{*}/N\)</span>, then the green curve crosses the maroon curve, which means that investment per worker is equal to depreciation per worker, and therefore from the above equation, capital per worker stays constant:</li>
+<li>If capital per worker is exactly equal to steady state capital per worker, that is <span class="math inline">\(K_{t}/N=K^{*}/N\)</span>, then investment per worker is equal to depreciation per worker, and therefore from the above equation, capital per worker stays constant:</li>
 </ol>
 <p><span class="math display">\[\frac{K_{t+1}}{L}=\frac{K_{t}}{L}=\frac{K^{*}}{L}\]</span></p>
 <ol start="3" style="list-style-type: decimal">
-<li>If capital per worker is relatively high initially, that is <span class="math inline">\(K_{t}/N&gt;K^{*}/N\)</span>, then the maroon curve is above the green curve, which means that depreciation per worker is larger than investment per worker, and therefore, capital per worker declines:</li>
+<li>If capital per worker is relatively high initially, that is <span class="math inline">\(K_{t}/N&gt;K^{*}/N\)</span>, then depreciation per worker is larger than investment per worker, and therefore, capital per worker declines:</li>
 </ol>
 <p><span class="math display">\[\frac{K_{t+1}}{L}&lt;\frac{K_{t}}{L}.\]</span></p>
 </div>
@@ -167,12 +172,12 @@ $(document).ready(function () {
 <div id="solving-for-the-model" class="section level2">
 <h2>Solving for the model</h2>
 <p>Assume now that the production function is a Cobb-Douglas production function, so that:</p>
-<p><span class="math display">\[F(K,N)=K^{\alpha}L^{1-\alpha}\]</span></p>
-<p>This implies then that:</p>
-<p><span class="math display">\[f(x)=x^{\alpha}\]</span></p>
+<p><span class="math display">\[F(K,N)=K^{\alpha}L^{1-\alpha}\]</span> As we saw during <a href="lecture1.html">lecture 1</a>, <span class="math inline">\(\alpha\)</span> should be taken as roughly equal to <span class="math inline">\(\alpha = 1/3\)</span>.</p>
+<p>This implies then that: <span class="math display">\[f(x)=x^{\alpha}\]</span></p>
 <p>The law of motion for capital is given by:</p>
 <p><span class="math display">\[\frac{K_{t+1}}{L}=\frac{K_{t}}{L}+s\left(\frac{K_{t}}{L}\right)^{\alpha}-\delta\frac{K_{t}}{L}.\]</span></p>
-<p>Note that given <span class="math inline">\(L\)</span>, <span class="math inline">\(K_{0}\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(\delta\)</span>, you are able to calculate <span class="math inline">\(K_{1}\)</span>, <span class="math inline">\(K_{2}\)</span>, …, as well as <span class="math inline">\(K_{t}\)</span> for any <span class="math inline">\(t\)</span>, by calculating the quantities of capital successively from the formula above. If you do so, you will notice that <span class="math inline">\(K_{t}\)</span> indeed converges to a steady state value <span class="math inline">\(K^{*}\)</span>. However, you do not need to perform an infinity of operations to get at this <span class="math inline">\(K^{*}\)</span>. Instead, you should see that capital per worker in steady-state <span class="math inline">\(K^{*}/L\)</span> solves:</p>
+<p>Given <span class="math inline">\(L\)</span>, <span class="math inline">\(K_{0}\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(\delta\)</span>, you are able to calculate <span class="math inline">\(K_{1}\)</span>, <span class="math inline">\(K_{2}\)</span>, …, as well as <span class="math inline">\(K_{t}\)</span> for any <span class="math inline">\(t\)</span>, by calculating the quantities of capital successively from the formula above.</p>
+<p>If you do so, you will notice that <span class="math inline">\(K_{t}\)</span> indeed converges to a steady state value <span class="math inline">\(K^{*}\)</span>. However, you do not need to perform an infinity of operations to get at this <span class="math inline">\(K^{*}\)</span>. Instead, you should see that capital per worker in steady-state <span class="math inline">\(K^{*}/L\)</span> solves:</p>
 <p><span class="math display">\[s\left(\frac{K^{*}}{L}\right)^{\alpha}=\delta\frac{K^{*}}{L}\quad\Rightarrow\quad\frac{K^{*}}{L}=\left(\frac{s}{\delta}\right)^{\frac{1}{1-\alpha}}\]</span></p>
 <p>The steady-state level of output per worker is then: <span class="math display">\[\frac{Y^{*}}{L}=\left(\frac{s}{\delta}\right)^{\frac{\alpha}{1-\alpha}}\]</span></p>
 </div>
@@ -188,7 +193,15 @@ $(document).ready(function () {
 <p>Therefore, the saving rate corresponding to the Golden Rule level of capital accumulation is equal to <span class="math inline">\(\alpha\)</span>. The Golden Rule level of capital accumulation is then such that:</p>
 <p><span class="math display">\[\frac{K^{*}}{L}=\left(\frac{\alpha}{\delta}\right)^{\frac{1}{1-\alpha}}\quad\Rightarrow\quad K^{*}=L\left(\frac{\alpha}{\delta}\right)^{\frac{1}{1-\alpha}}\]</span></p>
 <p>The level of GDP corresponding to this Golden rule level is:</p>
-<p><span class="math display">\[Y^{*}=L\left(\frac{\alpha}{\delta}\right)^{\frac{\alpha}{1-\alpha}}\]</span></p>
+<p><span class="math display">\[Y^{*}=L\left(\frac{\alpha}{\delta}\right)^{\frac{\alpha}{1-\alpha}}.\]</span></p>
+<div id="refs" class="references">
+<div id="ref-cobb_theory_1928">
+<p>Cobb, Charles W., and Paul H. Douglas. 1928. “A Theory of Production.” <em>The American Economic Review</em> 18 (1): 139–65. <a href="http://www.jstor.org/stable/1811556" class="uri">http://www.jstor.org/stable/1811556</a>.</p>
+</div>
+<div id="ref-solow_contribution_1956">
+<p>Solow, Robert M. 1956. “A Contribution to the Theory of Economic Growth.” <em>The Quarterly Journal of Economics</em> 70 (1): 65–94. doi:<a href="https://doi.org/10.2307/1884513">10.2307/1884513</a>.</p>
+</div>
+</div>
 </div>
 </div>
 
