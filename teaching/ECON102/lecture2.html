@@ -142,27 +142,27 @@ $(document).ready(function () {
 </div>
 <div id="solution" class="section level2">
 <h2>Solution</h2>
-<p>Replace investment in the previous equation and divide both sides by <span class="math inline">\(N\)</span>: <span class="math display">\[\frac{K_{t+1}}{L} =\left(1-\delta\right)\frac{K_{t}}{L}+s\frac{Y_{t}}{L}\quad\Rightarrow\quad\boxed{\frac{K_{t+1}}{L}-\frac{K_{t}}{L}=s\frac{Y_{t}}{L}-\delta\frac{K_{t}}{L}}\]</span></p>
+<p>Replace investment in the previous equation and divide both sides by <span class="math inline">\(L\)</span>: <span class="math display">\[\frac{K_{t+1}}{L} =\left(1-\delta\right)\frac{K_{t}}{L}+s\frac{Y_{t}}{L}\quad\Rightarrow\quad\boxed{\frac{K_{t+1}}{L}-\frac{K_{t}}{L}=s\frac{Y_{t}}{L}-\delta\frac{K_{t}}{L}}\]</span></p>
 <p>The change in the capital stock per person from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+1\)</span> has two components: investment (or saving) and depreciation:</p>
 <p><span class="math display">\[\underbrace{\frac{K_{t+1}}{L}-\frac{K_{t}}{L}}_{\text{Change in capital }}=\underbrace{sf\left(\frac{K_{t}}{L}\right)}_{\text{Investment}}-\underbrace{\delta\frac{K_{t}}{L}}_{\text{Depreciation}}.\]</span></p>
 <p>The steady state level of the capital stock <span class="math inline">\(K^{*}\)</span> is such that <span class="math inline">\(K_{t+1}=K_{t}=K^{*}\)</span>, and it therefore satisfies:</p>
 <p><span class="math display">\[\boxed{sf\left(\frac{K^{*}}{L}\right)=\delta\frac{K^{*}}{L}}\]</span></p>
-<p>Note that without further specifying <span class="math inline">\(f(.)\)</span>, we can’t say much more about the value of <span class="math inline">\(K^{*}/L\)</span>, we just know it satisfies this implicit equation. The steady-state value of output per worker <span class="math inline">\(Y^{*}/N\)</span>, as a function of <span class="math inline">\(K^{*}/N\)</span> is given by:</p>
+<p>Note that without further specifying <span class="math inline">\(f(.)\)</span>, we can’t say much more about the value of <span class="math inline">\(K^{*}/L\)</span>, we just know it satisfies this implicit equation. The steady-state value of output per worker <span class="math inline">\(Y^{*}/L\)</span>, as a function of <span class="math inline">\(K^{*}/L\)</span> is given by:</p>
 <p><span class="math display">\[\frac{Y^{*}}{L}=f\left(\frac{K^{*}}{L}\right)\]</span></p>
 </div>
 <div id="three-cases" class="section level2">
 <h2>Three cases</h2>
 <p>There are 3 cases:</p>
 <ol style="list-style-type: decimal">
-<li>If capital per worker is relatively low, that is <span class="math inline">\(K_{t}/N&lt;K^{*}/N\)</span>, then investment per worker is larger than depreciation per worker, and therefore from the above equation, capital per worker increases:</li>
+<li>If capital per worker is relatively low, that is <span class="math inline">\(K_{t}/L&lt;K^{*}/L\)</span>, then investment per worker is larger than depreciation per worker, and therefore from the above equation, capital per worker increases:</li>
 </ol>
 <p><span class="math display">\[\frac{K_{t+1}}{L}&gt;\frac{K_{t}}{L}\]</span></p>
 <ol start="2" style="list-style-type: decimal">
-<li>If capital per worker is exactly equal to steady state capital per worker, that is <span class="math inline">\(K_{t}/N=K^{*}/N\)</span>, then investment per worker is equal to depreciation per worker, and therefore from the above equation, capital per worker stays constant:</li>
+<li>If capital per worker is exactly equal to steady state capital per worker, that is <span class="math inline">\(K_{t}/L=K^{*}/L\)</span>, then investment per worker is equal to depreciation per worker, and therefore from the above equation, capital per worker stays constant:</li>
 </ol>
 <p><span class="math display">\[\frac{K_{t+1}}{L}=\frac{K_{t}}{L}=\frac{K^{*}}{L}\]</span></p>
 <ol start="3" style="list-style-type: decimal">
-<li>If capital per worker is relatively high, that is <span class="math inline">\(K_{t}/N&gt;K^{*}/N\)</span>, then depreciation per worker is larger than investment per worker, and therefore, capital per worker declines:</li>
+<li>If capital per worker is relatively high, that is <span class="math inline">\(K_{t}/L&gt;K^{*}/L\)</span>, then depreciation per worker is larger than investment per worker, and therefore, capital per worker declines:</li>
 </ol>
 <p><span class="math display">\[\frac{K_{t+1}}{L}&lt;\frac{K_{t}}{L}.\]</span></p>
 </div>
@@ -172,7 +172,7 @@ $(document).ready(function () {
 <div id="solving-for-the-model" class="section level2">
 <h2>Solving for the model</h2>
 <p>Assume now that the production function is a <span class="citation">Cobb and Douglas (1928)</span> production function, so that:</p>
-<p><span class="math display">\[F(K,N)=K^{\alpha}L^{1-\alpha}\]</span> As we saw during <a href="lecture1.html">lecture 1</a>, <span class="math inline">\(\alpha\)</span> should be thought of as roughly equal to <span class="math inline">\(\alpha = 1/3\)</span>. This implies then that function <span class="math inline">\(f\)</span> defined above is such that: <span class="math display">\[f(x)=x^{\alpha}\]</span></p>
+<p><span class="math display">\[F(K,L)=K^{\alpha}L^{1-\alpha}\]</span> As we saw during <a href="lecture1.html">lecture 1</a>, <span class="math inline">\(\alpha\)</span> should be thought of as roughly equal to <span class="math inline">\(\alpha = 1/3\)</span>. This implies then that function <span class="math inline">\(f\)</span> defined above is such that: <span class="math display">\[f(x)=x^{\alpha}\]</span></p>
 <p>The law of motion for capital is given by:</p>
 <p><span class="math display">\[\frac{K_{t+1}}{L}=\frac{K_{t}}{L}+s\left(\frac{K_{t}}{L}\right)^{\alpha}-\delta\frac{K_{t}}{L}.\]</span></p>
 <p>Given <span class="math inline">\(L\)</span>, <span class="math inline">\(K_{0}\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(\delta\)</span>, we are able to calculate <span class="math inline">\(K_{1}\)</span>, <span class="math inline">\(K_{2}\)</span>, …, as well as <span class="math inline">\(K_{t}\)</span> for any <span class="math inline">\(t\)</span>, by calculating the quantities of capital successively from the formula above.</p>
