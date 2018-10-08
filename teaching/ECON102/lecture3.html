@@ -125,7 +125,101 @@ $(document).ready(function () {
 </div>
 
 
-
+<div id="two-period" class="section level1">
+<h1>The Two-Period Consumption Problem</h1>
+<div id="most-general-calculations" class="section level2">
+<h2>Most general calculations</h2>
+<p>There are two periods, <span class="math inline">\(t=0\)</span> (think of this as “today”) and <span class="math inline">\(t=1\)</span> (think of this as “tomorrow”). There is one consumption good. The consumer values utility in both periods according to the following utility function:</p>
+<p><span class="math display">\[U(c_{0},c_{1})=u(c_{0})+\beta u(c_{1}).\]</span></p>
+<p>Utility is strictly increasing in both arguments, consumption in period <span class="math inline">\(0\)</span> (<span class="math inline">\(c_{0}\)</span>) and consumption in period <span class="math inline">\(1\)</span> (<span class="math inline">\(c_{1}\)</span>).</p>
+<p>People earn income <span class="math inline">\(y_{0}\)</span> in period <span class="math inline">\(0\)</span>, and income <span class="math inline">\(y_{1}\)</span> in period <span class="math inline">\(1\)</span>. They also are born with some financial wealth <span class="math inline">\(f_{0}\)</span> now, and have financial wealth <span class="math inline">\(f_{1}\)</span> in period 1, which they consume entirely because this is the last period. (there is no point keeping more money for after period 1, because there is no future at that point)</p>
+<p>The amount that agents save in this economy is thus <span class="math inline">\(f_{1}-f_{0}\)</span>, and the amount of their accumulated savings is the savings they already had plus what they decided to accumulate, so that <span class="math inline">\(f_{0}+(f_{1}-f_{0})=f_{1}.\)</span></p>
+<p>Consumption in period 0 is given by:</p>
+<p><span class="math display">\[c_{0} =y_{0}-(f_{1}-f_{0})\]</span></p>
+<p>The second period consumption <span class="math inline">\((t=1)\)</span> is given by income plus the return to (accumulated !) savings:</p>
+<p><span class="math display">\[c_{1} =y_{1}+(1+R)f_{1}.\]</span></p>
+<p>Rewriting <span class="math inline">\(f_{1}\)</span> from this second equation: <span class="math inline">\(f_{1}=\frac{c_{1}-y_{1}}{1+R}\)</span>, and plugging into the first, one gets that total wealth is the sum of financial wealth and of human wealth:</p>
+<p><span class="math display">\[c_{0}=y_{0}-\left(\frac{c_{1}-y_{1}}{1+R}-f_{0}\right)
+    \quad\Rightarrow\quad c_{0}+\frac{c_{1}}{1+R}=\overbrace{f_{0}+\underbrace{y_{0}+\frac{y_{1}}{1+R}}_{\text{human wealth}}}^{\text{total wealth}}.\]</span></p>
+<p>Thus the problem of the consumer is the following problem of constrained optimization:</p>
+<p><span class="math display">\[\max_{c_{0},c_{1}}\quad u(c_{0})+\beta u(c_{1})\]</span> <span class="math display">\[  \text{s.t.}\quad c_{0}+\frac{c_{1}}{1+R}=f_{0}+y_{0}+\frac{y_{1}}{1+R}.\]</span></p>
+<p>You can solve this optimization in three ways:</p>
+<ol style="list-style-type: decimal">
+<li>Apply the well known ratio of marginal utilities formula from a basic Microeconomic class and say that:</li>
+</ol>
+<p><span class="math display">\[\boxed{\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Apply the following intuitive argument. The marginal utility from consuming in period <span class="math inline">\(1\)</span> is <span class="math inline">\(\beta u'(c_{1})\)</span>. The marginal utility from consuming in period <span class="math inline">\(0\)</span> is <span class="math inline">\(u'(c_{0})\)</span>. By putting one unit of consumption in the bank, one forgoes <span class="math inline">\(1\)</span> unit of consumption in period <span class="math inline">\(0\)</span> to get <span class="math inline">\(1+R\)</span> units of consumption in period <span class="math inline">\(1\)</span>. The two have to be equal: <span class="math display">\[u'(c_{0})=(1+R)\beta u'(c_{1})\quad\Rightarrow\quad\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}.\]</span></p></li>
+<li><p>Replace <span class="math inline">\(c_{0}\)</span> and optimize with respect to <span class="math inline">\(c_{1}\)</span>:</p></li>
+</ol>
+<p><span class="math display">\[c_{0}=\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)-\frac{c_{1}}{1+R}\qquad\Rightarrow\qquad\max_{c_{1}}\quad u\left[\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)-\frac{c_{1}}{1+R}\right]+\beta u(c_{1})\]</span></p>
+<p>This leads to the following First-Order Condition:</p>
+<p><span class="math display">\[-\frac{1}{1+R}u'(c_{0})+\beta u'(c_{1})=0\quad\Rightarrow\quad\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}.\]</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Finally, you can replace <span class="math inline">\(c_{1}\)</span> and optimize with respect to <span class="math inline">\(c_{0}\)</span>:<br />
+<span class="math display">\[c_{1}=(1+R)\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)-(1+R)c_{0}\]</span> <span class="math display">\[\quad\Rightarrow\quad\max_{c_{0}}\quad u(c_{0})+\beta u\left[(1+R)\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)-(1+R)c_{0}\right]\]</span></li>
+</ol>
+<p>This leads to the following First-Order Condition:</p>
+<p><span class="math display">\[u'(c_{0})-\beta(1+R)u'(c_{1})=0\quad\Rightarrow\quad\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}.\]</span></p>
+</div>
+<div id="log-utility-no-discounting" class="section level2">
+<h2>Log utility, no discounting</h2>
+<p>With log utility, and no discounting, we have:</p>
+<p><span class="math display">\[u(c)=\log(c)\qquad\beta=1.\]</span></p>
+<p>Marginal utility is then:</p>
+<p><span class="math display">\[u'(c)=\frac{1}{c},\]</span></p>
+<p>so that the optimality condition gives:</p>
+<p><span class="math display">\[c_{0}=\frac{c_{1}}{1+R}\quad\Rightarrow\quad c_{0}=\frac{1}{2}\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)\quad\text{and}\quad c_{1}=\frac{1+R}{2}\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right).\]</span></p>
+<p>Consumption decreases when the interest rate rises, all the more that income will arise late into the future. This is a way to “microfound” the assumptions about aggregate demand that we made before.</p>
+<p>Note also that the “marginal propensity to consume” out of current wealth <span class="math inline">\(f_{0}\)</span> is given by <span class="math inline">\(1/2\)</span>. If one looks at a model with more periods, say <span class="math inline">\(T\)</span> periods, one can actually find that people’s marginal propensity to consume are approximately equal to <span class="math inline">\(1/T\)</span>.</p>
+</div>
+<div id="log-utility-with-discounting" class="section level2">
+<h2>Log utility, with discounting</h2>
+<p>Marginal utility is then <span class="math inline">\(u'(c)=1/c\)</span>, so that the optimality condition gives:</p>
+<p><span class="math display">\[\frac{c_{1}}{1+R}=\beta c_{0}\quad\Rightarrow\quad c_{0}=\frac{1}{1+\beta}\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)\quad\text{and}\quad c_{1}=\frac{\beta(1+R)}{1+\beta}\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right).\]</span></p>
+<p>You can check that the solution with no discounting corresponds to that with discounting when <span class="math inline">\(\beta=1\)</span>.</p>
+</div>
+</div>
+<div id="olg" class="section level1">
+<h1>The Overlapping Generations Model</h1>
+<p>In the <span class="citation">Solow (1956)</span> growth model, we assumed that saving was a constant fraction of GDP. The <a href="#two-period">previous section</a> has shown how to “endogenize” the saving behavior. This section presents a very simple version of the <span class="citation">Diamond (1965)</span> so-called overlapping-generations model (for reasons that will soon become clear). This model is used by policymakers to think about social security, public debt, and intergenerational transfers more generally.</p>
+<div id="assumptions" class="section level2">
+<h2>Assumptions</h2>
+<p>We assume that people in this economy live only for two periods. However, instead of referring to these two periods as <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>, we now call refer to them as <span class="math inline">\(t\)</span> and <span class="math inline">\(t+1\)</span>. People are called “young” in the first period of their life, and “old” in the second. (thus the length of one period is really long !)</p>
+<p>People from generation <span class="math inline">\(t\)</span> are young in period <span class="math inline">\(t\)</span>, and old in period <span class="math inline">\(t+1\)</span>. We denote their consumption when young by <span class="math inline">\(c_{t}^{y}\)</span> and their consumption when old by <span class="math inline">\(c_{t+1}^{o}\)</span>. In terms of the <a href="#two-period">previous section</a>, you should really think of <span class="math inline">\(c_{t}^{y}\)</span> as <span class="math inline">\(c_{0}\)</span>, and of <span class="math inline">\(c_{t+1}^{o}\)</span> as <span class="math inline">\(c_{1}\)</span>.</p>
+<p>People work when young, and then receive a wage given by <span class="math inline">\(w_{t}\)</span>. They retire when old, and then do not work. Their lifetime utility is logarithmic with <span class="math inline">\(\beta=1\)</span>:</p>
+<p><span class="math display">\[U=\log(c_{t}^{y})+\log(c_{t+1}^{o}).\]</span></p>
+<p>Their intertemporal budget constraint is given by:</p>
+<p><span class="math display">\[c_{t}^{y}+\frac{c_{t+1}^{o}}{1+R}=w_{t}.\]</span></p>
+<p>There is always two generations living in period <span class="math inline">\(t\)</span>: the previous period’s young, born in period <span class="math inline">\(t-1\)</span>, now old, consuming the return from their savings; and this period’s young, newly born (in period <span class="math inline">\(t\)</span>).</p>
+<p><strong>Production.</strong> There is a Cobb-Douglas, constant returns to scale, production function:</p>
+<p><span class="math display">\[Y_{t}=K_{t}^{1/3}L_{t}^{2/3}.\]</span></p>
+<p>Assume that the labor force is constant and fixed to unity (this is to avoid carrying <span class="math inline">\(L\)</span> around everywhere - from <a href="lecture2.html">lecture 2</a>, you should now know that everything can be expressed per capita, because of constant returns to scale):</p>
+<p><span class="math display">\[L_{t}=L=1.\]</span></p>
+<p>Again for simplicity, we shall assume that capital depreciates at rate <span class="math inline">\(\delta=1=100\%\)</span>. (that is, capital fully depreciates each period - this is not that unreasonable if you take one unit of time to represent one generation, or about 30 years - remember that the depreciation rate for one year was approximately equal to 10%.)</p>
+</div>
+<div id="solution" class="section level2">
+<h2>Solution</h2>
+<p>Utility is logarithmic, so that the consumption of the young <span class="math inline">\(c_{t}^{y}\)</span> and consumption of the old <span class="math inline">\(c_{t+1}^{o}\)</span> are given as a function of the wage as follows:</p>
+<p><span class="math display">\[c_{t}^{y}=\frac{w_{t}}{2}\qquad c_{t+1}^{o}=(1+R)\frac{w_{t}}{2}.\]</span></p>
+<p>Indeed, if you want to think of this model as the two periods model of the <a href="#two-period">previous section</a>, think that everything is as if: <span class="math inline">\(f_{0}=0,\qquad y_{0}=w_{t},\qquad y_{1}=0.\)</span> Saving (and savings) is equal to investment, and given by:</p>
+<p><span class="math display">\[S_t = I_t = w_{t}-c_{t}^{y}=\frac{w_{t}}{2}.\]</span></p>
+<p>Therefore, savings are here endogenous, and coming from agents’ optimizing choices. In the Solow model in contrast, they were assumed to be exogenous and equal to a fraction <span class="math inline">\(s\)</span>.</p>
+<p>The wage paid by employers, given that <span class="math inline">\(\bar{L}=1\)</span>, is given by:</p>
+<p><span class="math display">\[w_{t}=\frac{2}{3}K_{t}^{1/3}L^{-1/3}=\frac{2}{3}K_{t}^{1/3} = \frac{2}{3}Y_t.\]</span></p>
+<p>Finally:</p>
+<p><span class="math display">\[\Delta K_{t+1}=\frac{w_{t}}{2}-\delta K_{t} = \frac{Y_t}{3}-\delta K_t.\]</span></p>
+<p>This is the capital accumulation equation (or law of motion for capital) of the Solow model, with <span class="math inline">\(s = 1/3\)</span>. The new element here of course is to get savings endogenously, from agents’ optimal decisions.</p>
+<div id="refs" class="references">
+<div id="ref-diamond_national_1965">
+<p>Diamond, Peter A. 1965. “National Debt in a Neoclassical Growth Model.” <em>The American Economic Review</em> 55 (5): 1126–50. <a href="http://www.jstor.org/stable/1809231" class="uri">http://www.jstor.org/stable/1809231</a>.</p>
+</div>
+<div id="ref-solow_contribution_1956">
+<p>Solow, Robert M. 1956. “A Contribution to the Theory of Economic Growth.” <em>The Quarterly Journal of Economics</em> 70 (1): 65–94. doi:<a href="https://doi.org/10.2307/1884513">10.2307/1884513</a>.</p>
+</div>
+</div>
+</div>
+</div>
 
 
 
