@@ -128,11 +128,11 @@ $(document).ready(function () {
 <div id="geometric-sums" class="section level1">
 <h1>Geometric Sums</h1>
 <ol style="list-style-type: decimal">
-<li><p>Simplify the following geometric sum: <span class="math display">\[\sum_{i=0}^n x^i = 1+x+x^2+...+x^n\]</span></p></li>
+<li><p>Calculate the following geometric sum, when <span class="math inline">\(x \neq 1\)</span>, as a function of <span class="math inline">\(x^{n+1}\)</span> in particular: <span class="math display">\[\sum_{i=0}^n x^i = 1+x+x^2+...+x^n\]</span></p></li>
 <li><p>State a condition on <span class="math inline">\(x\)</span> such that the infinite geometric sum (when <span class="math inline">\(n \to \infty\)</span>) has a finite value.</p></li>
-<li><p>Assuming that this geometric sum is finite, simplify: <span class="math display">\[\sum_{i=0}^{\infty} x^i = 1+x+x^2+...+x^n+...\]</span></p></li>
-<li>More generally, for <span class="math inline">\(m\)</span> a positive integer, simplify: <span class="math display">\[\sum_{i=m}^n x^i = x^m+x^{m+1}+...+x^n\]</span></li>
-<li><p>What is the present discounted value of a stream of incomes, which grows at rate <span class="math inline">\(g=2\)</span> %, starts at <span class="math inline">\(y_0=90000\)</span>, if the interest rate is <span class="math inline">\(i=3\)</span> %?</p></li>
+<li><p>Assuming that this geometric sum is finite, calculate: <span class="math display">\[\sum_{i=0}^{\infty} x^i = 1+x+x^2+...+x^n+...\]</span></p></li>
+<li>More generally, for <span class="math inline">\(m\)</span> a positive integer, calculate: <span class="math display">\[\sum_{i=m}^n x^i = x^m+x^{m+1}+...+x^n\]</span></li>
+<li><p>What is the present discounted value of an infinite stream of incomes, which grows at rate <span class="math inline">\(g=2\)</span> %, starts at <span class="math inline">\(y_0=90000\)</span>, if the interest rate is <span class="math inline">\(i=3\)</span> %?</p></li>
 </ol>
 </div>
 <div id="taylor-approximations" class="section level1">
@@ -141,15 +141,15 @@ $(document).ready(function () {
 <li><p>If <span class="math inline">\(x\)</span> is small, show that: <span class="math display">\[(1+x)^n \approx 1+nx.\]</span></p></li>
 <li><p>If <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are small, then show that: <span class="math display">\[(1+x)(1+y) \approx 1+x+y.\]</span></p></li>
 <li><p>If <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are small, then show that: <span class="math display">\[\frac{1+x}{1+y} \approx 1+x-y.\]</span></p></li>
-<li><p>Your savings account offers a nominal interest rate of 1%. Meanwhile, annual inflation is 1.5%. What is an exact value for the real interest rate, defined as the rate of increase in your purchasing power if you leave your money the bank? What is an approximate value for this real interest rate, using one of the previous formulas?</p></li>
+<li><p>Your savings account offers a nominal interest rate of 1%. Meanwhile, annual inflation is 1.5%. What is an exact value for the real interest rate, defined as the rate of increase in your purchasing power if you leave your money in the bank? What is an approximate value for this real interest rate, using one of the previous formulas?</p></li>
 </ol>
 </div>
 <div id="growth-rates" class="section level1">
 <h1>Growth Rates</h1>
 <ol style="list-style-type: decimal">
-<li>If <span class="math inline">\(y_t\)</span> grows at a rate <span class="math inline">\(g\)</span> during a given period, then show that the growth rate <span class="math inline">\(G\)</span> of <span class="math inline">\(y_t\)</span> after <span class="math inline">\(T\)</span> periods is: <span class="math display">\[G = \frac{y_T}{y_0}-1=(1+g)^T-1.\]</span></li>
-<li><p>Conversely, if the growth rate of <span class="math inline">\(y_t\)</span> after <span class="math inline">\(T\)</span> periods is <span class="math inline">\(G\)</span>, then show that the growth rate of <span class="math inline">\(y_t\)</span> per period is: <span class="math display">\[g = \frac{y_{t+1}}{y_{t}}-1=(1+G)^{1/T}-1.\]</span></p></li>
-<li><p>If your annual return on your savings account is 1%, what is your daily return (assuming a year is 365 days)? How much do you give up each day by leaving $100K on your a zero interest checking account?</p></li>
+<li>If <span class="math inline">\(y_t\)</span> grows at a constant rate <span class="math inline">\(g\)</span> during a given period, then show that the growth <span class="math inline">\(G\)</span> of <span class="math inline">\(y_t\)</span> after <span class="math inline">\(T\)</span> periods is: <span class="math display">\[G = \frac{y_T}{y_0}-1=(1+g)^T-1.\]</span></li>
+<li><p>Conversely, if the growth rate of <span class="math inline">\(y_t\)</span> after <span class="math inline">\(T\)</span> periods is <span class="math inline">\(G\)</span>, then show that the average growth rate of <span class="math inline">\(y_t\)</span> per period is: <span class="math display">\[g = \frac{y_{t+1}}{y_{t}}-1=(1+G)^{1/T}-1.\]</span></p></li>
+<li><p>If your annual return on your savings rate is 1%, what is your daily return (assuming a year is 365 days)? How much do you then give up each day by leaving $100K on a zero interest checking account?</p></li>
 </ol>
 </div>
 
