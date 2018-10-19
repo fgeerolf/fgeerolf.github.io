@@ -140,7 +140,7 @@ xS&amp;=-1+S+x^{n+1}
 &amp;=x^m\frac{1-x^{n-m+1}}{1-x}\\
 \sum_{i=m}^n x^i &amp;=\frac{x^m - x^{n+1}}{1-x}.
 \end{aligned}\]</span></p></li>
-<li><p>The present discounted value of an infinite stream of incomes, which grows at rate <span class="math inline">\(g=2\)</span> %, starts at <span class="math inline">\(y_0=90000\)</span>, if the interest rate is <span class="math inline">\(i=3\)</span> is: <span class="math display">\[y_0+y_0\frac{1+g}{1+i}+y_0\frac{(1+g)^2}{(1+i)^2} + ...\]</span> Using the formula found in question 3 with <span class="math inline">\(x=(1+g)/(1+i)\)</span>, we get: <span class="math display">\[y_0+y_0\frac{1+g}{1+i}+y_0\frac{(1+g)^2}{(1+i)^2} + ...=y_0\dfrac{1}{1-\frac{1+g}{1+i}}=\frac{y_0(1+i)}{i-g}\]</span> A numerical application gives: <span class="math display">\[\frac{y_0(1+i)}{i-g}=\frac{90000 *(1+0.03)}{0.03-0.02}=9270000.\]</span></p></li>
+<li><p>The present discounted value of an infinite stream of incomes, which grows at rate <span class="math inline">\(g=2\)</span>%, starts at <span class="math inline">\(y_0=90000\)</span>, if the interest rate is <span class="math inline">\(i=3\)</span>% is: <span class="math display">\[y_0+y_0\frac{1+g}{1+i}+y_0\frac{(1+g)^2}{(1+i)^2} + ...\]</span> Using the formula found in question 3 with <span class="math inline">\(x=(1+g)/(1+i)\)</span>, we get: <span class="math display">\[y_0+y_0\frac{1+g}{1+i}+y_0\frac{(1+g)^2}{(1+i)^2} + ...=y_0\dfrac{1}{1-\frac{1+g}{1+i}}=\frac{y_0(1+i)}{i-g}\]</span> A numerical application gives (see <a href="https://docs.google.com/spreadsheets/d/108I8xuosIQvgU6wOGrfwzHhE4p1OStgv8iIpzZ-4vME/edit?usp=sharing">Google Sheet</a>): <span class="math display">\[\frac{y_0(1+i)}{i-g}=\frac{90000 *(1+0.03)}{0.03-0.02}=9270000.\]</span></p></li>
 </ol>
 </div>
 <div id="taylor-approximations" class="section level1">
@@ -165,7 +165,7 @@ xS&amp;=-1+S+x^{n+1}
 <ol style="list-style-type: decimal">
 <li><p>Iterating on the formula: <span class="math display">\[y_{t+1}=(1+g)y_t \quad \Rightarrow \quad y_T=(1+g)^Ty_0,\]</span> allows to find the result: <span class="math display">\[G = \frac{y_T}{y_0}-1=(1+g)^T-1.\]</span></p></li>
 <li><p>Again, inverting the previous relation: <span class="math display">\[G = (1+g)^T-1,\]</span> allows to find: <span class="math display">\[g = \frac{y_{t+1}}{y_{t}}-1=(1+G)^{1/T}-1.\]</span></p></li>
-<li><p>Applying the previous formula allows to get: <span class="math display">\[\begin{aligned}
+<li><p>Applying the previous formula allows to get (see <a href="https://docs.google.com/spreadsheets/d/108I8xuosIQvgU6wOGrfwzHhE4p1OStgv8iIpzZ-4vME/edit?usp=sharing">Google Sheet</a>): <span class="math display">\[\begin{aligned}
 g &amp;=(1+0.01)^{1/365}-1\\
  &amp;= 0.00002726155\\
 g &amp;=0.0027\%

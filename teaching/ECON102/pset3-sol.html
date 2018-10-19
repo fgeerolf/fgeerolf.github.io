@@ -125,99 +125,31 @@ $(document).ready(function () {
 </div>
 
 
-<div id="main-information" class="section level2">
-<h2>Main Information</h2>
-<p><strong>Lectures:</strong> Mondays and Wednesdays, 3:30-4:45pm, Dodd Hall, Room 147.</p>
-<p><strong>Office hours:</strong> Tuesdays, 4-6pm. (Bunche 8389)</p>
-<p><strong>Moodle Website:</strong> <a href="https://moodle2.sscnet.ucla.edu/course/view/18F-ECON102-1" class="uri">https://moodle2.sscnet.ucla.edu/course/view/18F-ECON102-1</a></p>
-<p><strong>Graduate Student Instructors (GSIs):</strong> Graduate Student Instructors are all graduate students in the UCLA Economics Department. They will teach sections and hold 2 hours of office hours in the Alper Room every week:</p>
-<ul>
-<li><p>Sections 1E-1I. Paula Beltran. OH: F 11-12; 2-3. <a href="mailto:pabeltran90@gmail.com">pabeltran90@gmail.com</a></p></li>
-<li><p>Sections 1H-1M. Alvaro Boitier. OH: M 2:30-3:30; T 2-3. <a href="mailto:alvaro.boitier@gmail.com">alvaro.boitier@gmail.com</a></p></li>
-<li><p>Sections 1N-1K. Conor Foley. OH: T 2-4. <a href="mailto:conor.teaches.econ@gmail.com">conor.teaches.econ@gmail.com</a></p></li>
-<li><p>Sections 1D-1J. Kun Hu. OH: R; 9-11. <a href="mailto:rickhukun@ucla.edu">rickhukun@ucla.edu</a></p></li>
-<li><p>Sections 1G-1O. Ivan Lavrov. OH: W 1-3. <a href="mailto:ilavrov113@gmail.com">ilavrov113@gmail.com</a></p></li>
-<li><p>Sections 1B-1C. Anthony Papac. OH: M 10-11; R 12:30-1:30. <a href="mailto:anthonypapac@g.ucla.edu">anthonypapac@g.ucla.edu</a></p></li>
-<li><p>Sections 1A-1F. Mengbo Zhang. OH: W 10-12. <a href="mailto:zmbruc@gmail.com">zmbruc@gmail.com</a></p></li>
-</ul>
-<p><strong>Course description.</strong> This course is meant to provide an intermediate-level treatment of macroeconomic topics, including the study of economic growth, business cycle fluctuations, unemployment, inflation, as well as open-economy macroeconomic issues such as trade imbalances and exchange rate policy. Although the title of the class is “Macroeconomic Theory”, students will learn both the theory as well as some of the empirical evidence behind the theory, and its practical implications. Special emphasis will be placed on the application of economic tools to contemporary economic problems and policies. Competing schools of thought will be presented, with a particular emphasis on Neoclassical and Keynesian theories, and they will be discussed in the light of macroeconomic data. Class meetings will be highly interactive, with many opportunities for you to both ask and answer questions.</p>
-<p><strong>Course Objectives.</strong> My objective is that, by the end of the course, you will be able to read, and critically assess writings from <em>The Economist</em>, <em>The Wall Street Journal</em>, or <em>The New York Times</em>. Macroeconomics is everywhere in the news, and I want to walk you through the tools you need to understand it better. Economics is ultimately an empirical subject, so as much as possible I will try to convey not just the theory of how the economy works, but also the evidence supporting, or contradicting the theory. We will not always reach definitive conclusions on most of the issues we will examine, but you should have a more informed opinion on each of them and why these questions are hard and debated scientifically.</p>
-<p><strong>Prerequisites.</strong> A strict prerequisite for the class is that you have taken Econ 101. If you do not meet this prerequisite, you are advised to take this course during another term. You should also be familiar with some elementary mathematics. For example, you need to know what a logarithm is, and how to calculate a geometric sum: <span class="math display">\[1+c_1+c_1^2+...=\frac{1}{1-c_1} \quad \text{if} \quad 0&lt;c_1&lt;1,\]</span> because that is really useful to understand how a Keynesian multiplier works, for example. If you do not know that already, that is fine too, but you should at least be willing to learn. If you want a treatment of Econ 102 which is less heavy on algebra, you are best advised to take this class in another term.</p>
-<p><strong>Textbook (optional):</strong> Olivier Blanchard’s <em>Macroeconomics</em>, 7th Edition (previous editions should be fine, too).</p>
-</div>
-<div id="class-rules" class="section level2">
-<h2>Class Rules</h2>
-<p><strong>Questions?</strong> If you have any question about the material covered during the course, you should consider the following options in order:</p>
+<div id="two-period-intertemporal-optimization" class="section level1">
+<h1>Two-period Intertemporal Optimization</h1>
 <ol style="list-style-type: decimal">
-<li><p>First, you should never refrain from asking questions during class.</p></li>
-<li><p>Second, you may ask questions during recitation sections. The smaller group should allow you to ask questions more freely. Our teaching assistants are all passionate graduate students, writing a phD thesis on macroeconomics or other related subjects, so they will be very happy to help you.</p></li>
-<li><p>Third, TAs will hold their office hours. The times for their office hours is reminded here:</p></li>
+<li><p>Given the expression for the utility function: <span class="math display">\[u(c) = \frac{c^{1-\sigma}-1}{1-\sigma},\]</span> we know that marginal utility is: <span class="math display">\[u'(c)=c^{-\sigma},\]</span> while the derivative of marginal utility is: <span class="math display">\[u''(c)=-\sigma c^{-\sigma-1}.\]</span> Thus, because <span class="math inline">\(u''(.)\)</span> must be negative for the function to be concave, we have <span class="math inline">\(\sigma&gt;0\)</span>.</p></li>
+<li><p>This is straight from <a href="lecture3.html">lecture 3</a>.</p></li>
+<li><p>Using the equation from question 2, we can write: <span class="math display">\[\frac{\beta c_1^{-\sigma}}{c_0^{-\sigma}}=\frac{1}{1+R} \qquad \Rightarrow \qquad \frac{c_1}{c_0}=\beta^{1/\sigma} (1+R)^{1/\sigma}\]</span></p></li>
+<li><p>The intertemporal budget constraint is: <span class="math display">\[c_0 + \frac{c_1}{1+R} = f_0 + y_0 + \frac{y_1}{1+R},\]</span> and therefore: <span class="math display">\[\begin{aligned}
+&amp; \left(1 + \beta^{1/\sigma}(1+R)^{1/\sigma-1} \right)c_0 = f_0 + y_0 + \frac{y_1}{1+R} \\
+&amp; \Rightarrow \quad c_0 = \frac{1}{1 + \beta^{1/\sigma}(1+R)^{1/\sigma-1}} \left( f_0 + y_0 + \frac{y_1}{1+R}\right).
+\end{aligned}\]</span> which implies: <span class="math display">\[c_1 = \frac{\beta^{1/\sigma}(1+R)^{1/\sigma}}{1 + \beta^{1/\sigma}(1+R)^{1/\sigma-1}} \left( f_0 + y_0 + \frac{y_1}{1+R}\right)\]</span></p></li>
+<li><p>Assume <span class="math inline">\(\sigma = 1/2\)</span>. If <span class="math inline">\(R = 1\%\)</span>, then according to <a href="https://docs.google.com/spreadsheets/d/1dDFa5YZE5170Tv36klHQ19ykK2bP9wjeR0Y1_h-kacg/edit?usp=sharing">this Google Spreadsheet</a>, <span class="math inline">\(c_0\)</span> is equal to $44,776, and <span class="math inline">\(c_1\)</span> is equal to $45,676. If <span class="math inline">\(R = 2\%\)</span>, then <span class="math inline">\(c_0\)</span> is equal to $44,554 and <span class="math inline">\(c_1\)</span> is equal to $46,354. Consumption <span class="math inline">\(c_0\)</span> thus falls by $222, approximately -0.5% in percentage terms.</p></li>
+<li><p>Assume <span class="math inline">\(\sigma = 1\)</span>. If <span class="math inline">\(R = 1\%\)</span>, then according to <a href="https://docs.google.com/spreadsheets/d/1dDFa5YZE5170Tv36klHQ19ykK2bP9wjeR0Y1_h-kacg/edit?usp=sharing">this Google Spreadsheet</a>, <span class="math inline">\(c_0\)</span> is equal to $45,000 and <span class="math inline">\(c_1\)</span> is $45,450. If <span class="math inline">\(R = 2\%\)</span>, then <span class="math inline">\(c_0\)</span> is equal to $45,000 and <span class="math inline">\(c_1\)</span> is equal to $45,900. Consumption <span class="math inline">\(c_0\)</span> does not change, this is the case we have seen in class. <strong>Remark.</strong> Note that this case is the one we saw in the class, because when <span class="math inline">\(\sigma\)</span> approaches <span class="math inline">\(1\)</span>, we have: <span class="math display">\[\lim_{\sigma \to 1} \frac{c^{1-\sigma}-1}{1-\sigma}=\log(c).\]</span> You can see this in many different ways. The simplest way is to write that: <span class="math display">\[c^{1-\sigma}=e^{(1-\sigma)\log(c)}=\exp\left((1-\sigma)\log(c))\right).\]</span> Then, we use that: <span class="math display">\[\lim_{x \to 0} \frac{e^{ax}-1}{x}=a\]</span> Indeed, the limit of <span class="math inline">\((e^{ax}-1)/x\)</span> when <span class="math inline">\(x\)</span> goes to <span class="math inline">\(0\)</span> is by definition the derivative of <span class="math inline">\(e^{ax}\)</span> at <span class="math inline">\(x=0\)</span>. Thus, since the derivative of <span class="math inline">\(e^{ax}\)</span> is <span class="math inline">\(ae^{ax}\)</span>, we get that the derivative at <span class="math inline">\(x=0\)</span> of <span class="math inline">\(e^{ax}\)</span> is <span class="math inline">\(a\)</span>. Using that formula for <span class="math inline">\(x = 1-\sigma\)</span> and <span class="math inline">\(a=\log(c)\)</span> allows to show: <span class="math display">\[\lim_{(1-\sigma) \to 0} \frac{e^{\log(c)(1-\sigma)}-1}{1-\sigma}=\log(c)\]</span> Therefore, we get: <span class="math display">\[\lim_{\sigma \to 1} \frac{c^{1-\sigma}-1}{1-\sigma}=\log(c).\]</span></p></li>
+<li><p>Assume <span class="math inline">\(\sigma = 2\)</span>. If <span class="math inline">\(R = 1\%\)</span>, then according to <a href="https://docs.google.com/spreadsheets/d/1dDFa5YZE5170Tv36klHQ19ykK2bP9wjeR0Y1_h-kacg/edit?usp=sharing">this Google Spreadsheet</a>, <span class="math inline">\(c_0\)</span> is equal to $45,112 and <span class="math inline">\(c_1\)</span> is equal to $45,337. If <span class="math inline">\(R = 2\%\)</span>, then <span class="math inline">\(c_0\)</span> is equal to $45,223 and <span class="math inline">\(c_1\)</span> is equal to $45,673. Consumption <span class="math inline">\(c_0\)</span> increases by $111, or approximately 0.25%.</p></li>
+<li><p>Whether an increase in real interest rates leads to a fall or an increase in consumption depends on <span class="math inline">\(\sigma\)</span>, which can be seen on this formula (it is crucial for this that <span class="math inline">\(y_1=0\)</span>, or that second-period income is zero): <span class="math display">\[c_0 = \frac{1}{1 +\beta^{1/\sigma}(1+R)^{1/\sigma-1}} \left( f_0 + y_0\right).\]</span> When <span class="math inline">\(1/\sigma-1&gt;0\)</span>, or <span class="math inline">\(\sigma&lt;1\)</span>, an increase in the real interest rate leads to lower consumption today, and more saving. Conversely, when <span class="math inline">\(1/\sigma-1&lt;0\)</span>, or <span class="math inline">\(\sigma&gt;1\)</span>, an increase in the real interest rate leads to higher consumption today, and less saving. Finally, when <span class="math inline">\(\sigma=1\)</span>, the interest rate has no effect on current consumption <span class="math inline">\(c_0\)</span> or saving.</p></li>
 </ol>
-<ul>
-<li><p>Paula Beltran. OH: F 11-12; 2-3. <a href="mailto:pabeltran90@gmail.com">pabeltran90@gmail.com</a></p></li>
-<li><p>Alvaro Boitier. OH: M 2:30-3:30; T 2-3. <a href="mailto:alvaro.boitier@gmail.com">alvaro.boitier@gmail.com</a></p></li>
-<li><p>Conor Foley. OH: T 2-4. <a href="mailto:conor.teaches.econ@gmail.com">conor.teaches.econ@gmail.com</a></p></li>
-<li><p>Kun Hu. OH: R; 9-11. <a href="mailto:rickhukun@ucla.edu">rickhukun@ucla.edu</a></p></li>
-<li><p>Ivan Lavrov. OH: W 1-3. <a href="mailto:ilavrov113@gmail.com">ilavrov113@gmail.com</a></p></li>
-<li><p>Anthony Papac. OH: M 10-11; R 12:30-1:30. <a href="mailto:anthonypapac@g.ucla.edu">anthonypapac@g.ucla.edu</a></p></li>
-<li><p>Mengbo Zhang. OH: W 10-12. <a href="mailto:zmbruc@gmail.com">zmbruc@gmail.com</a></p></li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Fourth, you should feel free to ask questions on the discussion board (not by email). We will never respond to questions about contents by email (in particular those starting with “is X, Y, Z, test material”), because doing so would be unfair to the rest of the class. In contrast, we commit to respond to all questions on the Moodle Website within 24 hours (either me or the TAs will). Beware ! You should start studying for the midterm exam earlier than November 4 – we will stop answering questions at <strong>6pm the day before each exam</strong> (either the midterm on November 5, or the final on December 14).</p></li>
-<li><p>Finally, I will hold regular office hours on Tuesdays, 4-6pm, in my office 8389. Please send me an email prior if you plan to arrive after 5pm.</p></li>
-</ol>
-<p><strong>Class notes.</strong> Class notes will be posted <em>after</em> each class, so as to encourage you to take notes. Notes might not always be comprehensive, and everything I will say during class is potentially examinable, even if it does not appear in the notes. Thus, to do well it’s best if you attend all lectures.</p>
-<p><strong>(Optional) Would-be Data scientists.</strong> A lot of what we do in the class involves a fair amount of data. I use the <em>R statistical software</em> in order to prepare my lecture notes and input the data from official sources, to provide you with the most up-to-date statistics. I will try to provide the required code to replicate all the analysis available in my lecture notes, as much as possible. For example, lecture 1 has the R code added to the lecture notes available <a href="https://fgeerolf.github.io/teaching/ECON102/lecture1-R.pdf">here</a>. An introduction to R statistical software is available <a href="https://fgeerolf.github.io/teaching/ECON102/R-intro.pdf">here</a>. I think that data science, statistics and economics are very complementary skills (<a href="https://www.eecs.mit.edu/academics-admissions/undergraduate-programs/6-14-computer-science-economics-and-data-science">so does the Massachusetts Institute of Technology</a>). However, understanding code is not required at all to succeed in that class. You will not be penalized in any way if you skip this.</p>
 </div>
-<div id="exams" class="section level2">
-<h2>Exams</h2>
-<p><strong>Grades.</strong> Your final grade has two components: one midterm exam, and a comprehensive final exam. Your final grade will be given by whichever of these two options gives you the best grade: (<strong>Midterm (40%)</strong> + <strong>Final Exam (60%)</strong>) or (<strong>Final Exam (100%)</strong>) at the following dates:</p>
+<div id="another-overlapping-generations-model" class="section level1">
+<h1>Another Overlapping Generations model</h1>
 <ol style="list-style-type: decimal">
-<li><p>November 5, 3:30pm to 4:45pm: Midterm Exam.</p></li>
-<li><p>December 14, 11:30am to 2:30pm: Final Exam.</p></li>
+<li><p>Agents care only about old age consumption, so they save everything, regarless of what the utility function is.</p></li>
+<li><p>Since they save everything, saving is equal to the wage, and thus: <span class="math display">\[S_t = w_t.\]</span> The wage paid by employers, given that <span class="math inline">\(L=1\)</span>, is: <span class="math display">\[w_{t}=(1-\alpha)K_{t}^{\alpha}L^{-\alpha}=(1-\alpha)K_{t}^{\alpha} = (1-\alpha)Y_t.\]</span> This implies, in turn, the following law of motion for the capital stock: <span class="math display">\[\Delta K_{t+1} = S_t - \delta K_t = (1-\alpha)Y_t-\delta K_t.\]</span></p></li>
+<li><p>The corresponding value of the saving rate in the Solow model is: <span class="math display">\[s = 1-\alpha.\]</span></p></li>
+<li><p>The Golden rule level of capital accumulation is characterized by a level of the saving rate equal to <span class="math inline">\(\alpha\)</span>. Thus, to be below the Golden Rule level of capital accumulation, the saving rate must be lower than that: <span class="math display">\[1-\alpha &lt; \alpha.\]</span> This, in turn, implies: <span class="math display">\[\alpha &gt; \frac{1}{2}.\]</span></p></li>
+<li><p>This condition is likely not satisfied, as we saw in <a href="lecture1.html">Lecture 1</a>. Thus, there is too much saving in this situation.</p></li>
 </ol>
-<p><strong>No make-up exams.</strong> In any case, there will be no make-up exams. If a midterm exam is missed due to a documented serious illness or emergency, the final exam will be worth 100 % of your grade. Note that attending the midterm is like an “option value”: you are necessarily better off attending the midterm, no matter what your grade is. Please make sure right away that you can be there on November 5 !</p>
-<p><strong>Regrade Policy.</strong> Students who wish to have their midterm or their final examinations regraded should submit a request in written form to their assigned Graduate Student Instructor, clearly explaining why they think they deserve a regrade. If a student requests a regrade, the whole exam will be regraded. Therefore, the grade can increase or decrease.</p>
-<p><strong>Exam content.</strong> Everything that I say during the class, that is covered during recitation sections, is potentially exam material. Exams will be a combination of multiple choice and short essay questions. Therefore, it is absolutely necessary that you attend all lectures! I encourage you to take notes during the class.</p>
-<p><strong>Exam practicalities.</strong> During exams, sufficient space will be provided on the sheets to answer. No notes, no books, no smartphones, no calculators, will be allowed during the exam. You must bring your UCLA ID in order to take the exam. Without a UCLA ID, you will not be allowed to take the exam. You will not need to bring scantrons, as we will be using Scantrons from the Office of Instructional Development (OID).</p>
-<p><strong>Other.</strong> For more details about policies regarding grading, exams and other matters please refer to the following link: <a href="https://www.econ.ucla.edu/undergraduate/" class="uri">https://www.econ.ucla.edu/undergraduate/</a>. I will adhere to the guidelines specified in this webpage. If you wish to request an accommodation due to a suspected or documented disability, please contact the Center for Accessible Education as soon as possible at A255 Murphy Hall, (310) 825-1501, (310) 206-6083 (telephone device for the deaf). Website: <a href="http://www.cae.ucla.edu/" class="uri">http://www.cae.ucla.edu/</a></p>
-</div>
-<div id="topics-tentative" class="section level2">
-<h2>Topics (tentative)</h2>
-<p>Below you will find the tentative list of topics that we will cover, along with corresponding chapters in the textbook. However, these chapters are not required reading, often contain more than is taught during the lecture, while not covering all aspects of them. The best way to prepare for the exam is to attend all the lectures and review the corresponding material.</p>
-<ol style="list-style-type: decimal">
-<li><p>Oct 1. National accounting, Cobb-Douglas. (Appendix 1)</p></li>
-<li><p>Oct 3. Solow Growth Model. (Chapter 11)</p></li>
-<li><p>Oct 8. Consumption: Intertemporal optimization. (Chapter 15)</p></li>
-<li><p>Oct 10. Overlapping Generations. (Chapter 11)</p></li>
-<li><p>Oct 15. Technological Growth. (Chapters 10, 12)</p></li>
-<li><p>Oct 17. The Labor Market and Unemployment. (Chapters 7, 8)</p></li>
-<li><p>Oct 22. Consumption function, Multiplier. (Chapter 3)</p></li>
-<li><p>Oct 24. Paradox of thrift. (Chapter 3)</p></li>
-<li><p>Oct 29. Redistributive Policies. (Chapter 3)</p></li>
-<li><p>Oct 31. Public debt, Say’s law. (Chapter 16)</p></li>
-<li><p>Nov 5. <em>Midterm.</em></p></li>
-<li><p>Nov 7. Empirics of Fiscal Policy. (Chapter 22)</p></li>
-<li><p>Nov 12. <em>No Class (Veteran’s day)</em></p></li>
-<li><p>Nov 14. Monetary Policy. (Chapters 4, 5, 6, 23)</p></li>
-<li><p>Nov 19. Keynesian Cross and the Open Economy. (Chapters 17, 18)</p></li>
-<li><p>Nov 21. Twin Deficits. (Chapters 17, 18)</p></li>
-<li><p>Nov 26. The Phillips Curve. (Chapter 8)</p></li>
-<li><p>Nov 28. Mundell-Fleming, Depreciations. (Chapter 19, 20)</p></li>
-<li><p>Dec 3. Currency Wars, Manufacturing Decline. (Chapter 19, 20)</p></li>
-<li><p>Dec 5. <em>Review.</em></p></li>
-</ol>
-</div>
-<div id="disclaimer-teaching-philosophy" class="section level2">
-<h2>Disclaimer: Teaching Philosophy</h2>
-<p>To the extent possible, I will strive to emphasize <strong>facts</strong> over <strong>theories</strong>. This is a major difference with the way that I taught this class in the past. Many of the issues that we will look at are politically charged, and various theories have been developed which usually speak to either ideological views. Theory usually does not allow to conclude definitively. This is unfortunate, because macroeconomic questions are debated on both sides of the political spectrum:</p>
-<ul>
-<li>Do advanced economies have too high levels of public debt?</li>
-<li>Should fiscal stimulus be used to fight recessions?</li>
-<li>What is the cause of unemployment? (how much is voluntary or involuntary?)</li>
-<li>etc.</li>
-</ul>
-<p>Fortunately, these questions are increasingly studied on the empirical front. Whenever possible, we shall try to “let the data speak”, and put the different theories that we will study to the test. Empirical research is still ongoing, and I will do my best to teach you the most up-to-date findings. In doing so, I will try to be as objective as possible, and try to avoid any conservative or liberal bias. According to <a href="https://www.bloomberg.com/view/articles/2018-09-17/colleges-have-way-too-many-liberal-professors">this article (link)</a>, the latter is more of a risk than the former. I will always try to give you both sides of the debate, and arguments supporting each side. You are welcomed (and even encouraged !) to disagree with what I say during class !</p>
 </div>
 
 
