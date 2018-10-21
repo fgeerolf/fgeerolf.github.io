@@ -125,8 +125,11 @@ $(document).ready(function () {
 </div>
 
 
+<div id="introduction" class="section level1 unnumbered">
+<h1>Introduction</h1>
 <p>Consumption and saving are perhaps the most important and controversial issues in macroeconomics. In the <span class="citation">Solow (1956)</span> growth model, saving was a constant fraction <span class="math inline">\(s\)</span> of GDP, by assumption. We now build on Economics 101, in order to derive saving behavior from microeconomic principles. In other words, we work to make saving “endogenous” (that is, explained by the model), while it was previously taken as exogenous (that is, assumed in the model).</p>
 <p>Although this discussion may appear somewhat abstract at first, these calculations are the basis of some of the most important controversies in macroeconomics, which we shall come to in the next lectures.</p>
+</div>
 <div id="two-period" class="section level1">
 <h1>The Two-Period Consumption Problem</h1>
 <div id="assumptions" class="section level2">
@@ -160,15 +163,11 @@ $(document).ready(function () {
 <li><p>Apply the following intuitive economic argument. The marginal utility from consuming in period <span class="math inline">\(1\)</span> is <span class="math inline">\(\beta u'(c_{1})\)</span>. The marginal utility from consuming in period <span class="math inline">\(0\)</span> is <span class="math inline">\(u'(c_{0})\)</span>. By putting one unit of consumption in the bank, one forgoes <span class="math inline">\(1\)</span> unit of consumption in period <span class="math inline">\(0\)</span> to get <span class="math inline">\(1+R\)</span> units of consumption in period <span class="math inline">\(1\)</span>. The two have to be equal: <span class="math display">\[u'(c_{0})=(1+R)\beta u'(c_{1})\quad\Rightarrow\quad\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}.\]</span></p></li>
 <li><p>Replace <span class="math inline">\(c_{0}\)</span> from the intertemporal budget constraint above and optimize with respect to <span class="math inline">\(c_{1}\)</span>:</p></li>
 </ol>
-<p><span class="math display">\[\max_{c_{1}}\quad u\left[\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)-\frac{c_{1}}{1+R}\right]+\beta u(c_{1})\]</span></p>
-<p>This leads to the following First-Order Condition:</p>
-<p><span class="math display">\[-\frac{1}{1+R}u'(c_{0})+\beta u'(c_{1})=0\quad\Rightarrow\quad\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}.\]</span></p>
+<p><span class="math display">\[\max_{c_{1}}\quad u\left[\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)-\frac{c_{1}}{1+R}\right]+\beta u(c_{1}).\]</span> This leads to the following First-Order Condition: <span class="math display">\[-\frac{1}{1+R}u'(c_{0})+\beta u'(c_{1})=0\quad\Rightarrow\quad\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}.\]</span></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Alternatively, you may substitute <span class="math inline">\(c_{1}\)</span> out and optimize with respect to <span class="math inline">\(c_{0}\)</span></li>
 </ol>
-<p><span class="math display">\[\max_{c_{0}}\quad u(c_{0})+\beta u\left[(1+R)\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)-(1+R)c_{0}\right]\]</span></p>
-<p>This again leads to the same First-Order Condition:</p>
-<p><span class="math display">\[u'(c_{0})-\beta(1+R)u'(c_{1})=0\quad\Rightarrow\quad\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}.\]</span></p>
+<p><span class="math display">\[\max_{c_{0}}\quad u(c_{0})+\beta u\left[(1+R)\left(f_{0}+y_{0}+\frac{y_{1}}{1+R}\right)-(1+R)c_{0}\right].\]</span> This again leads to the same First-Order Condition: <span class="math display">\[u'(c_{0})-\beta(1+R)u'(c_{1})=0\quad\Rightarrow\quad\frac{\beta u'(c_{1})}{u'(c_{0})}=\frac{1}{1+R}.\]</span></p>
 </div>
 <div id="some-examples" class="section level2">
 <h2>Some examples</h2>
