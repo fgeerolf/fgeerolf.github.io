@@ -1,3 +1,6 @@
+# UCLA - Econ 221 - Geerolf
+# Lecture 2: Replicating Mian and Sufi
+
 rm(list = ls())
 pklist <- c("curl", "tidyverse", "foreign", "AER")
 source("https://fgeerolf.github.io/code/load-packages.R")
