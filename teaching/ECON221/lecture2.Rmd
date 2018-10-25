@@ -24,19 +24,17 @@ bibliography: 221.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Preamble
+# Introduction {-}
 
-use a Routine to install packages in pklist if missing, and load mackages in pklist
-
-Set up your own directory
-
-```{r, echo = FALSE, warning = FALSE}
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
 rm(list = ls())
 pklist <- c("curl", "tidyverse", "foreign", "AER")
 source("https://fgeerolf.github.io/code/load-packages.R")
 ```
 
-# Housing Supply elasticity
+# Data
+
+## Housing Supply elasticity
 
 ```{r}
 curl_download("http://real.wharton.upenn.edu/~saiz/SUPPLYDATA.zip",
@@ -51,7 +49,7 @@ data.Saiz2010 <- read.dta("HOUSING_SUPPLY.dta")
 unlink("HOUSING_SUPPLY.dta")
 ```
 
-# Crosswalk
+## Crosswalk
 
 
 ```{r}
@@ -64,7 +62,7 @@ nber.crosswalk.extract <- nber.crosswalk %>%
 ```
 
 
-# House Prices
+## House Prices
 
 ```{r}
 fhfa.data <- read.csv("https://www.fhfa.gov/DataTools/Downloads/Documents/HPI/HPI_master.csv")
@@ -104,7 +102,7 @@ fhfa.data.quarterly.extract %>%
 ```
 
 
-# Unemployment
+## Unemployment
 
 ```{r}
 bls.laus.current <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.1.CurrentS")
@@ -138,7 +136,7 @@ bls.la.05.09.new %>%
 ```
 
 
-# Employment
+## Employment
 
 Link to data BLS LAUS:
 https://download.bls.gov/pub/time.series/la
@@ -177,8 +175,7 @@ bls.la.05.09.new.emp %>%
   head
 ```
 
-
-# Employment
+## Labor Force
 
 Link to data BLS LAUS:
 https://download.bls.gov/pub/time.series/la
@@ -217,7 +214,7 @@ bls.la.05.09.new.emp %>%
   head
 ```
 
-# CBP
+## CBP
 
 ```{r}
 curl_download("https://www2.census.gov/programs-surveys/cbp/datasets/2009/cbp09co.zip",
@@ -243,7 +240,7 @@ cbp.2006 <- read.delim("cbp06co.txt", sep = ",")
 unlink("cbp06co.txt")
 ```
 
-# Final Data
+## Merge into Final Data
 
 ```{r}
 final <- bls.la.05.09.new %>%
@@ -256,6 +253,8 @@ final <- bls.la.05.09.new %>%
 ```
 
 # Regressions
+
+## OLS
 
 We run:
 $$\Delta_{06-09} U_{i}=\Delta_{06-09} HP_{i} + \epsilon_{i}$$
@@ -280,7 +279,7 @@ final %>%
   summary
 ```
 
-# Matching
+## Matching
 
 Final is fips_msa = 10180 for Abilene, TX
 
@@ -299,7 +298,7 @@ data.Saiz2010 %>%
 
 
 
-# IVREG Regressions
+## IV Regressions
 
 ```{r}
 final %>%
