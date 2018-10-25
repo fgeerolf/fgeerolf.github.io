@@ -1,42 +1,7 @@
----
-title: \href{https://fgeerolf.github.io/teaching/ECON221/lecture2.pdf}{Lecture 2 - Replicating Mian and Sufi}
-subtitle: \href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018}
-author: \href{https://fgeerolf.github.io/}{François Geerolf}
-header-includes:
-- \usepackage{fancyhdr}
-- \usepackage{lipsum}
-- \pagestyle{fancy}
-- \fancyhf{}
-- \fancyfoot[C]{\thepage}
-- \fancyhead[L]{\href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018 - Geerolf}}
-- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/lecture2.pdf}{Replicating Mian and Sufi}}
-output:
-  pdf_document:
-    number_sections: true
-    citation_package: natbib
-    fig_caption: yes
-    toc: yes
-  html_document: default
-bibliography: 221.bib
----
-
-```{r setup, echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# Introduction {-}
-
-```{r, echo = TRUE, warning = FALSE, message = FALSE}
 rm(list = ls())
 pklist <- c("curl", "tidyverse", "foreign", "AER")
 source("https://fgeerolf.github.io/code/load-packages.R")
-```
 
-# Data
-
-## Housing Supply elasticity
-
-```{r}
 curl_download("http://real.wharton.upenn.edu/~saiz/SUPPLYDATA.zip",
               destfile = "SUPPLYDATA.zip",
               quiet = FALSE)
@@ -47,24 +12,14 @@ unlink("readme.txt")
 # Read in dta. Needs package foreign
 data.Saiz2010 <- read.dta("HOUSING_SUPPLY.dta")
 unlink("HOUSING_SUPPLY.dta")
-```
 
-## Crosswalk
-
-
-```{r}
 nber.crosswalk <- read.csv("http://www.nber.org/cbsa-msa-fips-ssa-county-crosswalk/cbsatocountycrosswalk.csv")
 
 
 nber.crosswalk.extract <- nber.crosswalk %>%
   select(msa, cbsa) %>%
   head
-```
 
-
-## House Prices
-
-```{r}
 fhfa.data <- read.csv("https://www.fhfa.gov/DataTools/Downloads/Documents/HPI/HPI_master.csv")
 
 fhfa.data.monthly <-  fhfa.data %>%
@@ -99,12 +54,7 @@ fhfa.data.quarterly.extract %>%
   mutate(fips_msa = place_id %>% paste %>% as.numeric) %>%
   select(fips_msa, houseprice_d1ln) %>%
   head
-```
 
-
-## Unemployment
-
-```{r}
 bls.laus.current <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.1.CurrentS")
 bls.laus.series <- read.delim("https://download.bls.gov/pub/time.series/la/la.series")
 bls.la.area.type <- read.delim("https://download.bls.gov/pub/time.series/la/la.area_type")
@@ -133,18 +83,8 @@ bls.la.05.09.new <- bls.la.05.09 %>%
 bls.la.05.09.new %>%
   select(fips_msa, unemp_d1) %>%
   head
-```
 
 
-## Employment
-
-Link to data BLS LAUS:
-https://download.bls.gov/pub/time.series/la
-
-Measures:
-https://download.bls.gov/pub/time.series/la/la.measure
-
-```{r}
 bls.laus.current <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.1.CurrentS")
 bls.laus.series <- read.delim("https://download.bls.gov/pub/time.series/la/la.series")
 bls.la.area.type <- read.delim("https://download.bls.gov/pub/time.series/la/la.area_type")
@@ -173,17 +113,8 @@ bls.la.05.09.new.emp <- bls.la.05.09 %>%
 bls.la.05.09.new.emp %>%
   select(fips_msa, emp_d1ln) %>%
   head
-```
 
-## Labor Force
 
-Link to data BLS LAUS:
-https://download.bls.gov/pub/time.series/la
-
-Measures:
-https://download.bls.gov/pub/time.series/la/la.measure
-
-```{r}
 bls.laus.current <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.1.CurrentS")
 bls.laus.series <- read.delim("https://download.bls.gov/pub/time.series/la/la.series")
 bls.la.area.type <- read.delim("https://download.bls.gov/pub/time.series/la/la.area_type")
@@ -212,11 +143,8 @@ bls.la.05.09.new.lf <- bls.la.05.09 %>%
 bls.la.05.09.new.emp %>%
   select(fips_msa, emp_d1ln) %>%
   head
-```
 
-## CBP
 
-```{r}
 curl_download("https://www2.census.gov/programs-surveys/cbp/datasets/2009/cbp09co.zip",
               destfile = "cbp09co.zip",
               quiet = FALSE)
@@ -226,9 +154,7 @@ unlink("cbp09co.zip")
 
 cbp.2009 <- read.delim("cbp09co.txt", sep = ",")
 unlink("cbp09co.txt")
-```
 
-```{r}
 curl_download("https://www2.census.gov/programs-surveys/cbp/datasets/2006/cbp06co.zip",
               destfile = "cbp06co.zip",
               quiet = FALSE)
@@ -238,11 +164,7 @@ unlink("cbp06co.zip")
 
 cbp.2006 <- read.delim("cbp06co.txt", sep = ",")
 unlink("cbp06co.txt")
-```
 
-## Merge into Final Data
-
-```{r}
 final <- bls.la.05.09.new %>%
   left_join(bls.la.05.09.new.emp, by = "fips_msa") %>%
   left_join(bls.la.05.09.new.lf, by = "fips_msa") %>%
@@ -250,43 +172,20 @@ final <- bls.la.05.09.new %>%
   left_join(fhfa.data.quarterly.extract %>%
               mutate(fips_msa = place_id %>% paste %>% as.numeric) %>%
               select(fips_msa, houseprice_d1ln))
-```
 
-# Regressions
-
-## OLS
-
-We run:
-$$\Delta_{06-09} U_{i}=\Delta_{06-09} HP_{i} + \epsilon_{i}$$
-
-```{r}
 final %>%
   lm(unemp_d1 ~ houseprice_d1ln, data = .) %>%
   summary
-```
 
 
-```{r}
 final %>%
   lm(emp_d1ln ~ houseprice_d1ln, data = .) %>%
   summary
-```
 
-
-```{r}
 final %>%
   lm(lf_d1ln ~ houseprice_d1ln, data = .) %>%
   summary
-```
 
-## Matching
-
-Final is fips_msa = 10180 for Abilene, TX
-
-Crosswalk is cbsa = fips_msa
-
-
-```{r}
 nber.crosswalk %>%
   select(fips_msa = cbsa, msa) %>%
   head
@@ -294,26 +193,8 @@ nber.crosswalk %>%
 data.Saiz2010 %>%
   rename(msa = msanecma) %>%
   head
-```
 
 
-
-## IV Regressions
-
-```{r}
-final %>%
-  left_join(nber.crosswalk %>%
-              select(fips_msa = cbsa, msa),
-            by = "fips_msa") %>%
-  left_join(data.Saiz2010 %>%
-              select(msa = msanecma, elasticity)) %>%
-  ivreg(unemp_d1 ~ houseprice_d1ln  | elasticity, data = .) %>%
-  summary
-```
-
-
-
-```{r}
 final %>%
   left_join(nber.crosswalk %>%
               select(fips_msa = cbsa, msa),
@@ -332,10 +213,7 @@ final %>%
               select(msa = msanecma, elasticity)) %>%
   select(elasticity) %>%
   summary
-```
 
-
-```{r}
 final %>%
   left_join(nber.crosswalk %>%
               select(fips_msa = cbsa, msa),
@@ -344,4 +222,3 @@ final %>%
               select(msa = msanecma, elasticity)) %>%
   lm(unemp_d1 ~ houseprice_d1ln, data = .) %>%
   summary
-```
