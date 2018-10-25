@@ -131,12 +131,13 @@ $(document).ready(function () {
 <p><a href="https://doi.org/10.1162/qjec.2010.125.3.1253">Saiz, Albert. “The Geographic Determinants of Housing Supply.” The Quarterly Journal of Economics 125, no. 3 (August 1, 2010): 1253–96.</a></p>
 <p><a href="https://doi.org/10.1093/qje/qjt020">Mian, Atif, Kamalesh Rao, and Amir Sufi. “Household Balance Sheets, Consumption, and the Economic Slump.” The Quarterly Journal of Economics 128, no. 4 (November 1, 2013): 1687–1726.</a></p>
 <p><a href="https://doi.org/10.3982/ECTA10451">Mian, Atif, and Amir Sufi. “What Explains the 2007–2009 Drop in Employment?” Econometrica 82, no. 6 (November 1, 2014): 2197–2223.</a></p>
-<pre class="r"><code>rm(list = ls())
-pklist &lt;- c(&quot;curl&quot;, &quot;tidyverse&quot;, &quot;foreign&quot;, &quot;AER&quot;)
-source(&quot;https://fgeerolf.github.io/code/load-packages.R&quot;)</code></pre>
 </div>
 <div id="data" class="section level1">
 <h1>Data</h1>
+<p>We attempt to replicate the results in the above papers, using R Statistical Software. You should read <a href="R.html">this introduction to R</a> first. We load the needed packages: <code>curl</code> to download, <code>tidyverse</code> to manipulate data, <code>foreign</code> to import stata datasets, and <code>AER</code> to run IV regressions.</p>
+<pre class="r"><code>rm(list = ls())
+pklist &lt;- c(&quot;curl&quot;, &quot;tidyverse&quot;, &quot;foreign&quot;, &quot;AER&quot;)
+source(&quot;https://fgeerolf.github.io/code/load-packages.R&quot;)</code></pre>
 <div id="housing-supply-elasticity" class="section level2">
 <h2>Housing Supply elasticity</h2>
 <pre class="r"><code>curl_download(&quot;http://real.wharton.upenn.edu/~saiz/SUPPLYDATA.zip&quot;,
