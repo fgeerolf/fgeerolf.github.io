@@ -127,6 +127,10 @@ $(document).ready(function () {
 
 <div id="introduction" class="section level1 unnumbered">
 <h1>Introduction</h1>
+<p>During this lecture, we do some “hands-on” data work based on the following academic articles:</p>
+<p><a href="https://doi.org/10.1162/qjec.2010.125.3.1253">Saiz, Albert. “The Geographic Determinants of Housing Supply.” The Quarterly Journal of Economics 125, no. 3 (August 1, 2010): 1253–96.</a></p>
+<p><a href="https://doi.org/10.1093/qje/qjt020">Mian, Atif, Kamalesh Rao, and Amir Sufi. “Household Balance Sheets, Consumption, and the Economic Slump.” The Quarterly Journal of Economics 128, no. 4 (November 1, 2013): 1687–1726.</a></p>
+<p><a href="https://doi.org/10.3982/ECTA10451">Mian, Atif, and Amir Sufi. “What Explains the 2007–2009 Drop in Employment?” Econometrica 82, no. 6 (November 1, 2014): 2197–2223.</a></p>
 <pre class="r"><code>rm(list = ls())
 pklist &lt;- c(&quot;curl&quot;, &quot;tidyverse&quot;, &quot;foreign&quot;, &quot;AER&quot;)
 source(&quot;https://fgeerolf.github.io/code/load-packages.R&quot;)</code></pre>
@@ -277,8 +281,8 @@ bls.la.05.09.new.emp &lt;- bls.la.05.09 %&gt;%
 ## 5    19460 -0.048428114
 ## 6    20020 -0.060530114</code></pre>
 </div>
-<div id="employment-1" class="section level2">
-<h2>Employment</h2>
+<div id="labor-force" class="section level2">
+<h2>Labor Force</h2>
 <p>Link to data BLS LAUS: <a href="https://download.bls.gov/pub/time.series/la" class="uri">https://download.bls.gov/pub/time.series/la</a></p>
 <p>Measures: <a href="https://download.bls.gov/pub/time.series/la/la.measure" class="uri">https://download.bls.gov/pub/time.series/la/la.measure</a></p>
 <pre class="r"><code>bls.laus.current &lt;- read.delim(&quot;https://download.bls.gov/pub/time.series/la/la.data.1.CurrentS&quot;)
