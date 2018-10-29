@@ -125,33 +125,146 @@ $(document).ready(function () {
 </div>
 
 
-<div id="tentative-timetable" class="section level1">
-<h1>Tentative Timetable</h1>
-<p>Oct 1. <a href="lecture1.html">Lecture 1 - National accounting, Cobb-Douglas.</a></p>
-<p>Oct 3. <a href="lecture2.html">Lecture 2 - Solow Growth Model.</a></p>
-<p>Oct 8. <a href="lecture3.html">Lecture 3 - Consumption: Intertemporal optimization.</a></p>
-<p>Oct 10. <a href="lecture4.html">Lecture 4 - Overlapping Generations.</a></p>
-<p>Oct 15. <a href="lecture5.html">Lecture 5 - Technological Growth.</a></p>
-<p>Oct 17. <a href="lecture6.html">Lecture 6 - The Labor Market and Unemployment.</a></p>
-<p>Oct 22. <a href="lecture7.html">Lecture 7 - Consumption function, multiplier.</a></p>
-<p>Oct 24. <a href="lecture8.html">Lecture 8 - Paradox of thrift.</a></p>
-<p>Oct 29. <em>Review.</em></p>
-<p>Oct 31. Lecture 9 - Redistributive Policies.</p>
-<p>Nov 5. <em>Midterm.</em></p>
-<p>Oct 31. Lecture 10 - Public debt, Say’s law.</p>
-<p>Nov 12. <em>No Class (Veteran’s day)</em></p>
-<p>Nov 14. Lecture 11 - Keynesian Cross and the Open Economy.</p>
-<p>Nov 19. Lecture 12 - Twin Deficits.</p>
-<p>Nov 21. Lecture 13 - Empirics of Fiscal Policy.</p>
-<p>Nov 26. Lecture 14 - Monetary Policy.</p>
-<p>Nov 28. Lecture 15 - Currency Wars, Manufacturing Decline.</p>
-<p>Dec 3. Lecture 16 - Summing Up: A Macroeconomic History of the U.S.</p>
-<p>Dec 5. <em>Review.</em></p>
+<div id="introduction" class="section level1 unnumbered">
+<h1>Introduction</h1>
+<p>From <span class="citation">Keynes (1936)</span>:</p>
+<blockquote>
+<p>Since the end of the nineteenth century significant progress towards the removal of very great disparities of wealth and income has been achieved through the instrument of direct taxation—income tax and surtax and death duties—especially in Great Britain. Many people would wish to see this process carried much further, but they are deterred by two considerations; partly by the fear of making skilful evasions too much worth while and also of diminishing unduly the motive towards risk-taking, but mainly, I think, by the belief that the growth of capital depends upon the strength of the motive towards individual saving and that for a large proportion of this growth we are dependent on the savings of the rich out of their superfluity. Our argument does not affect the first of these considerations. But it may considerably modify our attitude towards the second. For we have seen that, up to the point where full employment prevails, the growth of capital depends not at all on a low propensity to consume but is, on the contrary, held back by it; and only in conditions of full employment is a low propensity to consume conducive to the growth of capital. Moreover, experience suggests that in existing conditions saving by institutions and through sinking funds is more than adequate, and that measures for the redistribution of incomes in a way likely to raise the propensity to consume may prove positively favourable to the growth of capital.</p>
+</blockquote>
+<blockquote>
+<p>The State will have to exercise a guiding influence on the propensity to consume partly through its scheme of taxation. (…) Whilst, therefore, the enlargement of the functions of government, involved in the task of adjusting to one another the propensity to consume and the inducement to invest, would seem to a nineteenth-century publicist or to a contemporary American financier to be a terrific encroachment on individualism, I defend it, on the contrary, both as the only practicable means of avoiding the destruction of existing economic forms in their entirety and as the condition of the successful functioning of individual initiative.</p>
+</blockquote>
 </div>
-<div id="exams" class="section level1">
-<h1>Exams</h1>
-<p>November 5, 3:30pm to 4:45pm: Midterm Exam. (40% or 0%)</p>
-<p>December 14, 11:30am to 2:30pm: Final Exam. (60% or 100%)</p>
+<div id="redistributive-policies" class="section level1">
+<h1>Redistributive Policies</h1>
+<p>According to neoclassical economics, income taxation must strike a balance between equity and efficiency. Redistributing income leads to efficiency losses, as it dimishes workers’ incentives to produce income in the first place. Income redistribution leads to lower output, but also to output that is distributed more equally. According to the first welfare theorem, a market economy leads to a Pareto optimal outcome: it is impossible to make someone better off without making someone else worse off. This basic equity-efficiency trade-off is pervasive in the political debate and underlies much of modern public economics, following <span class="citation">Mirrlees (1971)</span>.</p>
+<p>However, Keynesian economics provides a mechanism through which more redistribution might actually increase output overall, at the same time as it reduces inequality. The idea that the economy suffers from a shortage of aggregate demand coming from increases in inequality has been put forward recently by mainstream academics such as Raghuram Rajan, former chief economist of the IMF, and now governor at the Bank of England (<span class="citation">Rajan (2010)</span>), as well as by Robert Reich, US Secretary of Labor from 1993 to 1997 (<span class="citation">(<span class="citeproc-not-found" data-reference-id="reich_aftershock_2011"><strong>???</strong></span>)</span>). This was noted by <span class="citation">Minsky (1976)</span>: “Although class ideas with respect to consumption are alluded to in The General Theory, and although class income affects the saving propensities in the work of Keynesian economists, such as N. Kaldor and J. Robinson, in general in the mainstream Keynesian literature the law for the determination of the surplus (i.e., the consumption function) treats income as a homogeneous glob in determining consumption behavior.”</p>
+<p>A small modification of the goods market model underlying <a href="lecture7.html">lecture 7</a> and <a href="lecture8.html">lecture 8</a> allow to make sense of this hypothesis. It also suggests two potential policy prescriptions in this situation:</p>
+<ul>
+<li><p>Income redistribution, from high to low income earners.</p></li>
+<li><p>Debt-financed decreases in taxes, financed by public debt.</p></li>
+</ul>
+<p>Instead of assuming one type of consumer, with the average income <span class="math inline">\(Y\)</span> and a given marginal propensity to consume <span class="math inline">\(c_{1}\)</span>, we shall assume two types of workers:</p>
+<ul>
+<li><p>There is a fraction <span class="math inline">\(\lambda\)</span> of low income earners, who earn income <span class="math inline">\(\underline{y}\)</span>, pay net taxes <span class="math inline">\(\underline{t}\)</span>, and the MPC of the low income earners is <span class="math inline">\(\underline{c}_{1}\)</span>: <span class="math display">\[\underline{c}=\underline{c}_{0}+\underline{c}_{1}(\underline{y}-\underline{t}).\]</span></p></li>
+<li><p>There is a fraction <span class="math inline">\(1-\lambda\)</span> of high income earners, they get an income <span class="math inline">\(\bar{y}=\gamma\underline{y}\)</span>, where <span class="math inline">\(\gamma\)</span> indexes inequality, pay net taxes <span class="math inline">\(\bar{t}\)</span>, and the MPC of the high income earners is <span class="math inline">\(\bar{c}_{1}&lt;\underline{c}_{1}\)</span>: <span class="math display">\[\bar{c}=\bar{c}_{0}+\bar{c}_{1}(\bar{y}-\bar{t})\]</span></p></li>
+</ul>
+<p>We have: <span class="math display">\[
+\begin{aligned}
+Y=\lambda\underline{y}&amp;+(1-\lambda)\gamma\underline{y}\quad\Rightarrow\quad\boxed{\underline{y}=\frac{1}{\lambda+(1-\lambda)\gamma}Y}\\
+&amp;\boxed{\bar{y}=\gamma\underline{y}=\frac{\gamma}{\lambda+(1-\lambda)\gamma}Y}
+\end{aligned}
+\]</span></p>
+<p>The total income of the low income earners <span class="math inline">\(\underline{Y}\)</span> and the total income of the high income earners <span class="math inline">\(\bar{Y}\)</span> are such that:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\underline{Y}   &amp;=\lambda\underline{y},\qquad\bar{Y}=(1-\lambda)\bar{y},\qquad\underline{Y}+\bar{Y}=Y\\
+\underline{Y}   &amp;=\frac{\lambda}{\lambda+(1-\lambda)\gamma}Y,\qquad\bar{Y}=\frac{\left(1-\lambda\right)\gamma}{\lambda+(1-\lambda)\gamma}Y.
+\end{aligned}
+\]</span></p>
+<p>Numerical Application: let’s divide the population in two groups, the top 10% income share, and the bottom 90% income share, so that: <span class="math inline">\(\lambda = 0.9\)</span>. Since the top 10% get approximately 50% of the income in the U.S., this implies that: <span class="math display">\[\frac{\lambda}{\lambda+(1-\lambda)\gamma}=0.5 \quad \Rightarrow \quad \gamma = 9.\]</span></p>
+</div>
+<div id="no-automatic-stabilizers" class="section level1">
+<h1>No Automatic Stabilizers</h1>
+<p>Assume that investment depends on output: <span class="math display">\[I=b_{0}+b_{1}Y\]</span></p>
+<p>Total taxes are given by: <span class="math display">\[T=\lambda\underline{t}+\left(1-\lambda\right)\bar{t}.\]</span></p>
+<p>Total taxes paid by the low income earners <span class="math inline">\(\underline{T}\)</span> and the total taxes paid by the high income earners <span class="math inline">\(\bar{T}\)</span> are such that: <span class="math display">\[\underline{T}=\lambda\underline{t},\qquad\bar{T}=\left(1-\lambda\right)\bar{t},\qquad\underline{T}+\bar{T}=T.\]</span></p>
+<p>Total consumption by the low income earners <span class="math inline">\(\underline{C}\)</span> and total consumption by the high income earners <span class="math inline">\(\bar{C}\)</span> are such that: <span class="math display">\[\underline{C}=\lambda\underline{c}=\underline{C}_{0}+\underline{c}_{1}\left(\underline{Y}-\underline{T}\right),\qquad\bar{C}=\lambda\bar{c}=\bar{C}_{0}+\bar{c}_{1}\left(\bar{Y}-\bar{T}\right),\qquad\underline{C}+\bar{C}=C.\]</span></p>
+<p>Total demand is then: <span class="math display">\[
+\begin{aligned}
+Z   &amp;=C+I+G\\
+    &amp;=\underline{C}+\bar{C}+b_{0}+b_{1}Y+G\\
+    &amp;=\lambda\underline{c}+(1-\lambda)\bar{c}+b_{0}+b_{1}Y+G\\
+    &amp;=\left[\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\right]+\left(\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}+b_{1}\right)Y-\left[\lambda\underline{c}_{1}\underline{t}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}\right]+b_{0}+G\\
+Z   &amp;=\left[\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\right]+\left(\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}+b_{1}\right)Y-\left[\underline{c}_{1}\underline{T}+\bar{c}_{1}\bar{T}\right]+b_{0}+G.
+\end{aligned}
+\]</span></p>
+<p>Define the average marginal propensity to consume as: <span class="math display">\[\boxed{c_{1}=\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}}.\]</span></p>
+<p>Define the baseline level of consumption as: <span class="math display">\[c_{0}=\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\]</span></p>
+<p>Equating output to demand Z=Y gives the value for output: <span class="math display">\[\boxed{Y=\underbrace{\frac{1}{1-c_{1}-b_{1}}}_{\text{Multiplier}}\underbrace{\left[c_{0}-\left(\underline{c}_{1}\underline{T}+\bar{c}_{1}\bar{T}\right)+b_{0}+G\right]}_{\text{Autonomous Spending \ensuremath{z_{0}}}}}.\]</span></p>
+<div id="income-redistribution-from-high-income-to-low-income-earners" class="section level2">
+<h2>Income redistribution from high income to low income earners</h2>
+<p>Assume a budget neutral change in net taxes. Assume that transfers to the low income earners are increased, so that <span class="math inline">\(\Delta\underline{T}&lt;0\)</span>, so that aggregate net taxes stay constant <span class="math inline">\(\Delta T=0\)</span>. Therefore, taxes on the high income earners are increased at the same time with <span class="math inline">\(\Delta\bar{T}=-\Delta\underline{T}&gt;0\)</span>. This leads to a change in autonomous spending: <span class="math display">\[\Delta z_{0}=-\underline{c}_{1}\Delta\underline{T}-\bar{c}_{1}\Delta\bar{T}\quad\Rightarrow\quad\Delta z_{0}=\left(\underline{c}_{1}-\bar{c}_{1}\right)\Delta\bar{T}&gt;0.\]</span></p>
+<p>This impulse leads to an increase in output: <span class="math display">\[\boxed{\Delta Y=\frac{\underline{c}_{1}-\bar{c}_{1}}{1-c_{1}-b_{1}}\Delta\bar{T}}.\]</span></p>
+</div>
+<div id="debt-financed-tax-cuts-for-high-income-earners" class="section level2">
+<h2>Debt-financed tax cuts for high income earners</h2>
+<p>Assume tax cuts for high income earners <span class="math inline">\(\Delta\bar{T}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\bar{c}_{1}}{1-c_{1}-b_{1}}\Delta\bar{T}&gt;0.\]</span></p>
+<p>There is an increase in output and a government deficit.</p>
+</div>
+<div id="debt-financed-tax-cuts-for-the-low-income-earners" class="section level2">
+<h2>Debt-financed tax cuts for the low income earners</h2>
+<p>Assume tax cuts for low income earners <span class="math inline">\(\Delta\underline{T}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\underline{c}_{1}}{1-c_{1}-b_{1}}\Delta\underline{T}&gt;0.\]</span></p>
+<p>There is an increase in output and a government deficit.</p>
+</div>
+</div>
+<div id="automatic-stabilizers" class="section level1">
+<h1>Automatic Stabilizers</h1>
+<p>Instead of assuming that taxes are fixed, we now assume that taxes depend on output, both for low income earners: <span class="math display">\[\underline{t}=\underline{t}_{0}+\underline{t}_{1}\underline{y}\]</span> as well as for high income earners: <span class="math display">\[\bar{t}=\bar{t}_{0}+\bar{t}_{1}\bar{y}.\]</span></p>
+<p>Taxes paid by the low income earners <span class="math inline">\(\underline{T}_{0}\)</span> and taxes paid by the high income earners <span class="math inline">\(\bar{T}_{0}\)</span> are such that: <span class="math display">\[\underline{T}_{0}=\lambda\underline{t}_{0},\qquad\bar{T}_{0}=\left(1-\lambda\right)\bar{t}_{0},\qquad\underline{T}_{0}+\bar{T}_{0}=T_{0}.\]</span></p>
+<p>Total taxes are given by: <span class="math display">\[T =\lambda\underline{t}+\left(1-\lambda\right)\bar{t},\]</span> which, as a function of total income, is: <span class="math display">\[\boxed{T=\left(\underline{T}_{0}+\bar{T}_{0}\right)+\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}Y}.\]</span></p>
+<p>Total demand is then: <span class="math display">\[
+\begin{aligned}
+Z   &amp;=C+I+G\\
+    &amp;=\lambda\underline{c}+(1-\lambda)\bar{c}+b_{0}+b_{1}Y+G\\
+Z   &amp;=\left[\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\right]+\left(\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}+b_{1}\right)Y-\left[\lambda\underline{c}_{1}\underline{t}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}\right]+b_{0}+G
+\end{aligned}
+\]</span></p>
+<p>We have: <span class="math display">\[\lambda\underline{c}_{1}\underline{t}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}=\left(\lambda\underline{c}_{1}\underline{t}_{0}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}_{0}\right)+\frac{\lambda\underline{c}_{1}\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}Y.\]</span></p>
+<p>Therefore: <span class="math display">\[
+\begin{aligned}
+Z   &amp;=\left[\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\right]+\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}Y-\left[\lambda\underline{c}_{1}\underline{t}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}\right]+b_{0}+G\\
+Z   &amp;=\left[\lambda\left(\underline{c}_{0}-\underline{c}_{1}\underline{t}_{0}\right)+\left(1-\lambda\right)\left(\bar{c}_{0}-\bar{c}_{1}\bar{t}_{0}\right)\right]+\left(\frac{\lambda\left(1-\underline{t}_{1}\right)\underline{c}_{1}+\left(1-\lambda\right)\gamma\left(1-\bar{t}_{1}\right)\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}+b_{1}\right)Y+b_{0}+G
+\end{aligned}
+\]</span></p>
+<p>The average marginal propensity to consume is given by: <span class="math display">\[\boxed{\left(1-t_{1}\right)c_{1}=\frac{\lambda\left(1-\underline{t}_{1}\right)\underline{c}_{1}+\left(1-\lambda\right)\gamma\left(1-\bar{t}_{1}\right)\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}}.\]</span></p>
+<p>Equating output to demand <span class="math inline">\(Z=Y\)</span> gives the value for output: <span class="math display">\[\boxed{Y=\underbrace{\frac{1}{1-\left(1-t_{1}\right)c_{1}-b_{1}}}_{\text{Multiplier}}\underbrace{\left[\left(\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\right)-\underline{c}_{1}\underline{T}_{0}-\bar{c}_{1}\bar{T}_{0}+b_{0}+G\right]}_{\text{Autonomous Spending \ensuremath{z_{0}}}}}.\]</span></p>
+<div id="income-redistribution-from-high-income-to-low-income-earners-1" class="section level2">
+<h2>Income redistribution from high income to low income earners</h2>
+<p>Assume a change in net taxes such that. Assume that transfers to the low income earners are increased, so that <span class="math inline">\(\Delta\underline{T}_{0}&lt;0\)</span>, so that <span class="math inline">\(\Delta\underline{T}_{0}+\Delta\bar{T}_{0}=0\)</span>. Therefore, taxes on the high income earners are increased at the same time with <span class="math inline">\(\Delta\bar{T}_{0}=-\Delta\underline{T}_{0}&gt;0\)</span>. This leads to a change in autonomous spending: <span class="math display">\[\Delta z_{0}=-\underline{c}_{1}\Delta\underline{T}_{0}-\bar{c}_{1}\Delta\bar{T}_{0}\quad\Rightarrow\quad\Delta z_{0}=\left(\underline{c}_{1}-\bar{c}_{1}\right)\Delta\bar{T}_{0}&gt;0.\]</span></p>
+<p>This impulse leads to an increase in output: <span class="math display">\[\boxed{\Delta Y=\frac{\underline{c}_{1}-\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}&gt;0}.\]</span></p>
+<p>Using the value for aggregate taxes: <span class="math display">\[T=\left(\underline{T}_{0}+\bar{T}_{0}\right)+\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}Y.\]</span> <span class="math display">\[\Delta T=\underbrace{\Delta\underline{T}_{0}+\Delta\bar{T}_{0}}_{0}+\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\Delta Y.\]</span></p>
+<p>Finally: <span class="math display">\[\Delta T=\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\frac{\underline{c}_{1}-\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}.\]</span></p>
+<p>Thus, public saving increase, there is a reduction in the deficit, in public debt, and therefore: <span class="math display">\[\boxed{\Delta\left(T-G\right)=\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\frac{\underline{c}_{1}-\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}}\]</span></p>
+</div>
+<div id="debt-financed-tax-cuts-for-high-income-earners-1" class="section level2">
+<h2>Debt-financed tax cuts for high income earners</h2>
+<p>Assume tax cuts for high income earners <span class="math inline">\(\Delta\bar{T}_{0}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}&gt;0.\]</span></p>
+<p>The impact on aggregate taxes is however ambiguous: <span class="math display">\[
+\begin{aligned}
+\Delta T    &amp;=\underbrace{\Delta\bar{T}_{0}}_{=0}+\Delta\underline{T}_{0}+\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\Delta Y\\
+\Delta T    &amp;=\left(1-\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\frac{\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\right)\Delta\bar{T}_{0}
+\end{aligned}
+\]</span></p>
+<p>Therefore, the impact on public saving is similarly ambiguous: <span class="math display">\[\boxed{\Delta\left(T-G\right)=\left(1-\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\frac{\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\right)\Delta\bar{T}_{0}}\]</span></p>
+<p>There is an increase in output and, depending on parameters, there can be a government surplus or a government deficit.</p>
+</div>
+<div id="debt-financed-tax-cuts-for-the-low-income-earners-1" class="section level2">
+<h2>Debt-financed tax cuts for the low income earners</h2>
+<p>Assume tax cuts for low income earners <span class="math inline">\(\Delta\underline{T}_{0}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\underline{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\underline{T}_{0}&gt;0.\]</span></p>
+<p>The impact on aggregate taxes is however ambiguous: <span class="math display">\[
+\begin{aligned}
+\Delta T    &amp;=\Delta\underline{T}_{0}+\underbrace{\Delta\bar{T}_{0}}_{=0}+\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\Delta Y\\
+\Delta T    &amp;=\left(1-\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\frac{\underline{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\right)\Delta\underline{T}_{0}
+\end{aligned}
+\]</span></p>
+<p>Therefore, the impact on public saving is similarly ambiguous: <span class="math display">\[\boxed{\Delta\left(T-G\right)=\left(1-\frac{\lambda\underline{t}_{1}+\left(1-\lambda\right)\gamma\bar{t}_{1}}{\lambda+(1-\lambda)\gamma}\frac{\underline{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\right)\Delta\underline{T}_{0}}\]</span></p>
+<p>There is an increase in output and, depending on parameters, there can be a government surplus or a government deficit.</p>
+<div id="refs" class="references">
+<div id="ref-keynes_general_1936">
+<p>Keynes, John Maynard. 1936. <em>The General Theory of Employment, Interest, and Money</em>.</p>
+</div>
+<div id="ref-minsky_john_1976">
+<p>Minsky, Hyman P. 1976. <em>John Maynard Keynes</em>. Springer.</p>
+</div>
+<div id="ref-mirrlees_exploration_1971">
+<p>Mirrlees, J. A. 1971. “An Exploration in the Theory of Optimum Income Taxation.” <em>The Review of Economic Studies</em> 38 (2): 175–208. doi:<a href="https://doi.org/10.2307/2296779">10.2307/2296779</a>.</p>
+</div>
+<div id="ref-rajan_fault_2010">
+<p>Rajan, Raghuram G. 2010. <em>Fault Lines: How Hidden Fractures Still Threaten the World Economy</em>. Princeton University Press.</p>
+</div>
+</div>
+</div>
 </div>
 
 
