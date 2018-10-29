@@ -127,24 +127,24 @@ $(document).ready(function () {
 
 <div id="introduction" class="section level1 unnumbered">
 <h1>Introduction</h1>
-<p>From <span class="citation">Keynes (1936)</span>:</p>
+<p>Keynesian economics provides a mechanism through which more redistribution might actually increase output overall, at the same time as it reduces inequality. The idea that the economy suffers from a shortage of aggregate demand coming from increases in inequality has been put forward recently by mainstream academics such as Raghuram Rajan, former chief economist of the IMF, and now governor at the Bank of England (<span class="citation">Rajan (2010)</span>), as well as by Robert Reich, US Secretary of Labor from 1993 to 1997 (<span class="citation">Reich (2011)</span>).</p>
+<p>The idea that the marginal propensity to consume is influenced by the distribution of income and wealth comes back to <span class="citation">Keynes (1936)</span>:</p>
 <blockquote>
 <p>Since the end of the nineteenth century significant progress towards the removal of very great disparities of wealth and income has been achieved through the instrument of direct taxation—income tax and surtax and death duties—especially in Great Britain. Many people would wish to see this process carried much further, but they are deterred by two considerations; partly by the fear of making skilful evasions too much worth while and also of diminishing unduly the motive towards risk-taking, but mainly, I think, by the belief that the growth of capital depends upon the strength of the motive towards individual saving and that for a large proportion of this growth we are dependent on the savings of the rich out of their superfluity. Our argument does not affect the first of these considerations. But it may considerably modify our attitude towards the second. For we have seen that, up to the point where full employment prevails, the growth of capital depends not at all on a low propensity to consume but is, on the contrary, held back by it; and only in conditions of full employment is a low propensity to consume conducive to the growth of capital. Moreover, experience suggests that in existing conditions saving by institutions and through sinking funds is more than adequate, and that measures for the redistribution of incomes in a way likely to raise the propensity to consume may prove positively favourable to the growth of capital.</p>
 </blockquote>
+<p>This passage from <span class="citation">Keynes (1936)</span> is intuitive: as long as saving propensities are no longer an impediment to capital accumulation, redistributing income or wealth from low to high marginal propensity to consume should lead to higher output. According to <span class="citation">Keynes (1936)</span>, this is in fact one reason for restricting the increase in inequality:</p>
 <blockquote>
 <p>The State will have to exercise a guiding influence on the propensity to consume partly through its scheme of taxation. (…) Whilst, therefore, the enlargement of the functions of government, involved in the task of adjusting to one another the propensity to consume and the inducement to invest, would seem to a nineteenth-century publicist or to a contemporary American financier to be a terrific encroachment on individualism, I defend it, on the contrary, both as the only practicable means of avoiding the destruction of existing economic forms in their entirety and as the condition of the successful functioning of individual initiative.</p>
 </blockquote>
+<p>During this lecture, we derive this result using the Keynesian model that was developed in <a href="lecture7.html">lecture 7</a> and <a href="lecture8.html">lecture 8</a>. One appeal of writing the equations is that we are not able to prove these assertions qualitatively, but we are also able to understand how important they are quantitatively. As we go along, we therefore attempt to put some actual numbers on all these arguments, to get a sense of the orders of magnitude. We shall investigate two types of policies:</p>
+<ul>
+<li><p>Income redistribution, from high to low income earners.</p></li>
+<li><p>Deficit-financed decreases in taxes, on high income earners or low income earners, financed by public debt.</p></li>
+</ul>
 </div>
 <div id="redistributive-policies" class="section level1">
 <h1>Redistributive Policies</h1>
-<p>According to neoclassical economics, income taxation must strike a balance between equity and efficiency. Redistributing income leads to efficiency losses, as it dimishes workers’ incentives to produce income in the first place. Income redistribution leads to lower output, but also to output that is distributed more equally. According to the first welfare theorem, a market economy leads to a Pareto optimal outcome: it is impossible to make someone better off without making someone else worse off. This basic equity-efficiency trade-off is pervasive in the political debate and underlies much of modern public economics, following <span class="citation">Mirrlees (1971)</span>.</p>
-<p>However, Keynesian economics provides a mechanism through which more redistribution might actually increase output overall, at the same time as it reduces inequality. The idea that the economy suffers from a shortage of aggregate demand coming from increases in inequality has been put forward recently by mainstream academics such as Raghuram Rajan, former chief economist of the IMF, and now governor at the Bank of England (<span class="citation">Rajan (2010)</span>), as well as by Robert Reich, US Secretary of Labor from 1993 to 1997 (<span class="citation">(<span class="citeproc-not-found" data-reference-id="reich_aftershock_2011"><strong>???</strong></span>)</span>). This was noted by <span class="citation">Minsky (1976)</span>: “Although class ideas with respect to consumption are alluded to in The General Theory, and although class income affects the saving propensities in the work of Keynesian economists, such as N. Kaldor and J. Robinson, in general in the mainstream Keynesian literature the law for the determination of the surplus (i.e., the consumption function) treats income as a homogeneous glob in determining consumption behavior.”</p>
-<p>A small modification of the goods market model underlying <a href="lecture7.html">lecture 7</a> and <a href="lecture8.html">lecture 8</a> allow to make sense of this hypothesis. It also suggests two potential policy prescriptions in this situation:</p>
-<ul>
-<li><p>Income redistribution, from high to low income earners.</p></li>
-<li><p>Debt-financed decreases in taxes, financed by public debt.</p></li>
-</ul>
-<p>Instead of assuming one type of consumer, with the average income <span class="math inline">\(Y\)</span> and a given marginal propensity to consume <span class="math inline">\(c_{1}\)</span>, we shall assume two types of workers:</p>
+<p>A small modification of the goods market model underlying <a href="lecture7.html">lecture 7</a> and <a href="lecture8.html">lecture 8</a> are in order. Instead of assuming one type of consumer, with the average income <span class="math inline">\(Y\)</span> and a given marginal propensity to consume <span class="math inline">\(c_{1}\)</span>, we shall assume two types of workers:</p>
 <ul>
 <li><p>There is a fraction <span class="math inline">\(\lambda\)</span> of low income earners, who earn income <span class="math inline">\(\underline{y}\)</span>, pay net taxes <span class="math inline">\(\underline{t}\)</span>, and the MPC of the low income earners is <span class="math inline">\(\underline{c}_{1}\)</span>: <span class="math display">\[\underline{c}=\underline{c}_{0}+\underline{c}_{1}(\underline{y}-\underline{t}).\]</span></p></li>
 <li><p>There is a fraction <span class="math inline">\(1-\lambda\)</span> of high income earners, they get an income <span class="math inline">\(\bar{y}=\gamma\underline{y}\)</span>, where <span class="math inline">\(\gamma\)</span> indexes inequality, pay net taxes <span class="math inline">\(\bar{t}\)</span>, and the MPC of the high income earners is <span class="math inline">\(\bar{c}_{1}&lt;\underline{c}_{1}\)</span>: <span class="math display">\[\bar{c}=\bar{c}_{0}+\bar{c}_{1}(\bar{y}-\bar{t})\]</span></p></li>
@@ -254,14 +254,11 @@ Z   &amp;=\left[\lambda\left(\underline{c}_{0}-\underline{c}_{1}\underline{t}_{0
 <div id="ref-keynes_general_1936">
 <p>Keynes, John Maynard. 1936. <em>The General Theory of Employment, Interest, and Money</em>.</p>
 </div>
-<div id="ref-minsky_john_1976">
-<p>Minsky, Hyman P. 1976. <em>John Maynard Keynes</em>. Springer.</p>
-</div>
-<div id="ref-mirrlees_exploration_1971">
-<p>Mirrlees, J. A. 1971. “An Exploration in the Theory of Optimum Income Taxation.” <em>The Review of Economic Studies</em> 38 (2): 175–208. doi:<a href="https://doi.org/10.2307/2296779">10.2307/2296779</a>.</p>
-</div>
 <div id="ref-rajan_fault_2010">
 <p>Rajan, Raghuram G. 2010. <em>Fault Lines: How Hidden Fractures Still Threaten the World Economy</em>. Princeton University Press.</p>
+</div>
+<div id="ref-reich_aftershock:_2011">
+<p>Reich, Robert B. 2011. <em>Aftershock: The Next Economy and America’s Future</em>. Vintage Books.</p>
 </div>
 </div>
 </div>
