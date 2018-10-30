@@ -147,19 +147,19 @@ $(document).ready(function () {
 <p>A small modification of the goods market model underlying <a href="lecture7.html">lecture 7</a> and <a href="lecture8.html">lecture 8</a> are in order. Instead of assuming one type of consumer, with the average income <span class="math inline">\(Y\)</span> and a given marginal propensity to consume <span class="math inline">\(c_{1}\)</span>, we shall assume two types of workers:</p>
 <ul>
 <li><p>There is a fraction <span class="math inline">\(\lambda\)</span> of low income earners, who earn income <span class="math inline">\(\underline{y}\)</span>, pay net taxes <span class="math inline">\(\underline{t}\)</span>, and the MPC of the low income earners is <span class="math inline">\(\underline{c}_{1}\)</span>: <span class="math display">\[\underline{c}=\underline{c}_{0}+\underline{c}_{1}(\underline{y}-\underline{t}).\]</span></p></li>
-<li><p>There is a fraction <span class="math inline">\(1-\lambda\)</span> of high income earners, they get an income <span class="math inline">\(\bar{y}=\gamma\underline{y}\)</span>, where <span class="math inline">\(\gamma\)</span> indexes inequality, pay net taxes <span class="math inline">\(\bar{t}\)</span>, and the MPC of the high income earners is <span class="math inline">\(\bar{c}_{1}&lt;\underline{c}_{1}\)</span>: <span class="math display">\[\bar{c}=\bar{c}_{0}+\bar{c}_{1}(\bar{y}-\bar{t})\]</span></p></li>
-</ul>
-<p>We have: <span class="math display">\[
+<li><p>There is a fraction <span class="math inline">\(1-\lambda\)</span> of high income earners, they get an income <span class="math inline">\(\bar{y}=\gamma\underline{y}\)</span>, where <span class="math inline">\(\gamma\)</span> indexes inequality, pay net taxes <span class="math inline">\(\bar{t}\)</span>, and the MPC of the high income earners is <span class="math inline">\(\bar{c}_{1}&lt;\underline{c}_{1}\)</span>: <span class="math display">\[\bar{c}=\bar{c}_{0}+\bar{c}_{1}(\bar{y}-\bar{t})\]</span> Total income is given by the sum of low income earners’ income, and high income earners’ income: <span class="math display">\[
 \begin{aligned}
-Y=\lambda\underline{y}&amp;+(1-\lambda)\gamma\underline{y}\quad\Rightarrow\quad \underline{y}=\frac{1}{\lambda+(1-\lambda)\gamma}Y\\
-&amp;\bar{y}=\gamma\underline{y}=\frac{\gamma}{\lambda+(1-\lambda)\gamma}Y
+&amp;Y=\lambda\underline{y}+(1-\lambda)\gamma\underline{y}\\
+&amp;\quad\Rightarrow\quad \underline{y}=\frac{1}{\lambda+(1-\lambda)\gamma}Y\\
+&amp;\quad\Rightarrow\quad \bar{y}=\gamma\underline{y}=\frac{\gamma}{\lambda+(1-\lambda)\gamma}Y
 \end{aligned}
-\]</span></p>
-<p>Numerical Application: let’s divide the population in two groups, the top 10% income share, and the bottom 90% income share, so that: <span class="math inline">\(\lambda = 0.9\)</span>. Since the top 10% get approximately 50% of the income in the U.S., this implies that: <span class="math display">\[\frac{0.9}{0.9+0.1\cdot \gamma}=0.5 \quad \Rightarrow \quad \gamma = 9.\]</span> This is actually very intuitive: if 90% of the population have the same income as 10% of the population (half of total income), then on average they have to be 9 times poorer.</p>
+\]</span></p></li>
+</ul>
+<p><strong>Numerical Application</strong>: let us divide the population in two groups, the top 10% income share, and the bottom 90% income share, so that: <span class="math inline">\(\lambda = 0.9\)</span>. Since the top 10% get approximately 50% of the income in the U.S., this implies that: <span class="math display">\[\frac{0.9}{0.9+0.1\cdot \gamma}=0.5 \quad \Rightarrow \quad \gamma = 9.\]</span> This is actually very intuitive: if 90% of the population have the same income as 10% of the population (half of total income), then on average they have to be 9 times poorer.</p>
 </div>
 <div id="no-automatic-stabilizers" class="section level1">
 <h1>No Automatic Stabilizers</h1>
-<p>Assume that investment depends on output: <span class="math display">\[I=b_{0}+b_{1}Y\]</span></p>
+<p>We assume that investment depends on output: <span class="math display">\[I=b_{0}+b_{1}Y\]</span></p>
 <p>Total taxes are given by: <span class="math display">\[T=\lambda\underline{t}+\left(1-\lambda\right)\bar{t}.\]</span></p>
 <p>Total taxes paid by the low income earners <span class="math inline">\(\underline{T}\)</span> and the total taxes paid by the high income earners <span class="math inline">\(\bar{T}\)</span> are such that: <span class="math display">\[\underline{T}=\lambda\underline{t},\qquad\bar{T}=\left(1-\lambda\right)\bar{t},\qquad\underline{T}+\bar{T}=T.\]</span></p>
 <p>Total consumption by the low income earners <span class="math inline">\(\underline{C}\)</span> is such that: <span class="math display">\[
@@ -200,39 +200,56 @@ Z   &amp;=\left[c_0 -\left(\underline{c}_{1}\underline{T}+\bar{c}_{1}\bar{T}\rig
 <h2>Income redistribution from high income to low income earners</h2>
 <p>Assume a budget neutral change in net taxes. Assume that transfers to the low income earners are increased, so that <span class="math inline">\(\Delta\underline{T}&lt;0\)</span>, so that aggregate net taxes stay constant <span class="math inline">\(\Delta T=0\)</span>. Therefore, taxes on the high income earners are increased at the same time with <span class="math inline">\(\Delta\bar{T}=-\Delta\underline{T}&gt;0\)</span>. This leads to a change in autonomous spending: <span class="math display">\[\Delta z_{0}=-\underline{c}_{1}\Delta\underline{T}-\bar{c}_{1}\Delta\bar{T}\quad\Rightarrow\quad\Delta z_{0}=\left(\underline{c}_{1}-\bar{c}_{1}\right)\Delta\bar{T}&gt;0.\]</span></p>
 <p>This impulse leads to an increase in output: <span class="math display">\[\Delta Y=\frac{\underline{c}_{1}-\bar{c}_{1}}{1-c_{1}-b_{1}}\Delta\bar{T}.\]</span></p>
+<p><strong>Numerical Application</strong>: Assume that the marginal propensity to consume of low income earners is given by <span class="math inline">\(\underline{c}_{1}=1\)</span>, and that the marginal propensity to consume of high income earners is given by <span class="math inline">\(\bar{c}_{1}=1/3.\)</span> We also assume, as above, that <span class="math inline">\(\gamma=9\)</span> and that <span class="math inline">\(\lambda=0.9\)</span>, so that the top 10% get 50% of national income (as is roughly true in the data). Finally, we assume that the propensity to invest is <span class="math inline">\(b_1=1/6\)</span>. To summarise, we have: <span class="math display">\[\underline{c}_{1}=1, \quad \bar{c}_{1}=1/3,\quad \gamma=9, \quad\lambda=0.9,\quad b_1=1/6.\]</span> We have that the weighted average marginal propensity to consume is: <span class="math display">\[c_{1}=\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}=\frac{2}{3}\]</span> This is actually intuitive: income is owned half by high income people with a marginal propensity to consume equal to <span class="math inline">\(1\)</span>, and half by low income people with a marginal propensity to consume equal to <span class="math inline">\(1/3\)</span>. We get that a $1 billion redistribution from high income people to low income people, leads to a rise in GDP given by: <span class="math display">\[\frac{\underline{c}_{1}-\bar{c}_{1}}{1-c_{1}-b_{1}}=\frac{1-1/3}{1-2/3-1/6}=4.\]</span></p>
+<p>This operation is budget neutral: it does not make the budget deficit any worse.</p>
 </div>
 <div id="debt-financed-tax-cuts-for-high-income-earners" class="section level2">
 <h2>Debt-financed tax cuts for high income earners</h2>
-<p>Assume tax cuts for high income earners <span class="math inline">\(\Delta\bar{T}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\bar{c}_{1}}{1-c_{1}-b_{1}}\Delta\bar{T}&gt;0.\]</span></p>
-<p>There is an increase in output and a government deficit.</p>
+<p>Assume tax cuts for high income earners <span class="math inline">\(\Delta\bar{T}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\bar{c}_{1}}{1-c_{1}-b_{1}}\Delta\bar{T}&gt;0.\]</span> There is an increase in output and a government deficit.</p>
+<p><strong>Numerical Application</strong>: Assume again that: <span class="math display">\[\underline{c}_{1}=1, \quad \bar{c}_{1}=1/3,\quad \gamma=9, \quad\lambda=0.9,\quad b_1=1/6.\]</span> As shown above, this implies an average marginal propensity to consume given by <span class="math inline">\(c_1=2/3.\)</span> Thus, we may calculate the tax multiplier for tax cuts to high income earners, which is given by: <span class="math display">\[\frac{\bar{c}_{1}}{1-c_{1}-b_{1}} = \frac{1/3}{1-2/3-1/6}=2\]</span></p>
 </div>
 <div id="debt-financed-tax-cuts-for-the-low-income-earners" class="section level2">
 <h2>Debt-financed tax cuts for the low income earners</h2>
 <p>Assume tax cuts for low income earners <span class="math inline">\(\Delta\underline{T}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\underline{c}_{1}}{1-c_{1}-b_{1}}\Delta\underline{T}&gt;0.\]</span></p>
 <p>There is an increase in output and a government deficit.</p>
+<p><strong>Numerical Application</strong>: Assume again that: <span class="math display">\[\underline{c}_{1}=1, \quad \bar{c}_{1}=1/3,\quad \gamma=9, \quad\lambda=0.9,\quad b_1=1/6.\]</span> As shown above, this implies an average marginal propensity to consume given by <span class="math inline">\(c_1=2/3.\)</span> Thus, we may calculate the tax multiplier for tax cuts to high income earners, which is given by: <span class="math display">\[\frac{\underline{c}_{1}}{1-c_{1}-b_{1}} = \frac{1}{1-2/3-1/6}=6\]</span></p>
 </div>
 </div>
 <div id="automatic-stabilizers" class="section level1">
 <h1>Automatic Stabilizers</h1>
 <p>Instead of assuming that taxes are fixed, we now assume that taxes depend on output, both for low income earners: <span class="math display">\[\underline{t}=\underline{t}_{0}+t_1\underline{y}\]</span> as well as for high income earners: <span class="math display">\[\bar{t}=\bar{t}_{0}+t_1\bar{y}.\]</span></p>
-<p>Taxes paid by the low income earners <span class="math inline">\(\underline{T}_{0}\)</span> and taxes paid by the high income earners <span class="math inline">\(\bar{T}_{0}\)</span> are such that: <span class="math display">\[\underline{T}_{0}=\lambda\underline{t}_{0},\qquad\bar{T}_{0}=\left(1-\lambda\right)\bar{t}_{0},\qquad\underline{T}_{0}+\bar{T}_{0}=T_{0}.\]</span></p>
-<p>Total taxes are given by: <span class="math display">\[T =\lambda\underline{t}+\left(1-\lambda\right)\bar{t},\]</span> which, as a function of total income, is: <span class="math display">\[T=\left(\underline{T}_{0}+\bar{T}_{0}\right)+t_1 Y.\]</span></p>
-<p>Total demand is then: <span class="math display">\[
+<p>Total consumption by the low income earners <span class="math inline">\(\underline{C}\)</span> is such that: <span class="math display">\[
+\begin{aligned}
+\underline{C}&amp;=\lambda\underline{c}\\
+&amp;=\lambda\left(\underline{c}_{0}+\underline{c}_{1}(\underline{y}-\underline{t})\right)\\
+&amp;=\lambda \underline{c}_{0} + \lambda (1-t_1) \underline{c}_{1}\underline{y}-\lambda \underline{c}_{1} \underline{t}_0\\
+\underline{C}&amp;=\left[\lambda \underline{c}_{0}-\lambda \underline{c}_{1} \underline{t}_0 \right]+ \frac{\lambda \underline{c}_{1}}{\lambda+(1-\lambda)\gamma}(1-t_1)Y
+\end{aligned}
+\]</span></p>
+<p>Symmetrically, consumption by the high income earners <span class="math inline">\(\bar{C}\)</span> is such that: <span class="math display">\[
+\begin{aligned}
+\bar{C}&amp;=(1-\lambda)\bar{c}\\
+&amp;=(1-\lambda)\left(\bar{c}_{0}+\bar{c}_{1}(\bar{y}-\bar{t})\right)\\
+&amp;=(1-\lambda) \bar{c}_{0} + (1-\lambda)(1-t_1) \bar{c}_{1}\bar{y}-(1-\lambda) \bar{c}_{1} \bar{t}_0\\
+\bar{C}&amp;=\left[(1-\lambda) \bar{c}_{0}-(1-\lambda) \bar{c}_{1} \bar{t}_0\right] + \frac{(1-\lambda) \gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}(1-t_1)Y
+\end{aligned}
+\]</span></p>
+<p>Therefore, aggregate consumption <span class="math inline">\(C=\underline{C} + \bar{C}\)</span> is given by: <span class="math display">\[
+\begin{aligned}
+C&amp;=\underline{C} + \bar{C}\\
+&amp;=\left[(1-\lambda) \bar{c}_{0}-(1-\lambda) \bar{c}_{1} \bar{t}_0\right] + \frac{(1-\lambda) \gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}(1-t_1)Y + \left[(1-\lambda) \bar{c}_{0}-(1-\lambda) \bar{c}_{1} \bar{t}_0\right] + \frac{(1-\lambda) \gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}(1-t_1)Y\\
+&amp;=\left(\lambda \underline{c}_{0}+(1-\lambda) \bar{c}_{0}\right)-\left(\lambda \underline{c}_{1} \underline{t}_0 +(1-\lambda) \bar{c}_{1} \bar{t}\right) +\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}(1-t_1)Y\\
+C&amp;=c_0 -\left(\underline{c}_{1}\underline{T}_0+\bar{c}_{1}\bar{T}_0\right)+c_1 (1-t_1) Y.
+\end{aligned}
+\]</span></p>
+<p>Using this expression for aggregate consumption <span class="math inline">\(C\)</span> and plugging in into total demand yields: <span class="math display">\[
 \begin{aligned}
 Z   &amp;=C+I+G\\
-    &amp;=\lambda\underline{c}+(1-\lambda)\bar{c}+b_{0}+b_{1}Y+G\\
-Z   &amp;=\left[\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\right]+\left(\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}+b_{1}\right)Y-\left[\lambda\underline{c}_{1}\underline{t}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}\right]+b_{0}+G
+    &amp;=c_0 -\left(\underline{c}_{1}\underline{T}_0+\bar{c}_{1}\bar{T}_0\right)+c_1 (1-t_1) Y + b_{0}+b_{1}Y+G\\
+Z   &amp;=\left[c_0 -\left(\underline{c}_{1}\underline{T}_0+\bar{c}_{1}\bar{T}_0\right)+ b_{0} + G \right]+ \left(c_1(1-t_1) + b_1\right) Y 
 \end{aligned}
 \]</span></p>
-<p>We have: <span class="math display">\[\lambda\underline{c}_{1}\underline{t}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}=\left(\lambda\underline{c}_{1}\underline{t}_{0}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}_{0}\right)+t_1Y.\]</span></p>
-<p>Therefore: <span class="math display">\[
-\begin{aligned}
-Z   &amp;=\left[\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\right]+\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}Y-\left[\lambda\underline{c}_{1}\underline{t}+\left(1-\lambda\right)\bar{c}_{1}\bar{t}\right]+b_{0}+G\\
-Z   &amp;=\left[\lambda\left(\underline{c}_{0}-\underline{c}_{1}\underline{t}_{0}\right)+\left(1-\lambda\right)\left(\bar{c}_{0}-\bar{c}_{1}\bar{t}_{0}\right)\right]+\left(\frac{\lambda\left(1-\underline{t}_{1}\right)\underline{c}_{1}+\left(1-\lambda\right)\gamma\left(1-\bar{t}_{1}\right)\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}+b_{1}\right)Y+b_{0}+G
-\end{aligned}
-\]</span></p>
-<p>The average marginal propensity to consume is given by: <span class="math display">\[\left(1-t_{1}\right)c_{1}=\frac{\lambda\left(1-\underline{t}_{1}\right)\underline{c}_{1}+\left(1-\lambda\right)\gamma\left(1-\bar{t}_{1}\right)\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}.\]</span></p>
-<p>Equating output to demand <span class="math inline">\(Z=Y\)</span> gives the value for output: <span class="math display">\[Y=\underbrace{\frac{1}{1-\left(1-t_{1}\right)c_{1}-b_{1}}}_{\text{Multiplier}}\underbrace{\left[\left(\lambda\underline{c}_{0}+\left(1-\lambda\right)\bar{c}_{0}\right)-\underline{c}_{1}\underline{T}_{0}-\bar{c}_{1}\bar{T}_{0}+b_{0}+G\right]}_{\text{Autonomous Spending \ensuremath{z_{0}}}}.\]</span></p>
+<p>Equating output to demand <span class="math inline">\(Z=Y\)</span> gives the value for output: <span class="math display">\[Y=\underbrace{\frac{1}{1-\left(1-t_{1}\right)c_{1}-b_{1}}}_{\text{Multiplier}}\underbrace{\left[c_0-\underline{c}_{1}\underline{T}_{0}-\bar{c}_{1}\bar{T}_{0}+b_{0}+G\right]}_{\text{Autonomous Spending }z_{0}}.\]</span></p>
 <div id="income-redistribution-from-high-income-to-low-income-earners-1" class="section level2">
 <h2>Income redistribution from high income to low income earners</h2>
 <p>Assume a change in net taxes such that. Assume that transfers to the low income earners are increased, so that <span class="math inline">\(\Delta\underline{T}_{0}&lt;0\)</span>, so that <span class="math inline">\(\Delta\underline{T}_{0}+\Delta\bar{T}_{0}=0\)</span>. Therefore, taxes on the high income earners are increased at the same time with <span class="math inline">\(\Delta\bar{T}_{0}=-\Delta\underline{T}_{0}&gt;0\)</span>. This leads to a change in autonomous spending: <span class="math display">\[\Delta z_{0}=-\underline{c}_{1}\Delta\underline{T}_{0}-\bar{c}_{1}\Delta\bar{T}_{0}\quad\Rightarrow\quad\Delta z_{0}=\left(\underline{c}_{1}-\bar{c}_{1}\right)\Delta\bar{T}_{0}&gt;0.\]</span></p>
@@ -244,10 +261,17 @@ Z   &amp;=\left[\lambda\left(\underline{c}_{0}-\underline{c}_{1}\underline{t}_{0
 \end{aligned}
 \]</span> Finally: <span class="math display">\[\Delta T=\frac{t_1\left(\underline{c}_{1}-\bar{c}_{1}\right)}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}.\]</span></p>
 <p>Thus, public saving increase, there is a reduction in the deficit, in public debt, and therefore: <span class="math display">\[\Delta\left(T-G\right)=\frac{t_1\left(\underline{c}_{1}-\bar{c}_{1}\right)}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}\]</span></p>
+<p><strong>Numerical Application</strong>: On top of the above numerical values, we assume that the marginal tax rate is 25% so that <span class="math inline">\(t_1=1/4\)</span>. Therefore: <span class="math display">\[\underline{c}_{1}=1, \quad \bar{c}_{1}=1/3,\quad \gamma=9, \quad\lambda=0.9,\quad b_1=1/6, \quad t_1=1/4.\]</span> As shown above, this implies an average marginal propensity to consume given by <span class="math inline">\(c_1=2/3.\)</span> Thus, a tax cut to low income earners financed by tax increases to high income earners leads to an increase in output given by the following multiplier: <span class="math display">\[
+\begin{aligned}
+\frac{\underline{c}_{1}-\bar{c}_{1}}{1-(1-t_1)c_{1}-b_{1}} &amp;= \frac{1-1/3}{1-(1-1/4)*2/3-1/6}\\
+&amp;= \frac{2/3}{1-1/2-1/6}\\
+\frac{\bar{c}_{1}}{1-(1-t_1)c_{1}-b_{1}} &amp;=2
+\end{aligned}
+\]</span></p>
 </div>
 <div id="debt-financed-tax-cuts-for-high-income-earners-1" class="section level2">
 <h2>Debt-financed tax cuts for high income earners</h2>
-<p>Assume tax cuts for high income earners <span class="math inline">\(\Delta\bar{T}_{0}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}&gt;0.\]</span></p>
+<p>Assume tax cuts for high income earners <span class="math inline">\(\Delta\bar{T}_{0}&lt;0\)</span>, then output increases: <span class="math display">\[\Delta Y=-\frac{\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}&gt;0\]</span></p>
 <p>The impact on aggregate taxes is however ambiguous: <span class="math display">\[
 \begin{aligned}
 \Delta T    &amp;=\underbrace{\Delta\bar{T}_{0}}_{=0}+\Delta\underline{T}_{0}+t_1\Delta Y\\
@@ -256,6 +280,13 @@ Z   &amp;=\left[\lambda\left(\underline{c}_{0}-\underline{c}_{1}\underline{t}_{0
 \]</span></p>
 <p>Therefore, the impact on public saving is similarly ambiguous: <span class="math display">\[\Delta\left(T-G\right)=\left(1-\frac{t_1\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\right)\Delta\bar{T}_{0}\]</span></p>
 <p>There is an increase in output and, depending on parameters, there can be a government surplus or a government deficit.</p>
+<p><strong>Numerical Application</strong>: We assume: <span class="math display">\[\underline{c}_{1}=1, \quad \bar{c}_{1}=1/3,\quad \gamma=9, \quad\lambda=0.9,\quad b_1=1/6, \quad t_1=1/4.\]</span> This implies <span class="math inline">\(c_1=2/3.\)</span> Thus, we may calculate the tax multiplier for tax cuts to high income earners, which is given by: <span class="math display">\[
+\begin{aligned}
+\frac{\bar{c}_{1}}{1-(1-t_1)c_{1}-b_{1}} &amp;= \frac{1/3}{1-(1-1/4)*2/3-1/6}\\
+&amp;= \frac{1/3}{1-1/2-1/6}\\
+\frac{\bar{c}_{1}}{1-(1-t_1)c_{1}-b_{1}} &amp;=1
+\end{aligned}
+\]</span></p>
 </div>
 <div id="debt-financed-tax-cuts-for-the-low-income-earners-1" class="section level2">
 <h2>Debt-financed tax cuts for the low income earners</h2>
@@ -268,6 +299,13 @@ Z   &amp;=\left[\lambda\left(\underline{c}_{0}-\underline{c}_{1}\underline{t}_{0
 \]</span></p>
 <p>The impact on public saving is similarly ambiguous: <span class="math display">\[\Delta\left(T-G\right)=\left(1-\frac{t_1\underline{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\right)\Delta\underline{T}_{0}\]</span></p>
 <p>There is an increase in output and, depending on parameters, there can be a government surplus or a government deficit.</p>
+<p><strong>Numerical Application</strong>: We assume: <span class="math display">\[\underline{c}_{1}=1, \quad \bar{c}_{1}=1/3,\quad \gamma=9, \quad\lambda=0.9,\quad b_1=1/6, \quad t_1=1/4.\]</span> This implies <span class="math inline">\(c_1=2/3.\)</span> Thus, we may calculate the tax multiplier for tax cuts to low income earners, which is given by: <span class="math display">\[
+\begin{aligned}
+\frac{\underline{c}_{1}}{1-(1-t_1)c_{1}-b_{1}} &amp;= \frac{1}{1-(1-1/4)*2/3-1/6}\\
+&amp;= \frac{1}{1-1/2-1/6}\\
+\frac{\underline{c}_{1}}{1-(1-t_1)c_{1}-b_{1}} &amp;=3
+\end{aligned}
+\]</span></p>
 <div id="refs" class="references">
 <div id="ref-keynes_general_1936">
 <p>Keynes, John Maynard. 1936. <em>The General Theory of Employment, Interest, and Money</em>.</p>
