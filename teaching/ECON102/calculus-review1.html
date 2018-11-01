@@ -129,7 +129,14 @@ $(document).ready(function () {
 <h1>Taylor Approximations</h1>
 <p><strong>Multiplication.</strong> If <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are small, then: <span class="math display">\[\boxed{(1+x)(1+y) \approx 1+x+y}.\]</span> <em>Proof.</em> We have: <span class="math display">\[(1+x)(1+y)=1+x+y+xy.\]</span> When <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are both small, then <span class="math inline">\(xy\)</span> is negligible (it is a second order term), which gives the result: <span class="math display">\[(1+x)(1+y)\approx1+x+y.\]</span></p>
 <p><strong>Ratio.</strong> If <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are small, then: <span class="math display">\[\boxed{\frac{1+x}{1+y} \approx 1+x-y}.\]</span> <em>Proof.</em> We have: <span class="math display">\[\frac{1}{1+y}=1-y+y^2-y^3+...\]</span> When <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are both small, all terms of the product are negligible except for first-order terms: <span class="math display">\[\frac{1+x}{1+y} \approx 1+x-y.\]</span></p>
-<p><strong>Power.</strong> If <span class="math inline">\(x\)</span> is small, then: <span class="math display">\[\boxed{(1+x)^n \approx 1+nx}.\]</span> <em>Proof.</em> For <span class="math inline">\(n=1\)</span>, we know that <span class="math inline">\((1+x)^1=1+x\)</span> (obviously). Assume that the approximation is true for <span class="math inline">\(n\)</span>, or that <span class="math inline">\((1+x)^n \approx 1+nx\)</span>, let’s prove that it is true for <span class="math inline">\(n+1\)</span>: <span class="math display">\[(1+x)^{n+1}=(1+x)^n \approx (1+nx)(1+x) \approx 1+(n+1)x + nx^2 \approx 1+(n+1)x,\]</span> which proves the proposition for <span class="math inline">\(n+1\)</span>. Thus, the Taylor approximation is true for any <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p><strong>Power.</strong> If <span class="math inline">\(x\)</span> is small, then: <span class="math display">\[\boxed{(1+x)^n \approx 1+nx}.\]</span> <em>Proof.</em> For <span class="math inline">\(n=1\)</span>, we know that <span class="math inline">\((1+x)^1=1+x\)</span> (obviously). Assume that the approximation is true for <span class="math inline">\(n\)</span>, or that <span class="math inline">\((1+x)^n \approx 1+nx\)</span>, let’s prove that it is true for <span class="math inline">\(n+1\)</span>: <span class="math display">\[
+\begin{aligned}
+(1+x)^{n+1}&amp;=(1+x)^n(1+x) \\
+&amp;\approx (1+nx)(1+x) \\
+&amp;\approx 1+(n+1)x + nx^2 \\
+(1+x)^{n+1}&amp;\approx 1+(n+1)x
+\end{aligned}
+\]</span> which proves the proposition for <span class="math inline">\(n+1\)</span>. Thus, the Taylor approximation is true for any <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </div>
 <div id="growth-rates" class="section level1">
 <h1>Growth Rates</h1>
