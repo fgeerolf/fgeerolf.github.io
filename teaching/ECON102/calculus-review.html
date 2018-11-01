@@ -139,10 +139,20 @@ $(document).ready(function () {
 g_{XY}&amp;=\frac{X_{t+1}Y_{t+1}}{X_t Y_t}-1\\
 &amp;= \frac{X_{t+1}}{X_t}\frac{Y_{t+1}}{Y_t}-1\\
 &amp;=(1+g_X)(1+g_Y)-1\\
-&amp;=1+g_X + g_Y-1\\
-g_{XY}&amp;=g_X +g_Y
+&amp;\approx1+g_X + g_Y-1\\
+g_{XY}&amp;\approx g_X +g_Y,
 \end{aligned}
-\]</span></p>
+\]</span> where we have used the above Taylor approximation with <span class="math inline">\((1+g_X)(1+g_Y) \approx 1+g_X + g_Y\)</span>.</p>
+<p><strong>Ratio.</strong> If <span class="math inline">\(g_X\)</span> and <span class="math inline">\(g_Y\)</span> are small, then: <span class="math display">\[\boxed{g_{X/Y}=g_X -g_Y}.\]</span></p>
+<p><em>Proof.</em> The growth rate <span class="math inline">\(g_X\)</span> of <span class="math inline">\(X\)</span> is given by <span class="math inline">\(g_X=X_{t+1}/X_t-1\)</span>. Thus, the growth rate of <span class="math inline">\(XY\)</span> is: <span class="math display">\[
+\begin{aligned}
+g_{X/Y}&amp;=\frac{X_{t+1}/Y_{t+1}}{X_t/Y_t}-1\\
+&amp;= \frac{X_{t+1}}{X_t}\frac{Y_{t}}{Y_{t+1}}-1\\
+&amp;=\frac{1+g_X}{1+g_Y}-1\\
+&amp;\approx1+g_X - g_Y-1\\
+g_{X/Y}&amp;\approx g_X -g_Y,
+\end{aligned}
+\]</span> where we have used the above Taylor approximation with <span class="math inline">\((1+g_X)/(1+g_Y) \approx 1+g_X - g_Y\)</span>.</p>
 </div>
 
 
