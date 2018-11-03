@@ -162,7 +162,7 @@ $(document).ready(function () {
 </div>
 <div id="some-real-life-distributions" class="section level1">
 <h1>Some Real-Life Distributions</h1>
-<pre class="r"><code>pklist &lt;- c(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;scales&quot;)
+<pre class="r"><code>pklist &lt;- c(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;scales&quot;, &quot;knitr&quot;)
 source(&quot;https://fgeerolf.github.io/code/load-packages.R&quot;)
 options(tibble.print_max = 100)</code></pre>
 <div id="natural-sciences" class="section level2">
@@ -239,38 +239,188 @@ heights.female &lt;- height %&gt;%
 <pre class="r"><code>data[[5]][,c(1:4)] %&gt;%
   as.tibble %&gt;%
   select(rank = &quot;2017rank&quot;, &quot;City&quot;, state = &quot;State[5]&quot;, pop = &quot;2017estimate&quot;) %&gt;%
-  head(28)</code></pre>
-<pre><code>## # A tibble: 28 x 4
-##     rank City              state                pop      
-##    &lt;int&gt; &lt;chr&gt;             &lt;chr&gt;                &lt;chr&gt;    
-##  1     1 New York[6]       New York             8,622,698
-##  2     2 Los Angeles       California           3,999,759
-##  3     3 Chicago           Illinois             2,716,450
-##  4     4 Houston[7]        Texas                2,312,717
-##  5     5 Phoenix           Arizona              1,626,078
-##  6     6 Philadelphia[8]   Pennsylvania         1,580,863
-##  7     7 San Antonio       Texas                1,511,946
-##  8     8 San Diego         California           1,419,516
-##  9     9 Dallas            Texas                1,341,075
-## 10    10 San Jose          California           1,035,317
-## 11    11 Austin            Texas                950,715  
-## 12    12 Jacksonville[9]   Florida              892,062  
-## 13    13 San Francisco[10] California           884,363  
-## 14    14 Columbus          Ohio                 879,170  
-## 15    15 Fort Worth        Texas                874,168  
-## 16    16 Indianapolis[11]  Indiana              863,002  
-## 17    17 Charlotte         North Carolina       859,035  
-## 18    18 Seattle           Washington           724,745  
-## 19    19 Denver[12]        Colorado             704,621  
-## 20    20 Washington[13]    District of Columbia 693,972  
-## 21    21 Boston            Massachusetts        685,094  
-## 22    22 El Paso           Texas                683,577  
-## 23    23 Detroit           Michigan             673,104  
-## 24    24 Nashville[14]     Tennessee            667,560  
-## 25    25 Memphis           Tennessee            652,236  
-## 26    26 Portland          Oregon               647,805  
-## 27    27 Oklahoma City     Oklahoma             643,648  
-## 28    28 Las Vegas         Nevada               641,676</code></pre>
+  head(28) %&gt;%
+  kable(align = &quot;c&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="center">rank</th>
+<th align="center">City</th>
+<th align="center">state</th>
+<th align="center">pop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">New York[6]</td>
+<td align="center">New York</td>
+<td align="center">8,622,698</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Los Angeles</td>
+<td align="center">California</td>
+<td align="center">3,999,759</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Chicago</td>
+<td align="center">Illinois</td>
+<td align="center">2,716,450</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Houston[7]</td>
+<td align="center">Texas</td>
+<td align="center">2,312,717</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Phoenix</td>
+<td align="center">Arizona</td>
+<td align="center">1,626,078</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">Philadelphia[8]</td>
+<td align="center">Pennsylvania</td>
+<td align="center">1,580,863</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">San Antonio</td>
+<td align="center">Texas</td>
+<td align="center">1,511,946</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">San Diego</td>
+<td align="center">California</td>
+<td align="center">1,419,516</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">Dallas</td>
+<td align="center">Texas</td>
+<td align="center">1,341,075</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">San Jose</td>
+<td align="center">California</td>
+<td align="center">1,035,317</td>
+</tr>
+<tr class="odd">
+<td align="center">11</td>
+<td align="center">Austin</td>
+<td align="center">Texas</td>
+<td align="center">950,715</td>
+</tr>
+<tr class="even">
+<td align="center">12</td>
+<td align="center">Jacksonville[9]</td>
+<td align="center">Florida</td>
+<td align="center">892,062</td>
+</tr>
+<tr class="odd">
+<td align="center">13</td>
+<td align="center">San Francisco[10]</td>
+<td align="center">California</td>
+<td align="center">884,363</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">Columbus</td>
+<td align="center">Ohio</td>
+<td align="center">879,170</td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">Fort Worth</td>
+<td align="center">Texas</td>
+<td align="center">874,168</td>
+</tr>
+<tr class="even">
+<td align="center">16</td>
+<td align="center">Indianapolis[11]</td>
+<td align="center">Indiana</td>
+<td align="center">863,002</td>
+</tr>
+<tr class="odd">
+<td align="center">17</td>
+<td align="center">Charlotte</td>
+<td align="center">North Carolina</td>
+<td align="center">859,035</td>
+</tr>
+<tr class="even">
+<td align="center">18</td>
+<td align="center">Seattle</td>
+<td align="center">Washington</td>
+<td align="center">724,745</td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="center">Denver[12]</td>
+<td align="center">Colorado</td>
+<td align="center">704,621</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">Washington[13]</td>
+<td align="center">District of Columbia</td>
+<td align="center">693,972</td>
+</tr>
+<tr class="odd">
+<td align="center">21</td>
+<td align="center">Boston</td>
+<td align="center">Massachusetts</td>
+<td align="center">685,094</td>
+</tr>
+<tr class="even">
+<td align="center">22</td>
+<td align="center">El Paso</td>
+<td align="center">Texas</td>
+<td align="center">683,577</td>
+</tr>
+<tr class="odd">
+<td align="center">23</td>
+<td align="center">Detroit</td>
+<td align="center">Michigan</td>
+<td align="center">673,104</td>
+</tr>
+<tr class="even">
+<td align="center">24</td>
+<td align="center">Nashville[14]</td>
+<td align="center">Tennessee</td>
+<td align="center">667,560</td>
+</tr>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">Memphis</td>
+<td align="center">Tennessee</td>
+<td align="center">652,236</td>
+</tr>
+<tr class="even">
+<td align="center">26</td>
+<td align="center">Portland</td>
+<td align="center">Oregon</td>
+<td align="center">647,805</td>
+</tr>
+<tr class="odd">
+<td align="center">27</td>
+<td align="center">Oklahoma City</td>
+<td align="center">Oklahoma</td>
+<td align="center">643,648</td>
+</tr>
+<tr class="even">
+<td align="center">28</td>
+<td align="center">Las Vegas</td>
+<td align="center">Nevada</td>
+<td align="center">641,676</td>
+</tr>
+</tbody>
+</table>
 <pre class="r"><code>data[[5]][,c(1:4)] %&gt;%
   as.tibble %&gt;%
   select(rank = &quot;2017rank&quot;, pop = &quot;2017estimate&quot;, &quot;City&quot;) %&gt;%
