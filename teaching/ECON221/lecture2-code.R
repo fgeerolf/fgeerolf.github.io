@@ -19,7 +19,7 @@ unlink("HOUSING_SUPPLY.dta")
 nber.crosswalk <- read.csv("http://www.nber.org/cbsa-msa-fips-ssa-county-crosswalk/cbsatocountycrosswalk.csv")
 
 
-nber.crosswalk.extract <- nber.crosswalk %>%
+nber.crosswalk %>%
   select(msa, cbsa) %>%
   head
 

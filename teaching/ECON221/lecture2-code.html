@@ -153,12 +153,18 @@ unlink(&quot;HOUSING_SUPPLY.dta&quot;)</code></pre>
 </div>
 <div id="crosswalk" class="section level2">
 <h2>Crosswalk</h2>
-<pre class="r"><code>nber.crosswalk &lt;- read.csv(&quot;http://www.nber.org/cbsa-msa-fips-ssa-county-crosswalk/cbsatocountycrosswalk.csv&quot;)
-
-
-nber.crosswalk.extract &lt;- nber.crosswalk %&gt;%
+<pre class="r"><code>nber.crosswalk &lt;- read.csv(&quot;http://www.nber.org/cbsa-msa-fips-ssa-county-crosswalk/cbsatocountycrosswalk.csv&quot;)</code></pre>
+<p>Let’s glance at the data:</p>
+<pre class="r"><code>nber.crosswalk %&gt;%
   select(msa, cbsa) %&gt;%
   head</code></pre>
+<pre><code>##    msa  cbsa
+## 1 5240 33860
+## 2 5160    NA
+## 3    1    NA
+## 4    1 13820
+## 5 1000 13820
+## 6    1    NA</code></pre>
 </div>
 <div id="house-prices" class="section level2">
 <h2>House Prices</h2>
