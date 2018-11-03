@@ -1,0 +1,227 @@
+# UCLA - Econ 221 - Geerolf
+# Lecture 2: Replicating Mian and Sufi
+
+rm(list = ls())
+pklist <- c("curl", "tidyverse", "foreign", "AER")
+source("https://fgeerolf.github.io/code/load-packages.R")
+
+curl_download("http://real.wharton.upenn.edu/~saiz/SUPPLYDATA.zip",
+              destfile = "SUPPLYDATA.zip",
+              quiet = FALSE)
+# Unzip
+unzip("SUPPLYDATA.zip")
+unlink("SUPPLYDATA.zip")
+unlink("readme.txt")
+# Read in dta. Needs package foreign
+data.Saiz2010 <- read.dta("HOUSING_SUPPLY.dta")
+unlink("HOUSING_SUPPLY.dta")
+
+nber.crosswalk <- read.csv("http://www.nber.org/cbsa-msa-fips-ssa-county-crosswalk/cbsatocountycrosswalk.csv")
+
+
+nber.crosswalk.extract <- nber.crosswalk %>%
+  select(msa, cbsa) %>%
+  head
+
+fhfa.data <- read.csv("https://www.fhfa.gov/DataTools/Downloads/Documents/HPI/HPI_master.csv")
+
+fhfa.data.monthly <-  fhfa.data %>%
+  filter(frequency == "monthly") %>%
+  mutate(date = yr + (period - 1)/12) %>%
+  select(-yr, -period)
+
+
+fhfa.data.quarterly <-  fhfa.data %>%
+  # Keep only quarterly
+  filter(frequency == "quarterly",
+         hpi_type == "traditional",
+         hpi_flavor == "all-transactions") %>%
+  # create new date variable collapsing year and quarter
+  mutate(date = yr + (period - 1)/4) %>%
+  # remove year and quarter
+  select(-yr, -period) %>%
+  # Keep only MSA geographies
+  filter(level == "MSA") %>%
+  select(place_name, place_id, date, index_nsa, index_sa)
+
+fhfa.data.quarterly.extract <- fhfa.data.quarterly %>%
+  filter(date %in% c(2006, 2009)) %>%
+  rename(value = index_nsa) %>%
+  select(-index_sa) %>%
+  mutate(date = paste0("year", date)) %>%
+  spread(date, value) %>%
+  mutate(houseprice_d1ln = log(year2009) - log(year2006))
+
+# Glance at data
+fhfa.data.quarterly.extract %>%
+  mutate(fips_msa = place_id %>% paste %>% as.numeric) %>%
+  select(fips_msa, houseprice_d1ln) %>%
+  head
+
+bls.laus.current <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.1.CurrentS")
+bls.laus.series <- read.delim("https://download.bls.gov/pub/time.series/la/la.series")
+bls.la.area.type <- read.delim("https://download.bls.gov/pub/time.series/la/la.area_type")
+bls.la.05.09 <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.0.CurrentU05-09")
+bls.laus.area.code <- read.delim("https://download.bls.gov/pub/time.series/la/la.area")
+
+bls.la.05.09.new <- bls.la.05.09 %>%
+  filter(period != "M13") %>%
+  mutate(month = period %>% substr(2, 3) %>% as.numeric,
+         date = year + (month-1)/12) %>%
+  select(-month, - year, -period, - footnote_codes) %>%
+  left_join(bls.laus.series, by = "series_id") %>%
+  filter(area_type_code == "B") %>%
+  filter(date %in% c(2006, 2009),
+         measure_code == 3) %>%
+  mutate(date = paste0("year", date)) %>%
+  select(area_code, date, value) %>%
+  spread(date, value) %>%
+  mutate(year2006 = year2006 %>% paste %>% as.numeric,
+         year2009 = year2009 %>% paste %>% as.numeric,
+         unemp_d1 = year2009 - year2006) %>%
+  mutate(area_code = area_code %>% paste,
+         fips_msa = area_code %>% substr(5, 9) %>% as.numeric)
+
+
+bls.la.05.09.new %>%
+  select(fips_msa, unemp_d1) %>%
+  head
+
+
+bls.laus.current <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.1.CurrentS")
+bls.laus.series <- read.delim("https://download.bls.gov/pub/time.series/la/la.series")
+bls.la.area.type <- read.delim("https://download.bls.gov/pub/time.series/la/la.area_type")
+bls.la.05.09 <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.0.CurrentU05-09")
+bls.laus.area.code <- read.delim("https://download.bls.gov/pub/time.series/la/la.area")
+
+bls.la.05.09.new.emp <- bls.la.05.09 %>%
+  filter(period != "M13") %>%
+  mutate(month = period %>% substr(2, 3) %>% as.numeric,
+         date = year + (month-1)/12) %>%
+  select(-month, - year, -period, - footnote_codes) %>%
+  left_join(bls.laus.series, by = "series_id") %>%
+  filter(area_type_code == "B") %>%
+  filter(date %in% c(2006, 2009),
+         measure_code == 5) %>%
+  mutate(date = paste0("year", date)) %>%
+  select(area_code, date, value) %>%
+  spread(date, value) %>%
+  mutate(year2006 = year2006 %>% paste %>% as.numeric,
+         year2009 = year2009 %>% paste %>% as.numeric,
+         emp_d1ln = log(year2009) - log(year2006)) %>%
+  mutate(area_code = area_code %>% paste,
+         fips_msa = area_code %>% substr(5, 9) %>% as.numeric)
+
+
+bls.la.05.09.new.emp %>%
+  select(fips_msa, emp_d1ln) %>%
+  head
+
+
+bls.laus.current <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.1.CurrentS")
+bls.laus.series <- read.delim("https://download.bls.gov/pub/time.series/la/la.series")
+bls.la.area.type <- read.delim("https://download.bls.gov/pub/time.series/la/la.area_type")
+bls.la.05.09 <- read.delim("https://download.bls.gov/pub/time.series/la/la.data.0.CurrentU05-09")
+bls.laus.area.code <- read.delim("https://download.bls.gov/pub/time.series/la/la.area")
+
+bls.la.05.09.new.lf <- bls.la.05.09 %>%
+  filter(period != "M13") %>%
+  mutate(month = period %>% substr(2, 3) %>% as.numeric,
+         date = year + (month-1)/12) %>%
+  select(-month, - year, -period, - footnote_codes) %>%
+  left_join(bls.laus.series, by = "series_id") %>%
+  filter(area_type_code == "B") %>%
+  filter(date %in% c(2006, 2009),
+         measure_code == 6) %>%
+  mutate(date = paste0("year", date)) %>%
+  select(area_code, date, value) %>%
+  spread(date, value) %>%
+  mutate(year2006 = year2006 %>% paste %>% as.numeric,
+         year2009 = year2009 %>% paste %>% as.numeric,
+         lf_d1ln = log(year2009) - log(year2006)) %>%
+  mutate(area_code = area_code %>% paste,
+         fips_msa = area_code %>% substr(5, 9) %>% as.numeric)
+
+
+bls.la.05.09.new.emp %>%
+  select(fips_msa, emp_d1ln) %>%
+  head
+
+
+curl_download("https://www2.census.gov/programs-surveys/cbp/datasets/2009/cbp09co.zip",
+              destfile = "cbp09co.zip",
+              quiet = FALSE)
+
+unzip("cbp09co.zip")
+unlink("cbp09co.zip")
+
+cbp.2009 <- read.delim("cbp09co.txt", sep = ",")
+unlink("cbp09co.txt")
+
+curl_download("https://www2.census.gov/programs-surveys/cbp/datasets/2006/cbp06co.zip",
+              destfile = "cbp06co.zip",
+              quiet = FALSE)
+
+unzip("cbp06co.zip")
+unlink("cbp06co.zip")
+
+cbp.2006 <- read.delim("cbp06co.txt", sep = ",")
+unlink("cbp06co.txt")
+
+final <- bls.la.05.09.new %>%
+  left_join(bls.la.05.09.new.emp, by = "fips_msa") %>%
+  left_join(bls.la.05.09.new.lf, by = "fips_msa") %>%
+  select(fips_msa, unemp_d1, emp_d1ln, lf_d1ln) %>%
+  left_join(fhfa.data.quarterly.extract %>%
+              mutate(fips_msa = place_id %>% paste %>% as.numeric) %>%
+              select(fips_msa, houseprice_d1ln))
+
+final %>%
+  lm(unemp_d1 ~ houseprice_d1ln, data = .) %>%
+  summary
+
+
+final %>%
+  lm(emp_d1ln ~ houseprice_d1ln, data = .) %>%
+  summary
+
+final %>%
+  lm(lf_d1ln ~ houseprice_d1ln, data = .) %>%
+  summary
+
+nber.crosswalk %>%
+  select(fips_msa = cbsa, msa) %>%
+  head
+
+data.Saiz2010 %>%
+  rename(msa = msanecma) %>%
+  head
+
+
+final %>%
+  left_join(nber.crosswalk %>%
+              select(fips_msa = cbsa, msa),
+            by = "fips_msa") %>%
+  left_join(data.Saiz2010 %>%
+              select(msa = msanecma, elasticity)) %>%
+  lm(houseprice_d1ln ~ elasticity, data = .) %>%
+  summary
+
+
+final %>%
+  left_join(nber.crosswalk %>%
+              select(fips_msa = cbsa, msa),
+            by = "fips_msa") %>%
+  left_join(data.Saiz2010 %>%
+              select(msa = msanecma, elasticity)) %>%
+  select(elasticity) %>%
+  summary
+
+final %>%
+  left_join(nber.crosswalk %>%
+              select(fips_msa = cbsa, msa),
+            by = "fips_msa") %>%
+  left_join(data.Saiz2010 %>%
+              select(msa = msanecma, elasticity)) %>%
+  lm(unemp_d1 ~ houseprice_d1ln, data = .) %>%
+  summary
