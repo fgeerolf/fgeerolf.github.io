@@ -162,18 +162,24 @@ $(document).ready(function () {
 </div>
 <div id="mathematical-reminder-on-growth-rates" class="section level2">
 <h2>Mathematical Reminder on Growth Rates</h2>
-<p>The mathematical orders of magnitude with exponential growth are sometimes hard to grasp intuitively. This section provides you with some maths to help get an intuitive feel for exponential growth. Let’s consider an economic quantity <span class="math inline">\(y_t\)</span>, growing at a constant rate <span class="math inline">\(g\)</span>. For our purposes in this lecture, <span class="math inline">\(y_t\)</span> is GDP per capita, but it could also veru well be a price level, consumption, or some other economic quantity. Iterating on the difference equation allows to get <span class="math inline">\(y_t\)</span> as a function of the initial value: <span class="math display">\[\begin{aligned}
+<p>The mathematical orders of magnitude with exponential growth are sometimes hard to grasp intuitively. This section provides you with some maths to help get an intuitive feel for exponential growth. Let’s consider an economic quantity <span class="math inline">\(y_t\)</span>, growing at a constant rate <span class="math inline">\(g\)</span>. For our purposes in this lecture, <span class="math inline">\(y_t\)</span> is GDP per capita, but it could also veru well be a price level, consumption, or some other economic quantity. Iterating on the difference equation allows to get <span class="math inline">\(y_t\)</span> as a function of the initial value: <span class="math display">\[
+\begin{aligned}
 y_t = (1+g)y_{t-1} \quad \Rightarrow \quad y_t = (1+g)^t y_0.
-\end{aligned}\]</span></p>
-<p>How fast of a growth is that? The number of years <span class="math inline">\(T\)</span> it takes for GDP per capita to be multiplied by a factor <span class="math inline">\(F\)</span> (where <span class="math inline">\(F=2\)</span>, if we are looking for GDP to double) is given by: <span class="math display">\[(1+g)^T = F \quad \Rightarrow \quad T=\frac{\ln F}{\ln(1+g)}.\]</span></p>
-<p>For small rates of growth, this formula can be approximated by: <span class="math display">\[T = \frac{\ln F}{g}.\]</span></p>
+\end{aligned}
+\]</span> How fast of a growth is that? The number of years <span class="math inline">\(T\)</span> it takes for GDP per capita to be multiplied by a factor <span class="math inline">\(F\)</span> (where <span class="math inline">\(F=2\)</span>, if we are looking for GDP to double) is given by : <span class="math display">\[
+\begin{aligned}
+&amp;y_t = F y_0 \quad \Rightarrow \quad (1+g)^t y_0 = F y_0 \quad \Rightarrow \quad (1+g)^T = F \\
+&amp; \quad \Rightarrow \quad \ln (1+g)^T = \ln F \quad \Rightarrow \quad T \ln (1+g) = \ln F \\
+&amp; \quad \Rightarrow \quad T=\frac{\ln F}{\ln(1+g)}.
+\end{aligned}
+\]</span> For small rates of growth, we know that a Taylor expansion of the <span class="math inline">\(\ln\)</span> gives <span class="math inline">\(\ln(1+g)=g\)</span>, so that this formula can be approximated by: <span class="math display">\[T = \frac{\ln F}{g}.\]</span></p>
 <p><strong>Rule of 70.</strong> This formula gives the “rule of 70” for small growth rates. The “rule of 70” states that a quantity which grows at a rate <span class="math inline">\(g\)</span> in percentage terms, takes approximately <span class="math inline">\(70/g\)</span> years to double. This comes from the fact that <span class="math inline">\(100*ln(2) \approx\)</span> 69.3147181. For example, if GDP per capita is growing at 2% per year, then it takes approximately 35 years for it to double: approximately one generation only. If it is growing at 1% per year, it takes approximately 70 years for it to double, so two generations. Whether you grow to be twice as rich as your parents, or twice as rich as your grandparents on average makes a big difference.</p>
 <p><strong>Rule of 230.</strong> The same formula also gives the “rule of 230” for small growth rates. The “rule of 230” states that a quantity which grows at a rate <span class="math inline">\(g\)</span> in percentage terms, takes approximately <span class="math inline">\(230/g\)</span> years to be multiplied by <span class="math inline">\(10\)</span>. This is because: <span class="math inline">\(100*ln(10) \approx\)</span> 230.2585093. Thus, with a 2% growth rate, GDP per capita is multiplied by <span class="math inline">\(10\)</span> over (as an exercise, you may create your own rules…)</p>
 </div>
 <div id="questions" class="section level2">
 <h2>Questions</h2>
 <p>The <a href="#long-run-growth">previous section</a> has shown that economic growth has been 2% on average in advanced economics, in the last two centuries. This raises a number of questions.</p>
-<p><strong>Why is there GDP per capita growth at all?</strong> One major shortcoming of the <span class="citation">Solow (1956)</span> of <a href="lecture2.html">Lecture 2</a> growth model and of the <span class="citation">Diamond (1965)</span> growth model of <a href="lecture4.html">Lecture 4</a> is that they fail to account for long run economic growth (rather ironically). According to these models, the process of capital accumulation reaches a steady-state at some point, such that capital per capita, GDP per capita, remain forever constant. This happens for intuitive reasons: if the labor force is given, then growth cannot be sustained through capital accumulation alone. In fact, in the <span class="citation">Solow (1956)</span> model, even a saving rate equal to 100% would lead to very high GDP, but not to constant GDP growth. At one point, the capital stock would be so large that merely maintaining it would consume all output. (output would then be equal to gross saving, and depreciation)</p>
+<p><strong>Why is there GDP per capita growth at all?</strong> One major shortcoming of the <span class="citation">Solow (1956)</span> of <a href="lecture2.html">Lecture 2</a> growth model and of the <span class="citation">Diamond (1965)</span> growth model of <a href="lecture4.html">Lecture 4</a> is that they fail to account for long run economic growth (rather ironically). According to these models, the process of capital accumulation reaches a steady-state at some point, such that capital per capita, GDP per capita, remain forever constant. This happens for intuitive reasons: if the labor force is given, then growth cannot be sustained through capital accumulation alone. In fact, in the <span class="citation">Solow (1956)</span> model, even a saving rate equal to 100% would lead to very high GDP, but not to constant GDP growth. At one point, the capital stock would be so large that merely maintaining it would consume all output. Output would then be equal to gross saving, and depreciation. This is coming from the fact that at the steady state of the Solow model, gross saving is given by <span class="math inline">\(s Y^{*}\)</span> which would then be equal to <span class="math inline">\(Y^{*}\)</span> (if <span class="math inline">\(s=1=100\%\)</span>), which is also equal to depreciation as: <span class="math display">\[s Y^{*}=\delta K^{*}.\]</span></p>
 <p><strong>The Cross-section of Countries: Rich versus Poor Countries.</strong> The power of compounding is such that even a few decades of lower growth makes a big difference. Given persistent differences in growth rates, per capita GDP is far from being equalized across countries. Contrary to the predictions in the <span class="citation">Solow (1956)</span> growth model, there has hardly been a strong catch up of poor countries towards the level of rich countries. On one hand of the spectrum, many countries have very small GDP per capita levels.</p>
 <table>
 <thead>
@@ -364,8 +370,21 @@ y_t = (1+g)y_{t-1} \quad \Rightarrow \quad y_t = (1+g)^t y_0.
 </div>
 <div id="solution" class="section level2">
 <h2>Solution</h2>
-<p>In order solve this model, we may simply iterate on the production function for new ideas, as a function of the initial value for productivity <span class="math inline">\(A_0\)</span> (just as there was an initial value for capital <span class="math inline">\(K_0\)</span> in the Solow growth model): <span class="math display">\[A_{t}=\left(1+zlL\right)^{t}A_{0}.\]</span></p>
-<p>Replacing then <span class="math inline">\(L_{yt}\)</span> in the production function, as well as this endogenous level of productivity, we get: <span class="math display">\[Y_t = A_{0} (1-l)L \left(1+zlL\right)^{t}.\]</span></p>
+<p>In order to solve this model, we may simply iterate on the production function for new ideas, as a function of the initial value for productivity <span class="math inline">\(A_0\)</span> (just as there was an initial value for capital <span class="math inline">\(K_0\)</span> in the Solow growth model), and using that the number of research workers is <span class="math inline">\(L_{at} = l L\)</span>: <span class="math display">\[
+\begin{aligned}
+&amp; \Delta A_{t+1} = A_{t+1}-A_t =z A_{t} L_{at}\\
+&amp; \quad \Rightarrow \quad  A_{t+1} = (1+z L_{at})A_{t} \\
+&amp; \quad \Rightarrow \quad  A_{t+1}=\left(1+zlL\right)A_{t}\\
+&amp; \quad \Rightarrow \quad  A_{t}=\left(1+zlL\right)^{t}A_{0}.
+\end{aligned}
+\]</span> Replacing then <span class="math inline">\(L_{yt}\)</span> in the production function with <span class="math inline">\(L_{yt} = (1-l)L\)</span>, as well as this endogenous level of productivity, we get: <span class="math display">\[
+\begin{aligned}
+Y_{t}&amp;  =A_{t} L_{yt}\\
+&amp;= \left(1+zlL\right)^{t}A_{0}L_{yt}\\
+&amp;= \left(1+zlL\right)^{t}A_{0}(1-l)L\\
+Y_{t}&amp;= A_{0}(1-l)L \left(1+zlL\right)^{t}
+\end{aligned}
+\]</span></p>
 <p><strong>Change in <span class="math inline">\(l\)</span>.</strong> A change on the research share of workers has too opposing effect. On the one hand, there are less production workers available for production Thus, there is a fall in <span class="math inline">\(L_{yt}\)</span>, which tends to reduce <span class="math inline">\(Y_t\)</span>. On the other, overall growth, which is here given by <span class="math inline">\(g=zlL\)</span>, is then permanently higher.</p>
 </div>
 <div id="shortcomings" class="section level2">
