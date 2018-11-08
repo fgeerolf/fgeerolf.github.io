@@ -125,6 +125,12 @@ $(document).ready(function () {
 </div>
 
 
+<pre class="r"><code>rm(list = ls())
+pklist &lt;- c(&quot;tidyverse&quot;, &quot;lubridate&quot;, &quot;rdbnomics&quot;, &quot;maddison&quot;, &quot;maps&quot;, &quot;knitr&quot;, &quot;devtools&quot;)
+source(&quot;https://fgeerolf.github.io/code/load-packages.R&quot;)
+devtools::install_github(&quot;dbnomics/rdbnomics&quot;)
+options(tibble.print_max = 100)
+load(&quot;/Users/geerolf/Drive/work/datasets/pwt/pwt.9.0.long.RData&quot;)</code></pre>
 <div id="introduction" class="section level1 unnumbered">
 <h1>Introduction</h1>
 <p>In this lecture, we start by reviewing <a href="#long-run-growth">some facts on long-run economic growth</a>. We then review <a href="#endogenous-growth-model">an endogenous growth model</a> which tries to account for long-run economic growth.</p>

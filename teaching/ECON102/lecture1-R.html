@@ -126,9 +126,9 @@ $(document).ready(function () {
 
 
 <pre class="r"><code>rm(list = ls())
+pklist &lt;- c(&quot;tidyverse&quot;, &quot;lubridate&quot;, &quot;rdbnomics&quot;, &quot;devtools&quot;)
+source(&quot;https://fgeerolf.github.io/code/load-packages.R&quot;)
 devtools::install_github(&quot;dbnomics/rdbnomics&quot;)
-pklist &lt;- c(&quot;tidyverse&quot;, &quot;lubridate&quot;, &quot;rdbnomics&quot;)
-source(&quot;https://fgeerolf.github.io/datasets/load-packages.R&quot;)
 options(tibble.print_max = 100)</code></pre>
 <div id="gdp-product" class="section level1">
 <h1>GDP: The Product Approach</h1>
