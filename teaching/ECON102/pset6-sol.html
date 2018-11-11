@@ -134,12 +134,23 @@ $(document).ready(function () {
 \frac{\underline{Y}}{Y}&amp;=\frac{\lambda N \underline{y}}{\lambda N \underline{y}+(1-\lambda) N \gamma \underline{y}}\\
 \frac{\underline{Y}}{Y}&amp;=\frac{\lambda}{\lambda +(1-\lambda) \gamma}
 \end{aligned}
+\]</span> Denoting by <span class="math inline">\(\nu\)</span> the share of income going to the low income: <span class="math display">\[
+\begin{aligned}
+\nu &amp;\equiv \frac{\underline{Y}}{Y}\\
+\nu &amp;=\frac{\lambda}{\lambda +(1-\lambda) \gamma}
+\end{aligned}
 \]</span> Solving for <span class="math inline">\(\gamma\)</span>: <span class="math display">\[
 \begin{aligned}
-&amp; \frac{\lambda}{\lambda +(1-\lambda) \gamma} = \frac{\underline{Y}}{Y} \quad \Rightarrow \quad  \lambda \cdot Y = \lambda \cdot \underline{Y} + (1-\lambda)\gamma \cdot \underline{Y} \\
-&amp; \quad \Rightarrow \quad \lambda (\underbrace{Y - \underline{Y}}_{\bar{Y}})=(1-\lambda) \gamma \underline{Y} \quad \Rightarrow \quad \boxed{\gamma = \frac{\lambda}{1-\lambda}\frac{\bar{Y}}{\underline{Y}}}
+&amp; \frac{\lambda}{\lambda +(1-\lambda) \gamma} = \nu \quad \Rightarrow \quad  \lambda  = \lambda \cdot\nu + (1-\lambda)\gamma \cdot \nu \\
+&amp; \quad \Rightarrow \quad \lambda \cdot (1-\nu)=\gamma \cdot (1-\lambda) \cdot \nu \quad \Rightarrow \quad \boxed{\gamma = \frac{\lambda}{1-\lambda}\frac{1-\nu}{\nu}}
 \end{aligned}
-\]</span> A numerical application is: <span class="math display">\[\gamma = \frac{0.99}{1-0.99}\frac{0.2}{0.8} \quad \Rightarrow \quad \boxed{\gamma = 24.75}\]</span> This implies that on average, high income earners in the top 1% are approximately <strong>25 times richer</strong> (exactly 24.75 times richer) than low income earners in the bottom 99%.</p></li>
+\]</span> A numerical application is <span class="math inline">\(\nu=0.8\)</span> and <span class="math inline">\(\lambda = 0.99\)</span> so that: <span class="math display">\[
+\begin{aligned}
+\gamma &amp;= \frac{0.99}{1-0.99}\frac{1-0.8}{0.8}\\
+ &amp;= \frac{99}{4} \\
+\gamma &amp;= 24.75
+\end{aligned}
+\]</span> This implies that on average, high income earners in the top 1% are approximately <strong>25 times richer</strong> (exactly 24.75 times richer) than low income earners in the bottom 99% (note that you can use the above formula to recover the <span class="math inline">\(\gamma = 9\)</span> from the class, using <span class="math inline">\(\lambda = 0.9\)</span> and <span class="math inline">\(\nu = 0.5\)</span> since <span class="math inline">\(\gamma = 0.9/0.1 \cdot0.5/0.5 = 9\)</span>).</p></li>
 <li><p>Total consumption by the low income earners <span class="math inline">\(\underline{C}\)</span> is such that: <span class="math display">\[
 \begin{aligned}
 \underline{C}&amp;=\lambda N \underline{c}\\
@@ -154,7 +165,7 @@ $(document).ready(function () {
 &amp;=(1-\lambda) N  \bar{c}_{0} + (1-\lambda) N (1-t_1) \bar{c}_{1}\bar{y}-(1-\lambda) N  \bar{c}_{1} \bar{t}_0\\
 \bar{C}&amp;=\left[(1-\lambda) N  \bar{c}_{0}-(1-\lambda) N  \bar{c}_{1} \bar{t}_0\right] + \frac{(1-\lambda) \gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}(1-t_1)Y
 \end{aligned}
-\]</span> Therefore, aggregate consumption <span class="math inline">\(C=\underline{C} + \bar{C}\)</span> is given by (using the suggested notations to go from the next to last line to the last line): <span class="math display">\[
+\]</span> Therefore, aggregate consumption <span class="math inline">\(C=\underline{C} + \bar{C}\)</span> is given by: <span class="math display">\[
 \begin{aligned}
 C&amp;=\underline{C} + \bar{C}\\
 &amp;=\left[(1-\lambda) N  \bar{c}_{0}-(1-\lambda) N  \bar{c}_{1} \bar{t}_0\right] + 
@@ -164,6 +175,13 @@ C&amp;=\underline{C} + \bar{C}\\
 &amp;=\left[\lambda N  \underline{c}_{0}+(1-\lambda) N  \bar{c}_{0}\right]-\left(\lambda  N \underline{c}_{1} \underline{t}_0 +(1-\lambda) N  \bar{c}_{1} \bar{t}_0\right) +\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}(1-t_1)Y\\
 &amp;=\left[\lambda N  \underline{c}_{0}+(1-\lambda) N  \bar{c}_{0}\right]-\left[\underline{c}_{1}(\lambda  N  \underline{t}_0) +\bar{c}_{1}((1-\lambda) N   \bar{t}_0)\right] +\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}(1-t_1)Y\\
 C&amp;=C_0 -\left(\underline{c}_{1}\underline{T}_0+\bar{c}_{1}\bar{T}_0\right)+c_1 (1-t_1) Y.
+\end{aligned}
+\]</span> where we have used the suggested notations: <span class="math display">\[
+\begin{aligned}
+C_{0}&amp; \equiv \lambda  N \underline{c}_0 + (1-\lambda) N \bar{c}_0\\
+\underline{T}_{0}&amp; \equiv \lambda  N \underline{t}_0\\
+\bar{T}_0 &amp; \equiv (1-\lambda) N \bar{t}_0\\
+c_{1}&amp;\equiv\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}.
 \end{aligned}
 \]</span> Therefore, aggregate consumption is given by: <span class="math display">\[\boxed{C=C_0 -\left(\underline{c}_{1}\underline{T}_0+\bar{c}_{1}\bar{T}_0\right)+c_1 (1-t_1) Y}.\]</span></p></li>
 <li><p><span class="math inline">\(c_1\)</span> is the average marginal propensity to consume, where the marginal propensity to consume of each group <span class="math inline">\(\underline{c}_1\)</span> and <span class="math inline">\(\bar{c}_1\)</span> is weighted by their share of income in the population <span class="math inline">\(\underline{Y}/Y\)</span> and <span class="math inline">\(\bar{Y}/Y\)</span>: <span class="math display">\[
