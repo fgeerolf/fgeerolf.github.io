@@ -134,7 +134,12 @@ $(document).ready(function () {
 \frac{\underline{Y}}{Y}&amp;=\frac{\lambda N \underline{y}}{\lambda N \underline{y}+(1-\lambda) N \gamma \underline{y}}\\
 \frac{\underline{Y}}{Y}&amp;=\frac{\lambda}{\lambda +(1-\lambda) \gamma}
 \end{aligned}
-\]</span> A numerical application is: <span class="math display">\[0.8 = \frac{0.99}{0.99+0.01 \cdot \gamma} \quad \Rightarrow \quad \boxed{\gamma = 19.8}\]</span> This implies that on average, high income earners in the top 1% are approximately 20 times richer (exactly 19.8 times richer) than low income earners in the bottom 99%.</p></li>
+\]</span> Solving for <span class="math inline">\(\gamma\)</span>: <span class="math display">\[
+\begin{aligned}
+&amp; \frac{\lambda}{\lambda +(1-\lambda) \gamma} = \frac{\underline{Y}}{Y} \quad \Rightarrow \quad  \lambda \cdot Y = \lambda \cdot \underline{Y} + (1-\lambda)\gamma \cdot \underline{Y} \\
+&amp; \quad \Rightarrow \quad \lambda (\underbrace{Y - \underline{Y}}_{\bar{Y}})=(1-\lambda) \gamma \underline{Y} \quad \Rightarrow \quad \boxed{\gamma = \frac{\lambda}{1-\lambda}\frac{\bar{Y}}{\underline{Y}}}
+\end{aligned}
+\]</span> A numerical application is: <span class="math display">\[\gamma = \frac{0.99}{1-0.99}\frac{0.2}{0.8} \quad \Rightarrow \quad \boxed{\gamma = 24.75}\]</span> This implies that on average, high income earners in the top 1% are approximately <strong>25 times richer</strong> (exactly 24.75 times richer) than low income earners in the bottom 99%.</p></li>
 <li><p>Total consumption by the low income earners <span class="math inline">\(\underline{C}\)</span> is such that: <span class="math display">\[
 \begin{aligned}
 \underline{C}&amp;=\lambda N \underline{c}\\
