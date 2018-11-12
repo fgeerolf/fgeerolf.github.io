@@ -125,18 +125,134 @@ $(document).ready(function () {
 </div>
 
 
-<div id="tentative-timetable-preliminary" class="section level1">
-<h1>Tentative Timetable (preliminary)</h1>
-<p>Oct 3. Lecture 1 - General Remarks on Empirical Macro and Finance. <a href="lecture1-slides.pdf">slides</a></p>
-<p>Oct 10. Lecture 2 - Replicating Mian and Sufi. <a href="lecture2.html">html</a> / <a href="lecture2.pdf">pdf</a> / <a href="lecture2.R">R</a></p>
-<p>Oct 17. Lecture 3 - Consumption. <a href="lecture3-slides.pdf">slides</a></p>
-<p>Oct 24. Lecture 4 - Investment. <a href="lecture4-slides.pdf">slides</a></p>
-<p>Oct 31. Lecture 5 - Financial Frictions. <a href="lecture5-slides.pdf">slides</a></p>
-<p>Nov 6. Lecture 6 - Unconventional Asset Pricing. <a href="lecture6-slides.pdf">slides</a></p>
-<p>Nov 13. Lecture 7 - Low Interest Rate Macroeconomics.</p>
-<p>Nov 20. Lecture 8 - Heterogeneity, Pareto Distributions.</p>
-<p>Nov 27. Presentations 1. <a href="lecture9.html">html</a> / <a href="lecture9.pdf">pdf</a></p>
-<p>Dec 5. Presentations 2. <a href="lecture10.html">html</a> / <a href="lecture10.pdf">pdf</a></p>
+<div id="theory" class="section level1">
+<h1>Theory</h1>
+<p>Assume that: <span class="math display">\[U\left(c_{1},c_{2}\right)=u\left(c_{1}\right)+\beta u\left(c_{2}\right)\]</span></p>
+<p>Income is <span class="math inline">\(y_{1}\)</span> and consumption is <span class="math inline">\(c_{1}\)</span>, so that: <span class="math display">\[a=y_{1}-c_{1}\]</span></p>
+<p>Income is <span class="math inline">\(y_{2}\)</span> and consumption is <span class="math inline">\(c_{2}\)</span>, so that:c_{2}=y_{2}+(1+r)a</p>
+<p>Budget constraint: <span class="math display">\[c_{1}+\frac{1}{1+r}c_{2}=y_{1}+\frac{1}{1+r}y_{2}\]</span></p>
+<p>TRherefore, the household problem is: <span class="math display">\[
+\begin{aligned}
+&amp;\max_{c_1, c_2} \quad u\left(c_{1}\right)+\beta u\left(c_{2}\right)\\
+&amp;\quad \text{s.t.}\quad c_{1}+\frac{1}{1+r}c_{2}    =y_{1}+\frac{1}{1+r}y_{2}
+\end{aligned}
+\]</span></p>
+<p>Forming the Lagrangian: <span class="math display">\[L\left(c_{1},c_{2},\lambda\right)=u\left(c_{1}\right)+\beta u\left(c_{2}\right)-\lambda\left[c_{1}+\frac{1}{1+r}c_{2}-y_{1}-\frac{1}{1+r}y_{2}\right]\]</span></p>
+<p>Therefore: <span class="math display">\[
+\begin{aligned}
+u^{\prime}\left(c_{1}\right)-\lambda    &amp;=0\\
+\beta u^{\prime}\left(c_{2}\right)-\lambda\frac{1}{1+r} &amp;=0
+\end{aligned}
+\]</span></p>
+<p>Finally: <span class="math display">\[u^{\prime}\left(c_{1}\right)=\beta(1+r)u^{\prime}\left(c_{2}\right)\]</span></p>
+<p><strong>CRRA utility.</strong> Using the CRRA utility: <span class="math display">\[u(c)=\frac{c^{1-\sigma}}{1-\sigma}\]</span></p>
+<p>Marginal utility is: <span class="math display">\[u^{\prime}(c)=c^{-\sigma}\]</span></p>
+<p>Therefore: <span class="math display">\[c_{1}^{-\sigma}=\beta(1+r)c_{2}^{-\sigma}\quad\Rightarrow\quad c_{2}=[\beta(1+r)]^{\frac{1}{\sigma}}c_{1}\]</span></p>
+<p>Replacing in the budget constraint: <span class="math display">\[c_{1}+\frac{1}{1+r}[\beta(1+r)]^{\frac{1}{\sigma}}c_{1}=y_{1}+\frac{1}{1+r}y_{2}\]</span></p>
+<p>Therefore: <span class="math display">\[c_{1}=\frac{y_{1}+\frac{1}{1+r}y_{2}}{1+\beta^{\frac{1}{\sigma}}(1+r)^{\frac{1}{\sigma}-1}}\]</span></p>
+</div>
+<div id="data" class="section level1">
+<h1>Data</h1>
+<div id="keynes_general_1936-friedman_theory_1957" class="section level2">
+<h2><span class="citation">Keynes (1936)</span>, <span class="citation">Friedman (1957)</span></h2>
+</div>
+<div id="poterba_finite_1987" class="section level2">
+<h2><span class="citation">Poterba and Summers (1987)</span></h2>
+</div>
+<div id="campbell_why_1989" class="section level2">
+<h2><span class="citation">Campbell and Deaton (1989)</span></h2>
+</div>
+<div id="cole_social_1992" class="section level2">
+<h2><span class="citation">Cole, Mailath, and Postlewaite (1992)</span></h2>
+<p><span class="citation">Cole, Mailath, and Postlewaite (1992)</span>:</p>
+<p>But think for a moment about an already very rich agent such as Donald Trump. Why does he continue to work long days, endure substantial amounts of stress, and take enormous risks? Surely it cannot be that he is savoring the prospect of going to the grocery store with a looser budget constraint next year. He seems to have more money than he could spend in several lifetimes. Even if we are wrong about Trump’s net worth, there clearly seem to be wealthy individuals that continue to work very hard and take large risks to increase their net worth. It is hard to reconcile such behavior with the underlying decision making in traditional growth models.We propose that people like Trump continue to care about increasing their net worth because their utility depends not only on the absolute level of their wealth but also on their wealth relative to that of other very rich people.</p>
+</div>
+<div id="deaton_understanding_1992" class="section level2">
+<h2><span class="citation">Deaton (1992)</span></h2>
+<p>If consumers are aware of these facts, as now they should be, and if their current consumption depends on their total lifetime resources, then the younger generations will be saving now to pay the tax bills and the reduced social security that they are going to receive in the future. In the light of the evidence against low-frequency smoothing, and of the limited relevance of expected future income, especially distant future income, it seems unlikely that they will do so. For exactly the same reasons, Ricardian equivalence will not hold, and government deficits will decrease national saving. The US government may not be able to manipulate its fiscal stance in the short run, but its long-term policies are not so constrained, and their consequences are unlikely to be offset by the clear-sighted and far-sighted actions of permanent income consumers.</p>
+</div>
+<div id="parker_reaction_1999" class="section level2">
+<h2><span class="citation">Parker (1999)</span></h2>
+</div>
+<div id="parker_spendthrift_2000" class="section level2">
+<h2><span class="citation">Parker (2000)</span></h2>
+</div>
+<div id="carroll_why_2000" class="section level2">
+<h2><span class="citation">Carroll (2000)</span></h2>
+</div>
+<div id="souleles_consumer_2002" class="section level2">
+<h2><span class="citation">N. S. Souleles (2002)</span></h2>
+</div>
+<div id="johnson_household_2006" class="section level2">
+<h2><span class="citation">Johnson, Parker, and Souleles (2006)</span></h2>
+</div>
+<div id="kaplan_wealthy_2014" class="section level2">
+<h2><span class="citation">Kaplan, Violante, and Weidner (2014)</span></h2>
+</div>
+<div id="jappelli_fiscal_2014" class="section level2">
+<h2><span class="citation">Jappelli and Pistaferri (2014)</span></h2>
+<p>In particular, we find that a debt-financed increase in transfers of 1 percent of national disposable income targeted to the bottom decile of the cash-on-hand distribution would increase aggregate consumption by 0.82 percent. Furthermore, redistributing income from the top decile to the bottom decile of the income distribution would boost aggregate consumption by about 0.1 percent. One important caveat is that our calculations of the aggregate effects of fiscal policy are performed assuming no general equilibrium effects, and, in particular, that fiscal policy does not impact asset prices and that tax changes have no effect on labor supply. Hence, our calculations are likely to be an upper bound to the true effects of fiscal policy.</p>
+</div>
+<div id="saez_wealth_2016" class="section level2">
+<h2><span class="citation">Saez and Zucman (2016)</span></h2>
+</div>
+<div id="parker_why_2017" class="section level2">
+<h2><span class="citation">Parker (2017)</span></h2>
+</div>
+<div id="wong_population_2016" class="section level2">
+<h2><span class="citation">Wong (2016)</span></h2>
+<p>In this paper, <span class="citation">N. S. Souleles (2002)</span> shows that the consumer response to the Reagan tax cuts was very far from the one which is predicted by the Permanent Income Hypothesis.</p>
+<div id="refs" class="references">
+<div id="ref-campbell_why_1989">
+<p>Campbell, John, and Angus Deaton. 1989. “Why Is Consumption so Smooth?” <em>The Review of Economic Studies</em> 56 (3): 357–73. doi:<a href="https://doi.org/10.2307/2297552">10.2307/2297552</a>.</p>
+</div>
+<div id="ref-carroll_why_2000">
+<p>Carroll, Christopher D. 2000. “Why Do the Rich Save so Much ?” In <em>Does Atlas Shrug? The Economic Consequences of Taxing the Rich</em>, edited by Joel B. Slemrod. Vol. D. Harvard Univ Pr.</p>
+</div>
+<div id="ref-cole_social_1992">
+<p>Cole, Harold L., George J. Mailath, and Andrew Postlewaite. 1992. “Social Norms, Savings Behavior, and Growth.” <em>Journal of Political Economy</em> 100 (6): 1092–1125. doi:<a href="https://doi.org/10.1086/261855">10.1086/261855</a>.</p>
+</div>
+<div id="ref-deaton_understanding_1992">
+<p>Deaton, Angus. 1992. <em>Understanding Consumption</em>. Oxford University Press.</p>
+</div>
+<div id="ref-friedman_theory_1957">
+<p>Friedman, Milton. 1957. <em>Theory of the Consumption Function</em>. Princeton University Press.</p>
+</div>
+<div id="ref-jappelli_fiscal_2014">
+<p>Jappelli, Tullio, and Luigi Pistaferri. 2014. “Fiscal Policy and MPC Heterogeneity.” <em>American Economic Journal: Macroeconomics</em> 6 (4): 107–36. doi:<a href="https://doi.org/10.1257/mac.6.4.107">10.1257/mac.6.4.107</a>.</p>
+</div>
+<div id="ref-johnson_household_2006">
+<p>Johnson, David S., Jonathan A. Parker, and Nicholas S. Souleles. 2006. “Household Expenditure and the Income Tax Rebates of 2001.” <em>American Economic Review</em> 96 (5): 1589–1610. doi:<a href="https://doi.org/10.1257/aer.96.5.1589">10.1257/aer.96.5.1589</a>.</p>
+</div>
+<div id="ref-kaplan_wealthy_2014">
+<p>Kaplan, Greg, Giovanni Violante, and Justin Weidner. 2014. “The Wealthy Hand-to-Mouth.” <em>Brookings Papers on Economic Activity</em>, 77–138. <a href="http://www.jstor.org/stable/23936272" class="uri">http://www.jstor.org/stable/23936272</a>.</p>
+</div>
+<div id="ref-keynes_general_1936">
+<p>Keynes, John Maynard. 1936. <em>The General Theory of Employment, Interest, and Money</em>.</p>
+</div>
+<div id="ref-parker_reaction_1999">
+<p>Parker, Jonathan A. 1999. “The Reaction of Household Consumption to Predictable Changes in Social Security Taxes.” <em>The American Economic Review</em> 89 (4): 959–73. <a href="http://www.jstor.org/stable/117167" class="uri">http://www.jstor.org/stable/117167</a>.</p>
+</div>
+<div id="ref-parker_spendthrift_2000">
+<p>———. 2000. “Spendthrift in America? On Two Decades of Decline in the U.S. Saving Rate.” <em>NBER Macroeconomics Annual 1999</em>, January, 317–87. <a href="http://www.nber.org/chapters/c11050" class="uri">http://www.nber.org/chapters/c11050</a>.</p>
+</div>
+<div id="ref-parker_why_2017">
+<p>———. 2017. “Why Don’t Households Smooth Consumption? Evidence from a $25 Million Experiment.” <em>American Economic Journal: Macroeconomics</em> 9 (4): 153–83. doi:<a href="https://doi.org/10.1257/mac.20150331">10.1257/mac.20150331</a>.</p>
+</div>
+<div id="ref-poterba_finite_1987">
+<p>Poterba, James M., and Lawrence H. Summers. 1987. “Finite Lifetimes and the Effects of Budget Deficits on National Saving.” <em>Journal of Monetary Economics</em> 20 (2): 369–91. doi:<a href="https://doi.org/10.1016/0304-3932(87)90021-3">10.1016/0304-3932(87)90021-3</a>.</p>
+</div>
+<div id="ref-saez_wealth_2016">
+<p>Saez, Emmanuel, and Gabriel Zucman. 2016. “Wealth Inequality in the United States Since 1913: Evidence from Capitalized Income Tax Data.” <em>Quarterly Journal of Economics</em> 131 (May): 519–78. doi:<a href="https://doi.org/10.1093/qje/qjw004.Advance">10.1093/qje/qjw004.Advance</a>.</p>
+</div>
+<div id="ref-souleles_consumer_2002">
+<p>Souleles, Nicholas S. 2002. “Consumer Response to the Reagan Tax Cuts.” <em>Journal of Public Economics</em> 85 (1): 99–120. doi:<a href="https://doi.org/10.1016/S0047-2727(01)00113-X">10.1016/S0047-2727(01)00113-X</a>.</p>
+</div>
+<div id="ref-wong_population_2016">
+<p>Wong, Arlene. 2016. “Population Aging and the Transmission of Monetary Policy to Consumption.” 2016 Meeting Paper 716. Society for Economic Dynamics. <a href="https://econpapers.repec.org/paper/redsed016/716.htm" class="uri">https://econpapers.repec.org/paper/redsed016/716.htm</a>.</p>
+</div>
+</div>
+</div>
 </div>
 
 
