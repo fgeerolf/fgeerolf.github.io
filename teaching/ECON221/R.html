@@ -139,11 +139,16 @@ $(document).ready(function () {
 <li>A <a href="https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf">Base R Cheatsheet</a>.</li>
 <li>An <a href="https://www.rstudio.com/wp-content/uploads/2016/02/advancedR.pdf">Advanced R Cheatsheet</a>.</li>
 </ul>
-<p><a href="https://www.datacamp.com/tracks/learn-statistics-with-r">Datacamp</a> also have great learning tools for <code>R</code>, as well as <code>Python</code>.</p>
+<p><a href="https://www.datacamp.com/tracks/learn-statistics-with-r">Datacamp</a> also has great learning tools for <code>R</code>, as well as <code>Python</code>.</p>
 </div>
-<div id="r-markdown" class="section level2">
-<h2>R-markdown</h2>
-<p><code>R-markdown</code> is a great tool for keeping your workflow organized and keeping track of each one of your research projects: you can add very easily, images, regression tables, graphs, etc. Again, cheatsheets are a good way to learn: there exists a <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">beginner’s cheatsheet</a> and a <a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">more advanced one</a>. You may also learn from the reference guide <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">here</a>.</p>
+<div id="r-markdown-rmd" class="section level2">
+<h2>R-markdown (Rmd)</h2>
+<p><code>R-markdown</code> is a great tool for keeping your workflow organized and keeping track of each one of your research projects: you can add very easily, images, regression tables, graphs, etc. Again, cheatsheets are a good way to learn. There are two main cheatsheets:</p>
+<ul>
+<li>A <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">Beginner’s R-Markdown Cheatsheet</a>.</li>
+<li>An <a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">Advanced R-Markdown Cheatsheet</a>.</li>
+</ul>
+<p>You may also learn from the reference guide <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">here</a>.</p>
 </div>
 <div id="necessary-packages" class="section level2">
 <h2>Necessary Packages</h2>
@@ -152,7 +157,7 @@ $(document).ready(function () {
 <li><code>dplyr</code> for data manipulation. <a href="https://ugoproto.github.io/ugo_r_doc/dplyr.pdf">Cheatsheet</a>. You will find a tutorial in 4 parts here: <a href="https://suzan.rbind.io/2018/01/dplyr-tutorial-1/">Part 1</a> / <a href="https://suzan.rbind.io/2018/02/dplyr-tutorial-2/">Part 2</a> / <a href="https://suzan.rbind.io/2018/02/dplyr-tutorial-3/">Part 3</a> / <a href="https://suzan.rbind.io/2018/04/dplyr-tutorial-4/">Part 4</a>. Note, in particular, the use of pipes %&gt;%:
 <ul>
 <li>x %&gt;% f(y) is the same as f(x, y).</li>
-<li>y %&gt;% f(x, ., z) is the same as f(x, y, z). “Piping” with %&gt;% makes code more readable. For example, the following code computes an average of <code>Sepal.Width</code> by <code>Species</code>in the <code>ìris</code> database, and then orders the Species by their average <code>Sepal.Width</code>. More generally, instead of writing <span class="math inline">\(i(h(g(f())))\)</span> which is very hard to read when <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span>, <span class="math inline">\(h\)</span> and <span class="math inline">\(i\)</span> are complex functions, pipes allow you to write functions in the order they are being called: x %&gt;% f %&gt;% g %&gt;% h %&gt;% i. Try it !</li>
+<li>y %&gt;% f(x, ., z) is the same as f(x, y, z). “Piping” with %&gt;% makes code more readable. For example, the following code computes an average of <code>Sepal.Width</code> by <code>Species</code>in the <code>iris</code> database, and then orders the Species by their average <code>Sepal.Width</code>. More generally, instead of writing <span class="math inline">\(i(h(g(f())))\)</span> which is very hard to read when <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span>, <span class="math inline">\(h\)</span> and <span class="math inline">\(i\)</span> are complex functions, pipes allow you to write functions in the order they are being called: x %&gt;% f %&gt;% g %&gt;% h %&gt;% i. Try it !</li>
 </ul>
 <pre class="r"><code>iris %&gt;%
   group_by(Species) %&gt;%
