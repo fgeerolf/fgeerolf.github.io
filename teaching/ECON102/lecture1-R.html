@@ -125,24 +125,30 @@ $(document).ready(function () {
 </div>
 
 
-<pre class="r"><code>rm(list = ls())
-pklist &lt;- c(&quot;tidyverse&quot;, &quot;lubridate&quot;, &quot;rdbnomics&quot;, &quot;devtools&quot;, &quot;scales&quot;)
-source(&quot;https://fgeerolf.github.io/code/load-packages.R&quot;)
-devtools::install_github(&quot;dbnomics/rdbnomics&quot;)
-options(tibble.print_max = 100)</code></pre>
 <div id="introduction" class="section level1 unnumbered">
 <h1>Introduction</h1>
-<p>Total demand for output is made of four components: (1) consumption spending by households (C), investment spending by households and corporations (I), government purchases (G) and finally net exports (NX). This view of GDP is called the <a href="#gdp-product">product approach to GDP</a>. At the same time, GDP is also equal to the sum of factor payments going to the inputs which allow to produce all these components: capital income, and labor income. This view of GDP is called the <a href="#gdp-income">income approach to GDP</a></p>
+<p>GDP is the value of all final goods and services produced in a country within a given period. There are two sides to GDP, the demand side and the supply side:</p>
+<ul>
+<li>On the <strong>demand side</strong>, the <a href="#gdp-product"><strong>product approach to GDP</strong></a> recognizes that total aggregate demand is made of four components:
+<ul>
+<li>Consumption spending by households (C).</li>
+<li>Investment spending by households and corporations (I).</li>
+<li>Government purchases (G).</li>
+<li>Net exports (NX).</li>
+</ul></li>
+<li>On the <strong>supply side</strong>, the production of output involves the use of factor of production, often limited to capital and labor. These factors of production receive payment for their use, whose sum equals GDP.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> The <a href="#gdp-income"><strong>income approach to GDP</strong></a> consists in dividing up these payments into the different factors of production. Again, this often simply means a division of total value added into capital income, and labor income.</li>
+</ul>
 </div>
 <div id="gdp-product" class="section level1">
 <h1>GDP: The Product Approach</h1>
-<p>Let us start with what is perhaps the most important accounting identity in macroeconomics: <span class="math display">\[ Y = C + I + G + X -M.\]</span></p>
-<p>Note that very often we denote net exports <span class="math inline">\(NX\)</span> as <span class="math inline">\(NX = X- M\)</span> so that GDP is simply: <span class="math display">\[ Y = C + I + G + NX.\]</span> In some textbooks (as well as in earlier versions of these lecture notes), imports are denoted by <span class="math inline">\(IM\)</span> instead of <span class="math inline">\(M\)</span>.</p>
-<p>We look at each component of GDP in turn:<br />
-- <a href="#cons">Consumption (C)</a><br />
-- <a href="#inv">Investment (I)</a><br />
-- <a href="#gov">Government Purchases (G)</a><br />
-- <a href="#net-exports">Net Exports (NX)</a></p>
+<p>GDP is equal to the total aggregate demand for goods: <span class="math display">\[ Y = C + I + G + X -M.\]</span> We often define net exports as:<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> <span class="math display">\[NX = X-M,\]</span> so that GDP is simply: <span class="math display">\[ Y = C + I + G + NX.\]</span></p>
+<p>We look at each component of aggregate demand in turn:</p>
+<ul>
+<li><a href="#cons">Consumption (C)</a></li>
+<li><a href="#inv">Investment (I)</a></li>
+<li><a href="#gov">Government Purchases (G)</a></li>
+<li><a href="#net-exports">Net Exports (NX)</a></li>
+</ul>
 <div id="cons" class="section level2">
 <h2>Personal Consumption Expenditures - Consumption (C)</h2>
 <p>Figure  plots GDP from the BEA, as well as PCE, in millions of dollars. US GDP being in the vicinity of USD 20 trillion dollars (or USD 20,000 billions, or USD 20,000,000 millions), this looks about right. On this figure, data for GDP is taken from the Bureau of Economic Analysis’s National Income and Product Accounts (NIPA) <a href="https://db.nomics.world/BEA/NIPA-T10105/A191RC-Q">here</a> and data for Personal Consumption Expenditures is taken from <a href="https://db.nomics.world/BEA/NIPA-T10105/DPCERC-Q">there</a>.</p>
@@ -188,10 +194,12 @@ options(tibble.print_max = 100)</code></pre>
 
 </p>
 </div>
-<p>Personal Consumption Expenditures are divided up into:<br />
-- Durable Goods (more than 3 years of durability): e.g. cars.<br />
-- Non-durable Goods (less than 3 years of durability).<br />
-- Services.</p>
+<p>Personal Consumption Expenditures are divided up into:</p>
+<ul>
+<li>Durable Goods (more than 3 years of durability): e.g. cars.</li>
+<li>Non-durable Goods (less than 3 years of durability).</li>
+<li>Services.</li>
+</ul>
 <p>Services have become more important than Goods in total consumption since the 1970s.</p>
 <pre class="r"><code>rdb(ids = c('BEA/NIPA-T10105/A191RC-Q', &quot;BEA/NIPA-T10105/DGDSRC-Q&quot;, &quot;BEA/NIPA-T10105/DSERRC-Q&quot;)) %&gt;%
   mutate(year = year(period),
@@ -220,8 +228,11 @@ options(tibble.print_max = 100)</code></pre>
 </div>
 <div id="inv" class="section level2">
 <h2>Gross private domestic investment - Investment (I)</h2>
-<p>Investment has two components: - non residential investment is the purchase of new capital goods by firms: structures, new plants.<br />
-- residential investment is the purchase of new houses.</p>
+<p>Investment has two components:</p>
+<ul>
+<li>non residential investment is the purchase of new capital goods by firms: structures, new plants.</li>
+<li>residential investment is the purchase of new houses.</li>
+</ul>
 <p>Gross private domestic investment is approximately <strong>15 to 20 % of GDP</strong>, as you can see on Figure . It is also very volatile over the cycle.</p>
 <pre class="r"><code>rdb(ids = c('BEA/NIPA-T10105/A191RC-Q', &quot;BEA/NIPA-T10105/A006RC-Q&quot;)) %&gt;%
   mutate(year = year(period),
@@ -304,14 +315,50 @@ options(tibble.print_max = 100)</code></pre>
 <h1>GDP: The Income Approach</h1>
 <div id="cobb-douglas-production-function" class="section level2">
 <h2>Cobb Douglas Production function</h2>
-<p>In order to organize our thinking, let’s write out a Cobb-Douglas production function, defined as: <span class="math display">\[Y_t = A_t K_t^{\alpha} L_t^{1-\alpha},\]</span> where <span class="math inline">\(\alpha\)</span> is a number between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>. Let us think of a firm who chooses the amount of labor it uses <span class="math inline">\(L_t\)</span> as well as the amount of capital it uses <span class="math inline">\(K_t\)</span> in order to maximize its profits: <span class="math display">\[\max_{K_t, L_t} \quad A_t K_t^{\alpha} L_t^{1-\alpha} - r K_t - w L_t.\]</span> From Econ 11, it should be clear that a way to solve this problem is simply to set the derivatives of the profit function equal to <span class="math inline">\(0\)</span> with respect to <span class="math inline">\(K_t\)</span> and <span class="math inline">\(L_t\)</span> which gives: <span class="math display">\[\alpha A_t K_t^{\alpha-1} L_t^{1-\alpha} - r = 0\]</span> when differentiating with respect to <span class="math inline">\(K_t\)</span> as well as: <span class="math display">\[(1-\alpha) A_t K_t^{\alpha} L_t^{-\alpha} - w = 0\]</span> when differentiating with respect to <span class="math inline">\(L_t\)</span>.</p>
-<p>The total wage bill <span class="math inline">\(w L_t\)</span> is then given by: <span class="math display">\[w L_t = (1-\alpha) A_t K_t^{\alpha} L_t^{-\alpha} * L_t = (1-\alpha) Y_t.\]</span></p>
-<p>The total income going to capital <span class="math inline">\(r K_t\)</span> is given by: <span class="math display">\[r K_t = \alpha A_t K_t^{\alpha-1} L_t^{1-\alpha} * K_t = \alpha Y_t.\]</span></p>
-<p>Thus, the share of capital in value added is: <span class="math display">\[\frac{rK_t}{Y_t}=\alpha,\]</span> while the share of labor in value added is: <span class="math display">\[\frac{wL_t}{Y_t}=1-\alpha.\]</span></p>
+<p>In order to organize our thinking, let’s write out a Cobb-Douglas production function, defined as: <span class="math display">\[Y_t = A_t K_t^{\alpha} L_t^{1-\alpha},\]</span> where <span class="math inline">\(\alpha\)</span> is a number between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>. It is useful to then think of a firm which would choose the amount of labor it uses <span class="math inline">\(L_t\)</span> as well as the amount of capital it uses <span class="math inline">\(K_t\)</span> in order to maximize its profits: <span class="math display">\[\max_{K_t, L_t} \quad A_t K_t^{\alpha} L_t^{1-\alpha} - R_t K_t - w_t L_t,\]</span> In this expression, <span class="math inline">\(R_t\)</span> is the <strong>rental rate</strong> of capital, also called the <strong>gross return</strong> to capital. This represents how much it costs to rent one unit of capital. This cost actually has two components:</p>
+<ol style="list-style-type: decimal">
+<li><p>It includes a conventional interest rate <span class="math inline">\(r_t\)</span>, which is the cost of borrowing money to invest in capital. You should think of this as the real interest rate which is charged by a bank to borrow money.</p></li>
+<li><p>It also includes a component to account for depreciation of the capital stock, often denoted by <span class="math inline">\(\delta\)</span>. If capital is bought, then the resale price for each unit of capital is lower by <span class="math inline">\(\delta\)</span>, which is a cost to the investor. If capital is rented, then capital needs to be given back to the owner in its original state.</p></li>
+</ol>
+<p>We have that the rental rate or gross return is equal to the net return plus the depreciation rate: <span class="math display">\[\boxed{R_t = r_t + \delta}.\]</span> From Econ 11, it should be clear that a way to solve this problem is to set the derivative of the profit function equal to <span class="math inline">\(0\)</span> with respect to <span class="math inline">\(K_t\)</span> and <span class="math inline">\(L_t\)</span>:</p>
+<ul>
+<li>Differentiating with respect to <span class="math inline">\(K_t\)</span> implies: <span class="math display">\[\alpha A_t K_t^{\alpha-1} L_t^{1-\alpha} - R_t = 0 \quad \Rightarrow \quad \boxed{R_t = \alpha A_t K_t^{\alpha-1} L_t^{1-\alpha}}.\]</span></li>
+<li>Differentiating with respect to <span class="math inline">\(L_t\)</span> implies: <span class="math display">\[(1-\alpha) A_t K_t^{\alpha} L_t^{-\alpha} - w_t = 0 \quad \Rightarrow \quad \boxed{w_t = (1-\alpha) A_t K_t^{\alpha} L_t^{-\alpha}}\]</span></li>
+</ul>
+<p>Note that an alternative, and more direct way to get at that same result, would be to use Econ 11 directly, and write that the marginal products have to be equal to prices:</p>
+<ul>
+<li>The <strong>rental rate of capital</strong> <span class="math inline">\(R_t\)</span> is the marginal product of capital. The marginal product of capital is how much more output is obtained when the capital stock is increased by one unit, which is just the derivative of output with respect to capital <span class="math inline">\(\partial Y_t / \partial K_t\)</span>: <span class="math display">\[
+\begin{aligned}
+R_t&amp;=\frac{\partial Y_t}{\partial K_t}\\
+&amp;= \frac{\partial \left(A_t K_t^{\alpha} L_t^{1-\alpha}\right)}{\partial K_t}\\
+R_t &amp;= \alpha A_t K_t^{\alpha-1} L_t^{1-\alpha}
+\end{aligned}
+\]</span></li>
+<li>The <strong>wage</strong> <span class="math inline">\(w_t\)</span> is the marginal product of labor. The marginal product of labor is how much more output is obtained when the quantity of labor is increased by one unit, which is just the derivative of output with respect to labor <span class="math inline">\(\partial Y_t / \partial L_t\)</span>: <span class="math display">\[
+\begin{aligned}
+w_t &amp;=\frac{\partial Y_t}{\partial L_t}\\
+&amp;= \frac{\partial \left(A_t K_t^{\alpha} L_t^{1-\alpha}\right)}{\partial L_t}\\
+w_t &amp;= (1-\alpha) A_t K_t^{\alpha} L_t^{-\alpha}
+\end{aligned}
+\]</span> The total wage bill <span class="math inline">\(w L_t\)</span> is a fraction <span class="math inline">\(1-\alpha\)</span> of output <span class="math inline">\(Y_t\)</span>: <span class="math display">\[
+\begin{aligned}
+w_t L_t &amp;= (1-\alpha) A_t K_t^{\alpha} L_t^{-\alpha} \cdot L_t \\
+&amp;= (1-\alpha) A_t K_t^{\alpha} L_t^{1-\alpha}\\
+w_t L_t &amp;= (1-\alpha) Y_t
+\end{aligned}
+\]</span></li>
+</ul>
+<p>The total capital income <span class="math inline">\(R_t K_t\)</span> is a fraction <span class="math inline">\(\alpha\)</span> of output <span class="math inline">\(Y_t\)</span>: <span class="math display">\[
+\begin{aligned}
+R_t K_t &amp;= \alpha A_t K_t^{\alpha-1} L_t^{1-\alpha} \cdot K_t \\
+&amp;= \alpha A_t K_t^{\alpha} L_t^{1-\alpha}\\
+R_t K_t &amp;= \alpha Y_t.
+\end{aligned}
+\]</span> This implies that the share of capital income in output (or equivalently, value added) is: <span class="math display">\[\frac{R_t K_t}{Y_t}=\alpha,\]</span> while the share of labor income in output (or equivalently, value added) is: <span class="math display">\[\frac{w_t L_t}{Y_t}=1-\alpha.\]</span> Note that capital income plus labor income equals total output: <span class="math display">\[R_t K_t + w_t L_t = Y_t.\]</span> Another way to say the same thing is that the share of capital income in output and that of labor income in output add up to one: <span class="math display">\[\boxed{\frac{R_t K_t}{Y_t} + \frac{w_t L_t}{Y_t}=1}.\]</span></p>
 </div>
 <div id="the-income-side-in-the-data" class="section level2">
 <h2>The Income Side in the Data</h2>
-<p>So in practice, how much goes to the compensation of employees, and how much goes to the returns to capital? The answer is that it goes approximately for 1/3 to capital and for 2/3 to labor. The calculations for these are less straightforward than for computing the share of consumption, investment, as we did above. The reason is that in practice, the division between labor and capital is not as clear cut in the national accounts as one might hope: for example, someone who owns her/his own business reports most of her/his income in the form of capital income, even when a large part of it is actually labor income, so that compensation of employees is (vastly) understated. Figure  shows which results are obtained using this understated measure. It needs to be adjusted upwards by about 10% of GDP, for the reasons mentioned above.</p>
+<p>In practice, how much goes to the compensation of employees (labor income), and how much goes to the returns to capital (capital income)? The answer is that it goes approximately for 1/3 to capital and for 2/3 to labor. In turn, this implies that we will, in numerical applications of our theories, often assume that: <span class="math display">\[\alpha = \frac{1}{3}\]</span> The calculations for these are less straightforward than for computing the share of consumption, investment, as we did above. The reason is that in practice, the division between labor and capital is not as clear cut in the national accounts as one might hope: for example, someone who owns her/his own business reports most of her/his income in the form of capital income, even when a large part of it is actually labor income, so that compensation of employees is (vastly) understated. Figure  shows which results are obtained using this understated measure. It needs to be adjusted upwards by about 10% of GDP, for the reasons mentioned above.</p>
 <pre class="r"><code>rdb(ids = c(&quot;BEA/NIPA-T11000/A4002C-Q&quot;, &quot;BEA/NIPA-T11000/A261RC-Q&quot;)) %&gt;%
   mutate(year = year(period),
          month = month(period),
@@ -337,12 +384,19 @@ options(tibble.print_max = 100)</code></pre>
 <p>For our purposes, we only need to remember that the share of compensation of employees is approximately 2/3 of value added. Therefore, we will very often work with a Cobb-Douglas production function such that: <span class="math display">\[Y_t = A_t K_t^{1/3} L_t^{2/3}.\]</span> <a href="lecture2.html">Lecture 2</a> will walk you through the Solow growth model, where we shall make heavy use of that Cobb-Douglas production function.</p>
 </div>
 </div>
-<div id="readings---to-go-further" class="section level1">
+<div id="readings---to-go-further" class="section level1 unnumbered">
 <h1>Readings - To go further</h1>
 <p><a href="https://hbr.org/2012/01/the-economics-of-well-being">The Economics of Well Being, <em>Harvard Business Review</em>.</a></p>
 <p><a href="https://search.proquest.com/hnpnewyorktimes/docview/1030670685/A9EF0C9A254D4699PQ/1?accountid=14512">G.D.P. R.I.P., <em>The New York Times</em>, August 9, 2009.</a></p>
-<p>(Gated) <a href="https://www.economist.com/news/finance-and-economics/21677223-new-study-shows-money-can-buy-you-happinessbut-only-fleetingly-others">Keeping up with the Karumes, <em>The Economist</em>, October 29th, 2015.</a></p>
+<p>(Gated) <a href="https://www.economist.com/news/finance-and-economics/21677223-new-study-shows-money-can-buy-you-happinessbut-only-fleetingly-others">Keeping up with the Karumes, <em>The Economist</em>, October 29, 2015.</a></p>
 <p>(More Difficult Read) <a href="https://doi.org/10.1257/089533005774357833">Abraham, Katharine G. “Distinguished Lecture on Economics in Government-What We Don’t Know Could Hurt Us: Some Reflections on the Measurement of Economic Activity.” Journal of Economic Perspectives 19, no. 3 (September 2005): 3–18.</a></p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Note that we are assuming here that there are no “rents” in the economy, that is that nothing can be obtained without either labor or capital. This is not exactly true, as for example oil is clearly more valuable than the costs of extracting it for the soil. Land is another example of something that is preexisting, but nevertheless earns a payment. It is a good first-order approximation however, as most production in fact requires either labor of capital.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>In some textbooks (as well as in earlier versions of these lecture notes), imports are denoted by <span class="math inline">\(IM\)</span> instead of <span class="math inline">\(M\)</span>.<a href="#fnref2">↩</a></p></li>
+</ol>
 </div>
 
 
