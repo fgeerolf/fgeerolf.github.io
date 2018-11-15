@@ -128,8 +128,8 @@ $(document).ready(function () {
 <div id="the-solow-model-with-exogenous-growth" class="section level1">
 <h1>The Solow Model with Exogenous Growth</h1>
 <ol style="list-style-type: decimal">
-<li><p>The saving rate is exogenous and equal to <span class="math inline">\(s\)</span> in the Solow growth model, and the depreciation rate is <span class="math inline">\(\delta\)</span>. Therefore, the law of motion for capital is: <span class="math display">\[\Delta K_{t+1}=K_{t+1}-K_t=sY_t-\delta K_t.\]</span> Using the value for <span class="math inline">\(Y_t\)</span>, we get: <span class="math display">\[K_{t+1}=s A_t K_t^{\alpha} L_t^{1-\alpha} + (1-\delta) K_t.\]</span> which is a law of motion for <span class="math inline">\(K_t\)</span>: a value for <span class="math inline">\(K_{t+1}\)</span> as a function of <span class="math inline">\(K_t\)</span> and the exogenous parameters in the model.</p></li>
-<li><p>Defining <span class="math inline">\(k_t\)</span> as: <span class="math display">\[ k_t\equiv\frac{K_t}{A_t^{1/(1-\alpha)} L_t},\]</span> as is suggested, we divide both the left-hand side and the right-hand side of the equation by <span class="math inline">\(A_t^{1/(1-\alpha)} L_t\)</span>. This gives: <span class="math display">\[\frac{K_{t+1}}{A_t^{1/(1-\alpha)} L_t}=s \frac{A_t K_t^{\alpha} L_t^{1-\alpha}}{A_t^{1/(1-\alpha)} L_t} + (1-\delta) \frac{K_t}{A_t^{1/(1-\alpha)} L_t}\]</span> We may proceed to a simplification of the first term on the right-hand side by putting the <span class="math inline">\(A_t\)</span> and the <span class="math inline">\(L_t^{1-\alpha}\)</span> from the numerator to the denominator (using that <span class="math inline">\(f/g=1/(g/f)\)</span>): <span class="math display">\[
+<li><p>The saving rate is exogenous and equal to <span class="math inline">\(s\)</span> in the Solow growth model, and the depreciation rate is <span class="math inline">\(\delta\)</span>. Therefore, the law of motion for capital is: <span class="math display">\[\Delta K_{t+1}=K_{t+1}-K_t=sY_t-\delta K_t.\]</span> Using the value for <span class="math inline">\(Y_t\)</span>, we get: <span class="math display">\[\boxed{K_{t+1}=s A_t K_t^{\alpha} L_t^{1-\alpha} + (1-\delta) K_t}.\]</span> which is a law of motion for <span class="math inline">\(K_t\)</span>: a value for <span class="math inline">\(K_{t+1}\)</span> as a function of <span class="math inline">\(K_t\)</span> and the exogenous parameters in the model.</p></li>
+<li><p>Defining <span class="math inline">\(k_t\)</span> as: <span class="math display">\[k_t\equiv\frac{K_t}{A_t^{1/(1-\alpha)} L_t},\]</span> as is suggested, we divide both the left-hand side and the right-hand side of the equation by <span class="math inline">\(A_t^{1/(1-\alpha)} L_t\)</span>. This gives: <span class="math display">\[\frac{K_{t+1}}{A_t^{1/(1-\alpha)} L_t}=s \frac{A_t K_t^{\alpha} L_t^{1-\alpha}}{A_t^{1/(1-\alpha)} L_t} + (1-\delta) \frac{K_t}{A_t^{1/(1-\alpha)} L_t}\]</span> We may proceed to a simplification of the first term on the right-hand side by putting the <span class="math inline">\(A_t\)</span> and the <span class="math inline">\(L_t^{1-\alpha}\)</span> from the numerator to the denominator (using that <span class="math inline">\(f/g=1/(g/f)\)</span>): <span class="math display">\[
 \begin{aligned}
 \frac{A_t K_t^{\alpha} L_t^{1-\alpha}}{A_t^{1/(1-\alpha)} L_t}&amp;=\frac{K_t^\alpha}{A_t^{1/(1-\alpha)-1}L_t^{1-(1-\alpha)}}\\
 &amp;=\frac{K_t^\alpha}{A_t^{\alpha/(1-\alpha)}L_t^{\alpha}}\\
@@ -140,8 +140,8 @@ $(document).ready(function () {
 \frac{K_{t+1}}{A_t^{1/(1-\alpha)} L_t}&amp;= \frac{A_{t+1}^{1/(1-\alpha)} L_{t+1}}{A_t^{1/(1-\alpha)} L_t} \cdot \frac{K_{t+1}}{A_{t+1}^{1/(1-\alpha)} L_{t+1}} \\
 \frac{K_{t+1}}{A_t^{1/(1-\alpha)} L_t}&amp;=(1+g)^{1/(1-\alpha)}(1+n) k_{t+1}.
 \end{aligned}
-\]</span> Therefore: <span class="math display">\[(1+g)^{1/(1-\alpha)}(1+n) k_{t+1} =sk_t^\alpha+(1-\delta)k_t.\]</span> If <span class="math inline">\(g\)</span> and <span class="math inline">\(n\)</span> are small then: <span class="math display">\[(1+g)^{1/(1-\alpha)}(1+n)\approx1+\frac{1}{1-\alpha}g+n.\]</span> Thus: <span class="math display">\[\left(1+\frac{1}{1-\alpha}g+n\right)k_{t+1}\approx s k_t^\alpha+(1-\delta)k_t.\]</span> A law of motion for <span class="math inline">\(k_{t+1}\)</span> is thus (we use equal signs now, even though it is really an approximation): <span class="math display">\[k_{t+1}=\frac{s}{1+g/(1-\alpha)+n}k_t^{\alpha}+\frac{1-\delta}{1+g/(1-\alpha)+n}k_t.\]</span></p></li>
-<li>The steady-state is such that: <span class="math display">\[\left(1+\frac{1}{1-\alpha}g+n\right)k^{*} = s(k^{*})^\alpha + (1-\delta)k^{*}.\]</span> Therefore: <span class="math display">\[\left(\delta+\frac{1}{1-\alpha}g+n\right)k^{*} = s(k^{*})^\alpha.\]</span> Finally, this gives <span class="math inline">\(k^{*}\)</span>: <span class="math display">\[k^{*}=\left(\frac{s}{\delta+g/(1-\alpha)+n}\right)^{\frac{1}{1-\alpha}}.\]</span></li>
+\]</span> Therefore: <span class="math display">\[(1+g)^{1/(1-\alpha)}(1+n) k_{t+1} =sk_t^\alpha+(1-\delta)k_t.\]</span> If <span class="math inline">\(g\)</span> and <span class="math inline">\(n\)</span> are small then: <span class="math display">\[(1+g)^{1/(1-\alpha)}(1+n)\approx1+\frac{1}{1-\alpha}g+n.\]</span> Thus: <span class="math display">\[\left(1+\frac{1}{1-\alpha}g+n\right)k_{t+1}\approx s k_t^\alpha+(1-\delta)k_t.\]</span> A law of motion for <span class="math inline">\(k_{t+1}\)</span> is thus (we use equal signs now, even though it is really an approximation): <span class="math display">\[\boxed{k_{t+1}=\frac{s}{1+g/(1-\alpha)+n}k_t^{\alpha}+\frac{1-\delta}{1+g/(1-\alpha)+n}k_t}.\]</span></p></li>
+<li>The steady-state is such that: <span class="math display">\[\left(1+\frac{1}{1-\alpha}g+n\right)k^{*} = s(k^{*})^\alpha + (1-\delta)k^{*}.\]</span> Therefore: <span class="math display">\[\left(\delta+\frac{1}{1-\alpha}g+n\right)k^{*} = s(k^{*})^\alpha.\]</span> Finally, this gives <span class="math inline">\(k^{*}\)</span>: <span class="math display">\[\boxed{k^{*}=\left(\frac{s}{\delta+g/(1-\alpha)+n}\right)^{\frac{1}{1-\alpha}}}.\]</span></li>
 <li><p>In this exercise, we make intensive use of the following rules on growth rates: <span class="math display">\[
 \begin{aligned}
 g_{XY}&amp;=g_X+g_Y\\
@@ -151,31 +151,114 @@ g_{X^a}&amp;=ag_X.
 \]</span> On the balanced growth path: <span class="math display">\[\frac{K_t}{A_t^{1/(1-\alpha)} L_t}=k^{*} \quad \Rightarrow \quad K_t = k^{*}A_t^{1/(1-\alpha)} L_t.\]</span> We may apply the rule above on products (<span class="math inline">\(g_{XY}=g_X+g_Y\)</span>) to see that the growth rate of <span class="math inline">\(K_t\)</span> is the growth rate of <span class="math inline">\(A_t^{1/(1-\alpha)}\)</span> plus the growth rate of <span class="math inline">\(L_t\)</span>, since <span class="math inline">\(k^{*}\)</span> is simply a constant which does not grow. In turn, using the rule on “powers” (that is <span class="math inline">\(g_{X^a}=ag_X\)</span>, with <span class="math inline">\(a=1/(1-\alpha)\)</span>) we get that the growth rate of <span class="math inline">\(A_t^{1/(1-\alpha)}\)</span> is the growth rate of <span class="math inline">\(A_t\)</span> times <span class="math inline">\(1/(1-\alpha)\)</span>. Finally, the growth rate of <span class="math inline">\(A_t\)</span> is <span class="math inline">\(g\)</span> and the growth rate of <span class="math inline">\(L_t\)</span> is <span class="math inline">\(n\)</span> by assumption. Thus, finally: <span class="math display">\[
 \begin{aligned}
 g_K &amp;=g_{A^{1/(1-\alpha)}L}\\
-&amp;=g_{A^{1/(1-\alpha)}L} + g_L\\
+&amp;=g_{A^{1/(1-\alpha)}} + g_L\\
 &amp;=\frac{1}{1-\alpha}g_A + g_L\\
 g_K &amp;=\frac{1}{1-\alpha}g + n
 \end{aligned}
 \]</span> Output is given by: <span class="math display">\[Y_t=A_t K_t^{\alpha} L_t^{1-\alpha}\]</span> Therefore, the rate of growth of output is: <span class="math display">\[
 \begin{aligned}
-g_Y &amp;= g + \alpha g_K +(1-\alpha)n\\
-&amp;= g+ \alpha n+\frac{\alpha}{1-\alpha}g+(1-\alpha)n\\
+g_Y &amp;= g + \alpha g_K +(1-\alpha)g_L\\
+&amp;= g+ \alpha\left(n+\frac{1}{1-\alpha}g\right)+(1-\alpha)n\\
+&amp;= g+ \alpha n+\frac{\alpha}{1-\alpha}g+(1-\alpha)n \\
+&amp;= \left[\alpha n+(1-\alpha)n\right] + \left[g+  \frac{\alpha}{1-\alpha}g\right] \\
 g_Y&amp;=n+\frac{1}{1-\alpha}g.
 \end{aligned}
-\]</span> <span class="math inline">\(C_t\)</span> grows at the same rate as <span class="math inline">\(Y_t\)</span> since <span class="math inline">\(C_t=(1-s)Y_t\)</span>, thus: <span class="math display">\[g_C=n+\frac{1}{1-\alpha}g.\]</span> The rate of growth of <span class="math inline">\(K_t/Y_t\)</span> is zero since <span class="math inline">\(Y_t\)</span> and <span class="math inline">\(k_t\)</span> grow at the same rate: <span class="math display">\[g_{K/Y}=g_K-g_Y=0\]</span> The rate of growth of <span class="math inline">\(K_t/L_t\)</span> is: <span class="math display">\[g_{K/L}=g_K-g_L=\frac{1}{1-\alpha}g.\]</span> The wage is equal to the marginal product of labor from firms’ optimality condition, as in <a href="lecture1.html">lecture 1</a>: <span class="math display">\[w_t=\frac{\partial Y_t}{\partial L_t}=(1-\alpha)A_t \left(\frac{K_t}{L_t}\right)^{\alpha}.\]</span> Thus, the rate of growth of <span class="math inline">\(w_t\)</span> is: <span class="math display">\[g_w=g_A+\alpha g_{K/L}=g+\frac{\alpha}{1-\alpha}g=\frac{1}{1-\alpha}g.\]</span> The rate of growth of <span class="math inline">\(w_t L_t\)</span> is the sum of that of <span class="math inline">\(w\)</span> and that of <span class="math inline">\(L_t\)</span> thus: <span class="math display">\[g_{wL}=\frac{1}{1-\alpha}g+n.\]</span> The marginal product of capital is: <span class="math display">\[r_t=\frac{\partial Y_t}{\partial K_t}=\alpha A_t \left(\frac{K_t}{L_t}\right)^{\alpha-1}.\]</span> Thus, the rate of growth of <span class="math inline">\(r_t\)</span> is: <span class="math display">\[g_r=g_A+(\alpha-1) g_{K/L}=g +\frac{\alpha-1}{1-\alpha}g=0.\]</span> The rate of growth of of <span class="math inline">\(r_t K_t\)</span> is similarly given by: <span class="math display">\[g_{r K}=g_r + g_K = n + \frac{g}{1-\alpha}.\]</span> Finally, the growth in the labor share <span class="math inline">\(w_t L_t\)</span> and that in the capital share <span class="math inline">\(r_t K_t\)</span> are equal to zero which can be inferred from the fact that they are constant with a Cobb-Douglas production function, or that the growth of <span class="math inline">\(w_t L_t\)</span> and <span class="math inline">\(r_t K_t\)</span> are equal to that of output.</p></li>
-<li><p>Using the expression for <span class="math inline">\(y_t\)</span> allows to write what is called the <em>intensive form</em> of the production function: <span class="math display">\[y_t=\frac{Y_t}{A_t^{1/(1-\alpha)} L_t} = \left(\frac{K_t}{A_t^{1/(1-\alpha)}L_t}\right)^\alpha = k_t^\alpha.\]</span> Therefore: <span class="math display">\[y^*=\left(k^*\right)^\alpha=\left(\frac{s}{\delta+g/(1-\alpha)+n}\right)^{\frac{\alpha}{1-\alpha}}.\]</span> Finally, using that <span class="math inline">\(C_t = (1-s)Y_t\)</span> and dividing on both sides by <span class="math inline">\(A_t^{1/(1-\alpha)} L_t\)</span> gives: <span class="math display">\[c^{*}=(1-s)y^*=(1-s)\left(\frac{s}{\delta+g/(1-\alpha)+n}\right)^{\frac{\alpha}{1-\alpha}}.\]</span> Just as in the Solow growth model of <a href="lecture2.html">lecture 2</a> we are thus led to maximize: <span class="math display">\[\max_s (1-s)s^{\frac{\alpha}{1-\alpha}} \quad  \Rightarrow \quad s=\alpha.\]</span></p></li>
-<li><p>The marginal product of capital <span class="math inline">\(r_t\)</span> is: <span class="math display">\[
+\]</span> <span class="math inline">\(C_t\)</span> grows at the same rate as <span class="math inline">\(Y_t\)</span> since <span class="math inline">\(C_t=(1-s)Y_t\)</span>, thus: <span class="math display">\[
 \begin{aligned}
-r_t&amp;=\alpha A_t \left(\frac{K_t}{L_t}\right)^{\alpha-1}\\
+g_C&amp;=g_Y \\
+g_C&amp;=n+\frac{1}{1-\alpha}g.
+\end{aligned}
+\]</span> The rate of growth of <span class="math inline">\(K_t/Y_t\)</span> is zero since <span class="math inline">\(Y_t\)</span> and <span class="math inline">\(k_t\)</span> grow at the same rate: <span class="math display">\[
+\begin{aligned}
+g_{K/Y}&amp;=g_K-g_Y\\
+&amp;=\left(\frac{1}{1-\alpha}g + n\right)-\left(\frac{1}{1-\alpha}g + n\right)\\
+g_{K/Y}&amp;=0
+\end{aligned}
+\]</span> The rate of growth of <span class="math inline">\(K_t/L_t\)</span> is: <span class="math display">\[
+\begin{aligned}
+g_{K/L}&amp;=g_K-g_L\\
+&amp;= \left(\frac{1}{1-\alpha}g + n\right)-n \\
+g_{K/L}&amp;=\frac{1}{1-\alpha}g.
+\end{aligned}
+\]</span> The wage is equal to the marginal product of labor from firms’ optimality condition, as in <a href="lecture1.html">lecture 1</a>: <span class="math display">\[
+\begin{aligned}
+w_t&amp;=\frac{\partial Y_t}{\partial L_t}\\
+&amp;=(1-\alpha)A_t K_t^\alpha L_t^{-\alpha}\\
+w_t&amp;=(1-\alpha)A_t \left(\frac{K_t}{L_t}\right)^{\alpha}.
+\end{aligned}
+\]</span> Thus, the rate of growth of <span class="math inline">\(w_t\)</span> is: <span class="math display">\[
+\begin{aligned}
+g_w&amp;=g_A+\alpha g_{K/L}\\
+&amp;=g+\frac{\alpha}{1-\alpha}g\\
+g_w&amp;=\frac{1}{1-\alpha}g.
+\end{aligned}
+\]</span> The rate of growth of <span class="math inline">\(w_t L_t\)</span> is the sum of that of <span class="math inline">\(w\)</span> and that of <span class="math inline">\(L_t\)</span> thus: <span class="math display">\[
+\begin{aligned}
+g_{wL}&amp;=g_w + g_L \\
+g_{wL}&amp;=\frac{1}{1-\alpha}g+n.
+\end{aligned}
+\]</span> The marginal product of capital <span class="math inline">\(R_t\)</span> is: <span class="math display">\[
+\begin{aligned}
+R_t&amp;=\frac{\partial Y_t}{\partial K_t}\\
+&amp;=\alpha A_t K_t^{\alpha-1}L_t^{1-\alpha}\\
+R_t&amp;= \alpha A_t \left(\frac{K_t}{L_t}\right)^{\alpha-1}.
+\end{aligned}
+\]</span> Thus, the rate of growth of the marginal product of capital <span class="math inline">\(R_t\)</span> is: <span class="math display">\[
+\begin{aligned}
+g_R&amp;=g_A+(\alpha-1) g_{K/L}\\
+&amp;=g +\frac{\alpha-1}{1-\alpha}g\\
+&amp;=g-g\\
+g_R&amp;=0
+\end{aligned}
+\]</span> The rate of growth of capital income <span class="math inline">\(R_t K_t\)</span> is given by: <span class="math display">\[
+\begin{aligned}
+g_{R K}&amp;=g_R + g_K \\
+g_{R K}&amp;= n + \frac{g}{1-\alpha}.
+\end{aligned}
+\]</span> Finally, the growth in the labor share <span class="math inline">\(w_t L_t\)</span> and that in the capital share <span class="math inline">\(R_t K_t\)</span> are equal to zero which can be inferred from the fact that they are constant with a Cobb-Douglas production function, or that the growth of <span class="math inline">\(w_t L_t\)</span> and <span class="math inline">\(r_t K_t\)</span> are equal to that of output.</p></li>
+<li>Using the expression for <span class="math inline">\(y_t\)</span> allows to write what is called the <em>intensive form</em> of the production function: <span class="math display">\[
+\begin{aligned}
+y_t&amp;=\frac{Y_t}{A_t^{1/(1-\alpha)} L_t}\\
+&amp;= \left(\frac{K_t}{A_t^{1/(1-\alpha)}L_t}\right)^\alpha\\
+y_t&amp;= k_t^\alpha.
+\end{aligned}
+\]</span> This implies that the relationship applies also to the steady state, and allows us to calculate steady-state <span class="math inline">\(y^{*}\)</span> corresponding to steady-state <span class="math inline">\(k^{*}\)</span>: <span class="math display">\[
+\begin{aligned}
+y^*=\left(k^*\right)^\alpha
+\end{aligned}
+\]</span> From question 3, we replace out <span class="math inline">\(k^{*}\)</span> in the equation above which gives directly: <span class="math display">\[
+\begin{aligned}
+\boxed{y^{*}=\left(\frac{s}{\delta+g/(1-\alpha)+n}\right)^{\frac{\alpha}{1-\alpha}}}.
+\end{aligned}
+\]</span> Finally, using that <span class="math inline">\(C_t = (1-s)Y_t\)</span> and dividing on both sides by <span class="math inline">\(A_t^{1/(1-\alpha)} L_t\)</span> gives: <span class="math display">\[\frac{C_t}{A_t^{1/(1-\alpha)} L_t}=(1-s)\frac{Y_t}{A_t^{1/(1-\alpha)} L_t}.\]</span> Using the given definitions for <span class="math inline">\(c_t\)</span> and <span class="math inline">\(y_t\)</span>, this implies that: <span class="math display">\[c_t = (1-s)y_t.\]</span> From this we can see that this relationship applies also to steady states so that: <span class="math display">\[c^{*} = (1-s)y^{*}.\]</span> Thus, replacing <span class="math inline">\(y^{*}\)</span> by its expression from previously: <span class="math display">\[
+\begin{aligned}
+\boxed{c^{*}=(1-s)\left(\frac{s}{\delta+g/(1-\alpha)+n}\right)^{\frac{\alpha}{1-\alpha}}}.
+\end{aligned}
+\]</span></li>
+<li><p>Just as in the Solow growth model of <a href="lecture2.html">lecture 2</a>, we see that we have a constant times a function of <span class="math inline">\(s\)</span>, which simplifies the maximization problem a lot: <span class="math display">\[c^{*}=\frac{1}{\left(\delta+g/(1-\alpha)+n\right)^{\frac{\alpha}{1-\alpha}}} (1-s)s^{\frac{\alpha}{1-\alpha}}\]</span> We are thus led to maximize only the part which depends on <span class="math inline">\(s\)</span> (if you are not convinced, you can leave the constant there, your calculations will just be more complicated!): <span class="math display">\[
+\begin{aligned}
+\max_s \quad  (1-s)s^{\frac{\alpha}{1-\alpha}}.
+\end{aligned}
+\]</span> Taking the first-order condition as in <a href="lecture2.html">lecture 2</a>: <span class="math display">\[
+\begin{aligned}
+&amp;-s^{\frac{\alpha}{1-\alpha}}+\frac{\alpha}{1-\alpha}(1-s)s^{\frac{\alpha}{1-\alpha}-1} =0 \quad \Rightarrow\quad\frac{\alpha}{1-\alpha}\frac{1-s}{s}=1\\
+&amp;\quad \quad \Rightarrow\quad\alpha-\alpha s=s-\alpha s \quad\Rightarrow\quad\boxed{s=\alpha}.
+\end{aligned}
+\]</span></p></li>
+<li><p>The marginal product of capital <span class="math inline">\(R_t\)</span> is then equal to: <span class="math display">\[
+\begin{aligned}
+R_t&amp;=\alpha A_t \left(\frac{K_t}{L_t}\right)^{\alpha-1}\\
 &amp;=\alpha \left(\frac{K_t}{A_t^{1/(1-\alpha)} L_t}\right)^{\alpha-1}\\
-r_t&amp;=\alpha k_t^{\alpha-1}.
+R_t&amp;=\alpha k_t^{\alpha-1}.
 \end{aligned}
 \]</span> Therefore, in the steady state, using the above expression for <span class="math inline">\(k^{*}\)</span> (question 3) we get: <span class="math display">\[
 \begin{aligned}
-r^{*}&amp;=\alpha \left(\frac{\alpha}{\delta + g/(1-\alpha)+n}\right)^{\frac{1}{1-\alpha}}\\
+R^{*}&amp;=\alpha \left[\left(\frac{s}{\delta + g/(1-\alpha)+n}\right)^{\frac{1}{1-\alpha}}\right]^{\alpha-1}\\
+&amp;=\alpha \frac{\delta + g/(1-\alpha)+n}{s}\\
 &amp;=\delta + g/(1-\alpha)+n\\
-r^{*}&amp;= \delta + g_Y.
+R^{*}&amp;=\frac{\alpha}{s}\left(\delta + g_Y\right).
 \end{aligned}
-\]</span> Finally, the net interest rate <span class="math inline">\(r^{*}-\delta\)</span> needs to be equal to the rate of growth of output <span class="math inline">\(g_Y\)</span>, to be at the Golden Rule level of capital accumulation. We shall encounter this condition again in <a href="lecture10.html">lecture 10</a> when we look at the sustainability of public debt.</p></li>
+\]</span> where we have used that the rate of growth of output <span class="math inline">\(g_Y\)</span> is given by <span class="math inline">\(g_Y = g/(1-\alpha)+n\)</span> which was proved in an earlier question. Using that <span class="math inline">\(s=\alpha\)</span> at the Golden Rule, we get an expression for the steady-state marginal product of capital: <span class="math display">\[s= \alpha \quad \Rightarrow \quad \boxed{R^{*} = \delta + g_Y}.\]</span> Finally, note that the net interest rate at the Golden Rule <span class="math inline">\(R^{*}-\delta\)</span>, which is often denoted by <span class="math inline">\(r^{*}\)</span> needs to be equal to the rate of growth of output <span class="math inline">\(g_Y\)</span>, to be at the Golden Rule level of capital accumulation: <span class="math display">\[\boxed{r^{*}=R^{*}-\delta=g_Y}.\]</span> We shall encounter this condition again in <a href="lecture10.html">lecture 10</a> when we study the sustainability of public debt.</p></li>
 </ol>
 </div>
 <div id="the-neoclassical-labor-market-model" class="section level1">
