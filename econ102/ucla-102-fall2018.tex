@@ -348,8 +348,8 @@ will cover:
 \item
   Oct 3. \protect\hyperlink{solow}{Lecture 2 - The Solow Growth Model.}
 \item
-  Oct 8. \protect\hyperlink{two-period}{Lecture 3 - Consumption -
-  Intertemporal optimization.}
+  Oct 8. \protect\hyperlink{two-period}{Lecture 3 - Two Period
+  Consumption Problem.}
 \item
   Oct 10. \protect\hyperlink{olg}{Lecture 4 - The Overlapping
   Generations Model.}
@@ -460,11 +460,14 @@ the supply side:
   On the \textbf{supply side}, the production of output involves the use
   of factor of production, often limited to capital and labor. These
   factors of production receive payment for their use, whose sum equals
-  GDP.\footnote{Note however that automatic stabilizers go against that:
-    in \href{pset6.html}{problem set 6}, we even saw that tax cuts
-    sometimes can pay for themselves. However, this happens only if the
-    multiplier is really very high. For example, if tax cuts benefit
-    agents with high marginal propensities to consume.} The
+  GDP.\footnote{Note that we are assuming here that there are no
+    ``rents'' in the economy, that is that nothing can be obtained
+    without either labor or capital. This is not exactly true, as for
+    example oil is clearly more valuable than the costs of extracting it
+    for the soil. Land is another example of something that is
+    preexisting, but nevertheless earns a payment. It is a good
+    first-order approximation however, as most production in fact
+    requires either labor of capital.} The
   \protect\hyperlink{gdp-income}{\textbf{income approach to GDP}}
   consists in dividing up these payments into the different factors of
   production. Again, this often simply means a division of total value
@@ -475,19 +478,10 @@ the supply side:
 GDP}\label{gdp-product}}
 
 GDP is equal to the total aggregate demand for goods:
-\[ Y = C + I + G + X -M.\] We often define net exports as:\footnote{It
-  might seem a bit contradictory that a situation where the debt to GDP
-  ratio goes to 0 automatically is called inefficient - this seems like
-  a rather positive state of affairs. However, we shall see in the next
-  chapter through the overlapping-generations model, that ``dynamic
-  inefficiency'' means here that the government should in fact be taking
-  on even \emph{more} government debt, to restore an equality between
-  \(r\) and \(g_Y\). You may also remember from Exercise 1 of
-  \href{pset4.html}{problem set 4} - the solution is posted
-  \href{pset4-sol.html}{here} - that an interest rate lower than the
-  rate of growth implies that we are below the Golden Rule interest
-  rate, so that the capital stock is too high, and consumption is too
-  low.} \[NX = X-M,\] so that GDP is simply: \[ Y = C + I + G + NX.\]
+\[ Y = C + I + G + X -M.\] We often define net exports as:\footnote{In
+  some textbooks (as well as in earlier versions of these lecture
+  notes), imports are denoted by \(IM\) instead of \(M\).} \[NX = X-M,\]
+so that GDP is simply: \[ Y = C + I + G + NX.\]
 
 We examine each component of aggregate demand in turn:
 
@@ -661,12 +655,12 @@ shall explain why at the end of this lecture.
 
 To proceed further, it is useful to think of a firm which would choose
 the amount of labor it uses \(L_t\) as well as the amount of capital it
-uses \(K_t\) in order to maximize its profits:\footnote{This picture is
-  taken from work by Emmanuel Saez and Gabriel Zucman, ``Wealth
-  Inequality in the United States since 1913: Evidence from Capitalized
-  Income Tax Data,'' published in 2016 in \emph{The Quarterly Journal of
-  Economics}. The paper is available here:
-  \url{https://doi.org/10.1093/qje/qjw004}.}
+uses \(K_t\) in order to maximize its profits:\footnote{You may be
+  asking yourself what this firm is. We are looking at aggregates here,
+  and there sure isn't just one firm in the economy. However, if all
+  firms were identical, because of constant return to scale, the
+  ``representative'' firm aggregating the decisions of all individual
+  firms would seem to be solving that problem.}
 \[\max_{K_t, L_t} \quad A_t K_t^{\alpha} L_t^{1-\alpha} - R_t K_t - w_t L_t,\]
 
 In this expression, \(R_t\) is the \textbf{rental rate} of capital, also
@@ -1071,7 +1065,7 @@ The level of GDP corresponding to this Golden rule level is:
 understand little about the causes of growth, \emph{The Economist},
 April 12, 2018.}
 
-\hypertarget{two-period}{\chapter{Two-period optimization
+\hypertarget{two-period}{\chapter{Two Period Consumption
 Problem}\label{two-period}}
 
 Consumption and saving are perhaps the most important and controversial
@@ -1319,19 +1313,9 @@ This section presents a very simple version of
 \href{https://en.wikipedia.org/wiki/Peter_Diamond}{Peter Diamond}'s
 \textbf{overlapping-generations model}, published in 1965 - if you would
 like to read the original paper (you probably don't), it's
-\href{https://www.jstor.org/stable/1809231}{here}.\footnote{It might
-  seem a bit contradictory that a situation where the debt to GDP ratio
-  goes to 0 automatically is called inefficient - this seems like a
-  rather positive state of affairs. However, we shall see in the next
-  chapter through the overlapping-generations model, that ``dynamic
-  inefficiency'' means here that the government should in fact be taking
-  on even \emph{more} government debt, to restore an equality between
-  \(r\) and \(g_Y\). You may also remember from Exercise 1 of
-  \href{pset4.html}{problem set 4} - the solution is posted
-  \href{pset4-sol.html}{here} - that an interest rate lower than the
-  rate of growth implies that we are below the Golden Rule interest
-  rate, so that the capital stock is too high, and consumption is too
-  low.} This model is used not just to give microfoundations to
+\href{https://www.jstor.org/stable/1809231}{here}.\footnote{Needless to
+  say, you are not responsible for reading the original paper for the
+  exam!} This model is used not just to give microfoundations to
 \href{https://en.wikipedia.org/wiki/Robert_Solow}{Robert Solow}'s growth
 model, but also to think about social security, public debt, an endeavor
 which we will take up in the next lectures as well as in the problem
@@ -1476,7 +1460,7 @@ there is always an option to liquidite one's house when old.
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{/Users/geerolf/Drive/work/biblio-graphics/SaezZucman2016/fig2-nolegend2} 
+{\centering \includegraphics[width=1\linewidth]{figures/fig2-nolegend2} 
 
 }
 
@@ -1492,7 +1476,7 @@ previously in \protect\hyperlink{two-period}{Lecture 3}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{/Users/geerolf/Drive/work/biblio-graphics/SaezZucman2016/fig9a} 
+{\centering \includegraphics[width=1\linewidth]{figures/fig9a} 
 
 }
 
@@ -1510,7 +1494,7 @@ saving for retirement.
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{/Users/geerolf/Drive/work/biblio-graphics/SaezZucman2016/fig6a} 
+{\centering \includegraphics[width=1\linewidth]{figures/fig6a} 
 
 }
 
@@ -1528,7 +1512,7 @@ retirement is the whole story.
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{/Users/geerolf/Drive/work/biblio-graphics/SaezZucman2016/fig6b} 
+{\centering \includegraphics[width=1\linewidth]{figures/fig6b} 
 
 }
 
@@ -1683,11 +1667,10 @@ point.
 Most economists are however general skeptical of this type of
 explanations. What they find puzzling is that high net worth individuals
 keep working even when they have achieved a sufficient amount of
-wealth.\footnote{Note however that automatic stabilizers go against
-  that: in \href{pset6.html}{problem set 6}, we even saw that tax cuts
-  sometimes can pay for themselves. However, this happens only if the
-  multiplier is really very high. For example, if tax cuts benefit
-  agents with high marginal propensities to consume.}
+wealth.\footnote{I personally am less sure, as culture and norms
+  certainly play a bigger role than many economists imagine - for
+  example, as explained above, the protestant work ethic, might be one
+  answer.}
 
 All this discussion may seem like armchair theorizing. At the same time,
 these are probably the most important questions facing macroeconomics.
@@ -2354,7 +2337,7 @@ for labor that determines the employment level.
 
 \begin{figure}
 
-{\centering \includegraphics[width=15.39in]{/Users/geerolf/Drive/work/teaching/ECON102/graphsketcher/labor-market-productivity-shock-keynes} 
+{\centering \includegraphics[width=15.39in]{graphsketcher/labor-market-productivity-shock-keynes} 
 
 }
 
