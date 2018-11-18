@@ -18,7 +18,7 @@ Miscellaneous resources. [html](useful-resources.html) / [pdf](useful-resources.
 ## Lectures
 
 Lecture 1. [pdf](lecture1-slides.pdf)  
-Lecture 2. [html](lecture2.html) / [pdf](lecture2.pdf) / [R](lecture2.R)   
+Lecture 2. [html](lecture2.html) / [pdf](lecture2.pdf) / [R](lecture2.R) / [Rmd](lecture2.Rmd)   
 Lecture 3. [pdf](lecture3-slides.pdf)    
 Lecture 4. [pdf](lecture4-slides.pdf)     
 Lecture 5. [pdf](lecture5-slides.pdf)     
