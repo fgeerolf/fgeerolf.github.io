@@ -12,7 +12,7 @@ I provide a syllabus for the class and a preliminary timetable below. I give a s
 
 Syllabus. [html](syllabus.html) / [pdf](syllabus.pdf)  
 Timetable. [html](timetable.html) / [pdf](timetable.pdf)  
-Intro to R. [html](R.html) / [pdf](R.pdf).  
+Intro to R. [html](R.html) / [pdf](R.pdf)  
 Miscellaneous resources. [html](useful-resources.html) / [pdf](useful-resources.pdf)
 
 ## Lectures
