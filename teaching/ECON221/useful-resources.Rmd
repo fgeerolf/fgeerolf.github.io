@@ -1,0 +1,75 @@
+---
+title: \href{https://fgeerolf.github.io/teaching/ECON221/useful-resources.pdf}{Useful Resources}
+subtitle: \href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018}
+author: \href{https://fgeerolf.github.io/}{François Geerolf}
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage[utf8]{inputenc}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyfoot[C]{\thepage}
+- \fancyhead[L]{\href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018 - Geerolf}}
+- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/useful-resources.pdf}{Useful Resources}}
+output:
+  pdf_document:
+    latex_engine: xelatex
+    number_sections: true
+    citation_package: natbib
+    fig_caption: yes
+    toc: no
+  html_document: default
+bibliography: 221.bib
+---
+
+# Introduction {-}
+
+Below is a list of resources you might find useful to navigate graduate school, and in particular the Econ Ph.D. Many of the resources below I first encountered in [this list](https://sites.google.com/site/mkudamatsu/tips4economists), which also has a lot more useful resources for every stage of your career as an economist.
+
+
+# Researching
+
+[Isaiah Berlin, "The Hedgehog and the Fox", 1953](https://www.blogs.hss.ed.ac.uk/crag/files/2016/06/the_hedgehog_and_the_fox-berlin.pdf)
+
+[Axel Leijonhufvud, “Life Among the Econ,” Economic Inquiry 11, no. 3 (September 1, 1973): 327–37](https://doi.org/10.1111/j.1465-7295.1973.tb01065.x)
+
+[Ariel Rubinstein, "10 Q&A: Experienced Advice for “Lost” Graduate Students in Economics".](http://arielrubinstein.tau.ac.il/papers/10QA.pdf)
+
+[Amy Finkelstein, “An unofficial guide to trying to do empirical work”, 2017](http://econ.lse.ac.uk/staff/spischke/phds/Amy%20Finkelstein%20IAP%20talk%2007.ppt)
+
+[Hal R. Varian, “Big Data: New Tricks for Econometrics,” Journal of Economic Perspectives 28, no. 2 (May 2014): 3–28.](https://doi.org/10.1257/jep.28.2.3)
+
+# Presenting
+
+[Adam Guren, "How To Give a Lunch Talk"](http://people.bu.edu/guren/Guren_HowToGiveALunchTalk.pdf)  
+
+[Jesse Shapiro, "How to give an applied micro talk"](https://www.brown.edu/Research/Shapiro/pdfs/applied_micro_slides.pdf) (applies equally well for applied macro talks).  
+
+[David Levine, "David Levine's Cheap Advice for Presenting Results"](http://faculty.haas.berkeley.edu/LEVINE/cheap_advice.html#results)
+
+[Tim Kehoe, "Tips on Preparing for the Workshop", May 2001](http://users.econ.umn.edu/~tkehoe/papers/tips.pdf)
+
+[Goldstein and Evans, "Making a short presentation based on your research: 11 tips", 2016](http://blogs.worldbank.org/impactevaluations/making-short-presentation-based-your-research-11-tips)
+
+[Matthew O. Jackson, "Notes on Presenting a Paper", Fall 1998](https://web.stanford.edu/~jacksonm/present.pdf)
+
+# Writing
+
+[Claudia Goldin and Lawrence Katz, "The Ten Most Important Rules of Writing Your Job Market Paper."](http://economics.harvard.edu/files/economics/files/tenruleswriting.pdf)  
+
+[John Cochrane, "Writing Tips"](https://faculty.chicagobooth.edu/john.cochrane/research/papers/phd_paper_writing.pdf).  
+
+[David Levine, "David Levine's Cheap Advice for Writing a Dissertation"](http://faculty.haas.berkeley.edu/LEVINE/cheap_advice.html#dissertation)
+
+# Graphing
+
+[Novartis, "Graphics Principles - Cheat Sheet V1.0"](https://www.psiweb.org/docs/default-source/2018-psi-conference-posters/48-julie-jones.pdf?sfvrsn=cb68dedb_4)
+
+# Coding
+
+[Matthew Gentzkow and Jesse M. Shapiro, "Code and Data for the Social Sciences: A Practitioner's Guide"](https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml)
+
+[Michael Ernst, "Version control concepts and best practices."](https://homes.cs.washington.edu/~mernst/advice/version-control.html#best-practices)
+
+[Benjamin S. Skrainka, "Enhance Your Productivity and Software Quality with Techniques from Silicon Valley"](http://www.ucl.ac.uk/~uctpbss/EconSite/Talks_files/Zurich-Sep2009.pdf)
+

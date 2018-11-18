@@ -1,0 +1,44 @@
+---
+title: \href{https://fgeerolf.github.io/teaching/ECON221/lecture10.pdf}{Lecture 10 - Presentations 2}
+subtitle: \href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018}
+author: \href{https://fgeerolf.github.io/}{François Geerolf}
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyfoot[C]{\thepage}
+- \fancyhead[L]{\href{https://fgeerolf.github.io/teaching/ECON221/index.html}{UCLA - Econ 221 - Fall 2018 - Geerolf}}
+- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/lecture10.pdf}{Presentations 2}}
+output:
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    toc: no
+  html_document: default
+---
+
+# Advice for the Presentation
+
+Most of these papers use individual-level data but aim to estimate macroeconomic "deep" parameters. Which are these parameters? Is identification convincing? What is the external validity of the results? How well do the results square with first-year macro or finance? Are they consistent with the results we saw in the lectures? What are the advantages and disadvantages of using individual level data versus regional data for the question of interest?
+
+# Schedule
+
+1. [Mondragon, John, "Household  Credit  and  Employment in  the  Great  Recession", March 19, 2018](https://www.dropbox.com/s/ftp7rj3aciu6kyo/Mondragon2018.pdf?dl=0)  
+**5:05-5:30PM: Denis Mokanov**
+
+2. [Martin Eichenbaum, Sergio Rebelo, and Arlene Wong, "State Dependent Effects of Monetary Policy: the Refinancing Channel", November, 2018.](https://static1.squarespace.com/static/576576adbe659449f97e0d35/t/5be119b088251b14103ba05b/1541478856780/November2018) [Daniel Greenwald's Discussion.](http://www.dlgreenwald.com/uploads/4/5/2/8/45280895/erw_discussion_greenwald.pdf)  
+**5:30-5:55PM: Gabriel Cuevas**
+
+3. [Marco Di Maggio, Amir Kermani, Christopher Palmer, "How Quantitative Easing Works: Evidence on the Refinancing Channel", December 2016](http://mitsloan.mit.edu/shared/ods/documents/?DocumentID=2835)  
+**5:55-6:20PM: Edward Kim**
+
+4. [Peter Ganong, Pascal Noel, "Liquidity vs. Wealth in Household Debt Obligations: Evidence from Housing Policy in the Great Recession", August 2018](https://www.nber.org/papers/w24964)  
+**6:20-6:45PM: James O'Neill**
+
+5. [Michael Carlos Best, James Cloyne, Ethan Ilzetski, Henrik Kleven. "Estimating the Elasticity of Intertemporal Substitution Using Mortgage Notches.", October 2018](https://docs.wixstatic.com/ugd/b3763a_0af2dca0bf484e75a340e9468f61936e.pdf)   
+**6:45-7:10PM: Paul Hübner**  
+
+6. [James Cloyne, Kilian Huber, Ethan Ilzetzki, and Henrik Kleven, "The Effect of House Prices on Household Borrowing: A New Approach", September 2018](https://drive.google.com/file/d/0B3NznAC46AHNVVk5d3ZwRkRmREE/view)  
+**7:10-7:35PM: Paul Momtaz**
+
