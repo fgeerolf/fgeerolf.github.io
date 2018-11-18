@@ -25,7 +25,7 @@
 <meta name="author" content="François Geerolf">
 
 
-<meta name="date" content="2018-11-17">
+<meta name="date" content="2018-11-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="redistributive.html">
-
+<link rel="next" href="open.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -161,9 +161,9 @@
 <li class="chapter" data-level="7.2.1" data-path="cons-function.html"><a href="cons-function.html#algebraic-derivation-of-the-multiplier"><i class="fa fa-check"></i><b>7.2.1</b> Algebraic derivation of the multiplier</a></li>
 <li class="chapter" data-level="7.2.2" data-path="cons-function.html"><a href="cons-function.html#four-interpretations"><i class="fa fa-check"></i><b>7.2.2</b> Four interpretations</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="cons-function.html"><a href="cons-function.html#variations"><i class="fa fa-check"></i><b>7.3</b> Variations on the Goods Market Model</a><ul>
+<li class="chapter" data-level="7.3" data-path="cons-function.html"><a href="cons-function.html#variations"><i class="fa fa-check"></i><b>7.3</b> Extensions of the Goods Market Model</a><ul>
 <li class="chapter" data-level="7.3.1" data-path="cons-function.html"><a href="cons-function.html#automatic"><i class="fa fa-check"></i><b>7.3.1</b> Automatic Stabilizers</a></li>
-<li class="chapter" data-level="7.3.2" data-path="cons-function.html"><a href="cons-function.html#accelerator"><i class="fa fa-check"></i><b>7.3.2</b> “Accelerator” effect of demand on investment</a></li>
+<li class="chapter" data-level="7.3.2" data-path="cons-function.html"><a href="cons-function.html#accelerator"><i class="fa fa-check"></i><b>7.3.2</b> “Accelerator” Effect</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="cons-function.html"><a href="cons-function.html#required-readings"><i class="fa fa-check"></i>Required Readings</a></li>
 <li class="chapter" data-level="" data-path="cons-function.html"><a href="cons-function.html#readings---to-go-further-4"><i class="fa fa-check"></i>Readings - To go further</a></li>
@@ -212,6 +212,12 @@
 <li class="chapter" data-level="10.3.2" data-path="public-debt.html"><a href="public-debt.html#says-law-supply-creates-its-own-demand"><i class="fa fa-check"></i><b>10.3.2</b> Say’s law: supply creates its own demand</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="public-debt.html"><a href="public-debt.html#readings---to-go-further-7"><i class="fa fa-check"></i>Readings - To go further</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="open.html"><a href="open.html"><i class="fa fa-check"></i><b>11</b> The Open Economy and the Multiplier</a><ul>
+<li class="chapter" data-level="11.1" data-path="open.html"><a href="open.html#national-accounting-in-the-open-economy"><i class="fa fa-check"></i><b>11.1</b> National accounting in the Open Economy</a></li>
+<li class="chapter" data-level="11.2" data-path="open.html"><a href="open.html#open-economy-multiplier"><i class="fa fa-check"></i><b>11.2</b> Open economy multiplier</a></li>
+<li class="chapter" data-level="11.3" data-path="open.html"><a href="open.html#comparative-statics"><i class="fa fa-check"></i><b>11.3</b> Comparative statics</a></li>
+<li class="chapter" data-level="11.4" data-path="open.html"><a href="open.html#devaluation-the-trade-balance-and-output"><i class="fa fa-check"></i><b>11.4</b> Devaluation, the Trade Balance, and Output</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -268,33 +274,52 @@
 <p>Which of these three cases is relevant for the U.S. economy? Is public debt sustainable in the U.S.? How do the real interest rate <span class="math inline">\(r\)</span> and the growth rate of GDP <span class="math inline">\(g_Y\)</span> compare? Up until now, I would argue that it’s fair to say that <span class="math inline">\(r&lt;g_Y\)</span>.</p>
 <p>The real interest rate <span class="math inline">\(r\)</span> can be measured in two ways:</p>
 <ol style="list-style-type: decimal">
-<li>Either using the nominal interest rate, and substracting an average expected (or realized) inflation rate in order to get to a real interest rate. The nominal interest rate has recently averaged around 2 to 3%, while inflation has been from 1 to 2% on average. This implies a real interest rate which is around 1%, perhaps 2%.</li>
+<li>Either using the nominal interest rate, and substracting an average expected (or realized) inflation rate in order to get to a real interest rate. Figure <a href="public-debt.html#fig:fred-DGS10">10.1</a> shows that the nominal interest rate has averaged around 2 to 3% recently, while inflation has been from 1 to 2% on average. This implies a real interest rate which is around 1%, perhaps 2%.</li>
 </ol>
-<p><img src="ucla-102-fall2018_files/figure-html/fred-DGS10-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-102-fall2018_files/figure-html/fred-DFII10-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-102-fall2018_files/figure-html/fred-FYOIGDA188S-1.png" width="576" style="display: block; margin: auto;" /></p>
+
+<div class="figure" style="text-align: center"><span id="fig:fred-DGS10"></span>
+<img src="ucla-102-fall2018_files/figure-html/fred-DGS10-1.png" alt="10-Year Treasury Rate (Source: FRED)." width="576" />
+<p class="caption">
+Figure 10.1: <span style="font-variant: small-caps;">10-Year Treasury Rate (Source: FRED).</span>
+</p>
+</div>
 <ol start="2" style="list-style-type: decimal">
-<li>Or, one can measure the real interest rate is to look at the rate on the so-called Treasury Inflation Protected Securities (also called TIPS). Measuring the real interest rate in this way leads to an interest rate around 1%.</li>
+<li>Or, one can measure the real interest rate by using the rate on <strong>Treasury Inflation Protected Securities (TIPS)</strong>. Figure <a href="public-debt.html#fig:fred-DFII10">10.2</a> from FRED (the Federal Reserve Economic Data) shows that the real interest rate has recently been around 1% per year.</li>
 </ol>
-<p>On the other hand, real GDP growth seems to be hovering around <span class="math inline">\(g_Y \approx 2.5\%\)</span>. Real GDP per capita growth is variable, but is usually estimated to be <strong>around 1.5%</strong>: <span class="math inline">\(g_{Y/L} \approx 1.5\%\)</span>. It varies over time, however: it was around 3.0% per year on average in the 1960s, 2.1% in the 1970s, 2.4% in the 1980s, 2.2% in the 1990s, 0.7% in the 2000s, and 0.9% from 2010 to 2017. On the other hand, the growth rate of population is <strong>around 1%</strong>: <span class="math inline">\(g_{L} \approx 1.5\%\)</span>. Therefore: <span class="math display">\[
+
+<div class="figure" style="text-align: center"><span id="fig:fred-DFII10"></span>
+<img src="ucla-102-fall2018_files/figure-html/fred-DFII10-1.png" alt="10-Year Treasury Inflation Protected Securities Rate (Source: FRED)." width="576" />
+<p class="caption">
+Figure 10.2: <span style="font-variant: small-caps;">10-Year Treasury Inflation Protected Securities Rate (Source: FRED).</span>
+</p>
+</div>
+<p>On the other hand, real GDP growth seems to be hovering around <span class="math inline">\(g_Y \approx 2.5\%\)</span>. Real GDP per capita growth is variable, but it is usually estimated to be <strong>around 1.5%</strong>: <span class="math inline">\(g_{Y/L} \approx 1.5\%\)</span>. It varies over time, however: it was around 3.0% per year on average in the 1960s, 2.1% in the 1970s, 2.4% in the 1980s, 2.2% in the 1990s, 0.7% in the 2000s, and 0.9% from 2010 to 2017. On the other hand, the growth rate of population is <strong>around 1%</strong>: <span class="math inline">\(g_{L} \approx 1.5\%\)</span>. Therefore: <span class="math display">\[
 \begin{aligned}
 g_Y &amp;= g_{Y/L} + g_L\\
 &amp;\approx 1.5\% + 1\% \\
 g_Y &amp;\approx 2.5\%.
 \end{aligned}
-\]</span> Therefore, the ratio of government debt to GDP does not appear to be on an unsustainable path so far. Another way to see this is that the ratio of interest payments to GDP is not particularly high historically, which is also shown on the graphs. This implies that if the primary deficit was reduced to zero, the debt to GDP ratio would not be on an explosive trajectory.</p>
+\]</span> Therefore, the ratio of government debt to GDP does not appear to be on an unsustainable path so far.</p>
+<p>A final way to see that U.S. debt is not yet on an unsustainable path is to note that the ratio of interest payments to GDP is not particularly high historically, which is shown on Figure <a href="public-debt.html#fig:fred-FYOIGDA188S">10.3</a>. This implies that if the primary deficit was reduced to zero, the debt to GDP ratio would not be on an explosive trajectory.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:fred-FYOIGDA188S"></span>
+<img src="ucla-102-fall2018_files/figure-html/fred-FYOIGDA188S-1.png" alt="Interest Payments on Government Debt as % of GDP (Source: FRED)." width="576" />
+<p class="caption">
+Figure 10.3: <span style="font-variant: small-caps;">Interest Payments on Government Debt as % of GDP (Source: FRED).</span>
+</p>
+</div>
 </div>
 </div>
 <div id="public-debt-in-the-overlapping-generations-model" class="section level2">
 <h2><span class="header-section-number">10.2</span> Public Debt in the Overlapping Generations Model</h2>
-<p>In this section, I illustrate using the overlapping-generations model of <a href="lecture4.html">lecture 4</a> that public debt does not necessarily need to be repaid eventually, so that government debt is not necessarily a burden on future generations - an argument which we nonetheless often hear in the public debate. However, one precondition for this is naturally that the debt to GDP has to be stable. In other words, we need that <span class="math inline">\(r^{*} \leq g_Y\)</span>. In the overlapping-generations model of <a href="lecture4.html">lecture 4</a>, we had <span class="math inline">\(g_Y = 0\)</span>, since there was no long-run growth. So we want <span class="math inline">\(r^{*} \leq 0\)</span>. In order to have a role for public debt, we will look at the model that we studied in <a href="pset3.html">Problem Set 3</a> called “Another Overlapping Generations Model” - the solution to this problem set was available <a href="pset3-sol.html">here</a>.</p>
+<p>In this section, I illustrate using the overlapping-generations model of <a href="olg.html#olg">lecture 4</a> that public debt does not necessarily need to be repaid eventually, so that government debt is not necessarily a burden on future generations - an argument which we nonetheless often hear in the public debate. However, one precondition for this is naturally that the debt to GDP has to be stable. In other words, we need that <span class="math inline">\(r^{*} \leq g_Y\)</span>. In the overlapping-generations model of <a href="olg.html#olg">lecture 4</a>, we had <span class="math inline">\(g_Y = 0\)</span>, since there was no long-run growth. So we want <span class="math inline">\(r^{*} \leq 0\)</span>. In order to have a role for public debt, we will look at the model that we studied in <a href="pset3.html">Problem Set 3</a> called “Another Overlapping Generations Model” - the solution to this problem set was available <a href="pset3-sol.html">here</a>.</p>
 <div id="overlapping-generations-model" class="section level3">
 <h3><span class="header-section-number">10.2.1</span> Overlapping Generations Model</h3>
-<p>Let us look at a simplified version of the overlapping generations model we looked at in <a href="lecture4.html">Lecture 4</a>. For this model, we shall assume that people only care about old age consumption, and that they work only when young, receiving wage <span class="math inline">\(w_{t}\)</span>. It does not really matter what the form of their utility function is with respect to old age consumption, because they will save everything anyway: <span class="math display">\[U=u(c_{t+1}^{o}).\]</span> Denoting by <span class="math inline">\(r_t\)</span> the (net) real interest rate, their intertemporal budget constraint is then given by: <span class="math display">\[c_{t}^{y}+\frac{c_{t+1}^{o}}{1+r_t}=w_{t}.\]</span> In this very simple environment, and because consumption in young age will always optimally be set to zero (<span class="math inline">\(c_{t}^{y}=0\)</span>), this implies: <span class="math display">\[c_{t+1}^{o}=(1+r_t)w_{t}.\]</span> Similarly to the previous time, we assume that the labor force is fixed to unity (<span class="math inline">\(L_{t}=\bar{L}=1\)</span>). The production function is Cobb-Douglas: <span class="math display">\[Y_{t}=K_{t}^{\alpha}L_{t}^{1-\alpha}.\]</span> Together with the previous assumption of constant labor <span class="math inline">\(L_{t}=1\)</span>, this implies that: <span class="math display">\[Y_{t}=K_{t}^{\alpha}.\]</span> From firms’ optimality conditions, the wage is just the marginal product of labor: <span class="math display">\[w_{t}=\frac{\partial Y_{t}}{\partial L_{t}}=(1-\alpha)K_{t}^{\alpha}L_{t}^{-\alpha}=(1-\alpha)K_{t}^{\alpha}.\]</span> Similarly as previously, we also get through firms’ optimization on the amount of capital that: <span class="math display">\[r_t+\delta=\frac{\partial Y_{t}}{\partial K_{t}}=\alpha K_{t}^{\alpha-1}.\]</span> Finally, for simplicity, we shall sometimes assume that the depreciation rate is equal to <span class="math inline">\(\delta=1=100\%\)</span>. In other words, capital fully depreciates each period - this is reasonable if you take one unit of time to represent one generation, or about 30 years - remember that the depreciation rate for one year was ranging from 5% to 10%.</p>
+<p>Let us look at a simplified version of the overlapping generations model we looked at in <a href="olg.html#olg">Lecture 4</a>. For this model, we shall assume that people only care about old age consumption, and that they work only when young, receiving wage <span class="math inline">\(w_{t}\)</span>. It does not really matter what the form of their utility function is with respect to old age consumption, because they will save everything anyway: <span class="math display">\[U=u(c_{t+1}^{o}).\]</span> Denoting by <span class="math inline">\(r_t\)</span> the (net) real interest rate, their intertemporal budget constraint is then given by: <span class="math display">\[c_{t}^{y}+\frac{c_{t+1}^{o}}{1+r_t}=w_{t}.\]</span> In this very simple environment, and because consumption in young age will always optimally be set to zero (<span class="math inline">\(c_{t}^{y}=0\)</span>), this implies: <span class="math display">\[c_{t+1}^{o}=(1+r_t)w_{t}.\]</span> Similarly to the previous time, we assume that the labor force is fixed to unity (<span class="math inline">\(L_{t}=\bar{L}=1\)</span>). The production function is Cobb-Douglas: <span class="math display">\[Y_{t}=K_{t}^{\alpha}L_{t}^{1-\alpha}.\]</span> Together with the previous assumption of constant labor <span class="math inline">\(L_{t}=1\)</span>, this implies that: <span class="math display">\[Y_{t}=K_{t}^{\alpha}.\]</span> From firms’ optimality conditions, the wage is just the marginal product of labor: <span class="math display">\[w_{t}=\frac{\partial Y_{t}}{\partial L_{t}}=(1-\alpha)K_{t}^{\alpha}L_{t}^{-\alpha}=(1-\alpha)K_{t}^{\alpha}.\]</span> Similarly as previously, we also get through firms’ optimization on the amount of capital that: <span class="math display">\[r_t+\delta=\frac{\partial Y_{t}}{\partial K_{t}}=\alpha K_{t}^{\alpha-1}.\]</span> Finally, for simplicity, we shall sometimes assume that the depreciation rate is equal to <span class="math inline">\(\delta=1=100\%\)</span>. In other words, capital fully depreciates each period - this is reasonable if you take one unit of time to represent one generation, or about 30 years - remember that the depreciation rate for one year was ranging from 5% to 10%.</p>
 </div>
 <div id="without-government-debt" class="section level3">
 <h3><span class="header-section-number">10.2.2</span> Without Government Debt</h3>
-<p>Let us first remind ourselves what happens in the absence of government debt in this model, as in <a href="lecture4.html">lecture 4</a>. In the absence of a government, we get even simpler expressions than the previous time. The law of motion for capital is given as follows: <span class="math display">\[\Delta K_{t+1}=w_{t}-\delta K_{t}.\]</span> Since <span class="math inline">\(w_t\)</span> is a fraction <span class="math inline">\(1-\alpha\)</span> of output, this law of motion corresponds to the Solow growth model with <span class="math inline">\(s = 1-\alpha\)</span>. The law of motion for capital is: <span class="math display">\[K_{t+1}=(1-\alpha) K_{t}^{\alpha}+ (1-\delta)K_t.\]</span> This is a difference equation for sequence <span class="math inline">\(K_{t}\)</span> which converges to a steady state value for the capital stock <span class="math inline">\(K^{*}\)</span> such that: <span class="math display">\[
+<p>Let us first remind ourselves what happens in the absence of government debt in this model, as in <a href="olg.html#olg">lecture 4</a>. In the absence of a government, we get even simpler expressions than the previous time. The law of motion for capital is given as follows: <span class="math display">\[\Delta K_{t+1}=w_{t}-\delta K_{t}.\]</span> Since <span class="math inline">\(w_t\)</span> is a fraction <span class="math inline">\(1-\alpha\)</span> of output, this law of motion corresponds to the Solow growth model with <span class="math inline">\(s = 1-\alpha\)</span>. The law of motion for capital is: <span class="math display">\[K_{t+1}=(1-\alpha) K_{t}^{\alpha}+ (1-\delta)K_t.\]</span> This is a difference equation for sequence <span class="math inline">\(K_{t}\)</span> which converges to a steady state value for the capital stock <span class="math inline">\(K^{*}\)</span> such that: <span class="math display">\[
 \begin{aligned}
 &amp; \delta K^{*} = (1-\alpha)(K^*)^{\alpha}\\
 &amp; \quad \Rightarrow \quad K^{*}=\frac{(1-\alpha)^{\frac{1}{1-\alpha}}}{\delta^{\frac{1}{1-\alpha}}}.
@@ -344,7 +369,7 @@ w^{*}&amp;=\left(1-\alpha\right)^{\frac{1}{1-\alpha}} =\frac{2\sqrt{2}}{3\sqrt{3
 </div>
 <div id="with-government-debt" class="section level3">
 <h3><span class="header-section-number">10.2.3</span> With Government Debt</h3>
-<p>As we saw in <a href="lecture2.html">lecture 2</a>, and then again in <a href="lecture4.html">lecture 4</a>, because <span class="math inline">\(r^{*}&lt;0\)</span> we have that the quantity of capital is higher than the Golden Rule level of the capital stock, which is such that <span class="math inline">\(r^{*}_g=0\)</span>. Why, again, is the Golden rule interest rate equal to 0 when there is no growth ? One quick way to understand it is to write that in the steady-state, the consumption of the old <span class="math inline">\((c^{o})^{*}\)</span> is supposed to be maximized (since the old are the only ones consuming). However, we also know that in the steady-state, total production <span class="math inline">\(F(K^{*}, 1) = (K^{*})^{\alpha}\)</span> is used for two things: consuming (for the old) and repairing the capital stock (saving equals investment equals depreciation, as in the Solow growth model), so that: <span class="math display">\[(c^{o})^{*} + \delta K^{*} = (K^{*})^{\alpha} \quad \Rightarrow \quad (c^{o})^{*} = (K^{*})^{\alpha} -\delta K^{*} \]</span> Therefore, the Golden rule capital stock <span class="math inline">\(K^{*}_g\)</span>, which maximizes <span class="math inline">\((c^{o})^{*}\)</span> solves: <span class="math display">\[\max_{K^{*}}\quad (K^{*})^{\alpha}-\delta K^{*},\]</span> which implies that: <span class="math display">\[\alpha (K^{*}_g)^{\alpha-1}=\delta.\]</span> Moreover, we know that the marginal product of capital <span class="math inline">\(\partial F(K^{*}, 1)/\partial K^{*} = \alpha (K^{*}_g)^{\alpha-1}\)</span> is also equal to <span class="math inline">\(r^{*}_g+\delta\)</span>, the gross return, from the firms’ problem, which gives the following optimality condition: <span class="math display">\[\alpha (K^{*}_g)^{\alpha-1}=r^{*}_g+\delta.\]</span> Using these two last equalities allows to conclude that in this situation with no growth, the Golden rule interest rate is equal to zero since <span class="math inline">\(r^{*}_g+\delta = \alpha (K^{*}_g)^{\alpha-1} =\delta\)</span>: <span class="math display">\[r^{*}_g=0.\]</span> However, we saw in the previous section that the <em>equilibrium</em> interest rate <span class="math inline">\(r^{*}\)</span> was negative, equal to -50%. Therefore, the capital stock is too high here. As we saw in lectures <a href="lecture2.html">2</a> and <a href="lecture4.html">4</a>, one way to solve this problem would be to force everyone to save less, in order to decrease private saving; however this might be thought of as a little bit too intrusive. Another way to solve this problem is to use public debt (decrease public saving, to reduce total saving) in order to solve this problem of excess saving and excess investment.</p>
+<p>As we saw in <a href="solow.html#solow">lecture 2</a>, and then again in <a href="olg.html#olg">lecture 4</a>, because <span class="math inline">\(r^{*}&lt;0\)</span> we have that the quantity of capital is higher than the Golden Rule level of the capital stock, which is such that <span class="math inline">\(r^{*}_g=0\)</span>. Why, again, is the Golden rule interest rate equal to 0 when there is no growth ? One quick way to understand it is to write that in the steady-state, the consumption of the old <span class="math inline">\((c^{o})^{*}\)</span> is supposed to be maximized (since the old are the only ones consuming). However, we also know that in the steady-state, total production <span class="math inline">\(F(K^{*}, 1) = (K^{*})^{\alpha}\)</span> is used for two things: consuming (for the old) and repairing the capital stock (saving equals investment equals depreciation, as in the Solow growth model), so that: <span class="math display">\[(c^{o})^{*} + \delta K^{*} = (K^{*})^{\alpha} \quad \Rightarrow \quad (c^{o})^{*} = (K^{*})^{\alpha} -\delta K^{*} \]</span> Therefore, the Golden rule capital stock <span class="math inline">\(K^{*}_g\)</span>, which maximizes <span class="math inline">\((c^{o})^{*}\)</span> solves: <span class="math display">\[\max_{K^{*}}\quad (K^{*})^{\alpha}-\delta K^{*},\]</span> which implies that: <span class="math display">\[\alpha (K^{*}_g)^{\alpha-1}=\delta.\]</span> Moreover, we know that the marginal product of capital <span class="math inline">\(\partial F(K^{*}, 1)/\partial K^{*} = \alpha (K^{*}_g)^{\alpha-1}\)</span> is also equal to <span class="math inline">\(r^{*}_g+\delta\)</span>, the gross return, from the firms’ problem, which gives the following optimality condition: <span class="math display">\[\alpha (K^{*}_g)^{\alpha-1}=r^{*}_g+\delta.\]</span> Using these two last equalities allows to conclude that in this situation with no growth, the Golden rule interest rate is equal to zero since <span class="math inline">\(r^{*}_g+\delta = \alpha (K^{*}_g)^{\alpha-1} =\delta\)</span>: <span class="math display">\[r^{*}_g=0.\]</span> However, we saw in the previous section that the <em>equilibrium</em> interest rate <span class="math inline">\(r^{*}\)</span> was negative, equal to -50%. Therefore, the capital stock is too high here. As we saw in lectures <a href="solow.html#solow">2</a> and <a href="olg.html#olg">4</a>, one way to solve this problem would be to force everyone to save less, in order to decrease private saving; however this might be thought of as a little bit too intrusive. Another way to solve this problem is to use public debt (decrease public saving, to reduce total saving) in order to solve this problem of excess saving and excess investment.</p>
 <p>In order to better understand which level of public debt is warranted, we look at the level of capital such that <span class="math inline">\(r^{*}_g=0\)</span> - which again, is the golden rule interest rate, since the rate of growth of output is <span class="math inline">\(g_Y=0\)</span>. Thus, the corresponding Golden Rule level of the capital stock <span class="math inline">\(K^{*}_g\)</span> is such that: <span class="math display">\[r^{*}_g+\delta=\alpha (K^{*}_g)^{\alpha-1} \quad \Rightarrow_{r^{*}_g=0} \quad \delta=\alpha (K^{*}_g)^{\alpha-1}\]</span> Therefore: <span class="math display">\[
 \begin{aligned}
 K^{*}_g=\frac{\alpha^{\frac{1}{1-\alpha}}}{\delta^{\frac{1}{1-\alpha}}}.
@@ -406,8 +431,8 @@ The government can reach that level of debt by giving a transfer to the first ge
 </blockquote>
 <p>What we have seen so far leads us to take a very constrasted perspective on the Treasury View:</p>
 <ul>
-<li><p>In the <strong>Keynesian model</strong> of lectures <a href="lecture7.html">7</a>, <a href="lecture8.html">8</a>, and <a href="lecture9.html">9</a>, investment is not crowded out by public debt - in the simplest model of the goods market, investment is in fact fixed. In the accelerator model, <span class="math inline">\(I=b_0 + b_1 Y\)</span> so that investment depends only on sales, not on saving. According to this model, what the Treasury View misses is that output is not determined by supply, but it is instead determined by demand. Therefore, one cannot reason as if GDP was fixed: GDP is precisely what adjusts when saving is reduced, to maintain the equality between investment and total saving.</p></li>
-<li><p>In the <strong>neoclassical model</strong> of lectures <a href="lecture2.html">2</a> and <a href="lecture4.html">4</a> in contrast, investment is determined by total saving, and it moves flexibly in response to saving. According to this view, investment is indeed crowded out by public deficits. Note however that this does not mean that in the neoclassical model, government deficits are always bad. As we just saw, public deficits may be a good thing if the economy has too much capital to begin with.</p></li>
+<li><p>In the <strong>Keynesian model</strong> of lectures <a href="cons-function.html#cons-function">7</a>, <a href="paradox-thrift.html#paradox-thrift">8</a>, and <a href="redistributive.html#redistributive">9</a>, investment is not crowded out by public debt - in the simplest model of the goods market, investment is in fact fixed. In the accelerator model, <span class="math inline">\(I=b_0 + b_1 Y\)</span> so that investment depends only on sales, not on saving. According to this model, what the Treasury View misses is that output is not determined by supply, but it is instead determined by demand. Therefore, one cannot reason as if GDP was fixed: GDP is precisely what adjusts when saving is reduced, to maintain the equality between investment and total saving.</p></li>
+<li><p>In the <strong>neoclassical model</strong> of lectures <a href="solow.html#solow">2</a> and <a href="olg.html#olg">4</a> in contrast, investment is determined by total saving, and it moves flexibly in response to saving. According to this view, investment is indeed crowded out by public deficits. Note however that this does not mean that in the neoclassical model, government deficits are always bad. As we just saw, public deficits may be a good thing if the economy has too much capital to begin with.</p></li>
 </ul>
 <p>This issue of the Treasury view was discussed a lot during the U.S. 2008 financial crisis, when policymakers were turning to economists for advice on the appropriate policy response. You can see some discussion of this issue in “Readings - To go further”. While Chicago economists were articulating the Treasury view in various different flavors, Keynesian economists were rejecting this notion very strongly - most notably Paul Krugman. Of course, whether the Treasury View is correct or not is ultimately an empirical question. We will present some empirical evidence on this issue during lecture 13.</p>
 </div>
@@ -423,10 +448,10 @@ The government can reach that level of debt by giving a transfer to the first ge
 </blockquote>
 <p>Once again, we may contrast two very different perspectives on the Say’s law:</p>
 <ul>
-<li><p>In the <strong>Keynesian model</strong> of lectures <a href="lecture7.html">7</a>, <a href="lecture8.html">8</a>, and <a href="lecture9.html">9</a>, supply does not create its own demand, as some resources (labor or capital) are idle. This allows government spending or tax cuts to have an effect on GDP, by utilizing some of these resources. The reason is that in this model, the desire to save does not necessarily translate into more investment, since investment is fixed or given by the overall level of GDP, which is depressed by more saving. This was the paradox of thrift of <a href="lecture8.html">lecture 8</a>: instead of increasing investment, a higher desire to save actually reduces output, which ends up depressing saving.</p></li>
-<li><p>In the <strong>neoclassical model</strong> of lectures <a href="lecture2.html">2</a> and <a href="lecture4.html">4</a> in contrast, investment is determined by total saving, and it moves flexibly in response to saving. According to this view, there can indeed never be a general glut: consumption increases aggregate demand, but saving increases it too, by stimulating more investment. True, there might be “too much capital”, when the capital stock is higher than the Golden rule level, but this is not a “general glut”. Thus, supply can be thought of as indeed “creating its own demand”.</p></li>
+<li><p>In the <strong>Keynesian model</strong> of lectures <a href="cons-function.html#cons-function">7</a>, <a href="paradox-thrift.html#paradox-thrift">8</a>, and <a href="redistributive.html#redistributive">9</a>, supply does not create its own demand, as some resources (labor or capital) are idle. This allows government spending or tax cuts to have an effect on GDP, by utilizing some of these resources. The reason is that in this model, the desire to save does not necessarily translate into more investment, since investment is fixed or given by the overall level of GDP, which is depressed by more saving. This was the paradox of thrift of <a href="lecture8.html">lecture 8</a>: instead of increasing investment, a higher desire to save actually reduces output, which ends up depressing saving.</p></li>
+<li><p>In the <strong>neoclassical model</strong> of lectures <a href="solow.html#solow">2</a> and <a href="olg.html#olg">4</a> in contrast, investment is determined by total saving, and it moves flexibly in response to saving. According to this view, there can indeed never be a general glut: consumption increases aggregate demand, but saving increases it too, by stimulating more investment. True, there might be “too much capital”, when the capital stock is higher than the Golden rule level, but this is not a “general glut”. Thus, supply can be thought of as indeed “creating its own demand”.</p></li>
 </ul>
-<p>How you stand on those two issues (the Treasury View and Say’s law) determines whether you are more a neoclassical or a Keynesian economist. We shall see during <a href="lecture13.html">lecture 13</a> which concentrates on fiscal policy, what the data has to say of Say’s law. As we have seen however, Keynesians and neoclassicals agree on one thing: consumption is the sole purpose of all production, and there exists such a thing as “too much capital”, when <span class="math inline">\(r^{*}&lt;g_Y\)</span>. Whether that is the situation we are in, even after Donald Trump’s massive tax cuts, is still a controversial question.</p>
+<p>How you stand on those two issues (the Treasury View and Say’s law) determines whether you are more a neoclassical or a Keynesian economist. As we have seen however, Keynesians and neoclassicals agree on one thing: consumption is the sole purpose of all production, and there exists such a thing as “too much capital”, when <span class="math inline">\(r^{*}&lt;g_Y\)</span>. Whether that is the situation we are in, even after Donald Trump’s massive tax cuts, is still a controversial question.</p>
 </div>
 </div>
 <div id="readings---to-go-further-7" class="section level2 unnumbered">
@@ -443,20 +468,6 @@ The government can reach that level of debt by giving a transfer to the first ge
 
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="footnotes">
 <hr />
 <ol start="8">
@@ -469,8 +480,8 @@ The government can reach that level of debt by giving a transfer to the first ge
           </div>
         </div>
       </div>
-<a href="redistributive.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="redistributive.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="open.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

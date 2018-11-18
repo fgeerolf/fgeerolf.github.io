@@ -25,7 +25,7 @@
 <meta name="author" content="François Geerolf">
 
 
-<meta name="date" content="2018-11-17">
+<meta name="date" content="2018-11-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -161,9 +161,9 @@
 <li class="chapter" data-level="7.2.1" data-path="cons-function.html"><a href="cons-function.html#algebraic-derivation-of-the-multiplier"><i class="fa fa-check"></i><b>7.2.1</b> Algebraic derivation of the multiplier</a></li>
 <li class="chapter" data-level="7.2.2" data-path="cons-function.html"><a href="cons-function.html#four-interpretations"><i class="fa fa-check"></i><b>7.2.2</b> Four interpretations</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="cons-function.html"><a href="cons-function.html#variations"><i class="fa fa-check"></i><b>7.3</b> Variations on the Goods Market Model</a><ul>
+<li class="chapter" data-level="7.3" data-path="cons-function.html"><a href="cons-function.html#variations"><i class="fa fa-check"></i><b>7.3</b> Extensions of the Goods Market Model</a><ul>
 <li class="chapter" data-level="7.3.1" data-path="cons-function.html"><a href="cons-function.html#automatic"><i class="fa fa-check"></i><b>7.3.1</b> Automatic Stabilizers</a></li>
-<li class="chapter" data-level="7.3.2" data-path="cons-function.html"><a href="cons-function.html#accelerator"><i class="fa fa-check"></i><b>7.3.2</b> “Accelerator” effect of demand on investment</a></li>
+<li class="chapter" data-level="7.3.2" data-path="cons-function.html"><a href="cons-function.html#accelerator"><i class="fa fa-check"></i><b>7.3.2</b> “Accelerator” Effect</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="cons-function.html"><a href="cons-function.html#required-readings"><i class="fa fa-check"></i>Required Readings</a></li>
 <li class="chapter" data-level="" data-path="cons-function.html"><a href="cons-function.html#readings---to-go-further-4"><i class="fa fa-check"></i>Readings - To go further</a></li>
@@ -213,6 +213,12 @@
 </ul></li>
 <li class="chapter" data-level="" data-path="public-debt.html"><a href="public-debt.html#readings---to-go-further-7"><i class="fa fa-check"></i>Readings - To go further</a></li>
 </ul></li>
+<li class="chapter" data-level="11" data-path="open.html"><a href="open.html"><i class="fa fa-check"></i><b>11</b> The Open Economy and the Multiplier</a><ul>
+<li class="chapter" data-level="11.1" data-path="open.html"><a href="open.html#national-accounting-in-the-open-economy"><i class="fa fa-check"></i><b>11.1</b> National accounting in the Open Economy</a></li>
+<li class="chapter" data-level="11.2" data-path="open.html"><a href="open.html#open-economy-multiplier"><i class="fa fa-check"></i><b>11.2</b> Open economy multiplier</a></li>
+<li class="chapter" data-level="11.3" data-path="open.html"><a href="open.html#comparative-statics"><i class="fa fa-check"></i><b>11.3</b> Comparative statics</a></li>
+<li class="chapter" data-level="11.4" data-path="open.html"><a href="open.html#devaluation-the-trade-balance-and-output"><i class="fa fa-check"></i><b>11.4</b> Devaluation, the Trade Balance, and Output</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -246,8 +252,8 @@
 </blockquote>
 <div id="the-demand-for-goods" class="section level2">
 <h2><span class="header-section-number">7.1</span> The Demand for Goods</h2>
-<p>Consider the first accounting identity of <a href="intro-cobb.html#intro-cobb">lecture 1</a>, showing the different components of the demand for goods: <span class="math display">\[Y=C+I+G+X-M.\]</span> The total demand for goods is determined by consumption demand, investment demand, government spending, and net exports (for example, China’s total demand includes US’ demand for Chinese products). For simplicity, we shall assume for now that we are considering a closed economy - think, for example, of the world economy - so that there are no exports or imports (<span class="math inline">\(X=M=0\)</span>). This assumption, which is not satisfying as the policies we shall consider are national (fiscal policy, etc.), will be relaxed starting in <a href="lecture11.html">lecture11</a>.</p>
-<p>In <a href="solow.html#solow">lecture 2</a> and <a href="Lecture4.html">lecture 4</a>, output was also determined by the amount of available technology, as well as by the supply of labor <span class="math inline">\(L\)</span>, and of capital <span class="math inline">\(K\)</span> in the economy (the “supply side”): <span class="math display">\[Y=F\left(K, L\right).\]</span> For example, in the Solow growth model of <a href="solow.html#solow">lecture 2</a>, where government spending was zero (<span class="math inline">\(G=0\)</span>), GDP was simultaneously equal to <span class="math inline">\(F(K,L)\)</span> as well as to <span class="math inline">\(C+I\)</span>. This is what allowed us to derive the dynamics in the economy.</p>
+<p>Consider the first accounting identity of <a href="intro-cobb.html#intro-cobb">lecture 1</a>, showing the different components of the demand for goods: <span class="math display">\[Y=C+I+G+X-M.\]</span> The total demand for goods is determined by consumption demand, investment demand, government spending, and net exports (for example, China’s total demand includes US’ demand for Chinese products). For simplicity, we shall assume for now that we are considering a closed economy - think, for example, of the world economy - so that there are no exports or imports (<span class="math inline">\(X=M=0\)</span>). This assumption, which is not satisfying as the policies we shall consider are national (fiscal policy, etc.), will be relaxed starting in <a href="open.html#open">lecture11</a>.</p>
+<p>In <a href="solow.html#solow">lecture 2</a> and <a href="olg.html#olg">lecture 4</a>, output was also determined by the amount of available technology, as well as by the supply of labor <span class="math inline">\(L\)</span>, and of capital <span class="math inline">\(K\)</span> in the economy (the “supply side”): <span class="math display">\[Y=F\left(K, L\right).\]</span> For example, in the Solow growth model of <a href="solow.html#solow">lecture 2</a>, where government spending was zero (<span class="math inline">\(G=0\)</span>), GDP was simultaneously equal to <span class="math inline">\(F(K,L)\)</span> as well as to <span class="math inline">\(C+I\)</span>. This is what allowed us to derive the dynamics in the economy.</p>
 <p>In the Keynesian model, output is determined only by demand. The underlying assumption is that there exists some idle resources which allow to accommodate any increase in demand by an increase in labor utilization. In order to show that output is determined by demand, we shall denote the total demand for goods by <span class="math inline">\(Z\)</span>: <span class="math display">\[Z=C+I+G.\]</span> The Keynesian assumption then is that output is demand determined, so that: <span class="math display">\[Y=Z.\]</span> We now investigate these components of demand in turn.</p>
 <div id="consumption-demand" class="section level3">
 <h3><span class="header-section-number">7.1.1</span> Consumption Demand</h3>
@@ -279,7 +285,7 @@
 </div>
 <div id="simple" class="section level2">
 <h2><span class="header-section-number">7.2</span> The Simple Goods Market Model</h2>
-<p>The simple Keynesian model, also called the (ZZ)-(YY) model, assumes a closed economy, that investment is exogenous and equal to <span class="math inline">\(\bar{I}\)</span>, an exogenous government spending <span class="math inline">\(G\)</span>, and a consumption function given as above by: <span class="math display">\[C=c_0+c_1\left(Y-T\right).\]</span></p>
+<p>The Simple Goods Market Model, also called the <strong>(ZZ)-(YY) model</strong>, assumes a closed economy, that investment is exogenous and equal to <span class="math inline">\(\bar{I}\)</span>, an exogenous government spending <span class="math inline">\(G\)</span>, and a consumption function given as above by: <span class="math display">\[C=c_0+c_1\left(Y-T\right).\]</span></p>
 <div id="algebraic-derivation-of-the-multiplier" class="section level3">
 <h3><span class="header-section-number">7.2.1</span> Algebraic derivation of the multiplier</h3>
 <p><strong>(ZZ) curve.</strong> With these assumptions, and assuming a closed economy, the value of the demand for goods <span class="math inline">\(Z\)</span> is: <span class="math display">\[
@@ -288,7 +294,7 @@ Z   &amp;=C+\bar{I}+G\\
     &amp;=c_{0}+c_{1}\left(Y-T\right)+\bar{I}+G\\
 Z   &amp;=\left(c_{0}+\bar{I}+G-c_{1}T\right)+c_{1}Y
 \end{aligned}
-\]</span> This demand for goods determines a value for the demand for goods <span class="math inline">\(Z\)</span>, as a function of aggregate income (or GDP) <span class="math inline">\(Y\)</span>, which defines the (ZZ) curve. The part of this demand which does not depend on income is called autonomous spending <span class="math inline">\(z_0\)</span> defined as: <span class="math display">\[z_0=c_{0}+\bar{I}+G-c_{1}T.\]</span> This autonomous spending <span class="math inline">\(z_0\)</span> is also the value of demand when income is equal to <span class="math inline">\(Y=0\)</span>. Therefore, the demand for goods <span class="math inline">\(Z\)</span> is given as: <span class="math display">\[Z=\underbrace{\left(c_{0}+\bar{I}+G-c_{1}T\right)}_{\text{Autonomous Spending }z_{0}}+\underbrace{c_{1}}_{\text{MPC}}Y\]</span></p>
+\]</span> This determines a value for the demand for goods <span class="math inline">\(Z\)</span>, as a function of aggregate income, or GDP <span class="math inline">\(Y\)</span>, which defines the (ZZ) curve. The part of this demand which does not depend on income is called <em>autonomous spending</em> <span class="math inline">\(z_0\)</span> defined as: <span class="math display">\[z_0=c_{0}+\bar{I}+G-c_{1}T.\]</span> This autonomous spending <span class="math inline">\(z_0\)</span> is also the value of demand when income is equal to <span class="math inline">\(Y=0\)</span>. Therefore, the demand for goods <span class="math inline">\(Z\)</span> is given as: <span class="math display">\[Z=\underbrace{\left(c_{0}+\bar{I}+G-c_{1}T\right)}_{\text{Autonomous Spending }z_{0}}+\underbrace{c_{1}}_{\text{MPC}}Y\]</span></p>
 <p><strong>(YY) curve.</strong> Equilibrium in the goods market requires that: <span class="math display">\[Z=Y.\]</span> Indeed, income is determined by the total demand for goods.</p>
 <p><strong>Equilibrium.</strong> Equilibrium is determined by the intersection of the (YY) and the (ZZ) curves, represented by point A on the Figure below. Replacing out <span class="math inline">\(Z=Y\)</span> in the expression for <span class="math inline">\(Z\)</span> above indeed implies: <span class="math display">\[Y=\left(c_{0}+\bar{I}+G-c_{1}T\right)+c_{1}Y.\]</span> Therefore, putting all <span class="math inline">\(Y\)</span> terms of the left-hand side: <span class="math display">\[Y=\underbrace{\frac{1}{1-c_{1}}}_{\text{Multiplier}}\times\underbrace{\left(c_{0}+\bar{I}+G-c_{1}T\right)}_{\text{Autonomous Spending }z_{0}}.\]</span></p>
 
@@ -312,7 +318,7 @@ Figure 7.1: <span style="font-variant: small-caps;">The Simple Goods Market (ZZ)
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:keynes-graphical"></span>
-<img src="graphsketcher/keynesian-cross-merged.png" alt="Simple Keynesian Cross: Graphical Interpretations." width="1108" />
+<img src="graphsketcher/keynesian-cross-merged.png" alt="Simple Keynesian Cross: Graphical Interpretations." width="100%" />
 <p class="caption">
 Figure 7.2: <span style="font-variant: small-caps;">Simple Keynesian Cross: Graphical Interpretations</span>.
 </p>
@@ -323,8 +329,8 @@ Figure 7.2: <span style="font-variant: small-caps;">Simple Keynesian Cross: Grap
 </div>
 </div>
 <div id="variations" class="section level2">
-<h2><span class="header-section-number">7.3</span> Variations on the Goods Market Model</h2>
-<p>There are multiple variations on the theme of the Goods Market Model: one with <a href="cons-function.html#automatic">automatic stabilizers</a>, one with an <a href="cons-function.html#accelerator">accelerator effect of demand on investment</a>.</p>
+<h2><span class="header-section-number">7.3</span> Extensions of the Goods Market Model</h2>
+<p>There are multiple extensions of the Goods Market Model: one with <a href="cons-function.html#automatic">automatic stabilizers</a>, one with an <a href="cons-function.html#accelerator">accelerator effect of demand on investment</a>.</p>
 <div id="automatic" class="section level3">
 <h3><span class="header-section-number">7.3.1</span> Automatic Stabilizers</h3>
 <p>In practice, the tax and transfer system is designed in such a way that taxes strongly depend on the level of income: net taxes are said to be <strong>procyclical</strong>:</p>
@@ -342,14 +348,14 @@ Z   &amp;=\left(c_{0}-c_{1}t_{0}+\bar{I}+G\right)+\left(\left(1-t_{1}\right)c_{1
 \]</span> Using that <span class="math inline">\(Y=Z\)</span> we see that the multiplier is now <span class="math inline">\(1/(1-c_1(1-t_1))\)</span>: <span class="math display">\[Y=\frac{1}{1-c_{1}\left(1-t_{1}\right)}\left(c_{0}-c_{1}t_{0}+\bar{I}+G\right)\]</span> The (ZZ) curve is less steep, and therefore the multiplier <span class="math inline">\(Y&#39;-Y\)</span> is smaller.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:keynes-variations"></span>
-<img src="graphsketcher/keynesian-cross-variations-merged.png" alt="Variations: Automatic Stabilizers, Accelerator Effect." width="1108" />
+<img src="graphsketcher/keynesian-cross-variations-merged.png" alt="Variations: Automatic Stabilizers, Accelerator Effect." width="100%" />
 <p class="caption">
 Figure 7.3: <span style="font-variant: small-caps;">Variations: Automatic Stabilizers, Accelerator Effect</span>.
 </p>
 </div>
 </div>
 <div id="accelerator" class="section level3">
-<h3><span class="header-section-number">7.3.2</span> “Accelerator” effect of demand on investment</h3>
+<h3><span class="header-section-number">7.3.2</span> “Accelerator” Effect</h3>
 <p>Another variation on the Goods Market model consists in recognizing that investment demand might also depend on income. Firms will invest more if they expect high income, and therefore high demand for their goods: <span class="math display">\[I=b_{0}+b_{1}Y.\]</span> Thus, the (ZZ)-curve now has a slope equal to <span class="math inline">\(c_1+b_1\)</span>: <span class="math display">\[
 \begin{aligned}
 Z   &amp;=C+I+G\\

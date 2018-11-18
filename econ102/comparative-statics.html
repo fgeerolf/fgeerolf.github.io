@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="intro-cobb.html">
-<link rel="next" href="two-period.html">
+<link rel="prev" href="open-economy-multiplier.html">
+<link rel="next" href="depreciation-the-trade-balance-and-output.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -213,12 +213,11 @@
 </ul></li>
 <li class="chapter" data-level="" data-path="public-debt.html"><a href="public-debt.html#readings---to-go-further-7"><i class="fa fa-check"></i>Readings - To go further</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="open.html"><a href="open.html"><i class="fa fa-check"></i><b>11</b> The Open Economy and the Multiplier</a><ul>
-<li class="chapter" data-level="11.1" data-path="open.html"><a href="open.html#national-accounting-in-the-open-economy"><i class="fa fa-check"></i><b>11.1</b> National accounting in the Open Economy</a></li>
-<li class="chapter" data-level="11.2" data-path="open.html"><a href="open.html#open-economy-multiplier"><i class="fa fa-check"></i><b>11.2</b> Open economy multiplier</a></li>
-<li class="chapter" data-level="11.3" data-path="open.html"><a href="open.html#comparative-statics"><i class="fa fa-check"></i><b>11.3</b> Comparative statics</a></li>
-<li class="chapter" data-level="11.4" data-path="open.html"><a href="open.html#devaluation-the-trade-balance-and-output"><i class="fa fa-check"></i><b>11.4</b> Devaluation, the Trade Balance, and Output</a></li>
-</ul></li>
+<li class="chapter" data-level="11" data-path="open.html"><a href="open.html"><i class="fa fa-check"></i><b>11</b> The Open Economy and the Multiplier</a></li>
+<li class="chapter" data-level="12" data-path="national-accounting-in-the-open-economy.html"><a href="national-accounting-in-the-open-economy.html"><i class="fa fa-check"></i><b>12</b> National accounting in the Open Economy</a></li>
+<li class="chapter" data-level="13" data-path="open-economy-multiplier.html"><a href="open-economy-multiplier.html"><i class="fa fa-check"></i><b>13</b> Open economy multiplier</a></li>
+<li class="chapter" data-level="14" data-path="comparative-statics.html"><a href="comparative-statics.html"><i class="fa fa-check"></i><b>14</b> Comparative statics</a></li>
+<li class="chapter" data-level="15" data-path="depreciation-the-trade-balance-and-output.html"><a href="depreciation-the-trade-balance-and-output.html"><i class="fa fa-check"></i><b>15</b> Depreciation, the Trade Balance, and Output</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -239,123 +238,25 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="solow" class="section level1">
-<h1><span class="header-section-number">Lecture 2</span> The Solow Growth Model</h1>
-<p>The <a href="solow.html#general-production-f">first part of this lecture</a> considers the case of a Solow growth model with a general, constant returns to scale, production function. The <a href="solow.html#cobb">second part of the lecture</a> looks at a special case of the Solow growth model for a case of a Cobb-Douglas production function.</p>
-<div id="general-production-f" class="section level2">
-<h2><span class="header-section-number">2.1</span> General Production Function</h2>
-<div id="assumptions" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Assumptions</h3>
-<p>Robert Solow, 1987 Nobel Memorial Prize in Economic Sciences, starts from a general production function, giving at any point in time output <span class="math inline">\(Y_t\)</span> as a function of inputs, capital <span class="math inline">\(K_t\)</span> and labor <span class="math inline">\(L_t\)</span>: <span class="math display">\[Y_t=F\left(K_t,L_t\right).\]</span> A very important assumption is also <strong>constant returns to scale</strong> with respect to capital and labor, so that for any scaling factor <span class="math inline">\(a\)</span>: <span class="math display">\[F(aK_t, aL_t) = aF(K_t, L_t).\]</span></p>
-<p>For simplicity, we shall assume from now on that the quantity of labor is fixed with <span class="math inline">\(L_t=L\)</span>, so that the production function becomes <span class="math inline">\(Y_t=F(K_t, L)\)</span>. Because of constant returns to scale with respect to capital and labor (and setting <span class="math inline">\(a=1/L\)</span> in the previous expression), we have: <span class="math display">\[\frac{Y_t}{L}=F\left(\frac{K_t}{L},1\right)=f\left(\frac{K_t}{L}\right)\]</span> where <span class="math inline">\(f\)</span> is defined as a function of <span class="math inline">\(F\)</span> such that: <span class="math display">\[f(x)\equiv F(x,1).\]</span></p>
-<p>An example of such a production function is the Cobb-Douglas production function, which we started studying in <a href="intro-cobb.html#intro-cobb">Lecture 1</a>, and which we look at in the <a href="solow.html#cobb">next section</a>.</p>
-<p>Robert Solow, in his 1956 contribution, abstracts from public saving, so that <strong>total saving</strong> at time <span class="math inline">\(t\)</span> equals <strong>private saving</strong> at time <span class="math inline">\(t\)</span>, and both are denoted <span class="math inline">\(S_{t}\)</span>, which also equals investment <span class="math inline">\(I_{t}\)</span> at time <span class="math inline">\(t\)</span> : <span class="math display">\[S_{t}=I_{t}.\]</span></p>
-<p>Saving is assumed to be a constant fraction <span class="math inline">\(s\)</span> of output <span class="math inline">\(Y_{t}\)</span>, and therefore: <span class="math display">\[S_{t}=sY_{t}.\]</span></p>
-<p>This constant saving rate my seem a bit ad-hoc; it is. We will investigate more in detail the determinants of saving and consumption behavior in the next lectures. Depreciation of capital is given by a share <span class="math inline">\(\delta\)</span> (think for example that 8% of the capital stock depreciates each period; the rate of depreciation is much lower for structures, and much higher for computers). The capital stock evolves according to: <span class="math display">\[K_{t+1}=\left(1-\delta\right)K_{t}+I_{t}\]</span></p>
-</div>
-<div id="solution" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Solution</h3>
-<p>Replace investment in the previous equation and divide both sides by <span class="math inline">\(L\)</span>: <span class="math display">\[\frac{K_{t+1}}{L} =\left(1-\delta\right)\frac{K_{t}}{L}+s\frac{Y_{t}}{L}\quad\Rightarrow\quad\boxed{\frac{K_{t+1}}{L}-\frac{K_{t}}{L}=s\frac{Y_{t}}{L}-\delta\frac{K_{t}}{L}}\]</span></p>
-<p>The change in the capital stock per person from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+1\)</span> has two components: investment (or saving) and depreciation:</p>
-<p><span class="math display">\[\underbrace{\frac{K_{t+1}}{L}-\frac{K_{t}}{L}}_{\text{Change in capital }}=\underbrace{sf\left(\frac{K_{t}}{L}\right)}_{\text{Investment}}-\underbrace{\delta\frac{K_{t}}{L}}_{\text{Depreciation}}.\]</span></p>
-<p>The steady state level of the capital stock <span class="math inline">\(K^{*}\)</span> is such that <span class="math inline">\(K_{t+1}=K_{t}=K^{*}\)</span>, and it therefore satisfies: <span class="math display">\[\boxed{sf\left(\frac{K^{*}}{L}\right)=\delta\frac{K^{*}}{L}}\]</span></p>
-<p>Note that without further specifying <span class="math inline">\(f(.)\)</span>, we can’t say much more about the value of <span class="math inline">\(K^{*}/L\)</span>, we just know it satisfies this implicit equation. The steady-state value of output per worker <span class="math inline">\(Y^{*}/L\)</span>, as a function of <span class="math inline">\(K^{*}/L\)</span> is given by: <span class="math display">\[\frac{Y^{*}}{L}=f\left(\frac{K^{*}}{L}\right)\]</span></p>
-</div>
-<div id="three-cases" class="section level3">
-<h3><span class="header-section-number">2.1.3</span> Three cases</h3>
-<p>There are 3 cases:</p>
-<ol style="list-style-type: decimal">
-<li><p>If capital per worker is relatively low, that is <span class="math inline">\(K_{t}/L&lt;K^{*}/L\)</span>, then investment per worker is larger than depreciation per worker, and therefore from the above equation, capital per worker increases: <span class="math display">\[\frac{K_{t+1}}{L}&gt;\frac{K_{t}}{L}\]</span></p></li>
-<li><p>If capital per worker is exactly equal to steady state capital per worker, that is <span class="math inline">\(K_{t}/L=K^{*}/L\)</span>, then investment per worker is equal to depreciation per worker, and therefore from the above equation, capital per worker stays constant: <span class="math display">\[\frac{K_{t+1}}{L}=\frac{K_{t}}{L}=\frac{K^{*}}{L}\]</span></p></li>
-<li><p>If capital per worker is relatively high, that is <span class="math inline">\(K_{t}/L&gt;K^{*}/L\)</span>, then depreciation per worker is larger than investment per worker, and therefore, capital per worker declines: <span class="math display">\[\frac{K_{t+1}}{L}&lt;\frac{K_{t}}{L}.\]</span></p></li>
-</ol>
-</div>
-</div>
-<div id="cobb" class="section level2">
-<h2><span class="header-section-number">2.2</span> Cobb-Douglas production function</h2>
-<div id="solving-for-the-model" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Solving for the model</h3>
-<p>Assume now that the production function is a Cobb-Douglas production function, so that:<br />
-<span class="math display">\[F(K,L)=K^{\alpha}L^{1-\alpha}\]</span> As we saw during <a href="intro-cobb.html#intro-cobb">lecture 1</a>, <span class="math inline">\(\alpha\)</span> should be thought of as roughly equal to <span class="math inline">\(\alpha = 1/3\)</span>. This implies then that function <span class="math inline">\(f\)</span> defined above is such that: <span class="math display">\[f(x)=x^{\alpha}\]</span></p>
-<p>The law of motion for capital is given by:<br />
-<span class="math display">\[\frac{K_{t+1}}{L}=\frac{K_{t}}{L}+s\left(\frac{K_{t}}{L}\right)^{\alpha}-\delta\frac{K_{t}}{L}.\]</span></p>
-<p>Given <span class="math inline">\(L\)</span>, <span class="math inline">\(K_{0}\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(\delta\)</span>, we are able to calculate <span class="math inline">\(K_{1}\)</span>, <span class="math inline">\(K_{2}\)</span>, …, as well as <span class="math inline">\(K_{t}\)</span> for any <span class="math inline">\(t\)</span>, by calculating the quantities of capital successively from the formula above.</p>
-<p>If you do so, you will notice that <span class="math inline">\(K_{t}\)</span> converges to a steady state value <span class="math inline">\(K^{*}\)</span>. However, you do not need to perform an infinity of operations to get at this <span class="math inline">\(K^{*}\)</span>. Instead, you can see that capital per worker in steady-state <span class="math inline">\(K^{*}/L\)</span> solves:</p>
-<p><span class="math display">\[s\left(\frac{K^{*}}{L}\right)^{\alpha}=\delta\frac{K^{*}}{L}\quad\Rightarrow\quad \boxed{\frac{K^{*}}{L}=\left(\frac{s}{\delta}\right)^{\frac{1}{1-\alpha}}}\]</span> What was an implicit equation in the <a href="solow.html#general-production-f">previous section</a> can now be solved for explicitely. The steady-state level of output per worker is then: <span class="math display">\[\frac{Y^{*}}{L}=\left(\frac{s}{\delta}\right)^{\frac{\alpha}{1-\alpha}}\]</span></p>
-<p>We are finally able to compute the capital to output ratio <span class="math inline">\(K^{*}/Y^{*}\)</span> from the Solow growth model: <span class="math display">\[
-\begin{aligned}
-\frac{K^{*}}{Y^{*}}&amp;=\frac{K^{*}/L}{Y^{*}/L}\\
-&amp;=\left(\frac{s}{\delta}\right)^{\frac{1}{1-\alpha}}  \left(\frac{s}{\delta}\right)^{-\frac{\alpha}{1-\alpha}} \\
-\frac{K^{*}}{Y^{*}}&amp;= \frac{s}{\delta}.
-\end{aligned}
-\]</span> Alternatively, you may obtain this expression much more simply by equating saving <span class="math inline">\(sY^{*}\)</span> to investment <span class="math inline">\(\delta K^{*}\)</span> in the steady state: <span class="math display">\[sY^{*} = \delta K^{*} \quad \Rightarrow \quad \boxed{\frac{K^{*}}{Y^{*}} = \frac{s}{\delta}}.\]</span></p>
-</div>
-<div id="golden-rule" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Golden Rule</h3>
-<p>Most economists believe that policymakers should not care so much about GDP per person, but rather about consumption per person (however, some people hold a different view – we shall talk about that later). The intuition is simple: if an economy was to produce many goods which were only used for investment purposes (which would be the case if <span class="math inline">\(s = 1\)</span>), then people in this economy would be starving, even though it was actually producing a lot. Investment, ultimately, should serve to increase future consumption.</p>
-<p>The <strong>Golden Rule level of capital accumulation</strong> is such that the level of steady-state consumption per capita is maximized. The steady-state consumption per capita is given by: <span class="math display">\[
-\begin{aligned}
-\frac{C^{*}}{L}&amp;=(1-s)\frac{Y^{*}}{L}\\
-&amp;=(1-s)\left(\frac{s}{\delta}\right)^{\frac{\alpha}{1-\alpha}}\\
-\frac{C^{*}}{L}&amp;=\frac{(1-s)s^{\frac{\alpha}{1-\alpha}}}{\delta^{\frac{\alpha}{1-\alpha}}}
-\end{aligned}
-\]</span></p>
-<p>Maximizing this steady state consumption with respect to the saving rate <span class="math inline">\(s\)</span> consists in finding the maximum of that function with respect to <span class="math inline">\(s\)</span>: <span class="math display">\[\frac{d\left(C^{*}/L\right)}{ds}=0\quad\Rightarrow\quad\frac{d\left[(1-s)s^{\frac{\alpha}{1-\alpha}}\right]}{ds}=0\]</span></p>
-<p>Note that the <span class="math inline">\(1/\delta^{\alpha/(1-\alpha)}\)</span> is just a constant which does not change anything to the maximization. If you are not convinced, then you may also compute the derivative with respect to the whole <span class="math inline">\(C^{*}/L\)</span> expression. This gives: <span class="math display">\[
-\begin{aligned}
-&amp;-s^{\frac{\alpha}{1-\alpha}}+\frac{\alpha}{1-\alpha}(1-s)s^{\frac{\alpha}{1-\alpha}-1} =0 \quad \Rightarrow\quad\frac{\alpha}{1-\alpha}\frac{1-s}{s}=1\\
-&amp;\quad \quad \Rightarrow\quad\alpha-\alpha s=s-\alpha s \quad\Rightarrow\quad\boxed{s=\alpha}.
-\end{aligned}
-\]</span> Therefore, the saving rate corresponding to the Golden Rule level of capital accumulation is equal to <span class="math inline">\(\alpha\)</span> (again, taking <span class="math inline">\(\alpha\)</span> to be equal to roughly 1/3, this would suggest that an economy would optimally need to save about a third of its production every year).</p>
-<p>The Golden Rule level of capital accumulation is then such that capital at the steady-state is given as a function of the exogenous parameters by: <span class="math display">\[\frac{K^{*}}{L}=\left(\frac{\alpha}{\delta}\right)^{\frac{1}{1-\alpha}}\quad\Rightarrow\quad K^{*}=L\left(\frac{\alpha}{\delta}\right)^{\frac{1}{1-\alpha}}\]</span></p>
-<p>The level of GDP corresponding to this Golden rule level is: <span class="math display">\[Y^{*}=L\left(\frac{\alpha}{\delta}\right)^{\frac{\alpha}{1-\alpha}}.\]</span></p>
-</div>
-</div>
-<div id="some-data" class="section level2">
-<h2><span class="header-section-number">2.3</span> Some Data</h2>
-
-<div class="figure" style="text-align: center"><span id="fig:gross-sav-inv"></span>
-<img src="ucla-102-fall2018_files/figure-html/gross-sav-inv-1.png" alt="Gross Savings and Investment (WDI)." width="576" />
-<p class="caption">
-Figure 2.1: <span style="font-variant: small-caps;">Gross Savings and Investment (WDI)</span>.
-</p>
-</div>
-
-<div class="figure" style="text-align: center"><span id="fig:net-sav-inv"></span>
-<img src="ucla-102-fall2018_files/figure-html/net-sav-inv-1.png" alt="Net Savings and Gross savings (WDI)." width="576" />
-<p class="caption">
-Figure 2.2: <span style="font-variant: small-caps;">Net Savings and Gross savings (WDI)</span>.
-</p>
-</div>
-
-<div class="figure" style="text-align: center"><span id="fig:inv-gdp"></span>
-<img src="ucla-102-fall2018_files/figure-html/inv-gdp-1.png" alt="Investment (% of GDP), 2016." width="576" />
-<p class="caption">
-Figure 2.3: <span style="font-variant: small-caps;">Investment (% of GDP), 2016</span>.
-</p>
-</div>
-
-<div class="figure" style="text-align: center"><span id="fig:sav-gdp"></span>
-<img src="ucla-102-fall2018_files/figure-html/sav-gdp-1.png" alt="Gross Saving (% of GDP), 2016." width="576" />
-<p class="caption">
-Figure 2.4: <span style="font-variant: small-caps;">Gross Saving (% of GDP), 2016</span>.
-</p>
-</div>
-</div>
-<div id="readings---to-go-further-1" class="section level2 unnumbered">
-<h2>Readings - To go further</h2>
-<p><a href="https://www.wsj.com/articles/humans-1-robots-0-1381098947?tesla=y">Humans 1, Robots 0, <em>Wall Street Journal</em>, October 6, 2013.</a></p>
-<p>(Gated) <a href="https://www.economist.com/finance-and-economics/2018/04/12/economists-understand-little-about-the-causes-of-growth">Economists understand little about the causes of growth, <em>The Economist</em>, April 12, 2018.</a></p>
-
-</div>
+<div id="comparative-statics" class="section level1">
+<h1><span class="header-section-number">Lecture 14</span> Comparative statics</h1>
+<p>We are now in a positio to ask how demand affects output in an open economy. We start with an increase in government spending, and then turn to the effects of an increase in foreign demand.</p>
+<p>Increase in government spending. What happens when we have an increase in government spending <span class="math inline">\(\Delta G\)</span>? Then we have an effect on output that is given by: <span class="math display">\[\Delta Y=\frac{\Delta G}{1-\left(c_{1}+b_{1}-m_{1}\right)}&lt;\frac{\Delta G}{1-\left(c_{1}+b_{1}\right)}.\]</span></p>
+<p>In this situation, there is an effect on the trade balance. The effect on exports is zero, since foreign output does not change by assumption – however, note that if the foreign country’s GDP also depends on the home GDP, then foreign output might change as well, and this may also boost exports – this is what Keynes (1936) suggested in the above quote when he stated that: “On the other hand our own country may recover a portion of this leakage through favourable repercussions due to the action of the multiplier in the foreign country in increasing its economic activity.”.</p>
+<p>Therefore, the effect on exports is: <span class="math display">\[\Delta X=0.\]</span></p>
+<p>The effect on imports is given by: <span class="math display">\[\Delta\left(\frac{IM}{\epsilon}\right)=m_{1}\Delta Y=\frac{m_{1}}{1-\left(c_{1}+b_{1}-m_{1}\right)}\Delta G.\]</span></p>
+<p>Finally, the effect on the trade balance is: <span class="math display">\[\Delta\left(X-\frac{IM}{\epsilon}\right)=-\frac{m_{1}}{1-\left(c_{1}+b_{1}-m_{1}\right)}\Delta G.\]</span></p>
+<p>This effect is greater, the greater the openness ratio <span class="math inline">\(m_{1}\)</span>. Therefore, in countries where the openness ratio is higher, this “leakage” of demand is more severe.</p>
+<p>Increase in foreign demand. What happens if there is an increase in foreign demand, that is, an increase in <span class="math inline">\(Y^{*}\)</span>. This could be due to an increase in foreign government spending, <span class="math inline">\(G^{*}\)</span>, for example. One can forever think of the United States being the foreign country, and Germany, Japan or China being the home country. What would then happen to these countries’ GDP and trade balance?</p>
+<p><strong>The need for international coordination.</strong> Countries prefer to run trade surpluses rather than trade deficits. There are many reasons for this: aversion to foreign debt, risks of losing one’s manufacturing base (cf. Donald Trump), etc. Therefore, there needs to be international coordination, as all countries would like other countries to increase their government spending, but do not want to increase their own.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro-cobb.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="two-period.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="open-economy-multiplier.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="depreciation-the-trade-balance-and-output.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -385,7 +286,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-solow.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/11-open.Rmd",
 "text": "Edit"
 },
 "download": ["ucla-102-fall2018.pdf", "ucla-102-fall2018.epub"],

@@ -86,7 +86,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-11-17}
+    \date{2018-11-18}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -118,6 +118,8 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\listoftables
+\listoffigures
 \chapter*{Syllabus}\label{syllabus}
 \addcontentsline{toc}{chapter}{Syllabus}
 
@@ -853,8 +855,9 @@ where \(f\) is defined as a function of \(F\) such that:
 \[f(x)\equiv F(x,1).\]
 
 An example of such a production function is the Cobb-Douglas production
-function, which we started studying in \href{lecture1.html}{Lecture 1},
-and which we look at in the \protect\hyperlink{cobb}{next section}.
+function, which we started studying in
+\protect\hyperlink{intro-cobb}{Lecture 1}, and which we look at in the
+\protect\hyperlink{cobb}{next section}.
 
 Robert Solow, in his 1956 contribution, abstracts from public saving, so
 that \textbf{total saving} at time \(t\) equals \textbf{private saving}
@@ -925,9 +928,9 @@ function}\label{cobb}}
 Assume now that the production function is a Cobb-Douglas production
 function, so that:\\
 \[F(K,L)=K^{\alpha}L^{1-\alpha}\] As we saw during
-\href{lecture1.html}{lecture 1}, \(\alpha\) should be thought of as
-roughly equal to \(\alpha = 1/3\). This implies then that function \(f\)
-defined above is such that: \[f(x)=x^{\alpha}\]
+\protect\hyperlink{intro-cobb}{lecture 1}, \(\alpha\) should be thought
+of as roughly equal to \(\alpha = 1/3\). This implies then that function
+\(f\) defined above is such that: \[f(x)=x^{\alpha}\]
 
 The law of motion for capital is given by:\\
 \[\frac{K_{t+1}}{L}=\frac{K_{t}}{L}+s\left(\frac{K_{t}}{L}\right)^{\alpha}-\delta\frac{K_{t}}{L}.\]
@@ -1338,7 +1341,7 @@ as \(t\) and \(t+1\).
 People from generation \(t\) are young in period \(t\), and old in
 period \(t+1\). We denote their consumption when young by \(c_{t}^{y}\)
 and their consumption when old by \(c_{t+1}^{o}\). In terms of
-\href{lecture3.html}{Lecture 3}, you should really think of
+\protect\hyperlink{two-period}{Lecture 3}, you should really think of
 \(c_{t}^{y}\) as \(c_{0}\), and of \(c_{t+1}^{o}\) as \(c_{1}\).
 
 People work when young, and then receive a wage given by \(w_{t}\). They
@@ -1363,9 +1366,9 @@ scale, production function: \[Y_{t}=K_{t}^{\alpha}L_{t}^{1-\alpha}.\]
 
 We assume that the labor force is constant and fixed to unity (this is
 to avoid carrying \(L\) around everywhere - from
-\href{lecture2.html}{lecture 2}, you should now know that everything can
-be expressed per capita, because of constant returns to scale), and
-therefore:
+\protect\hyperlink{solow}{lecture 2}, you should now know that
+everything can be expressed per capita, because of constant returns to
+scale), and therefore:
 
 \[L_{t}=L=1.\]
 
@@ -1383,12 +1386,13 @@ type of capital involved.)
 Utility is logarithmic, so that the consumption of the young
 \(c_{t}^{y}\) and consumption of the old \(c_{t+1}^{o}\) are given as a
 function of the wage as follows (this is just an application of
-\href{lecture3.html}{Lecture 3}):
+\protect\hyperlink{two-period}{Lecture 3}):
 
 \[c_{t}^{y}=\frac{w_{t}}{2}\qquad c_{t+1}^{o}=(1+r)\frac{w_{t}}{2}.\]
 
 Indeed, if you want to think of this model as the two periods model of
-\href{lecture3.html}{Lecture 3}, think that everything is as if:
+\protect\hyperlink{two-period}{Lecture 3}, think that everything is as
+if:
 
 \[f_{0}=0,\qquad y_{0}=w_{t},\qquad y_{1}=0.\]
 
@@ -1413,9 +1417,9 @@ of the Solow model, with \(s = (1-\alpha)/2\). The new element here of
 course is to get saving endogenously, from agents' optimal decisions.
 Note that the value for the saving rate has an economic interpretation:
 wages are only a fraction \(1-\alpha\) of output, from
-\href{lecture1.html}{lecture 1}. On the other hand, savers / consumers
-want to smooth consumption and therefore want to save a half of that.
-This is why a fraction \((1-\alpha)/2\) of output is saved.
+\protect\hyperlink{intro-cobb}{lecture 1}. On the other hand, savers /
+consumers want to smooth consumption and therefore want to save a half
+of that. This is why a fraction \((1-\alpha)/2\) of output is saved.
 
 \subsection{Numerical Application}\label{numerical-application}
 
@@ -1714,7 +1718,7 @@ exponential, so it is approximately linear on a semi-logarithmic scale.
 
 \begin{figure}
 
-{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/gdp-1200-1} 
+{\centering \includegraphics[width=1\linewidth]{ucla-102-fall2018_files/figure-latex/gdp-1200-1} 
 
 }
 
@@ -1725,7 +1729,7 @@ exponential, so it is approximately linear on a semi-logarithmic scale.
 
 \begin{figure}
 
-{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/gdp-1700-1} 
+{\centering \includegraphics[width=1\linewidth]{ucla-102-fall2018_files/figure-latex/gdp-1700-1} 
 
 }
 
@@ -1736,7 +1740,7 @@ exponential, so it is approximately linear on a semi-logarithmic scale.
 
 \begin{figure}
 
-{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/gdp-1800-1} 
+{\centering \includegraphics[width=1\linewidth]{ucla-102-fall2018_files/figure-latex/gdp-1800-1} 
 
 }
 
@@ -1747,7 +1751,7 @@ exponential, so it is approximately linear on a semi-logarithmic scale.
 
 \begin{figure}
 
-{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/gdp-1900-1} 
+{\centering \includegraphics[width=1\linewidth]{ucla-102-fall2018_files/figure-latex/gdp-1900-1} 
 
 }
 
@@ -1831,89 +1835,92 @@ strong catch up of poor countries towards the level of rich countries.
 On one hand of the spectrum, many countries have very small GDP per
 capita levels.
 
-\begin{tabular}{c|c}
-\hline
-Countryname & Per.Capita.GDP\\
-\hline
+
+
+
+\begin{table}
+
+\caption{\label{tab:low-gdp-per-cap}\textsc{Countries with GDP per capita lower than
+\$1.5K.}}
+\centering
+\begin{tabular}[t]{cc}
+\toprule
+Country & GDP per capita\\
+\midrule
 Ethiopia & \$ 1,489\\
-\hline
 Togo & \$ 1,446\\
-\hline
 Sierra Leone & \$ 1,353\\
-\hline
 Guinea-Bissau & \$ 1,257\\
-\hline
 Madagascar & \$ 1,237\\
-\hline
+\addlinespace
 Mozambique & \$ 1,211\\
-\hline
 D.R. of the Congo & \$ 1,199\\
-\hline
 Malawi & \$ 971\\
-\hline
 Liberia & \$ 877\\
-\hline
 Niger & \$ 868\\
-\hline
+\addlinespace
 Burundi & \$ 840\\
-\hline
 Central African Republic & \$ 599\\
-\hline
+\bottomrule
 \end{tabular}
+\end{table}
 
-\begin{center}\includegraphics{ucla-102-fall2018_files/figure-latex/map-gdp-per-capita-1} \end{center}
 
-On the other, some countries have very high GDP per capita. The list
-below shows the countries that have a GDP per capita higher than
-\$40000.
 
-\begin{tabular}{c|c}
-\hline
-Countryname & Per.Capita.GDP\\
-\hline
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{ucla-102-fall2018_files/figure-latex/map-gdp-per-capita-1} 
+
+}
+
+\caption{\textsc{2014 GDP per capita, by Country (Penn
+World Tables)}.}\label{fig:map-gdp-per-capita}
+\end{figure}
+
+On the other, some countries have very high GDP per capita. Table
+\ref{tab:high-gdp-per-cap} below shows the countries that have a GDP per
+capita higher than \$40K.
+
+
+
+
+\begin{table}
+
+\caption{\label{tab:high-gdp-per-cap}\textsc{Countries with GDP per capita higher than
+\$40K.}}
+\centering
+\begin{tabular}[t]{cc}
+\toprule
+Country & GDP per capita\\
+\midrule
 Qatar & \$ 146,037\\
-\hline
 China, Macao SAR & \$ 130,758\\
-\hline
 Norway & \$ 75,920\\
-\hline
 United Arab Emirates & \$ 68,021\\
-\hline
 Kuwait & \$ 67,432\\
-\hline
+\addlinespace
 Brunei Darussalam & \$ 66,968\\
-\hline
 Singapore & \$ 66,050\\
-\hline
 Luxembourg & \$ 65,842\\
-\hline
 Switzerland & \$ 61,570\\
-\hline
 United States & \$ 51,623\\
-\hline
+\addlinespace
 Ireland & \$ 51,224\\
-\hline
 Netherlands & \$ 47,392\\
-\hline
 Saudi Arabia & \$ 46,772\\
-\hline
 Germany & \$ 46,190\\
-\hline
 China, Hong Kong SAR & \$ 45,399\\
-\hline
+\addlinespace
 Austria & \$ 45,158\\
-\hline
 Denmark & \$ 43,733\\
-\hline
 Australia & \$ 43,590\\
-\hline
 Canada & \$ 42,794\\
-\hline
 Sweden & \$ 42,117\\
-\hline
 Taiwan & \$ 41,514\\
-\hline
+\bottomrule
 \end{tabular}
+\end{table}
 
 Why are poor countries so poor, and largely failing to catch up, and why
 advanced economies are growing at an average of 2\% per year since the
@@ -2026,9 +2033,8 @@ inexpensive way to motivate researchers hoping for recognition. The
 Economics Nobel Prize is one such example. In general, the motivations
 of researchers are complex, and probably not purely driven by profit
 seeking. For example, a very large community of developers contributes
-to open-source software (such as \href{R.intro/html}{R Statistics}),
-which is hard to rationalize from an orthodox (individualist) economic
-standpoint.
+to open-source software, which is hard to rationalize from an orthodox
+(individualist) economic standpoint.
 
 \subsection{Model}\label{model}
 
@@ -2075,7 +2081,7 @@ Y_{t}&= A_{0}(1-l)L \left(1+zlL\right)^{t}
 too opposing effect. On the one hand, there are less production workers
 available for production Thus, there is a fall in \(L_{yt}\), which
 tends to reduce \(Y_t\). On the other, overall growth, which is here
-given by \(g=zlL\), is then permanently higher.
+given by \(g = zlL\), is then permanently higher.
 
 \subsection{Shortcomings}\label{shortcomings}
 
@@ -2202,8 +2208,8 @@ consists in maximizing utility under his budget constraint: \[
 \]
 
 Again, similarly to the two-period optimization problem of
-\href{lecture3.html}{Lecture 3}, you may solve this optimization in four
-different ways:
+\protect\hyperlink{two-period}{Lecture 3}, you may solve this
+optimization in four different ways:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2337,7 +2343,7 @@ for labor that determines the employment level.
 
 \begin{figure}
 
-{\centering \includegraphics[width=15.39in]{graphsketcher/labor-market-productivity-shock-keynes} 
+{\centering \includegraphics[width=0.75\linewidth]{graphsketcher/labor-market-productivity-shock-keynes} 
 
 }
 
@@ -2411,7 +2417,7 @@ called the natural rate of unemployment, equal to:
 \[u^{*}=\frac{0.01}{0.2 + 0.01}\approx 4.8\%\].
 
 \textbf{Transition dynamics.} Unlike with the Solow growth model of
-\href{lecture2.html}{lecture 2}, we can do more and ask how the
+\protect\hyperlink{solow}{lecture 2}, we can do more and ask how the
 unemployment rate converges to this steady-state level, using the law of
 motion for unemployment (this was impossible for the Solow growth model
 because the law of motion for capital was too complex):
@@ -2457,7 +2463,7 @@ layoffs, but more importantly by a decline in job openings.
 
 \begin{figure}
 
-{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/monthly-hires-1} 
+{\centering \includegraphics[width=0.75\linewidth]{ucla-102-fall2018_files/figure-latex/monthly-hires-1} 
 
 }
 
@@ -2470,7 +2476,7 @@ Source: BLS-JOLTS}.}\label{fig:monthly-hires}
 
 \begin{figure}
 
-{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/monthly-job-openings-1} 
+{\centering \includegraphics[width=0.75\linewidth]{ucla-102-fall2018_files/figure-latex/monthly-job-openings-1} 
 
 }
 
@@ -2574,16 +2580,16 @@ assume for now that we are considering a closed economy - think, for
 example, of the world economy - so that there are no exports or imports
 (\(X=M=0\)). This assumption, which is not satisfying as the policies we
 shall consider are national (fiscal policy, etc.), will be relaxed
-starting in \href{lecture11.html}{lecture11}.
+starting in \protect\hyperlink{open}{lecture11}.
 
-In \protect\hyperlink{solow}{lecture 2} and \href{Lecture4.html}{lecture
-4}, output was also determined by the amount of available technology, as
-well as by the supply of labor \(L\), and of capital \(K\) in the
-economy (the ``supply side''): \[Y=F\left(K, L\right).\] For example, in
-the Solow growth model of \protect\hyperlink{solow}{lecture 2}, where
-government spending was zero (\(G=0\)), GDP was simultaneously equal to
-\(F(K,L)\) as well as to \(C+I\). This is what allowed us to derive the
-dynamics in the economy.
+In \protect\hyperlink{solow}{lecture 2} and
+\protect\hyperlink{olg}{lecture 4}, output was also determined by the
+amount of available technology, as well as by the supply of labor \(L\),
+and of capital \(K\) in the economy (the ``supply side''):
+\[Y=F\left(K, L\right).\] For example, in the Solow growth model of
+\protect\hyperlink{solow}{lecture 2}, where government spending was zero
+(\(G=0\)), GDP was simultaneously equal to \(F(K,L)\) as well as to
+\(C+I\). This is what allowed us to derive the dynamics in the economy.
 
 In the Keynesian model, output is determined only by demand. The
 underlying assumption is that there exists some idle resources which
@@ -2701,10 +2707,10 @@ alternative values for \(G\) for the determination of GDP, for example
 \hypertarget{simple}{\section{The Simple Goods Market
 Model}\label{simple}}
 
-The simple Keynesian model, also called the (ZZ)-(YY) model, assumes a
-closed economy, that investment is exogenous and equal to \(\bar{I}\),
-an exogenous government spending \(G\), and a consumption function given
-as above by: \[C=c_0+c_1\left(Y-T\right).\]
+The Simple Goods Market Model, also called the \textbf{(ZZ)-(YY) model},
+assumes a closed economy, that investment is exogenous and equal to
+\(\bar{I}\), an exogenous government spending \(G\), and a consumption
+function given as above by: \[C=c_0+c_1\left(Y-T\right).\]
 
 \subsection{Algebraic derivation of the
 multiplier}\label{algebraic-derivation-of-the-multiplier}
@@ -2716,10 +2722,10 @@ Z   &=C+\bar{I}+G\\
     &=c_{0}+c_{1}\left(Y-T\right)+\bar{I}+G\\
 Z   &=\left(c_{0}+\bar{I}+G-c_{1}T\right)+c_{1}Y
 \end{aligned}
-\] This demand for goods determines a value for the demand for goods
-\(Z\), as a function of aggregate income (or GDP) \(Y\), which defines
-the (ZZ) curve. The part of this demand which does not depend on income
-is called autonomous spending \(z_0\) defined as:
+\] This determines a value for the demand for goods \(Z\), as a function
+of aggregate income, or GDP \(Y\), which defines the (ZZ) curve. The
+part of this demand which does not depend on income is called
+\emph{autonomous spending} \(z_0\) defined as:
 \[z_0=c_{0}+\bar{I}+G-c_{1}T.\] This autonomous spending \(z_0\) is also
 the value of demand when income is equal to \(Y=0\). Therefore, the
 demand for goods \(Z\) is given as:
@@ -2807,7 +2813,7 @@ to see this, 2 are algebraic, and 2 are geometric:
 
 \begin{figure}
 
-{\centering \includegraphics[width=30.78in]{graphsketcher/keynesian-cross-merged} 
+{\centering \includegraphics[width=1\linewidth]{graphsketcher/keynesian-cross-merged} 
 
 }
 
@@ -2828,12 +2834,12 @@ Interpretations}.}\label{fig:keynes-graphical}
   \[m=1+mc_{1} \quad\Rightarrow\quad m=\frac{1}{1-c_{1}}.\]
 \end{enumerate}
 
-\hypertarget{variations}{\section{Variations on the Goods Market
+\hypertarget{variations}{\section{Extensions of the Goods Market
 Model}\label{variations}}
 
-There are multiple variations on the theme of the Goods Market Model:
-one with \protect\hyperlink{automatic}{automatic stabilizers}, one with
-an \protect\hyperlink{accelerator}{accelerator effect of demand on
+There are multiple extensions of the Goods Market Model: one with
+\protect\hyperlink{automatic}{automatic stabilizers}, one with an
+\protect\hyperlink{accelerator}{accelerator effect of demand on
 investment}.
 
 \hypertarget{automatic}{\subsection{Automatic
@@ -2882,7 +2888,7 @@ smaller.
 
 \begin{figure}
 
-{\centering \includegraphics[width=30.78in]{graphsketcher/keynesian-cross-variations-merged} 
+{\centering \includegraphics[width=1\linewidth]{graphsketcher/keynesian-cross-variations-merged} 
 
 }
 
@@ -2891,8 +2897,7 @@ Accelerator Effect}.}\label{fig:keynes-variations}
 \end{figure}
 
 \hypertarget{accelerator}{\subsection{\texorpdfstring{``Accelerator''
-effect of demand on
-investment}{Accelerator effect of demand on investment}}\label{accelerator}}
+Effect}{Accelerator Effect}}\label{accelerator}}
 
 Another variation on the Goods Market model consists in recognizing that
 investment demand might also depend on income. Firms will invest more if
@@ -2959,11 +2964,14 @@ fleets of ocean Greyhounds; Majestic, self-amortizing canals;
 Plantations of ripening tea'' (interestingly, these capital investments
 are all abroad; we shall come back to this later).
 
-\begin{center}\href{https://www.youtube.com/embed/XxyB29bDbBA}{\includegraphics{ucla-102-fall2018_files/figure-latex/mary-poppins-1} }\end{center}
+\begin{verbatim}
+# [1] "I do not know how to embed videos in PDFs, so please go to the Web version of the lectures, or use the direct link: https://www.youtube.com/watch?v=XxyB29bDbBA"
+\end{verbatim}
 
-However, the model of \href{lecture7.html}{lecture 7} implies that
-saving might be detrimental to the economy, at least when the economy
-has some slack. This phenomenon was explained by J.M. Keynes in the
+However, the model of \protect\hyperlink{cons-function}{lecture 7}
+implies that saving might be detrimental to the economy, at least when
+the economy has some slack. This phenomenon was explained by J.M. Keynes
+in the
 \href{http://cas2.umkc.edu/economics/people/facultypages/kregel/courses/econ645/winter2011/generaltheory.pdf}{\emph{General
 Theory}}:
 
@@ -2980,9 +2988,10 @@ a level at which the sums which individuals choose to save add up to a
 figure exactly equal to the amount of investment.
 \end{quote}
 
-In this lecture, we use the models of \href{lecture7.html}{lecture 7} to
-understand that argument better. From the outset, we should note that
-the paradox of thrift was known before J.M. Keynes, perhaps in the
+In this lecture, we use the models of
+\protect\hyperlink{cons-function}{lecture 7} to understand that argument
+better. From the outset, we should note that the paradox of thrift was
+known before J.M. Keynes, perhaps in the
 \href{https://en.wikipedia.org/wiki/Book_of_Proverbs}{Book of Proverbs}:
 
 \begin{quote}
@@ -3041,14 +3050,13 @@ recognized by J.M. Keynes in
 23 of the General Theory - Notes on Mercantilism, the usury laws,
 stamped money and theories of under-consumption}, which I strongly
 encourage you to read (although you are not responsible for it). We will
-come back to it when we talk about open economy macroeconomics,
-particularly during \href{lecture12.html}{lecture 12} on twin deficits,
-and \href{lecture16.html}{lecture 16} on currency wars.
+come back to it when we talk about open economy macroeconomics, starting
+in \protect\hyperlink{open}{lecture 11}
 
-Back to our Keynesian goods market model of \href{lecture7.html}{lecture
-7}, we shall now study the paradox of thrift in more detail. We will
-consider three ways in which an economy might save more, which are all
-relevant in practice:
+Back to our Keynesian goods market model of
+\protect\hyperlink{cons-function}{lecture 7}, we shall now study the
+paradox of thrift in more detail. We will consider three ways in which
+an economy might save more, which are all relevant in practice:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3072,9 +3080,10 @@ which such a paradox of thrift arises:
 \def\labelenumi{\arabic{enumi}.}
 \item
   in the \protect\hyperlink{simple}{simple goods market model} of
-  \href{lecture7.html}{lecture 7}, we will show that attempts to save
-  more, either by private individuals or by the government, are
-  self-defeating, in the sense that saving does not move.
+  \protect\hyperlink{cons-function}{lecture 7}, we will show that
+  attempts to save more, either by private individuals or by the
+  government, are self-defeating, in the sense that saving does not
+  move.
 \item
   in the \protect\hyperlink{extended}{variation on the goods market
   model} with an accelerator effect of investment where \(I=b_0+b_1Y\),
@@ -3258,7 +3267,7 @@ model}\label{extended}}
 In the consumption and investment multiplier model, we get an even
 stronger paradox of thrift in that efforts by consumers to save more
 lead to declining saving. We thus start from the extended goods market
-model of \href{lecture7.html}{lecture 7}: \[
+model of \protect\hyperlink{cons-function}{lecture 7}: \[
 \begin{aligned}
 C   &=c_{0}+c_{1}\left(Y-T\right)\\
 I   &=b_{0}+b_{1}Y.
@@ -3471,13 +3480,13 @@ individual initiative.
 \end{quote}
 
 During this lecture, we derive this result using the Keynesian model
-that was developed in \href{lecture7.html}{lecture 7} and
-\href{lecture8.html}{lecture 8}. One appeal of writing the equations is
-that we are not able to prove these assertions qualitatively, but we are
-also able to understand how important they are quantitatively. As we go
-along, we therefore attempt to put some actual numbers on all these
-arguments, to get a sense of the orders of magnitude. We shall
-investigate two types of policies:
+that was developed in \protect\hyperlink{cons-function}{lecture 7} and
+\protect\hyperlink{paradox-of-thrift}{lecture 8}. One appeal of writing
+the equations is that we are not able to prove these assertions
+qualitatively, but we are also able to understand how important they are
+quantitatively. As we go along, we therefore attempt to put some actual
+numbers on all these arguments, to get a sense of the orders of
+magnitude. We shall investigate two types of policies:
 
 \begin{itemize}
 \item
@@ -3490,11 +3499,12 @@ investigate two types of policies:
 \section{Assumptions}\label{assumptions-4}
 
 Some minor modifications to the goods market model underlying
-\href{lecture7.html}{lecture 7} and \href{lecture8.html}{lecture 8} are
-in order, in order to think about stimulus policies in the presence of
-inequality. Instead of assuming one type of consumer, with the average
-income \(Y\) and a given MPC \(c_{1}\), we shall assume two types of
-workers. In total, there are \(N\) workers:
+\protect\hyperlink{cons-function}{lecture 7} and
+\protect\hyperlink{paradox-thrift}{lecture 8} are in order, in order to
+think about stimulus policies in the presence of inequality. Instead of
+assuming one type of consumer, with the average income \(Y\) and a given
+MPC \(c_{1}\), we shall assume two types of workers. In total, there are
+\(N\) workers:
 
 \begin{itemize}
 \item
@@ -3605,11 +3615,11 @@ To conclude, total aggregate taxes are: \[
 \subsection{Consumption}\label{consumption}
 
 The challenging part, which differs from the models seen in
-\href{lecture7.html}{lecture 7} and \href{lecture8.html}{lecture 8}, is
-to calculate aggregate consumption, which is composed both of the
-consumption by low income earners, and that by high income earners.
-Total consumption by the low income earners \(\underline{C}\) is such
-that: \[
+\protect\hyperlink{cons-function}{lecture 7} and
+\protect\hyperlink{paradox-thrift}{lecture 8}, is to calculate aggregate
+consumption, which is composed both of the consumption by low income
+earners, and that by high income earners. Total consumption by the low
+income earners \(\underline{C}\) is such that: \[
 \begin{aligned}
 \underline{C}&=\lambda N \underline{c}\\
 &=\lambda N \left(\underline{c}_{0}+\underline{c}_{1}(\underline{y}-\underline{t})\right)\\
@@ -4010,30 +4020,50 @@ The real interest rate \(r\) can be measured in two ways:
 \item
   Either using the nominal interest rate, and substracting an average
   expected (or realized) inflation rate in order to get to a real
-  interest rate. The nominal interest rate has recently averaged around
-  2 to 3\%, while inflation has been from 1 to 2\% on average. This
-  implies a real interest rate which is around 1\%, perhaps 2\%.
+  interest rate. Figure \ref{fig:fred-DGS10} shows that the nominal
+  interest rate has averaged around 2 to 3\% recently, while inflation
+  has been from 1 to 2\% on average. This implies a real interest rate
+  which is around 1\%, perhaps 2\%.
 \end{enumerate}
 
-\begin{center}\includegraphics{ucla-102-fall2018_files/figure-latex/fred-DGS10-1} \end{center}
 
-\begin{center}\includegraphics{ucla-102-fall2018_files/figure-latex/fred-DFII10-1} \end{center}
 
-\begin{center}\includegraphics{ucla-102-fall2018_files/figure-latex/fred-FYOIGDA188S-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/fred-DGS10-1} 
+
+}
+
+\caption{\textsc{10-Year Treasury Rate (Source: FRED).}}\label{fig:fred-DGS10}
+\end{figure}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
 \tightlist
 \item
-  Or, one can measure the real interest rate is to look at the rate on
-  the so-called Treasury Inflation Protected Securities (also called
-  TIPS). Measuring the real interest rate in this way leads to an
-  interest rate around 1\%.
+  Or, one can measure the real interest rate by using the rate on
+  \textbf{Treasury Inflation Protected Securities (TIPS)}. Figure
+  \ref{fig:fred-DFII10} from FRED (the Federal Reserve Economic Data)
+  shows that the real interest rate has recently been around 1\% per
+  year.
 \end{enumerate}
 
+
+
+
+\begin{figure}
+
+{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/fred-DFII10-1} 
+
+}
+
+\caption{\textsc{10-Year Treasury Inflation Protected
+Securities Rate (Source: FRED).}}\label{fig:fred-DFII10}
+\end{figure}
+
 On the other hand, real GDP growth seems to be hovering around
-\(g_Y \approx 2.5\%\). Real GDP per capita growth is variable, but is
+\(g_Y \approx 2.5\%\). Real GDP per capita growth is variable, but it is
 usually estimated to be \textbf{around 1.5\%}:
 \(g_{Y/L} \approx 1.5\%\). It varies over time, however: it was around
 3.0\% per year on average in the 1960s, 2.1\% in the 1970s, 2.4\% in the
@@ -4046,24 +4076,39 @@ g_Y &= g_{Y/L} + g_L\\
 g_Y &\approx 2.5\%.
 \end{aligned}
 \] Therefore, the ratio of government debt to GDP does not appear to be
-on an unsustainable path so far. Another way to see this is that the
-ratio of interest payments to GDP is not particularly high historically,
-which is also shown on the graphs. This implies that if the primary
-deficit was reduced to zero, the debt to GDP ratio would not be on an
-explosive trajectory.
+on an unsustainable path so far.
+
+A final way to see that U.S. debt is not yet on an unsustainable path is
+to note that the ratio of interest payments to GDP is not particularly
+high historically, which is shown on Figure \ref{fig:fred-FYOIGDA188S}.
+This implies that if the primary deficit was reduced to zero, the debt
+to GDP ratio would not be on an explosive trajectory.
+
+
+
+
+\begin{figure}
+
+{\centering \includegraphics{ucla-102-fall2018_files/figure-latex/fred-FYOIGDA188S-1} 
+
+}
+
+\caption{\textsc{Interest Payments on Government Debt as
+\% of GDP (Source: FRED).}}\label{fig:fred-FYOIGDA188S}
+\end{figure}
 
 \section{Public Debt in the Overlapping Generations
 Model}\label{public-debt-in-the-overlapping-generations-model}
 
 In this section, I illustrate using the overlapping-generations model of
-\href{lecture4.html}{lecture 4} that public debt does not necessarily
+\protect\hyperlink{olg}{lecture 4} that public debt does not necessarily
 need to be repaid eventually, so that government debt is not necessarily
 a burden on future generations - an argument which we nonetheless often
 hear in the public debate. However, one precondition for this is
 naturally that the debt to GDP has to be stable. In other words, we need
 that \(r^{*} \leq g_Y\). In the overlapping-generations model of
-\href{lecture4.html}{lecture 4}, we had \(g_Y = 0\), since there was no
-long-run growth. So we want \(r^{*} \leq 0\). In order to have a role
+\protect\hyperlink{olg}{lecture 4}, we had \(g_Y = 0\), since there was
+no long-run growth. So we want \(r^{*} \leq 0\). In order to have a role
 for public debt, we will look at the model that we studied in
 \href{pset3.html}{Problem Set 3} called ``Another Overlapping
 Generations Model'' - the solution to this problem set was available
@@ -4073,7 +4118,7 @@ Generations Model'' - the solution to this problem set was available
 Model}\label{overlapping-generations-model}
 
 Let us look at a simplified version of the overlapping generations model
-we looked at in \href{lecture4.html}{Lecture 4}. For this model, we
+we looked at in \protect\hyperlink{olg}{Lecture 4}. For this model, we
 shall assume that people only care about old age consumption, and that
 they work only when young, receiving wage \(w_{t}\). It does not really
 matter what the form of their utility function is with respect to old
@@ -4103,7 +4148,7 @@ depreciation rate for one year was ranging from 5\% to 10\%.
 \subsection{Without Government Debt}\label{without-government-debt}
 
 Let us first remind ourselves what happens in the absence of government
-debt in this model, as in \href{lecture4.html}{lecture 4}. In the
+debt in this model, as in \protect\hyperlink{olg}{lecture 4}. In the
 absence of a government, we get even simpler expressions than the
 previous time. The law of motion for capital is given as follows:
 \[\Delta K_{t+1}=w_{t}-\delta K_{t}.\] Since \(w_t\) is a fraction
@@ -4171,8 +4216,8 @@ w^{*}&=\left(1-\alpha\right)^{\frac{1}{1-\alpha}} =\frac{2\sqrt{2}}{3\sqrt{3}}\\
 
 \subsection{With Government Debt}\label{with-government-debt}
 
-As we saw in \href{lecture2.html}{lecture 2}, and then again in
-\href{lecture4.html}{lecture 4}, because \(r^{*}<0\) we have that the
+As we saw in \protect\hyperlink{solow}{lecture 2}, and then again in
+\protect\hyperlink{olg}{lecture 4}, because \(r^{*}<0\) we have that the
 quantity of capital is higher than the Golden Rule level of the capital
 stock, which is such that \(r^{*}_g=0\). Why, again, is the Golden rule
 interest rate equal to 0 when there is no growth ? One quick way to
@@ -4199,8 +4244,8 @@ Golden rule interest rate is equal to zero since
 However, we saw in the previous section that the \emph{equilibrium}
 interest rate \(r^{*}\) was negative, equal to -50\%. Therefore, the
 capital stock is too high here. As we saw in lectures
-\href{lecture2.html}{2} and \href{lecture4.html}{4}, one way to solve
-this problem would be to force everyone to save less, in order to
+\protect\hyperlink{solow}{2} and \protect\hyperlink{olg}{4}, one way to
+solve this problem would be to force everyone to save less, in order to
 decrease private saving; however this might be thought of as a little
 bit too intrusive. Another way to solve this problem is to use public
 debt (decrease public saving, to reduce total saving) in order to solve
@@ -4337,24 +4382,27 @@ on the Treasury View:
 
 \begin{itemize}
 \item
-  In the \textbf{Keynesian model} of lectures \href{lecture7.html}{7},
-  \href{lecture8.html}{8}, and \href{lecture9.html}{9}, investment is
-  not crowded out by public debt - in the simplest model of the goods
-  market, investment is in fact fixed. In the accelerator model,
-  \(I=b_0 + b_1 Y\) so that investment depends only on sales, not on
-  saving. According to this model, what the Treasury View misses is that
-  output is not determined by supply, but it is instead determined by
-  demand. Therefore, one cannot reason as if GDP was fixed: GDP is
-  precisely what adjusts when saving is reduced, to maintain the
-  equality between investment and total saving.
+  In the \textbf{Keynesian model} of lectures
+  \protect\hyperlink{cons-function}{7},
+  \protect\hyperlink{paradox-thrift}{8}, and
+  \protect\hyperlink{redistributive}{9}, investment is not crowded out
+  by public debt - in the simplest model of the goods market, investment
+  is in fact fixed. In the accelerator model, \(I=b_0 + b_1 Y\) so that
+  investment depends only on sales, not on saving. According to this
+  model, what the Treasury View misses is that output is not determined
+  by supply, but it is instead determined by demand. Therefore, one
+  cannot reason as if GDP was fixed: GDP is precisely what adjusts when
+  saving is reduced, to maintain the equality between investment and
+  total saving.
 \item
-  In the \textbf{neoclassical model} of lectures \href{lecture2.html}{2}
-  and \href{lecture4.html}{4} in contrast, investment is determined by
-  total saving, and it moves flexibly in response to saving. According
-  to this view, investment is indeed crowded out by public deficits.
-  Note however that this does not mean that in the neoclassical model,
-  government deficits are always bad. As we just saw, public deficits
-  may be a good thing if the economy has too much capital to begin with.
+  In the \textbf{neoclassical model} of lectures
+  \protect\hyperlink{solow}{2} and \protect\hyperlink{olg}{4} in
+  contrast, investment is determined by total saving, and it moves
+  flexibly in response to saving. According to this view, investment is
+  indeed crowded out by public deficits. Note however that this does not
+  mean that in the neoclassical model, government deficits are always
+  bad. As we just saw, public deficits may be a good thing if the
+  economy has too much capital to begin with.
 \end{itemize}
 
 This issue of the Treasury view was discussed a lot during the U.S. 2008
@@ -4418,38 +4466,38 @@ law:
 
 \begin{itemize}
 \item
-  In the \textbf{Keynesian model} of lectures \href{lecture7.html}{7},
-  \href{lecture8.html}{8}, and \href{lecture9.html}{9}, supply does not
-  create its own demand, as some resources (labor or capital) are idle.
-  This allows government spending or tax cuts to have an effect on GDP,
-  by utilizing some of these resources. The reason is that in this
-  model, the desire to save does not necessarily translate into more
-  investment, since investment is fixed or given by the overall level of
-  GDP, which is depressed by more saving. This was the paradox of thrift
-  of \href{lecture8.html}{lecture 8}: instead of increasing investment,
-  a higher desire to save actually reduces output, which ends up
+  In the \textbf{Keynesian model} of lectures
+  \protect\hyperlink{cons-function}{7},
+  \protect\hyperlink{paradox-thrift}{8}, and
+  \protect\hyperlink{redistributive}{9}, supply does not create its own
+  demand, as some resources (labor or capital) are idle. This allows
+  government spending or tax cuts to have an effect on GDP, by utilizing
+  some of these resources. The reason is that in this model, the desire
+  to save does not necessarily translate into more investment, since
+  investment is fixed or given by the overall level of GDP, which is
+  depressed by more saving. This was the paradox of thrift of
+  \href{lecture8.html}{lecture 8}: instead of increasing investment, a
+  higher desire to save actually reduces output, which ends up
   depressing saving.
 \item
-  In the \textbf{neoclassical model} of lectures \href{lecture2.html}{2}
-  and \href{lecture4.html}{4} in contrast, investment is determined by
-  total saving, and it moves flexibly in response to saving. According
-  to this view, there can indeed never be a general glut: consumption
-  increases aggregate demand, but saving increases it too, by
-  stimulating more investment. True, there might be ``too much
-  capital'', when the capital stock is higher than the Golden rule
-  level, but this is not a ``general glut''. Thus, supply can be thought
-  of as indeed ``creating its own demand''.
+  In the \textbf{neoclassical model} of lectures
+  \protect\hyperlink{solow}{2} and \protect\hyperlink{olg}{4} in
+  contrast, investment is determined by total saving, and it moves
+  flexibly in response to saving. According to this view, there can
+  indeed never be a general glut: consumption increases aggregate
+  demand, but saving increases it too, by stimulating more investment.
+  True, there might be ``too much capital'', when the capital stock is
+  higher than the Golden rule level, but this is not a ``general glut''.
+  Thus, supply can be thought of as indeed ``creating its own demand''.
 \end{itemize}
 
 How you stand on those two issues (the Treasury View and Say's law)
 determines whether you are more a neoclassical or a Keynesian economist.
-We shall see during \href{lecture13.html}{lecture 13} which concentrates
-on fiscal policy, what the data has to say of Say's law. As we have seen
-however, Keynesians and neoclassicals agree on one thing: consumption is
-the sole purpose of all production, and there exists such a thing as
-``too much capital'', when \(r^{*}<g_Y\). Whether that is the situation
-we are in, even after Donald Trump's massive tax cuts, is still a
-controversial question.
+As we have seen however, Keynesians and neoclassicals agree on one
+thing: consumption is the sole purpose of all production, and there
+exists such a thing as ``too much capital'', when \(r^{*}<g_Y\). Whether
+that is the situation we are in, even after Donald Trump's massive tax
+cuts, is still a controversial question.
 
 \section*{Readings - To go further}\label{readings---to-go-further-7}
 \addcontentsline{toc}{section}{Readings - To go further}
@@ -4492,6 +4540,263 @@ is macroeconomics so hard to teach? \emph{The Economist}, August 9,
 \href{https://search.proquest.com/docview/2131663609/B6DB7A44958C4606PQ/1?accountid=14512}{``U.S.
 on a course to spend more on debt than defense'', \emph{Wall Street
 Journal}, November 11, 2018.}
+
+\hypertarget{open}{\chapter{The Open Economy and the
+Multiplier}\label{open}}
+
+In lectures \protect\hyperlink{cons-function}{7},
+\protect\hyperlink{paradox-thrift}{8},
+\protect\hyperlink{redistributive}{9} and
+\protect\hyperlink{public-debt}{10}, we made a very strong assumption:
+we assumed that the economy was closed. This assumption can only be
+justified when thinking about the world as a whole. However, the
+relevance of the theory is then considerably diminished, because fiscal
+policy such as government spending or the tax and transfer system, are
+largely decided at the national level. When the economy is open, the
+fiscal multiplier is lower because some of the increased demand is
+addressed to foreign products. J.M. Keynes describes this phenomenon in
+\emph{The General Theory of Employment, Interest and Money} as follows:
+
+\begin{quote}
+In an open system with foreign-trade relations, some part of the
+multiplier of the increased investment will accrue to the benefit of
+employment in foreign countries, since a proportion of the increased
+consumption will diminish our own country's favourable foreign balance;
+so that, if we consider only the effect on domestic employment as
+distinct from world employment, we must diminish the full figure of the
+multiplier. On the other hand our own country may recover a portion of
+this leakage through favourable repercussions due to the action of the
+multiplier in the foreign country in increasing its economic activity.
+\end{quote}
+
+During this lecture, we shall extend the goods market model of
+\protect\hyperlink{cons-function}{lecture 7} to allow for the importing
+and exporting of goods, as well as the potential for a deficit or a
+surplus in the trade balance. We will show that the value for the
+Keynesian multiplier is then reduced, all the more so that the economy
+is open.
+
+Very importantly, you should not necessarily think of the economies we
+consider here as countries. States, counties, or even zipcodes, also are
+open economies (which share a fixed exchange rate with respect to other
+states, counties, or zipcodes). Thus, the model is applicable if, for
+example, California decides to engage in fiscal stimulus (by lowering
+state taxes, for instance). Of course, California is much more open than
+the U.S. as a whole, as California imports many products from other
+states (a quarter of its electricity, for example), and exports many
+products to other states (such as Google, Apple, or Facebook).
+
+\section{National accounting in the Open
+Economy}\label{national-accounting-in-the-open-economy}
+
+The Keynesian analysis in the first lectures relied heavily on the fact
+that investment equals saving: the paradox of thrift, the effects of
+deficit reduction, etc. What happens to this identity in an open
+economy? The answer is that if \(CA\) is the current account, that is
+the sum of net exports, net income and net transfers:
+\[CA\equiv NX+NI+NT.\]
+
+then the current account is simply the difference between total saving
+and investment: \[CA=S+\left(T-G\right)-I\]
+
+Note that if the economy is closed, then \(NX=NI=NT=0\) and therefore
+\(CA=0\). This implies that investment equals total saving:
+\[I=S+\left(T-G\right)\]
+
+How do we arrive at the above relationship? Starting from the definition
+of demand in the open economy: \[Y=C+I+G-IM/\epsilon+X\]
+
+This implies: \[Y-T-C=I+\left(G-T\right)+NX\]
+
+However, the left-hand side is not exactly saving, because the income of
+domestic residents in the open economy is not given by \(Y\) but by
+\(Y+NI+NT\):
+\[\left(Y+NI+NT-T\right)-C=I+\left(G-T\right)+\left(NX+NI+NT\right)\]
+
+Finally, using the above definition: \[S=I+\left(G-T\right)+CA.\]
+
+\section{Open economy multiplier}\label{open-economy-multiplier}
+
+In this section, we assme that \(NI = NT = 0\). In practice, these
+components of the current account do not appear to matter very much.
+
+In an open economy, we need to add imports and exports to the demand for
+domestic goods \(Z\): \[Z=C+I+G-M/\epsilon+X\]
+
+Consumption is still an increasing function of disposable income \(Y-T\)
+so that: \[C=C\left(Y-T\right)\]
+
+Note that here, we neglect the fact that \(Y\) is, in principle, equal
+to GDP. Therefore, we should add net transfers and net income to GDP, in
+principle.
+
+So implicitely, \(NI=NT=0\)..
+
+Investment depends positively on production, and negatively on the real
+policy rate \(r\): \[I=I\left(Y,r\right)\]
+
+The real exchange rate \(\epsilon\), defined as the relative price of
+local goods with respect to the price of foreign goods:
+\[\epsilon=E\frac{P}{P^{*}}\] where \(E\) was the nominal exchange rate,
+is used to convert the quantity of foreign goods given by IM in domestic
+equivalent. Intuitively, if the real exchange rate is higher, then the
+same level of imports contributes less negatively to domestic demand.
+
+We also assume that imports are higher when the real exchange rate is at
+a higher level, because foreign goods now are cheaper than local goods:
+\[IM=IM\left(Y,\epsilon\right),\quad\frac{\partial IM}{\partial Y}>0,\quad\frac{\partial IM}{\partial\epsilon}>0.\]
+
+In contrast, exports depend on foreign demand and negatively on the real
+exchange rate:
+\[X=X\left(Y^{*},\epsilon\right),\quad\frac{\partial X}{\partial Y^{*}}>0,\quad\frac{\partial X}{\partial\epsilon}<0\]
+
+Example. Assume that consumption is a linear function of disposable
+income, that investment is a linear function of output and does not
+depend on the interest rate, that imports are a constant fraction
+\(m_{1}\) of total demand \(Y\), and that exports are a constant
+fraction \(x_{1}\) of foreign demand \(Y^{*}\). Therefore: \[
+\begin{aligned}
+C   &=c_{0}+c_{1}\left(Y-T\right)\\
+I   &=b_{0}+b_{1}Y\\
+IM  &=\epsilon m_{1}Y\\
+X   &=\frac{x_{1}Y^{*}}{\epsilon}
+\end{aligned}
+\]
+
+Therefore: \[
+\begin{aligned}
+Z   &=C+I+G-\frac{IM}{\epsilon}+X\\
+    &=c_{0}+c_{1}\left(Y-T\right)+b_{0}+b_{1}Y+G-m_{1}Y+\frac{x_{1}Y^{*}}{\epsilon}\\
+Z   &=\left(c_{0}-c_{1}T+b_{0}+G+\frac{x_{1}Y^{*}}{\epsilon}\right)+\left(c_{1}+b_{1}-m_{1}\right)Y
+\end{aligned}
+\]
+
+The slope is \(c_{1}+b_{1}\). Income is equal to demand and therefore,
+if \(c_{1}+b_{1}<1\):
+\[\boxed{Y=\underbrace{\frac{1}{1-\left(c_{1}+b_{1}-m_{1}\right)}}_{\text{Multiplier}}\times\underbrace{\left(c_{0}-c_{1}T+b_{0}+G+\frac{x_{1}Y^{*}}{\epsilon}\right)}_{\text{Autonomous Spending}}}\]
+
+\textbf{Graphical interpretation.} The DD curve represents total
+domestic demand, \(C+I+G\). AA represents domestic demand for domestic
+goods. As income increases, some of the additional domestic demand falls
+on foreign goods rather than on domestic goods. Therefore, AA is flatter
+than DD. ZZ represents total demand for domestic goods. Where the DD
+curve and the ZZ curve cross corresponds to an equilibrium in the trade
+balance: output is then equal to \(Y_{TB}\). When output is lower than
+\(Y_{TB}\), we have a trade surplus; when output is higher than
+\(Y_{TB}\), we have a trade deficit. Therefore, a trade deficit can be a
+sign of a booming (overheating?) economy, while a trade surplus can be a
+sign of a depressed economy.
+
+\section{Comparative statics}\label{comparative-statics}
+
+We are now in a positio to ask how demand affects output in an open
+economy. We start with an increase in government spending, and then turn
+to the effects of an increase in foreign demand.
+
+Increase in government spending. What happens when we have an increase
+in government spending \(\Delta G\)? Then we have an effect on output
+that is given by:
+\[\Delta Y=\frac{\Delta G}{1-\left(c_{1}+b_{1}-m_{1}\right)}<\frac{\Delta G}{1-\left(c_{1}+b_{1}\right)}.\]
+
+In this situation, there is an effect on the trade balance. The effect
+on exports is zero, since foreign output does not change by assumption
+-- however, note that if the foreign country's GDP also depends on the
+home GDP, then foreign output might change as well, and this may also
+boost exports -- this is what Keynes (1936) suggested in the above quote
+when he stated that: ``On the other hand our own country may recover a
+portion of this leakage through favourable repercussions due to the
+action of the multiplier in the foreign country in increasing its
+economic activity.''.
+
+Therefore, the effect on exports is: \[\Delta X=0.\]
+
+The effect on imports is given by:
+\[\Delta\left(\frac{IM}{\epsilon}\right)=m_{1}\Delta Y=\frac{m_{1}}{1-\left(c_{1}+b_{1}-m_{1}\right)}\Delta G.\]
+
+Finally, the effect on the trade balance is:
+\[\Delta\left(X-\frac{IM}{\epsilon}\right)=-\frac{m_{1}}{1-\left(c_{1}+b_{1}-m_{1}\right)}\Delta G.\]
+
+This effect is greater, the greater the openness ratio \(m_{1}\).
+Therefore, in countries where the openness ratio is higher, this
+``leakage'' of demand is more severe.
+
+Increase in foreign demand. What happens if there is an increase in
+foreign demand, that is, an increase in \(Y^{*}\). This could be due to
+an increase in foreign government spending, \(G^{*}\), for example. One
+can forever think of the United States being the foreign country, and
+Germany, Japan or China being the home country. What would then happen
+to these countries' GDP and trade balance?
+
+\textbf{The need for international coordination.} Countries prefer to
+run trade surpluses rather than trade deficits. There are many reasons
+for this: aversion to foreign debt, risks of losing one's manufacturing
+base (cf.~Donald Trump), etc. Therefore, there needs to be international
+coordination, as all countries would like other countries to increase
+their government spending, but do not want to increase their own.
+
+\section{Devaluation, the Trade Balance, and
+Output}\label{devaluation-the-trade-balance-and-output}
+
+Imagine that the government can take a policy measure that leads to a
+devaluation of the exchange rate.
+
+Does a depreciation improve the trade balance? The Marshall-Lerner
+condition. If we start from the definition of net exports:
+\[NX=X-\frac{IM}{\epsilon}\]
+
+Replacing \(X\) and \(IM\) by their expressions:
+\[NX=X\left(Y^{*},\epsilon\right)-\frac{IM(Y,\epsilon)}{\epsilon}\]
+
+The Marshall-Lerner condition is the condition under which a real
+depreciation, a decrease in the real exchange rate leads to an
+improvement in the trade balance. Indeed:
+\[\frac{\partial IM}{\partial\epsilon}>0,\quad\frac{\partial X}{\partial\epsilon}<0,\quad\frac{\partial1/\epsilon}{\partial\epsilon}=-\frac{1}{\epsilon^{2}}<0\]
+
+Therefore, with a real depreciation, or a fall in
+\(\epsilon(d\epsilon<0)\), imports are lower as goods are more expensive
+abroad, exports increase as goods are cheaper abroad, but the valuation
+effect means that initially at least, the trade balance deteriorates.
+
+The Marshall-Lerner condition considers a case where trade is initially
+balanced, so that: \[IM=\epsilon X\]
+
+Starting from: \(NX=X-\frac{IM}{\epsilon}\) and first differentiating
+this function with respect to \(\epsilon\):
+
+\[
+\begin{aligned}
+\frac{dNX}{d\epsilon}   =\frac{dX}{d\epsilon}-\frac{1}{\epsilon}\frac{dIM}{d\epsilon}-IM\frac{d(1/\epsilon)}{d\epsilon}
+\frac{dNX}{d\epsilon}   =\frac{dX}{d\epsilon}-\frac{1}{\epsilon}\frac{dIM}{d\epsilon}+IM\frac{1}{\epsilon^{2}}
+\end{aligned}
+\]
+
+Therefore, if the real exchange rate changes from \(\epsilon\) to
+\(\epsilon+d\epsilon\), then the change \(dNX\) is given by (just
+multiply the previous expression by the small increment \(d\epsilon\)):
+
+\[dNX=dX-\frac{dIM}{\epsilon}+\frac{IM}{\epsilon^{2}}d\epsilon\]
+
+Therefore:
+\[\frac{dNX}{X}=\frac{dX}{X}-\frac{dIM}{\epsilon X}+\frac{IM}{\epsilon X}\frac{d\epsilon}{\epsilon}\]
+
+Using that \(IM=\epsilon X\), we get:
+\[\boxed{\frac{dNX}{X}=\frac{dX}{X}-\frac{dIM}{IM}+\frac{d\epsilon}{\epsilon}}.\]
+
+For example, if a 1\% depreciation leads to a proportional increase in
+exports of 0.9\%, a proportional decrease in imports of 0.8\%, then in
+total we get thet the trade balance changes by -1+0.9+0.8=0.7\%.
+
+\textbf{Combining Exchange Rate and Fiscal Policies.} An increase in net
+exports, coming about from a depreciation of the real exchange rate,
+will bring an improvement in the trade balance. Through the multiplier
+effect, there will be multiple rounds of additional spending. In order
+to decrease the trade deficit, without bringing about too much
+overheating, one may want to decrease government spending at the same
+time, in order to bring back GDP at potential.
+
+\textbf{The dynamics of net exports: the J-curve.} In practice, the
+negative effect on net exports is immediate. The positive effects on
+export and import volumes only come about gradually.
 
 \bibliography{book.bib,packages.bib}
 

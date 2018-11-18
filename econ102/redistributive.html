@@ -25,7 +25,7 @@
 <meta name="author" content="François Geerolf">
 
 
-<meta name="date" content="2018-11-17">
+<meta name="date" content="2018-11-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -161,9 +161,9 @@
 <li class="chapter" data-level="7.2.1" data-path="cons-function.html"><a href="cons-function.html#algebraic-derivation-of-the-multiplier"><i class="fa fa-check"></i><b>7.2.1</b> Algebraic derivation of the multiplier</a></li>
 <li class="chapter" data-level="7.2.2" data-path="cons-function.html"><a href="cons-function.html#four-interpretations"><i class="fa fa-check"></i><b>7.2.2</b> Four interpretations</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="cons-function.html"><a href="cons-function.html#variations"><i class="fa fa-check"></i><b>7.3</b> Variations on the Goods Market Model</a><ul>
+<li class="chapter" data-level="7.3" data-path="cons-function.html"><a href="cons-function.html#variations"><i class="fa fa-check"></i><b>7.3</b> Extensions of the Goods Market Model</a><ul>
 <li class="chapter" data-level="7.3.1" data-path="cons-function.html"><a href="cons-function.html#automatic"><i class="fa fa-check"></i><b>7.3.1</b> Automatic Stabilizers</a></li>
-<li class="chapter" data-level="7.3.2" data-path="cons-function.html"><a href="cons-function.html#accelerator"><i class="fa fa-check"></i><b>7.3.2</b> “Accelerator” effect of demand on investment</a></li>
+<li class="chapter" data-level="7.3.2" data-path="cons-function.html"><a href="cons-function.html#accelerator"><i class="fa fa-check"></i><b>7.3.2</b> “Accelerator” Effect</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="cons-function.html"><a href="cons-function.html#required-readings"><i class="fa fa-check"></i>Required Readings</a></li>
 <li class="chapter" data-level="" data-path="cons-function.html"><a href="cons-function.html#readings---to-go-further-4"><i class="fa fa-check"></i>Readings - To go further</a></li>
@@ -213,6 +213,12 @@
 </ul></li>
 <li class="chapter" data-level="" data-path="public-debt.html"><a href="public-debt.html#readings---to-go-further-7"><i class="fa fa-check"></i>Readings - To go further</a></li>
 </ul></li>
+<li class="chapter" data-level="11" data-path="open.html"><a href="open.html"><i class="fa fa-check"></i><b>11</b> The Open Economy and the Multiplier</a><ul>
+<li class="chapter" data-level="11.1" data-path="open.html"><a href="open.html#national-accounting-in-the-open-economy"><i class="fa fa-check"></i><b>11.1</b> National accounting in the Open Economy</a></li>
+<li class="chapter" data-level="11.2" data-path="open.html"><a href="open.html#open-economy-multiplier"><i class="fa fa-check"></i><b>11.2</b> Open economy multiplier</a></li>
+<li class="chapter" data-level="11.3" data-path="open.html"><a href="open.html#comparative-statics"><i class="fa fa-check"></i><b>11.3</b> Comparative statics</a></li>
+<li class="chapter" data-level="11.4" data-path="open.html"><a href="open.html#devaluation-the-trade-balance-and-output"><i class="fa fa-check"></i><b>11.4</b> Devaluation, the Trade Balance, and Output</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -244,14 +250,14 @@
 <blockquote>
 <p>The State will have to exercise a guiding influence on the propensity to consume partly through its scheme of taxation. (…) Whilst, therefore, the enlargement of the functions of government, involved in the task of adjusting to one another the propensity to consume and the inducement to invest, would seem to a nineteenth-century publicist or to a contemporary American financier to be a terrific encroachment on individualism, I defend it, on the contrary, both as the only practicable means of avoiding the destruction of existing economic forms in their entirety and as the condition of the successful functioning of individual initiative.</p>
 </blockquote>
-<p>During this lecture, we derive this result using the Keynesian model that was developed in <a href="lecture7.html">lecture 7</a> and <a href="lecture8.html">lecture 8</a>. One appeal of writing the equations is that we are not able to prove these assertions qualitatively, but we are also able to understand how important they are quantitatively. As we go along, we therefore attempt to put some actual numbers on all these arguments, to get a sense of the orders of magnitude. We shall investigate two types of policies:</p>
+<p>During this lecture, we derive this result using the Keynesian model that was developed in <a href="cons-function.html#cons-function">lecture 7</a> and <a href="#paradox-of-thrift">lecture 8</a>. One appeal of writing the equations is that we are not able to prove these assertions qualitatively, but we are also able to understand how important they are quantitatively. As we go along, we therefore attempt to put some actual numbers on all these arguments, to get a sense of the orders of magnitude. We shall investigate two types of policies:</p>
 <ul>
 <li><p>Income redistribution, from high to low income earners.</p></li>
 <li><p>Deficit-financed decreases in taxes, on high income earners or low income earners, financed by public debt.</p></li>
 </ul>
 <div id="assumptions-4" class="section level2">
 <h2><span class="header-section-number">9.1</span> Assumptions</h2>
-<p>Some minor modifications to the goods market model underlying <a href="lecture7.html">lecture 7</a> and <a href="lecture8.html">lecture 8</a> are in order, in order to think about stimulus policies in the presence of inequality. Instead of assuming one type of consumer, with the average income <span class="math inline">\(Y\)</span> and a given MPC <span class="math inline">\(c_{1}\)</span>, we shall assume two types of workers. In total, there are <span class="math inline">\(N\)</span> workers:</p>
+<p>Some minor modifications to the goods market model underlying <a href="cons-function.html#cons-function">lecture 7</a> and <a href="paradox-thrift.html#paradox-thrift">lecture 8</a> are in order, in order to think about stimulus policies in the presence of inequality. Instead of assuming one type of consumer, with the average income <span class="math inline">\(Y\)</span> and a given MPC <span class="math inline">\(c_{1}\)</span>, we shall assume two types of workers. In total, there are <span class="math inline">\(N\)</span> workers:</p>
 <ul>
 <li><p>There is a fraction <span class="math inline">\(\lambda\)</span> of low income earners, who earn income <span class="math inline">\(\underline{y}\)</span>, pay net taxes <span class="math inline">\(\underline{t}\)</span>, and the MPC of the low income earners is <span class="math inline">\(\underline{c}_{1}\)</span>: <span class="math display">\[\underline{c}=\underline{c}_{0}+\underline{c}_{1}(\underline{y}-\underline{t}).\]</span></p></li>
 <li><p>There is a fraction <span class="math inline">\(1-\lambda\)</span> of high income earners, they get a higher income <span class="math inline">\(\bar{y}\)</span> which is a multiple <span class="math inline">\(\gamma\)</span> of low income earners’ income, given by: <span class="math display">\[\bar{y}=\gamma\underline{y},\]</span> where <span class="math inline">\(\gamma\)</span> indexes inequality. They each pay net taxes <span class="math inline">\(\bar{t}\)</span>, and the MPC of the high income earners is <span class="math inline">\(\bar{c}_{1}\)</span>: <span class="math display">\[\bar{c}=\bar{c}_{0}+\bar{c}_{1}(\bar{y}-\bar{t})\]</span> Moreover, we assume that high income earners have a lower MPC than low income earners, so that: <span class="math display">\[\bar{c}_{1}&lt;\underline{c}_{1}\]</span></p></li>
@@ -303,7 +309,7 @@ T&amp;=\left(\underline{T}_{0} + \bar{T}_{0}\right) + t_1 Y
 </div>
 <div id="consumption" class="section level3">
 <h3><span class="header-section-number">9.2.3</span> Consumption</h3>
-<p>The challenging part, which differs from the models seen in <a href="lecture7.html">lecture 7</a> and <a href="lecture8.html">lecture 8</a>, is to calculate aggregate consumption, which is composed both of the consumption by low income earners, and that by high income earners. Total consumption by the low income earners <span class="math inline">\(\underline{C}\)</span> is such that: <span class="math display">\[
+<p>The challenging part, which differs from the models seen in <a href="cons-function.html#cons-function">lecture 7</a> and <a href="paradox-thrift.html#paradox-thrift">lecture 8</a>, is to calculate aggregate consumption, which is composed both of the consumption by low income earners, and that by high income earners. Total consumption by the low income earners <span class="math inline">\(\underline{C}\)</span> is such that: <span class="math display">\[
 \begin{aligned}
 \underline{C}&amp;=\lambda N \underline{c}\\
 &amp;=\lambda N \left(\underline{c}_{0}+\underline{c}_{1}(\underline{y}-\underline{t})\right)\\
