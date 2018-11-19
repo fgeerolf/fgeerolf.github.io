@@ -130,8 +130,31 @@ $(document).ready(function () {
 <ol style="list-style-type: decimal">
 <li><p>The firm’s problem is to maximize: <span class="math display">\[\max_l \quad p f(l) -  w l \]</span> Therefore, the real wage is given by: <span class="math display">\[\boxed{A=\frac{w}{p}}.\]</span></p></li>
 <li><p>Writing that <span class="math inline">\(c=c_0+(1-\tau)\cdot (w/p) \cdot l\)</span> and plugging the value of <span class="math inline">\(c\)</span> into the worker’s optimization problem: <span class="math display">\[\max_l \quad (1-\tau)\frac{w}{p}l + c_0-B\frac{l^{1+\epsilon}}{1+\epsilon}\]</span> The first-order condition implies: <span class="math display">\[(1-\tau)\frac{w}{p} = Bl^{\epsilon} \quad \Rightarrow \quad \boxed{l = \frac{(1-\tau)^{1/\epsilon}}{B^{1/\epsilon}}\left(\frac{w}{p}\right)^{1/\epsilon}}\]</span></p></li>
-<li><p>The number of hours worked is given by replacing out the real wage <span class="math inline">\(w/p\)</span> from the labor demand equation to the labor supply equation, so that: <span class="math display">\[\boxed{l = (1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon}}{B^{1/\epsilon}}}.\]</span> Real pre-tax income is when simply given by the real wage times the number of hours. Since the real wage is simply <span class="math inline">\(A\)</span>, we get: <span class="math display">\[\frac{w}{p}l = A\cdot(1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon}}{B^{1/\epsilon}}.\]</span> Therefore: <span class="math display">\[\boxed{\frac{w}{p}l = (1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon+1}}{B^{1/\epsilon}}}.\]</span></p></li>
-<li></li>
+<li><p>The number of hours worked is given by replacing out the real wage <span class="math inline">\(w/p\)</span> from the labor demand equation to the labor supply equation, so that: <span class="math display">\[\boxed{l = (1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon}}{B^{1/\epsilon}}}.\]</span> Real pre-tax income is when simply given by the real wage times the number of hours. Since the real wage is simply <span class="math inline">\(A\)</span>, we get: <span class="math display">\[y = \frac{w}{p}l = A\cdot(1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon}}{B^{1/\epsilon}}.\]</span> Therefore: <span class="math display">\[\boxed{y = (1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon+1}}{B^{1/\epsilon}}}.\]</span></p></li>
+<li><p>A numerical application implies that: <span class="math display">\[\underline{l}=(1-\underline{\tau})^{1/\epsilon}\frac{\underline{A}^{1/\epsilon}}{\underline{B}^{1/\epsilon}}\]</span> Therefore: <span class="math display">\[
+\begin{aligned}
+\underline{l}&amp;=\left(1-\frac{1}{4}\right)^{1/2}\left(\frac{1000000}{28188}\right)^{1/2}\left(\frac{491569855488}{3000000}\right)^{1/2}\\
+\underline{l}&amp;=2088.
+\end{aligned}
+\]</span> Note that under the assumption of 281 business days in a year, this implies 8 hours a day of work. Income is then given by: <span class="math display">\[
+\begin{aligned}
+\underline{y}&amp;=\underline{A} \underline{l}\\
+&amp;=\frac{1000000}{28188}\cdot 2088\\
+\underline{y}&amp;\approx74074.07
+\end{aligned}
+\]</span></p></li>
+<li><p>We note that this group has a lower disutility of working <span class="math inline">\(B\)</span> and also a higher productivity per hour <span class="math inline">\(A\)</span>. Therefore: <span class="math display">\[
+\begin{aligned}
+\bar{l}&amp;=\left(1-\frac{1}{2}\right)^{1/2}\left(\frac{1000000}{6264}\right)^{1/2}\left(\frac{218475491328}{1000000}\right)^{1/2}\\
+\bar{l}&amp;=4176.
+\end{aligned}
+\]</span> Note that under the assumption of 281 business days in a year, this implies 16 hours a day of work on average (more likely on weekends, and during Thanksgiving). Income is then given by: <span class="math display">\[
+\begin{aligned}
+\bar{y}&amp;=\bar{A} \bar{l}\\
+&amp;=\frac{1000000}{6264}\cdot 4176\\
+\bar{y}&amp;\approx666666.66
+\end{aligned}
+\]</span></p></li>
 </ol>
 </div>
 <div id="paul-krugman-vs-robert-barro-on-the-bush-tax-cuts" class="section level1">
