@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="syllabus.html">
+<link rel="prev" href="pset3.html">
+<link rel="next" href="pset4.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -299,49 +299,33 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Intermediate Macroeconomics</h1>
-<h3 class="subtitle"><em>UCLA - Econ 102 - Fall 2018</em></h3>
-<h4 class="author"><em>François Geerolf</em></h4>
-<h4 class="date"><em>2018-11-18</em></h4>
+<div id="problem-set-3---solutions" class="section level1 unnumbered">
+<h1>Problem Set 3 - Solutions</h1>
+<div id="two-period-intertemporal-optimization-1" class="section level2 unnumbered">
+<h2>Two-period Intertemporal Optimization</h2>
+<ol style="list-style-type: decimal">
+<li><p>Given the expression for the utility function: <span class="math display">\[u(c) = \frac{c^{1-\sigma}-1}{1-\sigma},\]</span> we know that marginal utility is: <span class="math display">\[u&#39;(c)=c^{-\sigma},\]</span> while the derivative of marginal utility is: <span class="math display">\[u&#39;&#39;(c)=-\sigma c^{-\sigma-1}.\]</span> Thus, because <span class="math inline">\(u&#39;&#39;(.)\)</span> must be negative for the function to be concave, we have <span class="math inline">\(\sigma&gt;0\)</span>.</p></li>
+<li><p>This is straight from <a href="two-period.html#two-period">lecture 3</a>.</p></li>
+<li><p>Using the equation from question 2, we can write: <span class="math display">\[\frac{\beta c_1^{-\sigma}}{c_0^{-\sigma}}=\frac{1}{1+r} \qquad \Rightarrow \qquad \frac{c_1}{c_0}=\beta^{1/\sigma} (1+r)^{1/\sigma}\]</span></p></li>
+<li><p>The intertemporal budget constraint is: <span class="math display">\[c_0 + \frac{c_1}{1+r} = f_0 + y_0 + \frac{y_1}{1+r},\]</span> and therefore: <span class="math display">\[\begin{aligned}
+&amp; \left(1 + \beta^{1/\sigma}(1+r)^{1/\sigma-1} \right)c_0 = f_0 + y_0 + \frac{y_1}{1+r} \\
+&amp; \Rightarrow \quad c_0 = \frac{1}{1 + \beta^{1/\sigma}(1+r)^{1/\sigma-1}} \left( f_0 + y_0 + \frac{y_1}{1+r}\right).
+\end{aligned}\]</span> which implies: <span class="math display">\[c_1 = \frac{\beta^{1/\sigma}(1+r)^{1/\sigma}}{1 + \beta^{1/\sigma}(1+r)^{1/\sigma-1}} \left( f_0 + y_0 + \frac{y_1}{1+r}\right)\]</span></p></li>
+<li><p>Assume <span class="math inline">\(\sigma = 1/2\)</span>. If <span class="math inline">\(r = 1\%\)</span>, then according to <a href="https://docs.google.com/spreadsheets/d/1dDFa5YZE5170Tv36klHQ19ykK2bP9wjeR0Y1_h-kacg/edit?usp=sharing">this Google Spreadsheet</a>, <span class="math inline">\(c_0\)</span> is equal to $44,776, and <span class="math inline">\(c_1\)</span> is equal to $45,676. If <span class="math inline">\(r = 2\%\)</span>, then <span class="math inline">\(c_0\)</span> is equal to $44,554 and <span class="math inline">\(c_1\)</span> is equal to $46,354. Consumption <span class="math inline">\(c_0\)</span> thus falls by $222, approximately -0.5% in percentage terms.</p></li>
+<li><p>Assume <span class="math inline">\(\sigma = 1\)</span>. If <span class="math inline">\(r = 1\%\)</span>, then according to <a href="https://docs.google.com/spreadsheets/d/1dDFa5YZE5170Tv36klHQ19ykK2bP9wjeR0Y1_h-kacg/edit?usp=sharing">this Google Spreadsheet</a>, <span class="math inline">\(c_0\)</span> is equal to $45,000 and <span class="math inline">\(c_1\)</span> is $45,450. If <span class="math inline">\(r = 2\%\)</span>, then <span class="math inline">\(c_0\)</span> is equal to $45,000 and <span class="math inline">\(c_1\)</span> is equal to $45,900. Consumption <span class="math inline">\(c_0\)</span> does not change, this is the case we have seen in class. <strong>Remark.</strong> Note that this case is the one we saw in the class, because when <span class="math inline">\(\sigma\)</span> approaches <span class="math inline">\(1\)</span>, we have: <span class="math display">\[\lim_{\sigma \to 1} \frac{c^{1-\sigma}-1}{1-\sigma}=\log(c).\]</span> You can see this in many different ways. The simplest way is to write that: <span class="math display">\[c^{1-\sigma}=e^{(1-\sigma)\log(c)}=\exp\left((1-\sigma)\log(c))\right).\]</span> Then, we use that: <span class="math display">\[\lim_{x \to 0} \frac{e^{ax}-1}{x}=a\]</span> Indeed, the limit of <span class="math inline">\((e^{ax}-1)/x\)</span> when <span class="math inline">\(x\)</span> goes to <span class="math inline">\(0\)</span> is by definition the derivative of <span class="math inline">\(e^{ax}\)</span> at <span class="math inline">\(x=0\)</span>. Thus, since the derivative of <span class="math inline">\(e^{ax}\)</span> is <span class="math inline">\(ae^{ax}\)</span>, we get that the derivative at <span class="math inline">\(x=0\)</span> of <span class="math inline">\(e^{ax}\)</span> is <span class="math inline">\(a\)</span>. Using that formula for <span class="math inline">\(x = 1-\sigma\)</span> and <span class="math inline">\(a=\log(c)\)</span> allows to show: <span class="math display">\[\lim_{(1-\sigma) \to 0} \frac{e^{\log(c)(1-\sigma)}-1}{1-\sigma}=\log(c)\]</span> Therefore, we get: <span class="math display">\[\lim_{\sigma \to 1} \frac{c^{1-\sigma}-1}{1-\sigma}=\log(c).\]</span></p></li>
+<li><p>Assume <span class="math inline">\(\sigma = 2\)</span>. If <span class="math inline">\(r = 1\%\)</span>, then according to <a href="https://docs.google.com/spreadsheets/d/1dDFa5YZE5170Tv36klHQ19ykK2bP9wjeR0Y1_h-kacg/edit?usp=sharing">this Google Spreadsheet</a>, <span class="math inline">\(c_0\)</span> is equal to $45,112 and <span class="math inline">\(c_1\)</span> is equal to $45,337. If <span class="math inline">\(r = 2\%\)</span>, then <span class="math inline">\(c_0\)</span> is equal to $45,223 and <span class="math inline">\(c_1\)</span> is equal to $45,673. Consumption <span class="math inline">\(c_0\)</span> increases by $111, or approximately 0.25%.</p></li>
+<li><p>Whether an increase in real interest rates leads to a fall or an increase in consumption depends on <span class="math inline">\(\sigma\)</span>, which can be seen on this formula (it is crucial for this that <span class="math inline">\(y_1=0\)</span>, or that second-period income is zero): <span class="math display">\[c_0 = \frac{1}{1 +\beta^{1/\sigma}(1+r)^{1/\sigma-1}} \left( f_0 + y_0\right).\]</span> When <span class="math inline">\(1/\sigma-1&gt;0\)</span>, or <span class="math inline">\(\sigma&lt;1\)</span>, an increase in the real interest rate leads to lower consumption today, and more saving. Conversely, when <span class="math inline">\(1/\sigma-1&lt;0\)</span>, or <span class="math inline">\(\sigma&gt;1\)</span>, an increase in the real interest rate leads to higher consumption today, and less saving. Finally, when <span class="math inline">\(\sigma=1\)</span>, the interest rate has no effect on current consumption <span class="math inline">\(c_0\)</span> or saving.</p></li>
+</ol>
 </div>
-<div id="econ-102" class="section level1 unnumbered">
-<h1>Econ 102</h1>
-<p>This website contains most of the class material for <em>Intermediate Macro (Econ 102)</em> I teach at UCLA.<br />
-<a href="https://moodle2.sscnet.ucla.edu/course/view/18F-ECON102-1">The Moodle platform</a> should be used for the discussion board as well as some additional readings.</p>
-<div id="timetable" class="section level2 unnumbered">
-<h2>Timetable</h2>
-<ul>
-<li>Oct 1. <a href="intro-cobb.html#intro-cobb">Lecture 1 - Introduction to Macroeconomics.</a></li>
-<li>Oct 3. <a href="solow.html#solow">Lecture 2 - The Solow Growth Model.</a></li>
-<li>Oct 8. <a href="two-period.html#two-period">Lecture 3 - Two Period Consumption Problem.</a></li>
-<li>Oct 10. <a href="olg.html#olg">Lecture 4 - The Overlapping Generations Model.</a></li>
-<li>Oct 15. <a href="technology.html#technology">Lecture 5 - Technological Growth.</a></li>
-<li>Oct 17. <a href="labor-market.html#labor-market">Lecture 6 - The Labor Market and Unemployment.</a></li>
-<li>Oct 22. <a href="cons-function.html#cons-function">Lecture 7 - The Consumption Function and the Multiplier.</a></li>
-<li>Oct 24. <a href="paradox-thrift.html#paradox-thrift">Lecture 8 - The Paradox of Thrift.</a></li>
-<li>Oct 29. <em>Review.</em></li>
-<li>Oct 31. <a href="redistributive.html#redistributive">Lecture 9 - Redistributive Policies.</a></li>
-<li>Nov 5. <em>Midterm.</em></li>
-<li>Nov 7. <a href="public-debt.html#public-debt">Lecture 10 - Public debt, Say’s law.</a></li>
-<li>Nov 12. <em>No Class (Veteran’s day).</em></li>
-<li>Nov 14. <em>Pause (Finishing Lecture 10).</em></li>
-<li>Nov 19. <a href="open.html#open">Lecture 11 - The Open Economy and the Multiplier.</a></li>
-<li>Nov 21. <em>No Class (Thanksgiving).</em></li>
-<li>Nov 26. Lecture 12 - Twin Deficits.</li>
-<li>Nov 28. Lecture 13 - Empirics of Fiscal Policy.</li>
-<li>Dec 3. Lecture 14 - Monetary Policy.</li>
-<li>Dec 5. Lecture 15 - Summing Up: A Macroeconomic History of the U.S.</li>
-</ul>
-<p>A rough correspondance to chapters in Olivier Blanchard’s <em>Macroeconomics</em> textbook is <a href="https://docs.google.com/spreadsheets/d/1OQzilQvOLusOsv16pJ3FgFN1YAadELe64jJAV2PEsF0/edit?usp=sharing">provided here</a>.</p>
-</div>
-<div id="past-exams" class="section level2 unnumbered">
-<h2>Past Exams</h2>
-<p><strong>Fall 2018.</strong> <a href="past-exams/2018F-midterm.pdf">Midterm</a> / <a href="past-exams/2018F-midterm-solution.pdf">Solution</a> ; Final / Solution.<br />
-<strong>Spring 2018.</strong> <a href="past-exams/2018S-midterm.pdf">Midterm</a> / <a href="past-exams/2018S-midterm-solution.pdf">Solution</a> ; <a href="past-exams/2018S-final.pdf">Final</a> / <a href="past-exams/2018S-final-solution.pdf">Solution</a>.<br />
-<strong>Winter 2016.</strong> <a href="past-exams/2016W-midterm1.pdf">Midterm 1</a> / <a href="past-exams/2016W-midterm1-solution.pdf">Solution</a> ; <a href="past-exams/2016W-midterm2.pdf">Midterm 2</a> / <a href="past-exams/2016W-midterm2-solution.pdf">Solution</a> ; <a href="past-exams/2016W-final.pdf">Final</a> / <a href="past-exams/2016W-final-solution.pdf">Solution</a>.<br />
-<strong>Winter 2015.</strong> <a href="past-exams/2015W-midterm1.pdf">Midterm 1</a> / <a href="past-exams/2015W-midterm1-solution.pdf">Solution</a> ; <a href="past-exams/2015W-midterm2.pdf">Midterm 2</a> / <a href="past-exams/2015W-midterm2-solution.pdf">Solution</a> ; <a href="past-exams/2015W-final.pdf">Final</a> / <a href="past-exams/2015W-final-solution.pdf">Solution</a>.</p>
-<p><strong>Warning!</strong> The ordering, and the content of the class are different this year compared to previous years, and increasingly so as you go back in time - in 2015 and 2016, I was using a different textbook as a basis for my lectures. Anything that I do not go over this quarter is not exam material. The difference can be substantial for all the midterm-relevant material, as the lectures have been reshuffled. Thus, you might sometimes want to look at the final exam in order to review for the midterm. In order to succeed in the class, it is best to first and primarily review the material that is found in the lectures and the problem sets - that is where marginal returns are maximal.</p>
+<div id="another-overlapping-generations-model-1" class="section level2 unnumbered">
+<h2>Another Overlapping Generations model</h2>
+<ol style="list-style-type: decimal">
+<li><p>Agents care only about old age consumption, so they save everything, regarless of what the utility function is.</p></li>
+<li><p>Since they save everything, saving is equal to the wage, and thus: <span class="math display">\[S_t = w_t.\]</span> The wage paid by employers, given that <span class="math inline">\(L=1\)</span>, is: <span class="math display">\[w_{t}=(1-\alpha)K_{t}^{\alpha}L^{-\alpha}=(1-\alpha)K_{t}^{\alpha} = (1-\alpha)Y_t.\]</span> This implies, in turn, the following law of motion for the capital stock: <span class="math display">\[\Delta K_{t+1} = S_t - \delta K_t = (1-\alpha)Y_t-\delta K_t.\]</span></p></li>
+<li><p>The corresponding value of the saving rate in the Solow model is: <span class="math display">\[s = 1-\alpha.\]</span></p></li>
+<li><p>The Golden rule level of capital accumulation is characterized by a level of the saving rate equal to <span class="math inline">\(\alpha\)</span>. Thus, to be below the Golden Rule level of capital accumulation, the saving rate must be lower than that: <span class="math display">\[1-\alpha &lt; \alpha.\]</span> This, in turn, implies: <span class="math display">\[\alpha &gt; \frac{1}{2}.\]</span></p></li>
+<li><p>This condition is likely not satisfied, as we saw in <a href="intro-cobb.html#intro-cobb">Lecture 1</a>. Thus, there is too much saving in this situation.</p></li>
+</ol>
 
 </div>
 </div>
@@ -350,8 +334,8 @@
           </div>
         </div>
       </div>
-
-<a href="syllabus.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pset3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pset4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -381,7 +365,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fgeerolf/econ102/index.Rmd",
+"link": "https://github.com/fgeerolf/econ102/131-pset3-sol.Rmd",
 "text": "Edit"
 },
 "download": ["ucla-102-fall2018.pdf", "ucla-102-fall2018.epub"],

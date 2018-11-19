@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="syllabus.html">
+<link rel="prev" href="pset1.html">
+<link rel="next" href="pset2.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -299,49 +299,61 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Intermediate Macroeconomics</h1>
-<h3 class="subtitle"><em>UCLA - Econ 102 - Fall 2018</em></h3>
-<h4 class="author"><em>François Geerolf</em></h4>
-<h4 class="date"><em>2018-11-18</em></h4>
+<div id="problem-set-1---solution" class="section level1 unnumbered">
+<h1>Problem Set 1 - Solution</h1>
+<div id="geometric-sums-1" class="section level2 unnumbered">
+<h2>Geometric Sums</h2>
+<ol style="list-style-type: decimal">
+<li><p>Let us denote the geometric sum of interest by <span class="math inline">\(S\)</span>: <span class="math display">\[S=\sum_{i=0}^n x^i = 1+x+x^2+...+x^n.\]</span> The trick to calculate this sum is to multiply it by <span class="math inline">\(x\)</span>, which allows to get: <span class="math display">\[xS=x+x^2+x^3+...+x^{n+1}.\]</span> We can see that this is almost the same sum as the previous one except for the first term, which is missing, and the last term, which was absent from <span class="math inline">\(S\)</span>, therefore: <span class="math display">\[\begin{aligned}
+xS&amp;=-1+1+x+x^2+...+x^n+x^{n+1}\\
+xS&amp;=-1+S+x^{n+1}
+\end{aligned}\]</span> This implies (for <span class="math inline">\(x\neq1\)</span>): <span class="math display">\[1-x^{n+1}=(1-x)S \quad \Rightarrow \quad S=\frac{1-x^{n+1}}{1-x}.\]</span></p></li>
+<li><p>For <span class="math inline">\(S\)</span> to have a finite value when <span class="math inline">\(n \to \infty\)</span>, we need that <span class="math inline">\(x^{n+1}\)</span> stays finite. This happens when: <span class="math display">\[\lvert x\rvert&lt;1.\]</span> In the knife edge case when <span class="math inline">\(x=1\)</span>, the sum goes to infinity since it is then equal to <span class="math inline">\(n+1\)</span>. If <span class="math inline">\(x=-1\)</span>, then the sum oscillates between <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span> and does not have a limit when <span class="math inline">\(n\)</span> goes to infinity.</p></li>
+<li><p>From question 1 and 2, we know that when <span class="math inline">\(\lvert x\rvert&lt;1\)</span>, <span class="math inline">\(x^{n+1} \to 0\)</span> when <span class="math inline">\(n \to \infty\)</span>, and therefore: <span class="math display">\[\sum_{i=0}^{\infty} x^i = 1+x+x^2+...+x^n+...=\frac{1}{1-x}.\]</span></p></li>
+<li><p>We just factor in <span class="math inline">\(x^m\)</span> and then use the formula in question 1: <span class="math display">\[\begin{aligned}
+\sum_{i=m}^n x^i &amp;= x^m+x^{m+1}+...+x^n\\
+&amp;=x^m\left(1+x+...+x^{n-m}\right)\\
+&amp;=x^m\frac{1-x^{n-m+1}}{1-x}\\
+\sum_{i=m}^n x^i &amp;=\frac{x^m - x^{n+1}}{1-x}.
+\end{aligned}\]</span></p></li>
+<li><p>The present discounted value of an infinite stream of incomes, which grows at rate <span class="math inline">\(g=2\)</span>%, starts at <span class="math inline">\(y_0=90000\)</span>, if the interest rate is <span class="math inline">\(i=3\)</span>% is: <span class="math display">\[y_0+y_0\frac{1+g}{1+i}+y_0\frac{(1+g)^2}{(1+i)^2} + ...\]</span> Using the formula found in question 3 with <span class="math inline">\(x=(1+g)/(1+i)\)</span>, we get: <span class="math display">\[y_0+y_0\frac{1+g}{1+i}+y_0\frac{(1+g)^2}{(1+i)^2} + ...=y_0\dfrac{1}{1-\frac{1+g}{1+i}}=\frac{y_0(1+i)}{i-g}\]</span> A numerical application gives (see <a href="https://docs.google.com/spreadsheets/d/108I8xuosIQvgU6wOGrfwzHhE4p1OStgv8iIpzZ-4vME/edit?usp=sharing">Google Sheet</a>): <span class="math display">\[\frac{y_0(1+i)}{i-g}=\frac{90000 *(1+0.03)}{0.03-0.02}=9270000.\]</span></p></li>
+</ol>
 </div>
-<div id="econ-102" class="section level1 unnumbered">
-<h1>Econ 102</h1>
-<p>This website contains most of the class material for <em>Intermediate Macro (Econ 102)</em> I teach at UCLA.<br />
-<a href="https://moodle2.sscnet.ucla.edu/course/view/18F-ECON102-1">The Moodle platform</a> should be used for the discussion board as well as some additional readings.</p>
-<div id="timetable" class="section level2 unnumbered">
-<h2>Timetable</h2>
-<ul>
-<li>Oct 1. <a href="intro-cobb.html#intro-cobb">Lecture 1 - Introduction to Macroeconomics.</a></li>
-<li>Oct 3. <a href="solow.html#solow">Lecture 2 - The Solow Growth Model.</a></li>
-<li>Oct 8. <a href="two-period.html#two-period">Lecture 3 - Two Period Consumption Problem.</a></li>
-<li>Oct 10. <a href="olg.html#olg">Lecture 4 - The Overlapping Generations Model.</a></li>
-<li>Oct 15. <a href="technology.html#technology">Lecture 5 - Technological Growth.</a></li>
-<li>Oct 17. <a href="labor-market.html#labor-market">Lecture 6 - The Labor Market and Unemployment.</a></li>
-<li>Oct 22. <a href="cons-function.html#cons-function">Lecture 7 - The Consumption Function and the Multiplier.</a></li>
-<li>Oct 24. <a href="paradox-thrift.html#paradox-thrift">Lecture 8 - The Paradox of Thrift.</a></li>
-<li>Oct 29. <em>Review.</em></li>
-<li>Oct 31. <a href="redistributive.html#redistributive">Lecture 9 - Redistributive Policies.</a></li>
-<li>Nov 5. <em>Midterm.</em></li>
-<li>Nov 7. <a href="public-debt.html#public-debt">Lecture 10 - Public debt, Say’s law.</a></li>
-<li>Nov 12. <em>No Class (Veteran’s day).</em></li>
-<li>Nov 14. <em>Pause (Finishing Lecture 10).</em></li>
-<li>Nov 19. <a href="open.html#open">Lecture 11 - The Open Economy and the Multiplier.</a></li>
-<li>Nov 21. <em>No Class (Thanksgiving).</em></li>
-<li>Nov 26. Lecture 12 - Twin Deficits.</li>
-<li>Nov 28. Lecture 13 - Empirics of Fiscal Policy.</li>
-<li>Dec 3. Lecture 14 - Monetary Policy.</li>
-<li>Dec 5. Lecture 15 - Summing Up: A Macroeconomic History of the U.S.</li>
-</ul>
-<p>A rough correspondance to chapters in Olivier Blanchard’s <em>Macroeconomics</em> textbook is <a href="https://docs.google.com/spreadsheets/d/1OQzilQvOLusOsv16pJ3FgFN1YAadELe64jJAV2PEsF0/edit?usp=sharing">provided here</a>.</p>
+<div id="taylor-approximations-1" class="section level2 unnumbered">
+<h2>Taylor Approximations</h2>
+<ol style="list-style-type: decimal">
+<li><p>We have: <span class="math display">\[ (1+x)^n= \sum_{k=0}^n {{n}\choose{k}} \cdot x^k\]</span> When <span class="math inline">\(x\)</span> is small, all the <span class="math inline">\(x^k\)</span> terms for <span class="math inline">\(k\geq 2\)</span> are negligible, and therefore: <span class="math display">\[(1+x)^n\approx 1+{{n}\choose{1}}x=1+nx.\]</span> If you do not know what <span class="math inline">\({n}\choose{k}\)</span> means, that is fine too. You can prove the same result using recursion. For <span class="math inline">\(n=1\)</span>, we know that <span class="math inline">\((1+x)^1=1+x\)</span> (obviously). Assume that the approximation is true for <span class="math inline">\(n\)</span>, or that <span class="math inline">\((1+x)^n \approx 1+nx\)</span>, let’s prove that it is true for <span class="math inline">\(n+1\)</span>: <span class="math display">\[
+\begin{aligned}
+(1+x)^{n+1}&amp;=(1+x)^n(1+x) \\
+&amp;\approx (1+nx)(1+x) \\
+&amp;\approx 1+(n+1)x + nx^2 \\
+(1+x)^{n+1}&amp;\approx 1+(n+1)x
+\end{aligned}
+\]</span> which proves the proposition for <span class="math inline">\(n+1\)</span>. Thus, the Taylor approximation is true for any <span class="math inline">\(n \in \mathbb{N}\)</span>.</p></li>
+<li><p>We have: <span class="math display">\[(1+x)(1+y)=1+x+y+xy.\]</span> When <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are both small, then <span class="math inline">\(xy\)</span> is negligible, which gives the result: <span class="math display">\[(1+x)(1+y)\approx1+x+y.\]</span></p></li>
+<li><p>Using the formula proven in Problem 1, we get that: <span class="math display">\[\frac{1}{1+y}=1-y+y^2-y^3+...\]</span> When <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are both small, all terms of the product are negligible except for first-order terms: <span class="math display">\[\frac{1+x}{1+y} \approx 1+x-y.\]</span></p></li>
+<li><p>Denote the price level by <span class="math inline">\(p_t\)</span> (that is, in dollars, the price of a representative basket of goods). Inflation <span class="math inline">\(\pi_t\)</span> at time <span class="math inline">\(t\)</span> is defined as the rate of growth of this price level between <span class="math inline">\(t\)</span> and <span class="math inline">\(t+1\)</span>: <span class="math display">\[\frac{p_{t+1}}{p_t}=1+\pi_t.\]</span> If you leave one dollar at the bank, and if the nominal interest rate is given by <span class="math inline">\(i_t\)</span>, then you end up at the end of the period with <span class="math inline">\(1+i_t\)</span> dollars at the bank. With this, you can buy a quantity of goods given by <span class="math inline">\((1+i_t)/p_{t+1}\)</span>. If you buy a quantity of goods at time <span class="math inline">\(t\)</span>, then you get a number of goods equal to <span class="math inline">\(1/p_t\)</span>. Thus, the rate of increase in your purchasing power if you leave your money in the bank is given by: <span class="math display">\[\frac{(1+i_t)/p_{t+1}}{1/p_t}=\frac{1+i_t}{1+\pi_t}.\]</span> An exact value for the real interest rate is thus: <span class="math display">\[\begin{aligned}
+\frac{1+i_t}{1+\pi_t}-1&amp;=\frac{1+0.01}{1+0.015}-1\\
+&amp;=-0.00492610837\\ 
+\frac{1+i_t}{1+\pi_t}-1&amp;= -0.492610837\%.
+\end{aligned}\]</span> An approximate value from the above formula is: <span class="math display">\[\begin{aligned}
+\frac{1+i_t}{1+\pi_t}-1&amp;\approx1+i_t-\pi_t-1\\
+&amp;\approx0.01-0.015\\
+\frac{1+i_t}{1+\pi_t}-1&amp;\approx-0.5\%.
+\end{aligned}\]</span> This is not such a bad approximation.</p></li>
+</ol>
 </div>
-<div id="past-exams" class="section level2 unnumbered">
-<h2>Past Exams</h2>
-<p><strong>Fall 2018.</strong> <a href="past-exams/2018F-midterm.pdf">Midterm</a> / <a href="past-exams/2018F-midterm-solution.pdf">Solution</a> ; Final / Solution.<br />
-<strong>Spring 2018.</strong> <a href="past-exams/2018S-midterm.pdf">Midterm</a> / <a href="past-exams/2018S-midterm-solution.pdf">Solution</a> ; <a href="past-exams/2018S-final.pdf">Final</a> / <a href="past-exams/2018S-final-solution.pdf">Solution</a>.<br />
-<strong>Winter 2016.</strong> <a href="past-exams/2016W-midterm1.pdf">Midterm 1</a> / <a href="past-exams/2016W-midterm1-solution.pdf">Solution</a> ; <a href="past-exams/2016W-midterm2.pdf">Midterm 2</a> / <a href="past-exams/2016W-midterm2-solution.pdf">Solution</a> ; <a href="past-exams/2016W-final.pdf">Final</a> / <a href="past-exams/2016W-final-solution.pdf">Solution</a>.<br />
-<strong>Winter 2015.</strong> <a href="past-exams/2015W-midterm1.pdf">Midterm 1</a> / <a href="past-exams/2015W-midterm1-solution.pdf">Solution</a> ; <a href="past-exams/2015W-midterm2.pdf">Midterm 2</a> / <a href="past-exams/2015W-midterm2-solution.pdf">Solution</a> ; <a href="past-exams/2015W-final.pdf">Final</a> / <a href="past-exams/2015W-final-solution.pdf">Solution</a>.</p>
-<p><strong>Warning!</strong> The ordering, and the content of the class are different this year compared to previous years, and increasingly so as you go back in time - in 2015 and 2016, I was using a different textbook as a basis for my lectures. Anything that I do not go over this quarter is not exam material. The difference can be substantial for all the midterm-relevant material, as the lectures have been reshuffled. Thus, you might sometimes want to look at the final exam in order to review for the midterm. In order to succeed in the class, it is best to first and primarily review the material that is found in the lectures and the problem sets - that is where marginal returns are maximal.</p>
+<div id="growth-rates-1" class="section level2 unnumbered">
+<h2>Growth Rates</h2>
+<ol style="list-style-type: decimal">
+<li><p>Iterating on the formula: <span class="math display">\[y_{t+1}=(1+g)y_t \quad \Rightarrow \quad y_T=(1+g)^Ty_0,\]</span> allows to find the result: <span class="math display">\[G = \frac{y_T}{y_0}-1=(1+g)^T-1.\]</span></p></li>
+<li><p>Again, inverting the previous relation: <span class="math display">\[G = (1+g)^T-1,\]</span> allows to find: <span class="math display">\[g = \frac{y_{t+1}}{y_{t}}-1=(1+G)^{1/T}-1.\]</span></p></li>
+<li><p>Applying the previous formula allows to get (see <a href="https://docs.google.com/spreadsheets/d/108I8xuosIQvgU6wOGrfwzHhE4p1OStgv8iIpzZ-4vME/edit?usp=sharing">Google Sheet</a>): <span class="math display">\[\begin{aligned}
+g &amp;=(1+0.01)^{1/365}-1\\
+ &amp;= 0.00002726155\\
+g &amp;=0.0027\%
+\end{aligned}\]</span> You give up approximately $2.7 every day (your bank most likely is investing this money on your behalf, so you are rather giving this money to your bank): <span class="math display">\[0.00002726155*100000=2.7.\]</span></p></li>
+</ol>
 
 </div>
 </div>
@@ -350,8 +362,8 @@
           </div>
         </div>
       </div>
-
-<a href="syllabus.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pset1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pset2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -381,7 +393,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fgeerolf/econ102/index.Rmd",
+"link": "https://github.com/fgeerolf/econ102/111-pset1-sol.Rmd",
 "text": "Edit"
 },
 "download": ["ucla-102-fall2018.pdf", "ucla-102-fall2018.epub"],
