@@ -223,10 +223,11 @@
 <li class="chapter" data-level="11.3" data-path="open.html"><a href="open.html#comparative-statics"><i class="fa fa-check"></i><b>11.3</b> Comparative statics</a></li>
 <li class="chapter" data-level="11.4" data-path="open.html"><a href="open.html#devaluation-the-trade-balance-and-output"><i class="fa fa-check"></i><b>11.4</b> Devaluation, the Trade Balance, and Output</a></li>
 </ul></li>
-<li class="appendix"><span><b>Appendix</b></span><ul>
-<li class="chapter" data-level="A.5" data-path="open.html"><a href="open.html#geometric-sums"><i class="fa fa-check"></i><b>A.5</b> Geometric Sums</a></li>
-<li class="chapter" data-level="A.6" data-path="open.html"><a href="open.html#taylor-approximations"><i class="fa fa-check"></i><b>A.6</b> Taylor Approximations</a></li>
-<li class="chapter" data-level="A.7" data-path="open.html"><a href="open.html#growth-rates"><i class="fa fa-check"></i><b>A.7</b> Growth Rates</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="pset1.html"><a href="pset1.html"><i class="fa fa-check"></i><b>A</b> Problem Set 1</a><ul>
+<li class="chapter" data-level="A.1" data-path="pset1.html"><a href="pset1.html#geometric-sums"><i class="fa fa-check"></i><b>A.1</b> Geometric Sums</a></li>
+<li class="chapter" data-level="A.2" data-path="pset1.html"><a href="pset1.html#taylor-approximations"><i class="fa fa-check"></i><b>A.2</b> Taylor Approximations</a></li>
+<li class="chapter" data-level="A.3" data-path="pset1.html"><a href="pset1.html#growth-rates"><i class="fa fa-check"></i><b>A.3</b> Growth Rates</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="problem-set-1-solution.html"><a href="problem-set-1-solution.html"><i class="fa fa-check"></i>Problem Set 1 - Solution</a><ul>
 <li class="chapter" data-level="" data-path="problem-set-1-solution.html"><a href="problem-set-1-solution.html#geometric-sums-1"><i class="fa fa-check"></i>Geometric Sums</a></li>
@@ -290,7 +291,7 @@
 <li class="chapter" data-level="" data-path="problem-set-7-solution.html"><a href="problem-set-7-solution.html#another-overlapping-generations-model-with-government-debt-1"><i class="fa fa-check"></i>Another overlapping-generations model with government debt</a></li>
 </ul></li>
 <li class="chapter" data-level="H" data-path="pset8.html"><a href="pset8.html"><i class="fa fa-check"></i><b>H</b> Problem Set 8</a><ul>
-<li class="chapter" data-level="" data-path="pset8.html"><a href="pset8.html#another-overlapping-generations-model-with-government-debt-2"><i class="fa fa-check"></i>Another overlapping-generations model with government debt</a></li>
+<li class="chapter" data-level="H.1" data-path="labor-market.html"><a href="labor-market.html#labor-market"><i class="fa fa-check"></i><b>H.1</b> Labor Market</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -314,24 +315,28 @@
             <section class="normal" id="section-">
 <div id="pset8" class="section level1">
 <h1><span class="header-section-number">H</span> Problem Set 8</h1>
-<div id="another-overlapping-generations-model-with-government-debt-2" class="section level2 unnumbered">
-<h2>Another overlapping-generations model with government debt</h2>
-<p>In this exercise, we consider the same problem as in <a href="public-debt.html#public-debt">lecture 10</a>, except that lifetime utility is logarithmic with <span class="math inline">\(\beta = 2\)</span> (that is, people are patient instead of impatient, so they tend to save a lot): <span class="math display">\[U = \log(c_t^y) + 2\log(c_{t+1}^o)\]</span> We denote the (net) real interest rate by <span class="math inline">\(r_t\)</span> so that the intertemporal budget constraint is: <span class="math display">\[c_{t}^{y}+\frac{c_{t+1}^{o}}{1+r_t}=w_{t}.\]</span> Other than that, we still assume a Cobb-Douglas production function with <span class="math inline">\(\alpha = 1/3\)</span>, so that: <span class="math display">\[Y_t = K_t^{1/3} L_t^{2/3}.\]</span> We assume that the labor force is constant so that <span class="math inline">\(L_t=1\)</span>. The depreciation rate is still <span class="math inline">\(\delta = 1 = 100\%\)</span>.</p>
+<div id="labor-market" class="section level2">
+<h2><span class="header-section-number">H.1</span> Labor Market</h2>
 <ol style="list-style-type: decimal">
-<li><p>Compute <span class="math inline">\(c_{t+1}^o\)</span> and <span class="math inline">\(c_t^y\)</span> as a function of the wage <span class="math inline">\(w_t\)</span>.</p></li>
-<li><p>What is the law of motion for the capital stock?</p></li>
-<li><p>Compute the steady-state capital stock <span class="math inline">\(K^{*}\)</span>, the (net) steady-state real interest rate <span class="math inline">\(r^{*}\)</span>, the steady-state output <span class="math inline">\(Y^{*}\)</span>, the steady-state wage <span class="math inline">\(w^{*}\)</span>, and the steady-state consumption of the young <span class="math inline">\((c^y)^{*}\)</span> and of the old <span class="math inline">\((c^o)^{*}\)</span>.</p></li>
-<li><p>Compute the Golden Rule (net) interest rate <span class="math inline">\(r^{*}_g\)</span>, the Golden Rule capital stock <span class="math inline">\(K^{*}_g\)</span>, the Golden Rule output <span class="math inline">\(Y^{*}_g\)</span>, the Golden Rule wage <span class="math inline">\(w^{*}_g\)</span>, and the Golden Rule consumption of the young <span class="math inline">\((c^y)^{*}_g\)</span> and of the old <span class="math inline">\((c^o)^{*}_g\)</span>.</p></li>
-<li><p>Compare the Golden Rule and steady-state levels, and give an economic intuition.</p></li>
-<li><p>What level of government debt <span class="math inline">\(B^{*}_g\)</span> brings the capital stock to the Golden Rule level ?</p></li>
-<li><p>Starting from the steady-state situation of question 3, assume that the government gives this money to retirees, taking on government debt. How much is this (lucky) generation of retirees able to consume ?</p></li>
-<li><p>Why is national debt a Ponzi scheme here? Is it bad ?</p></li>
-<li><p>Assume that the government puts in place a pay-as-you-go system, such as Social Security (think of OASDI), giving retirees an amount <span class="math inline">\(B^{*}_g\)</span> each period (where <span class="math inline">\(B^{*}_g\)</span> is the same level of government debt as the one found in question 6), and taxing the young an equal amount <span class="math inline">\(B^{*}_g\)</span>. Compare this situation to question 7. What are the differences and similarities?</p></li>
-<li><p>What is the difference between pay-as-you-go financing and deficit financing ? Explain why government debt is not a very meaningful statistic.</p></li>
+<li>Labor Market</li>
 </ol>
 
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
