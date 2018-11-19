@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="problem-set-3-solution.html">
-<link rel="next" href="problem-set-4-solution.html">
+<link rel="prev" href="pset7.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -310,65 +310,89 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pset4" class="section level1">
-<h1><span class="header-section-number">D</span> Problem Set 4</h1>
-<div id="the-solow-growth-model-with-exogenous-growth" class="section level2">
-<h2><span class="header-section-number">D.1</span> The Solow Growth Model with Exogenous Growth</h2>
-<p>Consider the Solow growth model of <a href="solow.html#solow">Lecture 2</a>, with however two small changes. Assume that the production function is given by: <span class="math display">\[F(K_t,L_t)=A_t K_t^{\alpha} L_t^{1-\alpha},\]</span> where productivity <span class="math inline">\(A_t\)</span> grows exogenously at rate <span class="math inline">\(g\)</span> and <span class="math inline">\(A_0=1\)</span>: <span class="math display">\[A_t=(1+g)^t.\]</span> Moreover, assume that the labor force also grows at a rate <span class="math inline">\(n\)</span> and <span class="math inline">\(L_0=1\)</span>, so that at any time <span class="math inline">\(t\)</span>: <span class="math display">\[ L_t = (1+n)^t.\]</span></p>
+<div id="problem-set-7---solution" class="section level1 unnumbered">
+<h1>Problem Set 7 - Solution</h1>
+<div id="another-overlapping-generations-model-with-government-debt-1" class="section level2 unnumbered">
+<h2>Another overlapping-generations model with government debt</h2>
 <ol style="list-style-type: decimal">
-<li><p>Write the law of motion for capital <span class="math inline">\(K_t\)</span>.</p></li>
-<li><p>Define <span class="math inline">\(k_t\)</span> as: <span class="math display">\[ k_t\equiv\frac{K_t}{A_t^{1/(1-\alpha)} L_t},\]</span> and write a law of motion for <span class="math inline">\(k_t\)</span>. Assume that <span class="math inline">\(n\)</span>, and <span class="math inline">\(g\)</span> are small in order to simplify this law of motion. <em>Hint</em>: if <span class="math inline">\(n\)</span> and <span class="math inline">\(g\)</span> are small then: <span class="math inline">\((1+g)^{1/(1-\alpha)}(1+n) \approx 1+\frac{1}{1-\alpha}g+n.\)</span></p></li>
-<li><p>Show that <span class="math inline">\(k_t\)</span> converges to a steady-state <span class="math inline">\(k^{*}\)</span>. Compute <span class="math inline">\(k^{*}\)</span>.</p></li>
-<li><p>When <span class="math inline">\(k_t\)</span> has reached a steady-state, the economy is said to be on a <strong>balanced growth path</strong>. On this balanced growth path, what is the rate of growth of <span class="math inline">\(Y_t\)</span>, <span class="math inline">\(C_t\)</span>, <span class="math inline">\(K_t\)</span>, <span class="math inline">\(K_t/Y_t\)</span>, <span class="math inline">\(K_t/L_t\)</span>, <span class="math inline">\(w_t\)</span>, <span class="math inline">\(w_t L_t\)</span> and <span class="math inline">\(w_t L_t/Y_t\)</span> ? Denoting by <span class="math inline">\(R_t\)</span> the marginal product of capital, what is the rate of growth of <span class="math inline">\(R_t\)</span>, <span class="math inline">\(R_t K_t\)</span>, and <span class="math inline">\(R_t K_t/Y_t\)</span> ?</p></li>
-<li><p>Compute <span class="math inline">\(y^{*}\)</span> and <span class="math inline">\(c^{*}\)</span> corresponding to steady-state <span class="math inline">\(k^{*}\)</span> with: <span class="math display">\[y_t \equiv \frac{Y_t}{A_t^{1/(1-\alpha)} L_t} \quad \text{and} \quad c_t \equiv \frac{C_t}{A_t^{1/(1-\alpha)} L_t}.\]</span></p></li>
-<li><p>What is the saving rate which maximizes <span class="math inline">\(c^{*}\)</span> ? (Golden Rule level of capital accumulation)</p></li>
-<li><p>What is then the value of the marginal product of capital <span class="math inline">\(R^{*}\)</span> ?</p></li>
-</ol>
-</div>
-<div id="the-neoclassical-labor-market-model" class="section level2">
-<h2><span class="header-section-number">D.2</span> The Neoclassical Labor Market Model</h2>
-<p>Consider the neoclassical labor market model of <a href="labor-market.html#labor-market">lecture 6</a>. Assume that preferences and the production function are as in <a href="labor-market.html#labor-market">lecture 6</a>: <span class="math display">\[U(c, l)=c-B\frac{l^{1+\epsilon}}{1+\epsilon}, \qquad f(l)=Al^{1-\alpha}.\]</span> Denote the wage by <span class="math inline">\(w\)</span>, and the price of consumption by <span class="math inline">\(p\)</span>.</p>
-<ol style="list-style-type: decimal">
-<li><p>Derive the Labor Demand curve.</p></li>
-<li><p>Assume that <span class="math inline">\(\alpha=1/3\)</span> and <span class="math inline">\(A=2\)</span>. Using your favorite spreadsheet software, plot this demand curve in a <span class="math inline">\((l, w/p)\)</span> plane - that is, putting <span class="math inline">\(l\)</span> on the x-axis and <span class="math inline">\(w/p\)</span> on the y-axis.</p></li>
-<li><p>Take logs of both sides. What does the demand curve look like in a <span class="math inline">\((\log(l), \log(w/p))\)</span> plane? What is the slope of the demand curve equal to? If <span class="math inline">\(\alpha\)</span> is higher, is the demand curve steeper or flatter? What shifts the demand curve to the left or to the right?</p></li>
-<li><p>Derive the Labor Supply curve.</p></li>
-<li><p>Assume that <span class="math inline">\(\epsilon=5\)</span> and <span class="math inline">\(B=2\)</span>. Using your favorite spreadsheet software, plot this supply curve in a <span class="math inline">\((l, w/p)\)</span> plane - that is, putting <span class="math inline">\(l\)</span> on the x-axis and <span class="math inline">\(w/p\)</span> on the y-axis. Add the supply curve to the demand curve of question 2.</p></li>
-<li><p>Take logs of both sides. What does the supply curve look like in a <span class="math inline">\((\log(l), \log(w/p))\)</span> plane? What is the slope of the supply curve equal to? If <span class="math inline">\(\epsilon\)</span> is higher, is the supply curve steeper or flatter? What shifts the supply curve to the left, or to the right?</p></li>
-<li><p>Assume that productivity <span class="math inline">\(A\)</span> decreases by 5%, to <span class="math inline">\(A=1.9\)</span>. What is the effect on the quantity of employment, and on the real wage? If <span class="math inline">\(\alpha\)</span> is higher, is that effect larger or smaller? What is the economic intuition?</p></li>
-<li><p>Assume that leisure becomes relatively more attractive relative to working (think of Facebook, Netflix, etc.), so that <span class="math inline">\(B\)</span> increases by 10% (the disutility of work increases). What is the effect on the quantity of employment, and on the real wage? If <span class="math inline">\(\epsilon\)</span> is higher, is that effect larger or smaller? What is the economic intuition for this?</p></li>
-</ol>
-</div>
-<div id="the-keynesian-labor-market-model" class="section level2">
-<h2><span class="header-section-number">D.3</span> The “Keynesian” Labor Market Model</h2>
-<p>Consider the neoclassical labor market model of the previous problem.</p>
-<ol style="list-style-type: decimal">
-<li><p>Assume that productivity <span class="math inline">\(A\)</span> decreases by 5%, but that real wages <span class="math inline">\(w/p\)</span> are rigid. Compute the change in the quantity of employment following a fall in productivity.</p></li>
-<li><p>Compare the effect with question 7 in the previous problem. Explain.</p></li>
-<li><p>Assume that leisure becomes relatively more attractive relative to working, so that <span class="math inline">\(B\)</span> increases by 10%. Compute the change in the quantity of employment following a increase in leisure attractiveness.</p></li>
-<li><p>Compare the effect with question 8 in the previous problem. Explain.</p></li>
-</ol>
-</div>
-<div id="the-bathtub-model" class="section level2">
-<h2><span class="header-section-number">D.4</span> The Bathtub model</h2>
-<p>Consider the bathtub model of <a href="labor-market.html#labor-market">lecture 6</a>. Assume a monthly job separation rate equal to <span class="math inline">\(s=1\)</span>%, and a monthly job finding rate equal to <span class="math inline">\(f=20\)</span>%. Assume that the labor force is given by <span class="math inline">\(L=159\)</span> million.</p>
-<ol style="list-style-type: decimal">
-<li><p>Derive the steady-state unemployment rate. How many people are unemployed in the steady-state? How many people lose their jobs every month? How many people find a job every month?</p></li>
-<li><p>Assume that the economy starts with an unemployment rate equal to <span class="math inline">\(u_0=8\)</span>%. Using your favorite spreadsheet software, show the evolution of the unemployment rate over time. How long before the unemployment rate reaches 5%?</p></li>
-<li><p>If <span class="math inline">\(s=2\)</span>% instead, which job finding rate <span class="math inline">\(f\)</span> gives the same steady-state unemployment rate?</p></li>
-<li><p>Assuming the separation rate and the job finding rate are given from question 3, answer question 2 again.</p></li>
-<li><p>Explain why an economy with more churning (that is, faster reallocation) - think of the US versus Europe - has a faster recovery in terms of unemployment after a recession. <em>Note:</em> A recession could be coming from a temporary increase in the job separation rate, or a temporary decrease in the job finding rate, which then goes back to its original value.</p></li>
+<li><p>We could use the expressions derived in <a href="two-period.html#two-period">lecture 3</a> for a 2-period consumption problem, since utility is logarithmic with <span class="math inline">\(\beta = 2\)</span>. However, we will instead derive the formulas from scratch, using the same techniques we used in that lecture (and so should you during an exam). The problem we are looking to solve is the following: <span class="math display">\[
+\begin{aligned}
+&amp; \max_{c_t^y, c_{t+1}^o} \quad \log(c_t^y) + 2\log(c_{t+1}^o)\\
+&amp; \quad \text{s.t} \quad c_{t}^{y}+\frac{c_{t+1}^{o}}{1+r_t}=w_{t}.
+\end{aligned}
+\]</span> Again, there are many methods through which we could potentially solve this problem. We can just use the ratio os marginal utilities to get the optimality condition: <span class="math display">\[\frac{1/c_t^y}{2/c_{t+1}^o}=1+r_t \quad \Rightarrow \quad c_{t+1}^o = 2(1+r_t)c_t^y.\]</span> Plugging back in the intertemporal budget constraint: <span class="math display">\[
+\begin{aligned}
+&amp;c_{t}^{y}+\frac{c_{t+1}^{o}}{1+r_t}=w_{t} \quad \Rightarrow \quad c_t^y + 2 c_t^y = w_t\\
+&amp;\quad \Rightarrow \quad \boxed{c_t^y = \frac{w_t}{3}}.
+\end{aligned}
+\]</span> And finally, plugging this in the optimality condition: <span class="math display">\[
+\begin{aligned}
+c_{t+1}^o = 2(1+r_t)c_t^y \quad \Rightarrow \quad \boxed{c_{t+1}^o = (1+r_t)\frac{2w_t}{3}}.
+\end{aligned}
+\]</span></p></li>
+<li>Saving is given by <span class="math inline">\(w_t - c_t^y = 2w_t/3\)</span> and depreciation is <span class="math inline">\(\delta = 1\)</span>, and therefore the law of motion of the capital stock is: <span class="math display">\[K_{t+1} - K_t = \frac{2w_t}{3}-K_t.\]</span> From firms’ optimality condition, the wage is just the marginal product of labor: <span class="math display">\[w_{t}=\frac{\partial Y_{t}}{\partial L_{t}}=\frac{2}{3}K_{t}^{1/3}L_{t}^{-1/3}=\frac{2}{3}K_{t}^{1/3}.\]</span> Therefore, we get finally the following law of motion for capital: <span class="math display">\[K_{t+1} = \frac{4}{9}K_{t}^{1/3}.\]</span></li>
+<li><p>The steady-state capital stock <span class="math inline">\(K^{*}\)</span> is such that: <span class="math display">\[
+\begin{aligned}
+&amp; K^{*} = \frac{4}{9}(K^{*})^{1/3} \quad \Rightarrow \quad (K^{*})^{2/3} = \frac{4}{9}\\
+&amp; \quad \Rightarrow \quad K^{*} = \left(\frac{4}{9}\right)^{3/2} \quad \Rightarrow \quad K^{*} = \left(\frac{2}{3}\right)^{3} \quad \Rightarrow \quad \boxed{K^{*} = \frac{8}{27}}.
+\end{aligned}
+\]</span> The (net) steady-state real interest rate <span class="math inline">\(r^{*}\)</span> is given by the fact that the marginal product of capital is equal to <span class="math inline">\(r^{*} + \delta\)</span>, which is <span class="math inline">\(1+r^{*}\)</span> here: <span class="math display">\[
+\begin{aligned}
+1+r^{*} = \frac{1}{3}(K^{*})^{-2/3} \quad \Rightarrow \quad r^{*}=\frac{1}{3}\frac{1}{(K^{*})^{2/3}}-1
+\end{aligned}
+\]</span> Thus, using the above expression that <span class="math inline">\((K^{*})^{2/3} = \frac{4}{9}\)</span>, we get: <span class="math display">\[r^{*}=\frac{1}{3} \cdot \frac{9}{4}-1 \quad \Rightarrow \quad  \boxed{r^{*}= -25\%}\]</span> Steady-state output <span class="math inline">\(Y^{*}\)</span> is given by the production function: <span class="math display">\[Y^{*} = (K^{*})^{1/3} = \left(\frac{8}{27}\right)^{1/3} \quad \Rightarrow \quad \boxed{Y^{*} =\frac{2}{3}}\]</span> the steady-state wage <span class="math inline">\(w^{*}\)</span> is given by the marginal product of labor evaluated at the steady-state capital stock: <span class="math display">\[w^{*}=\frac{2}{3}(K^{*})^{1/3}=\frac{2}{3}Y^{*} \quad \Rightarrow \quad \boxed{w^{*} = \frac{4}{9}}.\]</span> The steady-state consumption of the young is: <span class="math display">\[(c^y)^{*} = \frac{1}{3}w^{*} \quad \Rightarrow \quad \boxed{(c^y)^{*} = \frac{4}{27}}.\]</span> The steady-state consumption of the old is: <span class="math display">\[(c^o)^{*} = (1+r^{*})\frac{2w^{*}}{3} = \frac{3}{4} \cdot \frac{8}{27} = \frac{3}{9} \quad \Rightarrow \quad \boxed{(c^o)^{*} = \frac{2}{9}}\]</span></p></li>
+<li><p>The Golden Rule (net) interest rate <span class="math inline">\(r^{*}_g\)</span> is given by <span class="math inline">\(r^{*}_g=0\)</span>, again because there is no growth. Using this and plugging back to get an expression for <span class="math inline">\((K^{*})_g\)</span>: <span class="math display">\[
+\begin{aligned}
+1+r^{*}_g = \frac{1}{3}(K^{*}_g)^{-2/3} \quad \Rightarrow \quad K_g^{*}=\frac{1}{3^{3/2}} \quad \Rightarrow \quad \boxed{K_g^{*}=\frac{1}{3\sqrt{3}}}
+\end{aligned}
+\]</span> The Golden Rule output <span class="math inline">\(Y^{*}_g\)</span> is then given by the production function: <span class="math display">\[Y^{*}_g=(K^{*}_g)^{1/3} = \left(\frac{1}{3^{3/2}}\right)^{1/3} = \frac{1}{3^{1/2}} \quad \Rightarrow \quad \boxed{Y^{*}_g = \frac{1}{\sqrt{3}}}\]</span> The Golden Rule wage <span class="math inline">\(w^{*}_g\)</span> is: <span class="math display">\[w^{*}_g=\frac{2}{3}(K^{*}_g)^{1/3}=\frac{2}{3}Y^{*}_g \quad \Rightarrow \quad \boxed{w^{*}_g = \frac{2}{3\sqrt{3}}}.\]</span> The Golden Rule consumption of the young is: <span class="math display">\[(c^y)^{*}_g = \frac{1}{3}w^{*}_g \quad \Rightarrow \quad \boxed{(c^y)^{*}_g = \frac{2}{9\sqrt{3}}}.\]</span> The Golden Rule consumption of the old is: <span class="math display">\[(c^o)^{*}_g = \frac{2}{3}w^{*}_g \quad \Rightarrow \quad \boxed{(c^o)^{*}_g = \frac{4}{9\sqrt{3}}}.\]</span></p></li>
+<li><p>We have the following inequalities: <span class="math display">\[
+\begin{aligned}
+r^{*}_g &amp;&gt; r^{*}\\
+K^{*}_g &amp;&lt; K^{*}\\
+Y^{*}_g &amp;&lt; Y^{*}\\
+w^{*}_g &amp;&lt; w^{*}\\
+(c^y)^{*}_g &amp;&lt; (c^y)^{*} \quad \text{since} \quad \frac{2}{9\sqrt{3}}&lt;\frac{4}{27} \quad \Leftrightarrow \quad \sqrt{3} &lt;2 \\
+(c^o)^{*}_g &amp;&gt; (c^o)^{*} \quad \text{since} \quad \frac{4}{9\sqrt{3}}&gt;\frac{2}{9} \quad \Leftrightarrow \quad 2 &gt;\sqrt{3} \\
+\end{aligned}
+\]</span> The economic intuition is that the capital stock is at a lower steady-state under the Golden-Rule, so that the marginal product of capital is lower, output is lower, and the wage is lower. For consumption, it is higher when old under the Golden Rule (because the return is higher, which more than compensates for the lowest wage) and lower when young because the wage is lower. Overall, the Golden-Rule steady-state utility is given by: <span class="math display">\[U^*_g = \log(c^y)^{*}_g+2\log(c^o)^{*}_g = \log\frac{2}{9\sqrt{3}}+2\log \frac{4}{9\sqrt{3}}\]</span> While the steady-state utility is: <span class="math display">\[U^* = \log(c^y)^{*}+2\log(c^o)^{*} = \log\frac{4}{27}+2\log \frac{2}{9}\]</span> We compute <span class="math inline">\(U^{*}_g-U^{*}\)</span> to see which steady-state utility is greater: <span class="math display">\[
+\begin{aligned}
+U^{*}_g-U^{*} &amp;= \log\frac{2}{9\sqrt{3}}+2\log \frac{4}{9\sqrt{3}} - \log\frac{4}{27}-2\log \frac{2}{9}\\
+&amp;= \log \left[\frac{2}{9\sqrt{3}} \cdot \left(\frac{4}{9\sqrt{3}}\right)^2 \cdot\frac{27}{4} \cdot \left(\frac{9}{2}\right)^2\right]\\
+&amp;=\log \left[\frac{2 \cdot 4^2 \cdot 27 \cdot 9^2}{9\sqrt{3} \cdot 9^2 \cdot 3\cdot 4 \cdot 4}\right]\\
+U^{*}_g-U^{*}&amp;=\log \frac{2}{\sqrt3} &gt; \log \frac{2}{\sqrt4}=\log1 =0
+\end{aligned}
+\]</span> Thus, we conclude that the Golden Rule level of steady-state utility is higher than the equilibrium level of steady-state utility.</p></li>
+<li><p>What level of government debt <span class="math inline">\(B^{*}_g\)</span> brings the capital stock to the Golden Rule level ?</p></li>
+<li><p>Starting from the steady-state situation of question 3, assume that the government gives this money to retirees, taking on government debt. How much is this (lucky) generation of retirees able to consume ?</p></li>
+<li><p>Why is national debt a Ponzi scheme here? Is it bad ?</p></li>
+<li><p>Assume that the government puts in place a pay-as-you-go system, such as Social Security (think of OASDI), giving retirees an amount <span class="math inline">\(B^{*}_g\)</span> each period (where <span class="math inline">\(B^{*}_g\)</span> is the same level of government debt as the one found in question 6), and taxing the young an equal amount <span class="math inline">\(B^{*}_g\)</span>. Compare this situation to question 7. What are the differences and similarities?</p></li>
+<li><p>What is the difference between pay-as-you-go financing and deficit financing ? Explain why government debt is not a very meaningful statistic.</p></li>
 </ol>
 
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="problem-set-3-solution.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="problem-set-4-solution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pset7.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -398,7 +422,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fgeerolf/econ102/140-pset4.Rmd",
+"link": "https://github.com/fgeerolf/econ102/171-pset7-sol.Rmd",
 "text": "Edit"
 },
 "download": null,

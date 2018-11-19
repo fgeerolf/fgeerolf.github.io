@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="problem-set-3-solution.html">
-<link rel="next" href="problem-set-4-solution.html">
+<link rel="prev" href="pset5.html">
+<link rel="next" href="pset6.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -310,54 +310,79 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pset4" class="section level1">
-<h1><span class="header-section-number">D</span> Problem Set 4</h1>
-<div id="the-solow-growth-model-with-exogenous-growth" class="section level2">
-<h2><span class="header-section-number">D.1</span> The Solow Growth Model with Exogenous Growth</h2>
-<p>Consider the Solow growth model of <a href="solow.html#solow">Lecture 2</a>, with however two small changes. Assume that the production function is given by: <span class="math display">\[F(K_t,L_t)=A_t K_t^{\alpha} L_t^{1-\alpha},\]</span> where productivity <span class="math inline">\(A_t\)</span> grows exogenously at rate <span class="math inline">\(g\)</span> and <span class="math inline">\(A_0=1\)</span>: <span class="math display">\[A_t=(1+g)^t.\]</span> Moreover, assume that the labor force also grows at a rate <span class="math inline">\(n\)</span> and <span class="math inline">\(L_0=1\)</span>, so that at any time <span class="math inline">\(t\)</span>: <span class="math display">\[ L_t = (1+n)^t.\]</span></p>
+<div id="problem-set-5---solution" class="section level1 unnumbered">
+<h1>Problem Set 5 - Solution</h1>
+<div id="gregory-n.-mankiw---nyt---nov-30-2008-1" class="section level2 unnumbered">
+<h2>Gregory N. Mankiw - NYT - Nov 30, 2008</h2>
 <ol style="list-style-type: decimal">
-<li><p>Write the law of motion for capital <span class="math inline">\(K_t\)</span>.</p></li>
-<li><p>Define <span class="math inline">\(k_t\)</span> as: <span class="math display">\[ k_t\equiv\frac{K_t}{A_t^{1/(1-\alpha)} L_t},\]</span> and write a law of motion for <span class="math inline">\(k_t\)</span>. Assume that <span class="math inline">\(n\)</span>, and <span class="math inline">\(g\)</span> are small in order to simplify this law of motion. <em>Hint</em>: if <span class="math inline">\(n\)</span> and <span class="math inline">\(g\)</span> are small then: <span class="math inline">\((1+g)^{1/(1-\alpha)}(1+n) \approx 1+\frac{1}{1-\alpha}g+n.\)</span></p></li>
-<li><p>Show that <span class="math inline">\(k_t\)</span> converges to a steady-state <span class="math inline">\(k^{*}\)</span>. Compute <span class="math inline">\(k^{*}\)</span>.</p></li>
-<li><p>When <span class="math inline">\(k_t\)</span> has reached a steady-state, the economy is said to be on a <strong>balanced growth path</strong>. On this balanced growth path, what is the rate of growth of <span class="math inline">\(Y_t\)</span>, <span class="math inline">\(C_t\)</span>, <span class="math inline">\(K_t\)</span>, <span class="math inline">\(K_t/Y_t\)</span>, <span class="math inline">\(K_t/L_t\)</span>, <span class="math inline">\(w_t\)</span>, <span class="math inline">\(w_t L_t\)</span> and <span class="math inline">\(w_t L_t/Y_t\)</span> ? Denoting by <span class="math inline">\(R_t\)</span> the marginal product of capital, what is the rate of growth of <span class="math inline">\(R_t\)</span>, <span class="math inline">\(R_t K_t\)</span>, and <span class="math inline">\(R_t K_t/Y_t\)</span> ?</p></li>
-<li><p>Compute <span class="math inline">\(y^{*}\)</span> and <span class="math inline">\(c^{*}\)</span> corresponding to steady-state <span class="math inline">\(k^{*}\)</span> with: <span class="math display">\[y_t \equiv \frac{Y_t}{A_t^{1/(1-\alpha)} L_t} \quad \text{and} \quad c_t \equiv \frac{C_t}{A_t^{1/(1-\alpha)} L_t}.\]</span></p></li>
-<li><p>What is the saving rate which maximizes <span class="math inline">\(c^{*}\)</span> ? (Golden Rule level of capital accumulation)</p></li>
-<li><p>What is then the value of the marginal product of capital <span class="math inline">\(R^{*}\)</span> ?</p></li>
+<li><p>According to Gregory N. Mankiw, the factors contributing to hold back consumption are low consumer confidence and “wait and see” behavior caused by falling house price values, shrinking 401(k) balances (due to the fall of the stock market, my addition) and increased unemployment. Yes, these factors can be interpreted in terms of a fall in <span class="math inline">\(c_0\)</span>, since they reduce consumption for a given level of income <span class="math inline">\(Y\)</span>.</p></li>
+<li><p>Gregory N. Mankiw writes: “Keynesian theory suggests a”paradox of thrift.&quot; If all households try to save more, a short-run result could be lower aggregate demand and thus lower national income. Reduced incomes, in turn, could prevent households from reaching their new saving goals.&quot; This is exactly the type of phenomenon which we explained in <a href="paradox-thrift.html#paradox-thrift">lecture 8</a>: if there is a fall in <span class="math inline">\(c_0\)</span>, then output falls and saving falls as a result. Because investment is fixed and equal to <span class="math inline">\(\bar{I}\)</span>, output decreases until saving equals investment again.</p></li>
+<li><p>The neoclassical comment of the article is: “In normal times, a fall in consumption could be met by an increase in investment, which includes spending by businesses on plant and equipment and by households on new homes.” This is the usual logic of the Solow (1956) model, for instance. What happens in this model is that saving in fact determines investment entirely. The way this happens through market mechanisms is that the interest rate falls to equate demand and supply of capital. The cost of capital falls down to the point where firms and households want to invest enough to make productive use of all this saving. This logic is somewhat contradictory with the “paradox of thrift” logic, according to which investment is fixed or even increasing with demand (and the interest rate does not clear markets).</p></li>
+<li><p>Gregory N. Mankiw is very concerned about “the long-term fiscal picture. Increased government spending may be a good short-run fix, but it would add to the budget deficit. The baby boomers are now starting to retire and claim Social Security and Medicare benefits. Any increase in the national debt will make fulfilling those unfunded promises harder in coming years.” We will talk about this potential issue during <a href="public-debt.html#public-debt">lecture 10</a>.</p></li>
 </ol>
 </div>
-<div id="the-neoclassical-labor-market-model" class="section level2">
-<h2><span class="header-section-number">D.2</span> The Neoclassical Labor Market Model</h2>
-<p>Consider the neoclassical labor market model of <a href="labor-market.html#labor-market">lecture 6</a>. Assume that preferences and the production function are as in <a href="labor-market.html#labor-market">lecture 6</a>: <span class="math display">\[U(c, l)=c-B\frac{l^{1+\epsilon}}{1+\epsilon}, \qquad f(l)=Al^{1-\alpha}.\]</span> Denote the wage by <span class="math inline">\(w\)</span>, and the price of consumption by <span class="math inline">\(p\)</span>.</p>
+<div id="procyclical-government-spending-1" class="section level2 unnumbered">
+<h2>Procyclical Government Spending</h2>
 <ol style="list-style-type: decimal">
-<li><p>Derive the Labor Demand curve.</p></li>
-<li><p>Assume that <span class="math inline">\(\alpha=1/3\)</span> and <span class="math inline">\(A=2\)</span>. Using your favorite spreadsheet software, plot this demand curve in a <span class="math inline">\((l, w/p)\)</span> plane - that is, putting <span class="math inline">\(l\)</span> on the x-axis and <span class="math inline">\(w/p\)</span> on the y-axis.</p></li>
-<li><p>Take logs of both sides. What does the demand curve look like in a <span class="math inline">\((\log(l), \log(w/p))\)</span> plane? What is the slope of the demand curve equal to? If <span class="math inline">\(\alpha\)</span> is higher, is the demand curve steeper or flatter? What shifts the demand curve to the left or to the right?</p></li>
-<li><p>Derive the Labor Supply curve.</p></li>
-<li><p>Assume that <span class="math inline">\(\epsilon=5\)</span> and <span class="math inline">\(B=2\)</span>. Using your favorite spreadsheet software, plot this supply curve in a <span class="math inline">\((l, w/p)\)</span> plane - that is, putting <span class="math inline">\(l\)</span> on the x-axis and <span class="math inline">\(w/p\)</span> on the y-axis. Add the supply curve to the demand curve of question 2.</p></li>
-<li><p>Take logs of both sides. What does the supply curve look like in a <span class="math inline">\((\log(l), \log(w/p))\)</span> plane? What is the slope of the supply curve equal to? If <span class="math inline">\(\epsilon\)</span> is higher, is the supply curve steeper or flatter? What shifts the supply curve to the left, or to the right?</p></li>
-<li><p>Assume that productivity <span class="math inline">\(A\)</span> decreases by 5%, to <span class="math inline">\(A=1.9\)</span>. What is the effect on the quantity of employment, and on the real wage? If <span class="math inline">\(\alpha\)</span> is higher, is that effect larger or smaller? What is the economic intuition?</p></li>
-<li><p>Assume that leisure becomes relatively more attractive relative to working (think of Facebook, Netflix, etc.), so that <span class="math inline">\(B\)</span> increases by 10% (the disutility of work increases). What is the effect on the quantity of employment, and on the real wage? If <span class="math inline">\(\epsilon\)</span> is higher, is that effect larger or smaller? What is the economic intuition for this?</p></li>
+<li><p>We write that Output = Demand: <span class="math display">\[
+\begin{aligned}
+Y=Z &amp;=C+\bar{I}+G\\
+Y   &amp;=c_{0}+c_{1}\left(Y-T\right)+ \bar{I} + g_{0}+g_{1}Y\\
+Y   &amp;=\left(c_{0}-c_{1}T+g_{0}+\bar{I}\right)+\left(c_{1}+g_{1}\right)Y \\
+&amp; \Rightarrow \quad \boxed{Y=\frac{1}{1-c_{1}-g_{1}}\left(c_{0}-c_{1}T+g_{0}+\bar{I}\right)}.
+\end{aligned}
+\]</span></p></li>
+<li><p>The tax multiplier is found by computing the change <span class="math inline">\(\Delta Y\)</span> in output corresponding to a given change <span class="math inline">\(\Delta T\)</span> in taxes: <span class="math display">\[
+\begin{aligned}
+\Delta Y = -\frac{c_1}{1-c_1-g_1}\Delta T
+\end{aligned}
+\]</span> Therefore, if <span class="math inline">\(\Delta T = -\$ 1\)</span>, the change in output is <span class="math inline">\(\frac{c_1}{1-c_1-g_1}\)</span>. Therefore: <span class="math display">\[
+\begin{aligned}
+\boxed{\text{Tax Multiplier} = \frac{c_1}{1-c_1-g_1}}.
+\end{aligned}
+\]</span> The multiplier is higher in this economy than when government spending does not depend on GDP since: <span class="math display">\[
+\begin{aligned}
+\frac{c_1}{1-c_1-g_1}&gt;\frac{c_1}{1-c_1}.
+\end{aligned}
+\]</span> The intuition is that government spending automatically increases when GDP increases, which increases demand further. Thus, the multiplier is higher.</p></li>
+<li><p>This policy appears to be the opposite of what automatic stabilizers are doing, which is to stabilize the economy. The government is having a very procyclical policy, which means that when things go well, it is spending more and therefore helping things go even better; while when things go wrong, it is making it worse by cutting spending. This is clearly not a good policy ! Note however that this is the policy you end up having if you follow a fixed deficit rule, for instance. With a fixed deficit rule, <span class="math inline">\(T-G\)</span> needs to be constant. If <span class="math inline">\(T\)</span> depend on GDP through automatic stabilizers, through <span class="math inline">\(T=t_0+t_1 Y\)</span> then by construction <span class="math inline">\(G\)</span> needs to respond as well, and it needs to be that <span class="math inline">\(g_1 = t_1\)</span>.</p></li>
+<li><p>The (ZZ) curve in this problem has a slope equal to <span class="math inline">\(c_1+g_1\)</span>. The impulse to autonomous spending is given by <span class="math inline">\(\$ c_1\)</span>, since one dollar of decreased taxes leads to an increase in consumption equal <span class="math inline">\(c_1\)</span>. This increase leads to a second round of increased consumption and investment <span class="math inline">\(c_1(c_1+g_1)\)</span>, and so on: <span class="math display">\[
+\begin{aligned}
+\text{Tax Multiplier} &amp;= c_1 + c_1(c_1+g_1) + c_1(c_1+g_1)^2 + ... + c_1(c_1+g_1)^n + ...\\
+&amp;= c_1\left(1 + (c_1+g_1) + (c_1+g_1)^2 + ... + (c_1+g_1)^n + ...\right) \\
+\text{Tax Multiplier} &amp;=c_1 \sum_{i=0}^{+\infty}(c_1+g_1)^i =  \frac{c_1}{1-c_1-g_1}
+\end{aligned}
+\]</span> A graphical justification for the multiplier is given below. The initial impulse is given by <span class="math inline">\(c_1\)</span>. A fraction <span class="math inline">\(c_1+g_1\)</span> of the additional income injected in the economy is being consumed, so that adds <span class="math inline">\(c_1(c_1+g_1)\)</span>. This repeats itself in a loop, and all of these effects are summed up, so that the total effect is: <span class="math display">\[c_1 + c_1(c_1+g_1)\]</span></p></li>
+</ol>
+
+<div class="figure" style="text-align: center"><span id="fig:graphical-multiplier"></span>
+<img src="graphsketcher/midterm.png" alt="Graphical Interpretation for the Multiplier." width="60%" />
+<p class="caption">
+Figure E.1: <span style="font-variant: small-caps;">Graphical Interpretation for the Multiplier</span>.
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>If <span class="math inline">\(g_1+c_1&gt;1\)</span>, then each new round of spending leads to an even greater new round of new income and new spending. Therefore, the above infinite sum is then infinite, and the tax multiplier is infinite: <span class="math display">\[
+\begin{aligned}
+\text{Tax Multiplier} =c_1 \sum_{i=0}^{+\infty}(c_1+g_1)^i = +\infty.
+\end{aligned}
+\]</span> Of course, this is not possible. Therefore, this just means that output cannot be demand-determined and that it is always constrained by supply (the amount of inputs there is in the economy).</li>
 </ol>
 </div>
-<div id="the-keynesian-labor-market-model" class="section level2">
-<h2><span class="header-section-number">D.3</span> The “Keynesian” Labor Market Model</h2>
-<p>Consider the neoclassical labor market model of the previous problem.</p>
+<div id="accelerator-and-automatic-stabilizer-1" class="section level2 unnumbered">
+<h2>Accelerator and Automatic Stabilizer</h2>
 <ol style="list-style-type: decimal">
-<li><p>Assume that productivity <span class="math inline">\(A\)</span> decreases by 5%, but that real wages <span class="math inline">\(w/p\)</span> are rigid. Compute the change in the quantity of employment following a fall in productivity.</p></li>
-<li><p>Compare the effect with question 7 in the previous problem. Explain.</p></li>
-<li><p>Assume that leisure becomes relatively more attractive relative to working, so that <span class="math inline">\(B\)</span> increases by 10%. Compute the change in the quantity of employment following a increase in leisure attractiveness.</p></li>
-<li><p>Compare the effect with question 8 in the previous problem. Explain.</p></li>
-</ol>
-</div>
-<div id="the-bathtub-model" class="section level2">
-<h2><span class="header-section-number">D.4</span> The Bathtub model</h2>
-<p>Consider the bathtub model of <a href="labor-market.html#labor-market">lecture 6</a>. Assume a monthly job separation rate equal to <span class="math inline">\(s=1\)</span>%, and a monthly job finding rate equal to <span class="math inline">\(f=20\)</span>%. Assume that the labor force is given by <span class="math inline">\(L=159\)</span> million.</p>
-<ol style="list-style-type: decimal">
-<li><p>Derive the steady-state unemployment rate. How many people are unemployed in the steady-state? How many people lose their jobs every month? How many people find a job every month?</p></li>
-<li><p>Assume that the economy starts with an unemployment rate equal to <span class="math inline">\(u_0=8\)</span>%. Using your favorite spreadsheet software, show the evolution of the unemployment rate over time. How long before the unemployment rate reaches 5%?</p></li>
-<li><p>If <span class="math inline">\(s=2\)</span>% instead, which job finding rate <span class="math inline">\(f\)</span> gives the same steady-state unemployment rate?</p></li>
-<li><p>Assuming the separation rate and the job finding rate are given from question 3, answer question 2 again.</p></li>
-<li><p>Explain why an economy with more churning (that is, faster reallocation) - think of the US versus Europe - has a faster recovery in terms of unemployment after a recession. <em>Note:</em> A recession could be coming from a temporary increase in the job separation rate, or a temporary decrease in the job finding rate, which then goes back to its original value.</p></li>
+<li><p>We have both an automatic stabilizer as well as an accelerator effect of investment. We write, again, the total demand for goods <span class="math inline">\(Z\)</span> and then equate demand to output so that <span class="math inline">\(Y=Z\)</span>: <span class="math display">\[
+\begin{aligned}
+Y=Z &amp;=C+\bar{I}+G\\
+Y   &amp;=c_{0}+c_{1} Y - c_1 t_0 - c_1 t_1 Y+ b_0+ b_{1}Y + G\\
+Y   &amp;=\left(c_{0}-c_{1}t_0+b_{0}+G\right)+\left(c_{1}(1-t_1)+b_1\right)Y \\
+&amp; \Rightarrow \quad \boxed{Y=\frac{1}{1-b_{1}-c_{1}(1-t_1)}\left(c_{0}-c_{1}t_0+b_{0}+G\right)}.
+\end{aligned}
+\]</span></p></li>
+<li><p>The condition is now given by: <span class="math display">\[b_1 + c_1(1-t_1)&lt;1.\]</span></p></li>
+<li><p>If this condition isn’t satisfied, then the multiplier becomes infinite: one dollar of stimulus leads to more than 1 dollar in additional spending, etc. This leads to an infinite sum. This does not, of course, mean that GDP becomes infinite. It just means that output cannot be constrained by demand, and that the Keynesian model no longer applies. Such an economy should always be neoclassical, in other words GDP should always be limited by available factors of production (capital and labor).</p></li>
+<li><p>The graph is very similar to the usual one, only that the slope is <span class="math inline">\(b_1+c_1(1-t_1)\)</span>. (if asked for it in an exam, you need to provide it) The geometric sum is: <span class="math display">\[1+ \left(b_1+c_1(1-t_1)\right) + \left(b_1+c_1(1-t_1)\right)^2 + ... = \frac{1}{1-b_1-c_1(1-t_1)}.\]</span> (again, you will need to provide the multiplier intuition when asked for it in an exam)</p></li>
 </ol>
 
 </div>
@@ -367,8 +392,8 @@
           </div>
         </div>
       </div>
-<a href="problem-set-3-solution.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="problem-set-4-solution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pset5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pset6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -398,7 +423,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fgeerolf/econ102/140-pset4.Rmd",
+"link": "https://github.com/fgeerolf/econ102/151-pset5-sol.Rmd",
 "text": "Edit"
 },
 "download": null,
