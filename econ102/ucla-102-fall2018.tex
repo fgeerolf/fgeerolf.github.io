@@ -86,7 +86,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-11-18}
+    \date{2018-11-19}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -6876,7 +6876,7 @@ exogenous and equal to \(G\).
   much saving''.
 \end{enumerate}
 
-\chapter{Problem Set 7}\label{pset7}
+\hypertarget{pset7}{\chapter{Problem Set 7}\label{pset7}}
 
 \section*{Another overlapping-generations model with government
 debt}\label{another-overlapping-generations-model-with-government-debt}
@@ -7052,14 +7052,13 @@ with government debt}
   utility is higher than the equilibrium level of steady-state utility.
 \item
   What level of government debt \(B^{*}_g\) brings the capital stock to
-  the Golden Rule level ?
+  the Golden Rule level?
 \item
   Starting from the steady-state situation of question 3, assume that
   the government gives this money to retirees, taking on government
-  debt. How much is this (lucky) generation of retirees able to consume
-  ?
+  debt. How much is this (lucky) generation of retirees able to consume?
 \item
-  Why is national debt a Ponzi scheme here? Is it bad ?
+  Why is national debt a Ponzi scheme here? Is it bad?
 \item
   Assume that the government puts in place a pay-as-you-go system, such
   as Social Security (think of OASDI), giving retirees an amount
@@ -7075,13 +7074,82 @@ with government debt}
 
 \chapter{Problem Set 8}\label{pset8}
 
-\hypertarget{labor-market}{\section{Labor Market}\label{labor-market}}
+\section{\texorpdfstring{Optimal Taxation: The ``Supply Side''
+(Neoclassical)
+View}{Optimal Taxation: The Supply Side (Neoclassical) View}}\label{optimal-taxation-the-supply-side-neoclassical-view}
+
+Let us go back to the labor market model of
+\protect\hyperlink{labor-market}{lecture 6}. Denoting the (hourly) wage
+by \(w\), the price of consumption by \(p\), and the number of hours
+(per year) by \(l\), assume that moreover \(\alpha=0\) so that:
+\[U(c, l)=c-B\frac{l^{1+\epsilon}}{1+\epsilon}, \qquad f(l)=Al^{1-\alpha} = A l.\]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
-  Labor Market
+  Derive the Labor Demand curve.
+\item
+  For labor supply, assume that the tax and transfer system is such that
+  \(\tau\) is the marginal tax rate, and \(c_0\) is a real subsistence
+  level of income given by the government: \(pc = (1-\tau)wl + p c_0\).
+  Derive the Labor Supply curve.
+\item
+  Express the number of hours worked per year \(\underline{l}\), as well
+  real annual pre-tax income \(y=(w/p) \cdot l\), as a function of the
+  parameters of the model.
+\item
+  Compute the number of hours worked per year \(\underline{l}\), as well
+  as real pre-tax income \(\underline{y}\) if \(\epsilon = 2\),
+  \(\underline{\tau}=1/4\),
+  \(\underline{A}= 1000000/28188\approx 35.5\),
+  \(\underline{B}= 3000000/491569855488 \approx 6.1 \cdot 10^{-6}\).
+\item
+  Compute the number of hours worked per year \(\bar{l}\), as well as
+  real pre-tax income \(\bar{y}\) if \(\epsilon = 2\),
+  \(\bar{\tau}=1/2\), \(\bar{A}= 1000000/6264\approx 159.6\),
+  \(\bar{B}=3000000/655426473984 \approx 4.6 \cdot 10^{-6}\).
+\item
+  Assume that the labor force is \(N = 150\) million, with a fraction
+  \(\lambda = 0.9\) of the type described in question 4, and a fraction
+  \(1-\lambda = 0.1\) of the type described in question 5. What is total
+  output in the economy?
+\item
+  Assume that the tax system has two marginal tax rates: one 25\%
+  marginal tax rate above 25K, one 50\% marginal tax rate above 200K and
+  that \(c_0=5K\). In other words, if income is \(y\) then taxes are:
+  \[T(y) = -5K + 0.25\cdot \max \{ y-25K, 0 \} + 0.25\cdot \max \{ y-200K, 0 \}.\]
+  Assume a tax reform that lowers the marginal tax rate on the richest
+  by 5 points, and compensates using \(c_0\) to collect revenue. How
+  much is the total tax cut? What is the impact on GDP?
+\item
+  Assume a tax reform that lowers the marginal tax rate on the poorest
+  by 5 points, and compensates using \(c_0\) to collect revenue. How
+  much is the total tax cut? What is the impact on GDP?
+\end{enumerate}
+
+\section{Paul Krugman VS Robert Barro on the Bush tax
+cuts}\label{paul-krugman-vs-robert-barro-on-the-bush-tax-cuts}
+
+Watch \href{https://www.youtube.com/watch?v=O77G0SaJv5M}{this debate
+between Paul Krugman and Robert Barro}, moderated by Charlie Rose.
+
+\begin{verbatim}
+# [1] "Sorry I don't know how to embed videos in PDF"
+# [1] "Use the html version, or the link: https://www.youtube.com/embed/O77G0SaJv5M"
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Explain Robert Barro's view on taxes, using the previous exercise.
+\item
+  What is Paul Krugman's take on taxes?
+\item
+  What is the discussion on public debt, and the deficit ? Explain.
+\item
+  From \href{https://youtu.be/O77G0SaJv5M?t=686}{11:26} Robert Barro
+  suggests to move from pay-as-you-go to ``personal accounts''. Explain
+  their discussion in terms of \protect\hyperlink{pset7}{problem set 7}.
 \end{enumerate}
 
 \bibliography{book.bib,packages.bib}
