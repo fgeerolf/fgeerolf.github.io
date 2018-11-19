@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content />
+<meta name="author" content="François Geerolf" />
 
 
 <title></title>
@@ -125,33 +125,17 @@ $(document).ready(function () {
 </div>
 
 
-<div id="optimal-taxation-the-supply-side-neoclassical-view" class="section level1">
-<h1>Optimal Taxation: The “Supply Side” (Neoclassical) View</h1>
-<p>Let us go back to the labor market model of <a href="#labor-market">lecture 6</a>. Denoting the (hourly) wage by <span class="math inline">\(w\)</span>, the price of consumption by <span class="math inline">\(p\)</span>, and the number of hours (per year) by <span class="math inline">\(l\)</span>, assume that moreover <span class="math inline">\(\alpha=0\)</span> so that: <span class="math display">\[U(c, l)=c-B\frac{l^{1+\epsilon}}{1+\epsilon}, \qquad f(l)=Al^{1-\alpha} = A l.\]</span></p>
+<div id="optimal-taxation-the-supply-side-view" class="section level1">
+<h1>Optimal Taxation: The Supply Side View</h1>
 <ol style="list-style-type: decimal">
-<li><p>Derive the Labor Demand curve.</p></li>
-<li><p>For labor supply, assume that the tax and transfer system is such that <span class="math inline">\(\tau\)</span> is the marginal tax rate, and <span class="math inline">\(c_0\)</span> is a real subsistence level of income given by the government: <span class="math display">\[pc = (1-\tau)wl + p c_0\]</span> Derive the Labor Supply curve.</p></li>
-<li><p>Calculate the numbers of hours worked per year <span class="math inline">\(\underline{l}\)</span>, as well real annual pre-tax income <span class="math inline">\(y=(w/p) \cdot l\)</span>, as a function of the parameters of the model.</p></li>
-<li><p>Compute the number of hours worked per year <span class="math inline">\(\underline{l}\)</span>, as well as real pre-tax income <span class="math inline">\(\underline{y}\)</span> if <span class="math inline">\(\epsilon = 2\)</span>, <span class="math inline">\(\underline{\tau}=1/4\)</span>, <span class="math inline">\(\underline{A}= 1000000/28188\approx 35.5\)</span>, <span class="math inline">\(\underline{B}= 1000000/28188\)</span>.</p></li>
-<li><p>Compute the number of hours worked per year <span class="math inline">\(\bar{l}\)</span>, as well as real pre-tax income <span class="math inline">\(\bar{y}\)</span> if <span class="math inline">\(\epsilon = 2\)</span>, <span class="math inline">\(\bar{\tau}=1/2\)</span>, <span class="math inline">\(\bar{A}= 1000000/28188\)</span>, <span class="math inline">\(\bar{B}= 1000000/28188\)</span>.</p></li>
-<li><p>Assume that the population has <span class="math inline">\(N = 150\)</span> million people, with a fraction <span class="math inline">\(\lambda = 0.9\)</span> of the type described in question 4, and a fraction <span class="math inline">\(1-\lambda = 0.1\)</span> of the type described in question 5. What is total output in the economy?</p></li>
-<li><p>Assume that the tax system has two marginal tax rates: one 25% marginal tax rate above 70K, one 50% marginal tax rate above 200K. In other words, if income is <span class="math inline">\(y\)</span> then taxes are: <span class="math display">\[T(y) = -5K + 0.25\cdot \max \{ y-70K, 0 \} + 0.5\cdot \max \{ y-200K, 0 \}.\]</span> Note that <span class="math inline">\(c_0=5K\)</span> here. In other words, if income is zero, the government gives a transfer equal to 5 thousand dollars per year.</p></li>
-<li><p>Assume a deficit financed tax reform that increases <span class="math inline">\(c_0\)</span> from 5K to 6K. What is the impact on output in this supply side model?</p></li>
-<li><p>Assume a deficit financed tax reform that lowers the marginal tax rate on the richest by 5%. What is the total tax cut? What is the impact on GDP?</p></li>
-<li><p>Assume a deficit financed tax reform that lowers the marginal tax rate on the poorest by 5%. What is the total tax cut? What is the impact on GDP?</p></li>
+<li><p>The firm’s problem is to maximize: <span class="math display">\[\max_l \quad p f(l) -  w l \]</span> Therefore, the real wage is given by: <span class="math display">\[\boxed{A=\frac{w}{p}}.\]</span></p></li>
+<li><p>Writing that <span class="math inline">\(c=c_0+(1-\tau)\cdot (w/p) \cdot l\)</span> and plugging the value of <span class="math inline">\(c\)</span> into the worker’s optimization problem: <span class="math display">\[\max_l \quad (1-\tau)\frac{w}{p}l + c_0-B\frac{l^{1+\epsilon}}{1+\epsilon}\]</span> The first-order condition implies: <span class="math display">\[(1-\tau)\frac{w}{p} = Bl^{\epsilon} \quad \Rightarrow \quad \boxed{l = \frac{(1-\tau)^{1/\epsilon}}{B^{1/\epsilon}}\left(\frac{w}{p}\right)^{1/\epsilon}}\]</span></p></li>
+<li><p>The number of hours worked is given by replacing out the real wage <span class="math inline">\(w/p\)</span> from the labor demand equation to the labor supply equation, so that: <span class="math display">\[\boxed{l = (1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon}}{B^{1/\epsilon}}}.\]</span> Real pre-tax income is when simply given by the real wage times the number of hours. Since the real wage is simply <span class="math inline">\(A\)</span>, we get: <span class="math display">\[\frac{w}{p}l = A\cdot(1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon}}{B^{1/\epsilon}}.\]</span> Therefore: <span class="math display">\[\boxed{\frac{w}{p}l = (1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon+1}}{B^{1/\epsilon}}}.\]</span></p></li>
+<li></li>
 </ol>
 </div>
 <div id="paul-krugman-vs-robert-barro-on-the-bush-tax-cuts" class="section level1">
 <h1>Paul Krugman VS Robert Barro on the Bush tax cuts</h1>
-<p>Watch <a href="https://www.youtube.com/watch?v=O77G0SaJv5M">this debate between Paul Krugman and Robert Barro</a>, moderated by Charlie Rose.</p>
-<iframe src="https://www.youtube.com/embed/O77G0SaJv5M" width="100%" height="400px">
-</iframe>
-<ol style="list-style-type: decimal">
-<li><p>Explain Robert Barro’s view on taxes, using the previous exercise.</p></li>
-<li><p>What is Paul Krugman’s take on taxes?</p></li>
-<li><p>What is the discussion on public debt, and the deficit ? Explain.</p></li>
-<li><p>From <a href="https://youtu.be/O77G0SaJv5M?t=686">11:26</a> Robert Barro suggests to move from pay-as-you-go to “personal accounts”. Explain their discussion in terms of <a href="#pset7">problem set 7</a>.</p></li>
-</ol>
 </div>
 
 
