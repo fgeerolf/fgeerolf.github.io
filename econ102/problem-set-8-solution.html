@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="olg.html">
-<link rel="next" href="labor-market.html">
+<link rel="prev" href="pset8.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -309,450 +309,31 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="technology" class="section level1">
-<h1><span class="header-section-number">Lecture 5</span> Technological Change</h1>
-<p>In this lecture, we start by reviewing <a href="technology.html#long-run-growth">some facts on long-run economic growth</a>. We then review <a href="technology.html#endogenous-growth-model">an endogenous growth model</a> which tries to account for long-run economic growth.</p>
-<div id="long-run-growth" class="section level2">
-<h2><span class="header-section-number">5.1</span> Long-run Economic Growth</h2>
-<p>In this section, we remind ourselves some basic facts on technological growth since the 1200s. We in particular use Angus Maddison’s long run data series on GDP per capita in major advanced economies, to show that growth as we know it is a rather recent phenomenon, one that starts at the beginning of the nineteenth century.</p>
-<div id="the-facts-of-growth" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> The Facts of Growth</h3>
-<p>The Figures below show GDP per capita in France, Germany, Italy, the United Kingdom, and the United States, starting respectively in 1200, 1700, 1800, and 1900. These are presented on a semi-logarithmic scale (that is, the y-axis is in log), also sometimes called a ratio scale. Do not worry too much about the unit in which GDP per capita is expressed in this Maddison data: the unit is called the <a href="https://en.wikipedia.org/wiki/Geary%E2%80%93Khamis_dollar">Geary–Khamis dollar</a>, but we shall come back to it when we discuss the issue of real exchange rates and purchasing power parity comparisons. The reason for using such a semi-logarithmic scale is that growth is roughly exponential, so it is approximately linear on a semi-logarithmic scale.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:gdp-1200"></span>
-<img src="ucla-102-fall2018_files/figure-html/gdp-1200-1.png" alt="1200-2010 GDP per capita (Maddison Data)." width="100%" />
-<p class="caption">
-Figure 5.1: <span style="font-variant: small-caps;">1200-2010 GDP per capita (Maddison Data)</span>.
-</p>
-</div>
-
-<div class="figure" style="text-align: center"><span id="fig:gdp-1700"></span>
-<img src="ucla-102-fall2018_files/figure-html/gdp-1700-1.png" alt="1700-2010 GDP per capita (Maddison Data)." width="100%" />
-<p class="caption">
-Figure 5.2: <span style="font-variant: small-caps;">1700-2010 GDP per capita (Maddison Data)</span>.
-</p>
-</div>
-
-<div class="figure" style="text-align: center"><span id="fig:gdp-1800"></span>
-<img src="ucla-102-fall2018_files/figure-html/gdp-1800-1.png" alt="1800-2010 GDP per capita (Maddison Data)." width="100%" />
-<p class="caption">
-Figure 5.3: <span style="font-variant: small-caps;">1800-2010 GDP per capita (Maddison Data)</span>.
-</p>
-</div>
-
-<div class="figure" style="text-align: center"><span id="fig:gdp-1900"></span>
-<img src="ucla-102-fall2018_files/figure-html/gdp-1900-1.png" alt="1900-2010 GDP per capita (Maddison Data)." width="100%" />
-<p class="caption">
-Figure 5.4: <span style="font-variant: small-caps;">1900-2010 GDP per capita (Maddison Data)</span>.
-</p>
-</div>
-</div>
-<div id="the-mathematics-of-growth" class="section level3">
-<h3><span class="header-section-number">5.1.2</span> The Mathematics of Growth</h3>
-<p>The mathematical orders of magnitude with exponential growth are sometimes hard to grasp intuitively. This section provides you with some maths to help get an intuitive feel for exponential growth. Let’s consider an economic quantity <span class="math inline">\(y_t\)</span>, growing at a constant rate <span class="math inline">\(g\)</span>. For our purposes in this lecture, <span class="math inline">\(y_t\)</span> is GDP per capita, but it could also veru well be a price level, consumption, or some other economic quantity. Iterating on the difference equation allows to get <span class="math inline">\(y_t\)</span> as a function of the initial value: <span class="math display">\[
-\begin{aligned}
-y_t = (1+g)y_{t-1} \quad \Rightarrow \quad y_t = (1+g)^t y_0.
-\end{aligned}
-\]</span> How fast of a growth is that? The number of years <span class="math inline">\(T\)</span> it takes for GDP per capita to be multiplied by a factor <span class="math inline">\(F\)</span> (where <span class="math inline">\(F=2\)</span>, if we are looking for GDP to double) is given by : <span class="math display">\[
-\begin{aligned}
-&amp;y_t = F y_0 \quad \Rightarrow \quad (1+g)^t y_0 = F y_0 \quad \Rightarrow \quad (1+g)^T = F \\
-&amp; \quad \Rightarrow \quad \ln (1+g)^T = \ln F \quad \Rightarrow \quad T \ln (1+g) = \ln F \\
-&amp; \quad \Rightarrow \quad T=\frac{\ln F}{\ln(1+g)}.
-\end{aligned}
-\]</span> For small rates of growth, we know that a Taylor expansion of the <span class="math inline">\(\ln\)</span> gives <span class="math inline">\(\ln(1+g)=g\)</span>, so that this formula can be approximated by: <span class="math display">\[T = \frac{\ln F}{g}.\]</span></p>
-<p><strong>Rule of 70.</strong> This formula gives the “rule of 70” for small growth rates. The “rule of 70” states that a quantity which grows at a rate <span class="math inline">\(g\)</span> in percentage terms, takes approximately <span class="math inline">\(70/g\)</span> years to double. This comes from the fact that <span class="math inline">\(100*ln(2) \approx\)</span> 69.3147181. For example, if GDP per capita is growing at 2% per year, then it takes approximately 35 years for it to double: approximately one generation only. If it is growing at 1% per year, it takes approximately 70 years for it to double, so two generations. Whether you grow to be twice as rich as your parents, or twice as rich as your grandparents on average makes a big difference.</p>
-<p><strong>Rule of 230.</strong> The same formula also gives the “rule of 230” for small growth rates. The “rule of 230” states that a quantity which grows at a rate <span class="math inline">\(g\)</span> in percentage terms, takes approximately <span class="math inline">\(230/g\)</span> years to be multiplied by <span class="math inline">\(10\)</span>. This is because: <span class="math inline">\(100*ln(10) \approx\)</span> 230.2585093. Thus, with a 2% growth rate, GDP per capita is multiplied by <span class="math inline">\(10\)</span> over (as an exercise, you may create your own rules…)</p>
-</div>
-<div id="questions" class="section level3">
-<h3><span class="header-section-number">5.1.3</span> Questions</h3>
-<p>The <a href="technology.html#long-run-growth">previous section</a> has shown that economic growth has been 2% on average in advanced economics, in the last two centuries. This raises a number of questions.</p>
-<p><strong>Why is there GDP per capita growth at all?</strong> One major shortcoming of Bob Solow’s Growth model of <a href="solow.html#solow">Lecture 2</a> and of Peter Diamond’s growth model of <a href="olg.html#olg">Lecture 4</a> is that they fail to account for long run economic growth - rather ironically. According to these models, the process of capital accumulation reaches a steady-state at some point, such that capital per capita, GDP per capita, remain forever constant. This happens for intuitive reasons: if the labor force is given, then growth cannot be sustained through capital accumulation alone. In fact, in the Solow model, even a saving rate equal to 100% would lead to very high GDP, but not to constant GDP growth. At one point, the capital stock would be so large that merely maintaining it would consume all output. Output would then be equal to gross saving, and depreciation. This is coming from the fact that at the steady state of the Solow model, gross saving is given by <span class="math inline">\(s Y^{*}\)</span> which would then be equal to <span class="math inline">\(Y^{*}\)</span> (if <span class="math inline">\(s=1=100\%\)</span>), which is also equal to depreciation as: <span class="math display">\[s Y^{*}=\delta K^{*}.\]</span></p>
-<p><strong>The Cross-section of Countries: Rich versus Poor Countries.</strong> The power of compounding is such that even a few decades of lower growth makes a big difference. Given persistent differences in growth rates, per capita GDP is far from being equalized across countries. Contrary to the predictions in the Solow growth model, there has hardly been a strong catch up of poor countries towards the level of rich countries. On one hand of the spectrum, many countries have very small GDP per capita levels.</p>
-
-<table>
-<caption>
-<span id="tab:low-gdp-per-cap">Table 5.1: </span><span style="font-variant: small-caps;">Countries with GDP per capita lower than $1.5K.</span>
-</caption>
-<thead>
-<tr>
-<th style="text-align:center;">
-Country
-</th>
-<th style="text-align:center;">
-GDP per capita
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;">
-Ethiopia
-</td>
-<td style="text-align:center;">
-$ 1,489
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Togo
-</td>
-<td style="text-align:center;">
-$ 1,446
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Sierra Leone
-</td>
-<td style="text-align:center;">
-$ 1,353
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Guinea-Bissau
-</td>
-<td style="text-align:center;">
-$ 1,257
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Madagascar
-</td>
-<td style="text-align:center;">
-$ 1,237
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Mozambique
-</td>
-<td style="text-align:center;">
-$ 1,211
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-D.R. of the Congo
-</td>
-<td style="text-align:center;">
-$ 1,199
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Malawi
-</td>
-<td style="text-align:center;">
-$ 971
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Liberia
-</td>
-<td style="text-align:center;">
-$ 877
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Niger
-</td>
-<td style="text-align:center;">
-$ 868
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Burundi
-</td>
-<td style="text-align:center;">
-$ 840
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Central African Republic
-</td>
-<td style="text-align:center;">
-$ 599
-</td>
-</tr>
-</tbody>
-</table>
-
-<div class="figure" style="text-align: center"><span id="fig:map-gdp-per-capita"></span>
-<img src="ucla-102-fall2018_files/figure-html/map-gdp-per-capita-1.png" alt="2014 GDP per capita, by Country (Penn World Tables)." width="100%" />
-<p class="caption">
-Figure 5.5: <span style="font-variant: small-caps;">2014 GDP per capita, by Country (Penn World Tables)</span>.
-</p>
-</div>
-<p>On the other, some countries have very high GDP per capita. Table <a href="technology.html#tab:high-gdp-per-cap">5.2</a> below shows the countries that have a GDP per capita higher than $40K.</p>
-
-<table>
-<caption>
-<span id="tab:high-gdp-per-cap">Table 5.2: </span><span style="font-variant: small-caps;">Countries with GDP per capita higher than $40K.</span>
-</caption>
-<thead>
-<tr>
-<th style="text-align:center;">
-Country
-</th>
-<th style="text-align:center;">
-GDP per capita
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;">
-Qatar
-</td>
-<td style="text-align:center;">
-$ 146,037
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-China, Macao SAR
-</td>
-<td style="text-align:center;">
-$ 130,758
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Norway
-</td>
-<td style="text-align:center;">
-$ 75,920
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-United Arab Emirates
-</td>
-<td style="text-align:center;">
-$ 68,021
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Kuwait
-</td>
-<td style="text-align:center;">
-$ 67,432
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Brunei Darussalam
-</td>
-<td style="text-align:center;">
-$ 66,968
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Singapore
-</td>
-<td style="text-align:center;">
-$ 66,050
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Luxembourg
-</td>
-<td style="text-align:center;">
-$ 65,842
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Switzerland
-</td>
-<td style="text-align:center;">
-$ 61,570
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-United States
-</td>
-<td style="text-align:center;">
-$ 51,623
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Ireland
-</td>
-<td style="text-align:center;">
-$ 51,224
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Netherlands
-</td>
-<td style="text-align:center;">
-$ 47,392
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Saudi Arabia
-</td>
-<td style="text-align:center;">
-$ 46,772
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Germany
-</td>
-<td style="text-align:center;">
-$ 46,190
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-China, Hong Kong SAR
-</td>
-<td style="text-align:center;">
-$ 45,399
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Austria
-</td>
-<td style="text-align:center;">
-$ 45,158
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Denmark
-</td>
-<td style="text-align:center;">
-$ 43,733
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Australia
-</td>
-<td style="text-align:center;">
-$ 43,590
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Canada
-</td>
-<td style="text-align:center;">
-$ 42,794
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Sweden
-</td>
-<td style="text-align:center;">
-$ 42,117
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-Taiwan
-</td>
-<td style="text-align:center;">
-$ 41,514
-</td>
-</tr>
-</tbody>
-</table>
-<p>Why are poor countries so poor, and largely failing to catch up, and why advanced economies are growing at an average of 2% per year since the beginning of the nineteenth century, are perhaps the potentially most impactful questions for economics, but also those for which economists perhaps know the least. This lecture presents an attempt at endogenizing GDP per capita growth, based on the a very simplified version of <a href="https://en.wikipedia.org/wiki/Paul_Romer">Paul Romer</a>’s endogenous growth model. This may allow us to shed light on some of these issues.</p>
-</div>
-</div>
-<div id="endogenous-growth-model" class="section level2">
-<h2><span class="header-section-number">5.2</span> Endogenous Growth Model</h2>
-<p>Paul Romer was awarded the Nobel Prize in Economic Sciences this year. <a href="https://www.economist.com/finance-and-economics/2018/10/13/paul-romer-and-william-nordhaus-win-the-economics-nobel?fsrc=scn/fb/te/bl/ed/paulromerandwilliamnordhauswintheeconomicsnobelfreeexchange">The Economist</a> is a good coverage of his work. In this section, we present a very simplified version of his much more subtle ideas.</p>
-<div id="objects-vs-ideas" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> Objects VS Ideas</h3>
-<p>A crucial distinction for understanding endogenous growth theory, is that of objects versus ideas.</p>
-<p><strong>Objects.</strong> Objects like houses, food, or cell phones are <strong>rivalrous</strong>. That is, one person’s use of one of these particular objects prevents its use by someone else. Most goods are rivalrous, and this is what leads to scarcity, the central topic of economics.</p>
-<p><strong>Ideas and recipes.</strong> In contrast, ideas are <strong>nonrival</strong>. My use of an idea does not prevent someone else’s use of that idea. For example, after it has been shot, a movie can be shown in any theatre in the world, and for a cost equal to zero on the internet (apart for the cost of electricity, and of storing the movie on servers). Similarly, a recipe for a pharmaceutical drug takes years to develop. However, once the drug has been invented, the cost of producing this drug is typically very small, much smaller than the associated initial fixed cost. Finally, Antonín Dvořák’s 9th Symphony “From the New World” can be performed by any orchestra in the world, <a href="https://www.youtube.com/watch?v=vHqtJH2f1Yk">Gustavo Dudamel’s</a> or <a href="https://www.youtube.com/watch?v=0hmjGbh9qdg&amp;start_radio=1&amp;list=RD0hmjGbh9qdg&amp;t=193">Herbert Von Karajan’s</a>, once Antonín Dvořák has composed it.</p>
-<p>According to Paul Romer, ideas and recipes have the potential to be a source of indefinite economic growth:</p>
-<blockquote>
-<p>Every generation has perceived the limits to growth that finite resources and undesirable side effects would pose if no new recipes or ideas were discovered. And every generation has underestimated the potential for finding new recipes and ideas. We consistently fail to grasp how many ideas remain to be discovered.</p>
-</blockquote>
-<p>As Chad Jones puts it describing Paul Romer’s contributions in a <a href="https://voxeu.org/article/new-ideas-about-new-ideas-paul-romer-nobel-laureate">Vox Eu article</a>:</p>
-<blockquote>
-<p>Once you’ve got increasing returns, growth follows naturally. Output per person then depends on the total stock of knowledge; the stock doesn’t need to be divided up among all the people in the economy. Contrast this with capital in a Solow model. If you add one computer, you make one worker more productive. If you add a new idea – think of the computer code for the first spreadsheet or word processor or even the internet itself – you can make any number of workers more productive. With non-rivalry, growth in income per person is tied to growth in the total stock of ideas – an aggregate – not to growth in ideas per person.</p>
-</blockquote>
-<p>However, ideas implies increasing returns and therefore, potentially inefficient market outcomes.</p>
-</div>
-<div id="increasing-returns" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> Increasing Returns</h3>
-<p>Because of increasing returns, a competitive market economy may not lead to an efficient level of development of ideas. The issue with pure competition is that if a movie director was forced to charge a price equal to the marginal cost of showing a movie, then he would have to charge a zero price for this movie, as it would then be available for everyone to watch on Youtube. Similarly, once a drug against AIDS (for example) has been invented, one would ideally like to give this drug to the largest possible number of people. Indeed, the marginal cost of producing a new drug is much lower than the cost at which it is commercialized. However, this would decrease the incentives to innovate in the first place.</p>
-<p><strong>Patents.</strong> One way that this market failure has historically been addressed, is by granting patents (property rights) on newly invented ideas. (in biology, scientists are sometimes granted 12 years of exclusivity; in chemistry, they may be granted 5 years) Similarly, intellectual property rights, as well as laws against piracy, have the same purpose: they seek to encourage innovation by preventing 0 marginal cost pricing. Note however that patents should not be too strong either, or they discourage the use of new ideas, potentially at a suboptimal level. In fact, historically, especially in periods of high innovation and economic growth, intellectual property rights were relatively weak. When the US was a rising economic power, it was also a notorious pirate of intellectual property, very much like what China is being accused of today.</p>
-<p><strong>Government funded research.</strong> One alternative way through which R&amp;D can be incentivized, while allowing for large dissemination, is to have the allow for government funded research. For example, the Department of Defense’s ARPANET was a precursor of today’s World Wide Web.</p>
-<p><strong>Prizes.</strong> Another way for the government to incentivize fundamental research is to give out prizes, which are a rather inexpensive way to motivate researchers hoping for recognition. The Economics Nobel Prize is one such example. In general, the motivations of researchers are complex, and probably not purely driven by profit seeking. For example, a very large community of developers contributes to open-source software, which is hard to rationalize from an orthodox (individualist) economic standpoint.</p>
-</div>
-<div id="model" class="section level3">
-<h3><span class="header-section-number">5.2.3</span> Model</h3>
-<p>In Paul Romer’s endogenous growth model, there are two types of workers: research workers, whose number is <span class="math inline">\(L_{at}\)</span>, and production workers, whose number is <span class="math inline">\(L_{yt}\)</span>. We denote the share of research workers in total labor by <span class="math inline">\(l\)</span>, so that: <span class="math display">\[L_{at} = l L\]</span> The number of production workers is simply the complement of that, so that: <span class="math display">\[L_{yt} = (1-l)L.\]</span> As an example, if <span class="math inline">\(l=0.10\)</span>, then 10% of the labor force works in the R&amp;D sector. For simplicity, we neglect the role of capital and capital accumulation, an issue that you will take up during sections. Therefore, production is simply given by: <span class="math display">\[Y_{t} =A_{t} L_{yt}\]</span></p>
-<p>Finally, productivity is assumed to grow at a rate that is function of the productivity of the research sector <span class="math inline">\(z\)</span>, overall productivity <span class="math inline">\(A_t\)</span>, and the number of researchers in the research sector <span class="math inline">\(L_{at}\)</span>: <span class="math display">\[\Delta A_{t+1} =z A_{t} L_{at}.\]</span></p>
-</div>
-<div id="solution-2" class="section level3">
-<h3><span class="header-section-number">5.2.4</span> Solution</h3>
-<p>In order to solve this model, we may simply iterate on the production function for new ideas, as a function of the initial value for productivity <span class="math inline">\(A_0\)</span> (just as there was an initial value for capital <span class="math inline">\(K_0\)</span> in the Solow growth model), and using that the number of research workers is <span class="math inline">\(L_{at} = l L\)</span>: <span class="math display">\[
-\begin{aligned}
-&amp; \Delta A_{t+1} = A_{t+1}-A_t =z A_{t} L_{at}\\
-&amp; \quad \Rightarrow \quad  A_{t+1} = (1+z L_{at})A_{t} \\
-&amp; \quad \Rightarrow \quad  A_{t+1}=\left(1+zlL\right)A_{t}\\
-&amp; \quad \Rightarrow \quad  A_{t}=\left(1+zlL\right)^{t}A_{0}.
-\end{aligned}
-\]</span> Replacing then <span class="math inline">\(L_{yt}\)</span> in the production function with <span class="math inline">\(L_{yt} = (1-l)L\)</span>, as well as this endogenous level of productivity, we get: <span class="math display">\[
-\begin{aligned}
-Y_{t}&amp;  =A_{t} L_{yt}\\
-&amp;= \left(1+zlL\right)^{t}A_{0}L_{yt}\\
-&amp;= \left(1+zlL\right)^{t}A_{0}(1-l)L\\
-Y_{t}&amp;= A_{0}(1-l)L \left(1+zlL\right)^{t}
-\end{aligned}
-\]</span></p>
-<p><strong>Change in <span class="math inline">\(l\)</span>.</strong> A change on the research share of workers has too opposing effect. On the one hand, there are less production workers available for production Thus, there is a fall in <span class="math inline">\(L_{yt}\)</span>, which tends to reduce <span class="math inline">\(Y_t\)</span>. On the other, overall growth, which is here given by <span class="math inline">\(g = zlL\)</span>, is then permanently higher.</p>
-</div>
-<div id="shortcomings" class="section level3">
-<h3><span class="header-section-number">5.2.5</span> Shortcomings</h3>
-<p>In Paul Romer’s model, all economic growth comes from R&amp;D. Despite its successes, this model however leaves a number of questions unanswered. For example, it is unclear why poor countries are not able to benefit from “ideas” which are available in rich countries. Ideas being a public good, they are potentially available for anyone to use. Then, productivity <span class="math inline">\(A_t\)</span> should be quite similar in rich and poor countries. Moreover, the endogenous growth model does not really explain why economic growth took off where and when it took off (in the UK, at the beginning of the nineteenth century), a question we started out with.</p>
-<p>If you want to know more, this <a href="https://www.economist.com/finance-and-economics/2018/04/12/economists-understand-little-about-the-causes-of-growth">Economist article</a> gives a number of limitations on the theory of economic growth. In particular, economic historians are still debating the origins of the Industrial Revolution. Important factors that the endogenous growth model neglects are the relative importance of <strong>secure property rights</strong>, the extent to which cultures tolerate <strong>personal ambition</strong>, and other cultural or political factors, all of which certainly matter for economic growth. You may refer to the next section, if you wish to read more about economic growth.</p>
-</div>
-</div>
-<div id="readings---to-go-further-2" class="section level2 unnumbered">
-<h2>Readings - To go further</h2>
-<p><a href="https://doi.org/10.1257/jep.27.1.3">Michele Boldrin and David K. Levine, “The Case against Patents,” Journal of Economic Perspectives 27, no. 1 (February 2013): 3–22.</a></p>
-<p><a href="https://voxeu.org/article/new-ideas-about-new-ideas-paul-romer-nobel-laureate">Chad Jones, New ideas about new ideas: Paul Romer, Nobel laureate, <em>Vox Eu</em>, October 12, 2018.</a></p>
-<p><a href="https://search.proquest.com/docview/2123033147/1417E92D94B43EFPQ/3?accountid=14512">Paul Krugman, Notes on Global Convergence (Wonkish and Off-Point), <em>New York Times</em>, October 20, 2018.</a></p>
-<p>(Gated) <a href="https://www.economist.com/news/leaders/21660522-ideas-fuel-economy-todays-patent-systems-are-rotten-way-rewarding-them-time-fix">Time to fix patents, <em>The Economist</em>, August 8 2015.</a></p>
-<p>(Gated) <a href="https://www.economist.com/international/2015/08/08/a-question-of-utility">A question of utility, <em>The Economist</em>, August 8, 2015.</a></p>
-<p>(Gated) <a href="https://www.economist.com/finance-and-economics/2018/04/12/economists-understand-little-about-the-causes-of-growth">Economists understand little about the causes of growth, <em>The Economist</em>, April 12, 2018.</a></p>
-<p>(Gated) <a href="https://www.economist.com/finance-and-economics/2018/10/13/paul-romer-and-william-nordhaus-win-the-economics-nobel?fsrc=scn/fb/te/bl/ed/paulromerandwilliamnordhauswintheeconomicsnobelfreeexchange">Paul Romer and William Nordhaus win the economics Nobel, <em>The Economist</em>, Oct 13, 2018.</a></p>
+<div id="problem-set-8---solution" class="section level1 unnumbered">
+<h1>Problem Set 8 - Solution</h1>
 
 </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="olg.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="labor-market.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pset8.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -782,7 +363,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fgeerolf/econ102/05-technology.Rmd",
+"link": "https://github.com/fgeerolf/econ102/181-pset8-sol.Rmd",
 "text": "Edit"
 },
 "download": ["ucla-102-fall2018.pdf", "ucla-102-fall2018.epub"],
