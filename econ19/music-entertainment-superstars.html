@@ -49,43 +49,6 @@
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -896,8 +859,12 @@ $1 million
 <div id="highest-grossing-concert-tours" class="section level3">
 <h3><span class="header-section-number">3.1.5</span> Highest grossing concert tours</h3>
 <p>The data comes from the following Wikipedia entry: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_concert_tours">List of highest-grossing concert tours</a>. We first input the data from the Wikipedia page, using the <code>rvest</code> package to extract tables from the html source code:</p>
+
 We then display the first rows of the data:
 <table>
+<caption>
+<span id="tab:highest-grossing-concert">Table 3.5: </span><span style="font-variant: small-caps;">List of Highest Grossing Concert Tours.</span>
+</caption>
 <thead>
 <tr>
 <th style="text-align:center;">
@@ -1057,13 +1024,17 @@ The Police
 </tr>
 </tbody>
 </table>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-20-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-19-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="highest-paid-film-actors" class="section level3">
 <h3><span class="header-section-number">3.1.6</span> Highest paid film actors</h3>
 <p>The data comes from the following Wikipedia entry: <a href="https://en.wikipedia.org/wiki/List_of_highest_paid_film_actors">List of highest paid film actors</a>. We first input the data from the Wikipedia page, using the <code>rvest</code> package to extract tables from the html source code:</p>
+
 We then display the first rows of the data:
 <table>
+<caption>
+<span id="tab:unnamed-chunk-20">Table 3.6: </span><span style="font-variant: small-caps;">List of Highest Paid Film Actors.</span>
+</caption>
 <thead>
 <tr>
 <th style="text-align:center;">
@@ -1336,8 +1307,12 @@ $55,000,000
 <div id="largest-sports-contracts" class="section level3">
 <h3><span class="header-section-number">3.1.7</span> Largest sports contracts</h3>
 <p>The data comes from the following Wikipedia entry: <a href="https://en.wikipedia.org/wiki/List_of_largest_sports_contracts">List of largest sports contracts</a>.</p>
+
 We then display the first rows of the data:
 <table>
+<caption>
+<span id="tab:unnamed-chunk-22">Table 3.7: </span><span style="font-variant: small-caps;">Largest Sports Contracts.</span>
+</caption>
 <thead>
 <tr>
 <th style="text-align:center;">
@@ -1504,8 +1479,12 @@ $217,000,000
 <div id="billionaires-from-forbes" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> Billionaires from Forbes</h3>
 <p>Preparing the data from the Forbes Website.</p>
+
 The first 25 billionaires are:
 <table>
+<caption>
+<span id="tab:unnamed-chunk-24">Table 3.8: </span><span style="font-variant: small-caps;">First 25 Billionaires.</span>
+</caption>
 <thead>
 <tr>
 <th style="text-align:center;">
@@ -1847,19 +1826,19 @@ media
 </ol></li>
 </ol></li>
 </ol>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-26-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-25-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>The Pareto distribution does not work very well for the very top (Bill Gates is not rich enough!)</p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-27-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-26-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="salaries-at-the-university-of-california-uc" class="section level3">
 <h3><span class="header-section-number">3.2.2</span> Salaries at the University of California (UC)</h3>
 <p>The salaries at the University of California are public and available at this website: <a href="https://ucannualwage.ucop.edu/wage/" class="uri">https://ucannualwage.ucop.edu/wage/</a></p>
 <p>The distribution in the tail at the University of California is really well approximated by a Pareto distribution. Below is the plot of wages higher than $250K.</p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-28-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-27-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>The distribution in the tail at the University of California is really well approximated by a Pareto distribution. Below is the plot of wages higher than $400K.</p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-29-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-28-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Below is a zoom on the distribution of wages higher than 1.5 million annual. You can see that the highest paid superstars on campus are the Head Coaches, and superstar physicians. Again, it is striking that these distributions are very well approximated by a Pareto distribution.</p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-30-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-29-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="market-for-executive-officers-in-large-firms" class="section level3">
 <h3><span class="header-section-number">3.2.3</span> Market for Executive Officers in large firms</h3>
