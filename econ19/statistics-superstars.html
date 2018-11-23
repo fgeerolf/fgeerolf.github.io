@@ -191,6 +191,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="statistics-superstars" class="section level1">
 <h1><span class="header-section-number">Lecture 2</span> The Statistical Distibution of Superstars: Gaussian VS Pareto</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pklist &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;rvest&quot;</span>, <span class="st">&quot;scales&quot;</span>, <span class="st">&quot;knitr&quot;</span>)
+<span class="kw">source</span>(<span class="st">&quot;https://fgeerolf.github.io/code/load-packages.R&quot;</span>)
+knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">fig.height =</span> <span class="dv">3</span>, <span class="dt">fig.width =</span> <span class="dv">6</span>, <span class="dt">out.width=</span><span class="st">&quot;100%&quot;</span>, <span class="dt">fig.align =</span> <span class="st">&quot;center&quot;</span>, <span class="dt">comment =</span> <span class="st">&quot;#&quot;</span>, <span class="dt">echo =</span> <span class="ot">FALSE</span>, <span class="dt">warning =</span> <span class="ot">FALSE</span>)
+<span class="kw">options</span>(<span class="dt">tibble.print_max =</span> <span class="dv">100</span>)</code></pre></div>
 <p>During this course, we shall try to understand a technical passage in Sherwin Rosen’s <a href="https://www.jstor.org/stable/41210977"><em>The American Scholar</em> piece</a>:</p>
 <blockquote>
 <p>Of particular interest here is an observation, first studied systematically by the great Italian economist Vilfredo Pareto in the late nineteenth century, that the distribution of income contains an <strong>unusually large proportion of top earners</strong>: that is, among the rich rather than the poor. A visual image will perhaps clarify what is meant by “unusual” in this connection. Imagine a graph plotting IQ scores on the horizontal and the frequency of scores on the vertical. The result is a familiar bell-shaped curve. The peak of the bell occurs at a score arbitrarily scaled at 100 and the curve falls symmetrically on either side of 100. Now picture a similar graph, except with earnings on the horizontal. The resulting curve is unbalanced and nonsymmetrical - a bell that is definitely out of whack. To the left of the modal (peak) value it appears much like the IQ frequency curve. However, to the right of the mode it does not fall as fast as it does to the left. It looks as if someone had stood at the right end of the curve, placed it over his back like a rope, and dragged and stretched it out a very long distance. <strong>The upper or right-hand tail of the distribution of income is much thicker</strong> than the lower, left-hand tail. The extra weight on the right lends a certain skewness to the distribution of income. <strong>What this comes down to is that the distribution of earnings is far from proportionate to the distribution of ability.</strong> Amazingly, Pareto’s observations have been qualitatively duplicated in virtually every era of every society for which data on income distributions can be found.</p>
@@ -209,10 +213,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>The Bell shape curve is defined by a density function given by: <span class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(x-\mu)^2}{\sigma^2}\right).\]</span> One implication is that the density of a Bell Shaped curve goes very rapidly to zero as <span class="math inline">\(x\)</span> goes to infinity. When premultiplied by any power function <span class="math inline">\(x^a\)</span>, no matter how large <span class="math inline">\(a\)</span>, the density of a Bell-shaped curve still converges to zero, which means that the density is negligible compared to any power function when <span class="math inline">\(x\)</span> to infinity: <span class="math display">\[\text{for all } a&gt;0, \quad \lim_{x \to +\infty} x^a f(x) =0.\]</span></p>
 <p>Intuitively, this means that the Gaussian Distribution goes “very fast” to zero as <span class="math inline">\(x\)</span> becomes large, faster in fact than usual functions which are thought to go very fast to zero (thing, for example of <span class="math inline">\(x^10000\)</span> when <span class="math inline">\(x\)</span> becomes large).</p>
 <p><a href="https://docs.google.com/spreadsheets/d/1PJ9AjF0kDo-Fe5h3f4eAWZgccIjtn6urpA0Uk4OneXc/edit?usp=sharing">Here is a link</a> to the Google Sheets that we created in order to look at the Gaussian distribution. In particular, we were able to plot the density function of a Normal Distribution with <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span>, using the formula above. Note: this Google Sheet is read only. However, you may copy and paste from this Google Sheet, and choose your own values for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
-<img src="figures/bell-shaped.png" alt="\label{fig::fig4}\textsc{Bell Shaped Curve}" width="400px" />
+
+<div class="figure" style="text-align: center"><span id="fig:bell-shaped"></span>
+<img src="figures/bell-shaped.png" alt="Bell Shaped Curve." width="100%" />
 <p class="caption">
-Figure 2.1: 
+Figure 2.1: <span style="font-variant: small-caps;">Bell Shaped Curve</span>.
 </p>
 </div>
 </div>
@@ -225,9 +230,6 @@ Figure 2.1:
 </div>
 <div id="some-real-life-distributions" class="section level2">
 <h2><span class="header-section-number">2.2</span> Some Real-Life Distributions</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pklist &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;rvest&quot;</span>, <span class="st">&quot;scales&quot;</span>, <span class="st">&quot;knitr&quot;</span>)
-<span class="kw">source</span>(<span class="st">&quot;https://fgeerolf.github.io/code/load-packages.R&quot;</span>)
-<span class="kw">options</span>(<span class="dt">tibble.print_max =</span> <span class="dv">100</span>)</code></pre></div>
 <div id="natural-sciences" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Natural Sciences</h3>
 <p>Many distributions in the natural sciences are well described by a Bell-shaped curve. In order to illustrate this, let us use the <a href="https://www.nlsinfo.org/">National Longitudinal Surveys (NLS)</a> from the Bureau of Labor Statistics which tracks the income, education, and life circumstances of a large cohort of Americans across several decades. We use <code>summary</code> in order to summarise our dataset.</p>
@@ -246,17 +248,18 @@ Figure 2.1:
 #  3rd Qu.:51.00                 
 #  Max.   :91.00</code></pre>
 <p>The variable names are pretty self-explanatory. We are in particular interested by the distribution of height, possibly by gender.</p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-8-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-9-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-10-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="cities" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Cities</h3>
 <p>During the class, w have used <a href="https://docs.google.com/spreadsheets/d/1PJ9AjF0kDo-Fe5h3f4eAWZgccIjtn6urpA0Uk4OneXc/edit?usp=sharing">this Google Spreadsheet</a> in order to plot the city size distribution of cities. We note that the result is something that is close to a linear relationship, when the log rank is plotted against the log size, which shows that the distribution is close to Pareto.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
-<img src="figures/city-size-wikipedia.png" alt="\label{fig::fig1}\textsc{City Size Distribution}" width="400px" />
+
+<div class="figure" style="text-align: center"><span id="fig:city-size-wikipedia"></span>
+<img src="figures/city-size-wikipedia.png" alt="City Size Distribution." width="100%" />
 <p class="caption">
-Figure 2.2: 
+Figure 2.2: <span style="font-variant: small-caps;">City Size Distribution</span>.
 </p>
 </div>
 <p>We can also download everything in R directly. The data comes from the following Wikipedia entry: <a href="https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population">List of United States cities by population</a>.</p>
@@ -673,8 +676,8 @@ Nevada
 </tr>
 </tbody>
 </table>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-14-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-15-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-12-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-13-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="msas" class="section level3">
 <h3><span class="header-section-number">2.2.3</span> MSAs</h3>
@@ -918,8 +921,8 @@ Las Vegas-Henderson-Paradise, NV MSA
 </tr>
 </tbody>
 </table>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-18-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-19-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-16-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-17-1.png" width="100%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
