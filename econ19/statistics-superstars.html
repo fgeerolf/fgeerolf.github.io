@@ -46,7 +46,6 @@
 
 
 
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 
@@ -185,42 +184,47 @@ Figure 2.1: <span style="font-variant: small-caps;">Bell Shaped Curve</span>.
 <h2><span class="header-section-number">2.2</span> Some Real-Life Distributions</h2>
 <div id="natural-sciences" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Natural Sciences</h3>
-<p>Many distributions in the natural sciences are well described by a Bell-shaped curve. In order to illustrate this, let us use the <a href="https://www.nlsinfo.org/">National Longitudinal Surveys (NLS)</a> from the Bureau of Labor Statistics which tracks the income, education, and life circumstances of a large cohort of Americans across several decades. We use <code>summary</code> in order to summarise our dataset.</p>
-<pre><code>#       earn            height          sex            ed      
-#  Min.   :   200   Min.   :57.50   female:687   Min.   : 3.0  
-#  1st Qu.: 10000   1st Qu.:64.01   male  :505   1st Qu.:12.0  
-#  Median : 20000   Median :66.45                Median :13.0  
-#  Mean   : 23155   Mean   :66.92                Mean   :13.5  
-#  3rd Qu.: 30000   3rd Qu.:69.85                3rd Qu.:16.0  
-#  Max.   :200000   Max.   :77.05                Max.   :18.0  
-#       age              race    
-#  Min.   :18.00   black   :112  
-#  1st Qu.:29.00   hispanic: 66  
-#  Median :38.00   other   : 25  
-#  Mean   :41.38   white   :989  
-#  3rd Qu.:51.00                 
-#  Max.   :91.00</code></pre>
-<p>The variable names are pretty self-explanatory. We are in particular interested by the distribution of height, possibly by gender.</p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-8-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-9-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Many distributions in the natural sciences are well described by a Bell-shaped curve. In order to illustrate this, let us use the <a href="https://www.nlsinfo.org/">National Longitudinal Surveys (NLS)</a> from the Bureau of Labor Statistics which tracks the income, education, and life circumstances of a large cohort of Americans across several decades. The below figures shows the distribution of height in the population, first for both genders, and then for male and female separately.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:heights-fig"></span>
+<img src="ucla-19-fall2018_files/figure-html/heights-fig-1.png" alt="Distribution of Height in the National Longitudinal Surveys (NLS)." width="100%" />
+<p class="caption">
+Figure 2.2: <span style="font-variant: small-caps;">Distribution of Height in the National Longitudinal Surveys (NLS)</span>.
+</p>
+</div>
+
+<div class="figure" style="text-align: center"><span id="fig:male-heights-fig"></span>
+<img src="ucla-19-fall2018_files/figure-html/male-heights-fig-1.png" alt="Male Distribution of Height in the National Longitudinal Surveys (NLS)." width="100%" />
+<p class="caption">
+Figure 2.3: <span style="font-variant: small-caps;">Male Distribution of Height in the National Longitudinal Surveys (NLS)</span>.
+</p>
+</div>
+
+<div class="figure" style="text-align: center"><span id="fig:female-heights-fig"></span>
+<img src="ucla-19-fall2018_files/figure-html/female-heights-fig-1.png" alt="Female Distribution of Height in the National Longitudinal Surveys (NLS)." width="100%" />
+<p class="caption">
+Figure 2.4: <span style="font-variant: small-caps;">Female Distribution of Height in the National Longitudinal Surveys (NLS)</span>.
+</p>
+</div>
 </div>
 <div id="cities" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Cities</h3>
 <p>During the class, w have used <a href="https://docs.google.com/spreadsheets/d/1PJ9AjF0kDo-Fe5h3f4eAWZgccIjtn6urpA0Uk4OneXc/edit?usp=sharing">this Google Spreadsheet</a> in order to plot the city size distribution of cities. We note that the result is something that is close to a linear relationship, when the log rank is plotted against the log size, which shows that the distribution is close to Pareto.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:city-size-wikipedia"></span>
-<img src="figures/city-size-wikipedia.png" alt="City Size Distribution." width="100%" />
+<img src="figures/city-size-wikipedia.png" alt="City Size Distribution, Pareto Plot." width="100%" />
 <p class="caption">
-Figure 2.2: <span style="font-variant: small-caps;">City Size Distribution</span>.
+Figure 2.5: <span style="font-variant: small-caps;">City Size Distribution, Pareto Plot</span>.
 </p>
 </div>
 <p>We can also download everything in R directly. The data comes from the following Wikipedia entry: <a href="https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population">List of United States cities by population</a>.</p>
+<p>Biggest cities:</p>
 
-Biggest cities:
+
+
 <table>
 <caption>
-<span id="tab:unnamed-chunk-11">Table 2.1: </span><span style="font-variant: small-caps;">Biggest Cities in the United States.</span>
+<span id="tab:unnamed-chunk-7">Table 2.1: </span><span style="font-variant: small-caps;">Biggest Cities in the United States.</span>
 </caption>
 <thead>
 <tr>
@@ -633,17 +637,29 @@ Nevada
 </tr>
 </tbody>
 </table>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-12-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-13-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:most-populated-US-cities-fig"></span>
+<img src="ucla-19-fall2018_files/figure-html/most-populated-US-cities-fig-1.png" alt="Most populated cities in the U.S. (&gt; 250,000), Pareto Plot." width="100%" />
+<p class="caption">
+Figure 2.6: <span style="font-variant: small-caps;">Most populated cities in the U.S. (&gt; 250,000), Pareto Plot.</span>
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:most-populated-US-cities-fig2"></span>
+<img src="ucla-19-fall2018_files/figure-html/most-populated-US-cities-fig2-1.png" alt="Most populated cities in the U.S. (&gt; 500,000), Pareto Plot." width="100%" />
+<p class="caption">
+Figure 2.7: <span style="font-variant: small-caps;">Most populated cities in the U.S. (&gt; 500,000), Pareto Plot.</span>
+</p>
+</div>
 </div>
 <div id="msas" class="section level3">
 <h3><span class="header-section-number">2.2.3</span> MSAs</h3>
 <p>Instead of cities, we can look at MSAs instead. The data comes from the following Wikipedia entry: <a href="https://en.wikipedia.org/wiki/List_of_metropolitan_statistical_areas">List of metropolitan statistical areas</a>.</p>
 
+
+
 The list of the 28 largest Metropolitan Statistical Areas is as follows.
 <table>
 <caption>
-<span id="tab:unnamed-chunk-15">Table 2.2: </span><span style="font-variant: small-caps;">Biggest Metropolitan Statistical Areas (MSAs) in the United States.</span>
+<span id="tab:unnamed-chunk-9">Table 2.2: </span><span style="font-variant: small-caps;">Biggest Metropolitan Statistical Areas (MSAs) in the United States.</span>
 </caption>
 <thead>
 <tr>
@@ -882,8 +898,18 @@ Las Vegas-Henderson-Paradise, NV MSA
 </tr>
 </tbody>
 </table>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-16-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="ucla-19-fall2018_files/figure-html/unnamed-chunk-17-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:most-populated-US-MSAs-fig"></span>
+<img src="ucla-19-fall2018_files/figure-html/most-populated-US-MSAs-fig-1.png" alt="Most populated MSAs in the U.S. (&gt; 600,000), Pareto Plot." width="100%" />
+<p class="caption">
+Figure 2.8: <span style="font-variant: small-caps;">Most populated MSAs in the U.S. (&gt; 600,000), Pareto Plot.</span>
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:most-populated-US-MSAs-fig2"></span>
+<img src="ucla-19-fall2018_files/figure-html/most-populated-US-MSAs-fig2-1.png" alt="Most populated MSAs in the U.S. (&gt; 1,900,000), Pareto Plot." width="100%" />
+<p class="caption">
+Figure 2.9: <span style="font-variant: small-caps;">Most populated MSAs in the U.S. (&gt; 1,900,000), Pareto Plot.</span>
+</p>
+</div>
 
 </div>
 </div>
