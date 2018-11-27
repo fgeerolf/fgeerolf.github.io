@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="keynes.ico" type="image/x-icon">
-<link rel="prev" href="intro-cobb.html">
-<link rel="next" href="two-period.html">
+<link rel="prev" href="open.html">
+<link rel="next" href="pset1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -350,179 +350,121 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="solow" class="section level1">
-<h1><span class="header-section-number">Lecture 2</span> The Solow Growth Model</h1>
-<p>What are the sources of GDP growth, and of GDP differences across countries? As a matter of pure accounting, the supply-side approach to GDP presented in lecture <a href="intro-cobb.html#intro-cobb">1</a>, with GDP given as <span class="math inline">\(Y_t = A_t K_t^{\alpha} L_t^{1-\alpha},\)</span> implies that growth in GDP may arise from technology, capital, or population. Population is natural, and probably not that interesting from an economist’s point of view, since the object of interest for an economist usually is GDP per capita.<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></p>
-<p>So we are left with two factors of potential interest: capital accumulation, and technology growth. In this lecture, we study the Solow-Swan model of economic growth, which deals with the problem of capital accumulation. We study two versions of this model. Section <a href="solow.html#general-production-f">2.1</a> considers the case of a Solow growth model with a general, constant returns to scale, production function. Section <a href="solow.html#cobb">2.2</a> looks at a special case of the Solow growth model for a case of a Cobb-Douglas production function.</p>
-<div id="general-production-f" class="section level2">
-<h2><span class="header-section-number">2.1</span> General Production Function</h2>
-<div id="the-solow-model" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> The Solow Model</h3>
-<p><strong>Production function.</strong> <a href="https://en.wikipedia.org/wiki/Robert_Solow">Robert Solow</a>, starts from a general production function, giving at any point in time output at time <span class="math inline">\(t\)</span> <span class="math inline">\(Y_t\)</span> as a function of two inputs, capital at time <span class="math inline">\(t\)</span> <span class="math inline">\(K_t\)</span> and labor at time <span class="math inline">\(t\)</span> <span class="math inline">\(L_t\)</span>: <span class="math display">\[Y_t=F\left(K_t,L_t\right).\]</span> He further assumes <strong>constant returns to scale</strong> with respect to capital and labor, so that for any scaling factor <span class="math inline">\(a\)</span>: <span class="math display">\[F(aK_t, aL_t) = aF(K_t, L_t).\]</span> For example, for <span class="math inline">\(a=2\)</span>, when the quantity of labor and the quantity of capital are doubled, then we get double the quantity of output.<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a></p>
-<p>Because of constant returns to scale, everything “scales with population”. For simplicity, we shall assume from now on that the quantity of labor is fixed with <span class="math inline">\(L_t=L\)</span>, so that the production function becomes <span class="math inline">\(Y_t=F(K_t, L)\)</span>. Because of constant returns to scale with respect to capital and labor (and setting <span class="math inline">\(a=1/L\)</span> in the previous expression), we can express everything as a function of output per worker <span class="math inline">\(Y_t/L\)</span> and capital per worker <span class="math inline">\(K_t/L\)</span>: <span class="math display">\[\frac{Y_t}{L}=F\left(\frac{K_t}{L},1\right)=f\left(\frac{K_t}{L}\right),\]</span> where <span class="math inline">\(f\)</span> is defined as a function of <span class="math inline">\(F\)</span> such that: <span class="math display">\[f(x)\equiv F(x,1).\]</span> An example of such a production function is the Cobb-Douglas production function, which we started studying in lecture <a href="intro-cobb.html#intro-cobb">1</a>, and which we look at in section <a href="solow.html#cobb">2.2</a>.</p>
-<p><strong>Saving and Investment.</strong> Robert Solow, in his 1956 contribution, abstracts from public saving, so that <strong>total saving</strong> at time <span class="math inline">\(t\)</span> equals <strong>private saving</strong> at time <span class="math inline">\(t\)</span>, and both are denoted <span class="math inline">\(S_{t}\)</span>, which also equals investment <span class="math inline">\(I_{t}\)</span> at time <span class="math inline">\(t\)</span> : <span class="math display">\[S_{t}=I_{t}.\]</span></p>
-<p>Saving is assumed to be a constant fraction <span class="math inline">\(s\)</span> of output <span class="math inline">\(Y_{t}\)</span>, and therefore: <span class="math display">\[S_{t}=sY_{t}.\]</span></p>
-<p>This constant saving rate my seem a bit ad-hoc; it is. We will investigate more in detail the determinants of saving and consumption behavior in <a href="two-period.html#two-period">lecture 3</a>. This implies that: <span class="math display">\[\boxed{I_t = S_t = sY_t}.\]</span></p>
-<p><strong>Law of motion for capital.</strong> Depreciation of capital is given by a share <span class="math inline">\(\delta\)</span>. Think for example that 8% of the capital stock depreciates each period; the rate of depreciation is much lower for structures, and much higher for computers. The capital stock evolves according to: <span class="math display">\[\boxed{K_{t+1}=\left(1-\delta\right)K_{t}+I_{t}}.\]</span></p>
-</div>
-<div id="law-of-motion-for-capital-per-worker" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Law of motion for capital per worker</h3>
-<p>The law of motion for capital, together with the constant saving rate, implies: <span class="math display">\[K_{t+1}=\left(1-\delta\right)K_{t}+sY_t.\]</span></p>
-<p>Dividing both sides by <span class="math inline">\(L\)</span> to scale everything by the number of worker (so that we are looking at capital per worker, as well as output per worker): <span class="math display">\[\frac{K_{t+1}}{L} =\left(1-\delta\right)\frac{K_{t}}{L}+s\frac{Y_{t}}{L}\quad\Rightarrow\quad\boxed{\frac{K_{t+1}}{L}-\frac{K_{t}}{L}=s\frac{Y_{t}}{L}-\delta\frac{K_{t}}{L}}.\]</span></p>
-<p>The change in the capital stock per worker from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+1\)</span> has two components:</p>
-<ul>
-<li>investment per worker (equivalently, saving per worker) <span class="math inline">\(s Y_t / L\)</span>.</li>
-<li>depreciation per worker <span class="math inline">\(\delta K_t / L\)</span>.</li>
-</ul>
-<p>Therefore, the law of motion for capital per worker is: <span class="math display">\[\underbrace{\frac{K_{t+1}}{L}-\frac{K_{t}}{L}}_{\text{Change in capital }}=\underbrace{sf\left(\frac{K_{t}}{L}\right)}_{\text{Investment}}-\underbrace{\delta\frac{K_{t}}{L}}_{\text{Depreciation}}.\]</span></p>
-</div>
-<div id="steady-state" class="section level3">
-<h3><span class="header-section-number">2.1.3</span> Steady-state</h3>
-<p>The steady state level of the capital stock <span class="math inline">\(K^{*}\)</span> is such that <span class="math inline">\(K_{t+1}=K_{t}=K^{*}\)</span>, and it therefore satisfies: <span class="math display">\[\boxed{sf\left(\frac{K^{*}}{L}\right)=\delta\frac{K^{*}}{L}}.\]</span></p>
-<p>Note that without further specifying <span class="math inline">\(f(.)\)</span>, we can’t say much more about the value of <span class="math inline">\(K^{*}/L\)</span>, we just know it satisfies this implicit equation. The steady-state value of output per worker <span class="math inline">\(Y^{*}/L\)</span>, as a function of <span class="math inline">\(K^{*}/L\)</span> is given by: <span class="math display">\[\frac{Y^{*}}{L}=f\left(\frac{K^{*}}{L}\right).\]</span></p>
-</div>
-<div id="convergence-to-the-steady-state" class="section level3">
-<h3><span class="header-section-number">2.1.4</span> Convergence to the steady-state</h3>
-<p>Without further specifying the shape of the production function, we may identify three cases. In all cases, there is convergence to the steady-state level of capital per worker <span class="math inline">\(K^{*}/L\)</span> which was identified in the previous section.</p>
+<div id="monetary-policy" class="section level1">
+<h1><span class="header-section-number">Lecture 12</span> Monetary Policy</h1>
+<p>In the United States, the Federal Reserve System, a quasi-independant part of the government (at least up to now !), is responsible for setting monetary policy. The U.S. Federal Reserve chooses the level of the short term interest rate, called the <em>federal funds rate</em>. This short term interest rate works through two main channels:</p>
 <ol style="list-style-type: decimal">
-<li><p>If capital per worker is initially relatively low, that is <span class="math inline">\(K_{t}/L&lt;K^{*}/L\)</span>, then investment per worker is larger than depreciation per worker, and therefore from the above equation, capital per worker increases: <span class="math display">\[\boxed{\frac{K_t}{L}&lt;\frac{K^{*}}{L} \quad \Rightarrow \quad \frac{K_{t+1}}{L}&gt;\frac{K_{t}}{L}}.\]</span></p></li>
-<li><p>If capital per worker is exactly equal to steady state capital per worker, that is <span class="math inline">\(K_{t}/L=K^{*}/L\)</span>, then investment per worker is equal to depreciation per worker, and therefore from the above equation, capital per worker stays constant: <span class="math display">\[\boxed{\frac{K_t}{L}=\frac{K^{*}}{L} \quad \Rightarrow \quad \frac{K_{t+1}}{L}=\frac{K_{t}}{L}=\frac{K^{*}}{L}}.\]</span></p></li>
-<li><p>If capital per worker is relatively high, that is <span class="math inline">\(K_{t}/L&gt;K^{*}/L\)</span>, then depreciation per worker is larger than investment per worker, and therefore, capital per worker declines: <span class="math display">\[\boxed{\frac{K_t}{L}&gt;\frac{K^{*}}{L} \quad \Rightarrow \quad \frac{K_{t+1}}{L}&lt;\frac{K_{t}}{L}}.\]</span></p></li>
+<li><p><strong>the exchange rate channel</strong>. By affecting the level of interest rates, the central bank is able to affect nominal exchange rates, and, at least in the short-run, real exchange rates (because prices are sticky). Lower interest rates lead to a lower nominal exchange rate, and therefore, in the short run, to a lower real exchange rate. Devaluations make exports more competitive, and imports more expensive: they may therefore increase exports and reduce imports.</p></li>
+<li><p><strong>the credit channel</strong>. In the U.S. and in the U.K., many homeowners borrow at a rate close to the rate set by the Federal Reserve. With adjustable rate mortgages, the payments of these borrowers automatically follow short term interest rates. When interest rates go up, these payments increase. When interest rates go down, these payments de decrease. Moreover, most households may refinance their loans when interest rate go down; this also allows them to their mortgage payments and increase their disposable income. Both these two effects stimulate aggregate demand and increase GDP.</p></li>
 </ol>
+<div id="the-exchange-rate-channel" class="section level2">
+<h2><span class="header-section-number">12.1</span> The exchange rate channel</h2>
+<div id="the-mundell-trilemma" class="section level3">
+<h3><span class="header-section-number">12.1.1</span> The Mundell Trilemma</h3>
+<p>According to the Mundell policy trilemma (also sometimes called <em>impossible trinity</em>), countries cannot have all three of the following at the same time:</p>
+<ol style="list-style-type: decimal">
+<li>Free capital mobility</li>
+<li>Monetary autonomy</li>
+<li>A fixed foreign exchange rate</li>
+</ol>
+<p>Most countries (apart from China) have found free capital mobility hard to give up, and so they have resorted to the following two options:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Exchange rate targeting.</strong> A clear case is that of countries which simply give up their currency. For example, countries in the Euro area cannot have an independant monetary policy as a result. Many emerging economies (such as Turkey, Argentina) also “peg to the dollar”: they have an exchange rate target in mind.</li>
+<li><strong>Inflation targeting.</strong> Free capital mobility and monetary autonomy: For example, the U.S., the U.K., Japan, the Euro area as a whole operate under such a system. These countries usually resort to <em>inflation targeting</em>: they seek to attain a particular value for inflation.</li>
+</ol>
+<p>Note that the distinction above is artificial, as many countries adopt a mix of the above two options:</p>
+<ul>
+<li><p>Most inflation targeting central banks often operate with exchange rate concerns in mind, as well. For example, Donald Trump does not like when the value of the dollar fluctuates too much, especially when it is led to appreciate. Such a type of intervention is not consistent with pure inflation targeting.</p></li>
+<li><p>On the contrary, fixed exchange rate regimes sometimes collapse, when countries realized that they would like to take back the control of their own monetary policy. (as we shall see, one reason can be to devalue to restore their competitiveness) Such was the case in Argentina in 2001, which abandoned its peg to the dollar; and Greece almost left the European Union for the same reason.</p></li>
+</ul>
 </div>
-</div>
-<div id="cobb" class="section level2">
-<h2><span class="header-section-number">2.2</span> Cobb-Douglas production function</h2>
-<div id="production-function" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Production function</h3>
-<p>Assume now that the production function is a Cobb-Douglas production function, so that:<br />
-<span class="math display">\[F(K,L)=K^{\alpha}L^{1-\alpha}.\]</span> As we saw during lecture <a href="intro-cobb.html#intro-cobb">1</a>, <span class="math inline">\(\alpha\)</span> should be thought of as roughly equal to <span class="math inline">\(1/3\)</span>. This implies then that function <span class="math inline">\(f\)</span> defined above is such that: <span class="math display">\[f(x)=x^{\alpha}.\]</span></p>
-</div>
-<div id="law-of-motion-for-capital" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Law of motion for capital</h3>
-<p>The law of motion for capital is given by:<br />
-<span class="math display">\[\frac{K_{t+1}}{L}=\frac{K_{t}}{L}+s\left(\frac{K_{t}}{L}\right)^{\alpha}-\delta\frac{K_{t}}{L}.\]</span></p>
-<p>Given <span class="math inline">\(L\)</span>, <span class="math inline">\(K_{0}\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(\delta\)</span>, we are able to calculate <span class="math inline">\(K_{1}\)</span>, <span class="math inline">\(K_{2}\)</span>, …, as well as <span class="math inline">\(K_{t}\)</span> for any <span class="math inline">\(t\)</span>, by calculating the quantities of capital successively from the formula above. If you do so, you will notice that <span class="math inline">\(K_{t}\)</span> converges to a steady state value <span class="math inline">\(K^{*}\)</span>. However, you do not need to perform an infinity of operations to get at this <span class="math inline">\(K^{*}\)</span>.</p>
-</div>
-<div id="cobb-solow-steady-state" class="section level3">
-<h3><span class="header-section-number">2.2.3</span> Steady-state</h3>
-<p><strong>Capital per worker.</strong> In the Cobb-Douglas case, there is a simpler way to get steady-state capital per worker: what was an implicit equation in section <a href="solow.html#general-production-f">2.1</a> can now be solved for explicitely. Capital per worker in steady-state <span class="math inline">\(K^{*}/L\)</span> solves: <span class="math display">\[s\left(\frac{K^{*}}{L}\right)^{\alpha}=\delta\frac{K^{*}}{L}\quad\Rightarrow\quad \boxed{\frac{K^{*}}{L}=\left(\frac{s}{\delta}\right)^{\frac{1}{1-\alpha}}}.\]</span></p>
-<p><strong>Output per worker.</strong> The steady-state level of output per worker is then: <span class="math display">\[\boxed{\frac{Y^{*}}{L}=\left(\frac{s}{\delta}\right)^{\frac{\alpha}{1-\alpha}}}.\]</span></p>
-<p><strong>Capital-Output Ratio.</strong> We are also able to compute the capital to output ratio <span class="math inline">\(K^{*}/Y^{*}\)</span> from the Solow growth model: <span class="math display">\[
-\begin{aligned}
-\frac{K^{*}}{Y^{*}}&amp;=\frac{K^{*}/L}{Y^{*}/L}\\
-&amp;=\left(\frac{s}{\delta}\right)^{\frac{1}{1-\alpha}}  \left(\frac{s}{\delta}\right)^{-\frac{\alpha}{1-\alpha}} \\
-\frac{K^{*}}{Y^{*}}&amp;= \frac{s}{\delta}.
-\end{aligned}
-\]</span> Alternatively, you may obtain this expression much more simply by equating saving <span class="math inline">\(sY^{*}\)</span> to investment <span class="math inline">\(\delta K^{*}\)</span> in the steady state: <span class="math display">\[sY^{*} = \delta K^{*} \quad \Rightarrow \quad \boxed{\frac{K^{*}}{Y^{*}} = \frac{s}{\delta}}.\]</span></p>
-<p><strong>MPK.</strong> Another object of potential interest is the steady-state marginal product of capital (also called Rental Rate of capital <span class="math inline">\(R^{*}\)</span>, see lecture <a href="intro-cobb.html#intro-cobb">1</a>: <span class="math display">\[
-\begin{aligned}
-R^{*}&amp;=\alpha \left(K^{*}\right)^{\alpha-1} L^{1-\alpha}\\
-&amp;=\alpha\left(\frac{K^{*}}{L}\right)^{\alpha-1}\\
-&amp;=\alpha\left(\frac{s}{\delta}\right)^{\frac{\alpha-1}{1-\alpha}}\\
-R^{*}&amp;=\frac{\alpha \delta}{s}
-\end{aligned}
-\]</span> Therefore, the steady-state marginal product of capital is given by: <span class="math display">\[\boxed{R^{*}=\frac{\alpha \delta}{s}}.\]</span></p>
-<p><strong>Net MPK.</strong> The net marginal product of capital <span class="math inline">\(r^{*}\)</span>, which is the gross marginal product of capital minus depreciation (relevant for calculating the real return to an investor) is thus given by: <span class="math display">\[
-\begin{aligned}
-r^{*}&amp;=R^{*}-\delta\\
-r^{*}&amp;=\frac{\alpha \delta}{s}-\delta
-\end{aligned}
-\]</span> Therefore, the steady-state <strong>net</strong> marginal product of capital is given by: <span class="math display">\[\boxed{r^{*}=\frac{\alpha \delta}{s}-\delta}.\]</span></p>
-<p><strong>Consumption per worker.</strong> Finally, steady-state consumption per worker is given by: <span class="math display">\[
-\begin{aligned}
-\frac{C^{*}}{L}&amp;=(1-s)\frac{Y^{*}}{L}\\
-&amp;=(1-s)\left(\frac{s}{\delta}\right)^{\frac{\alpha}{1-\alpha}}\\
-\frac{C^{*}}{L}&amp;=\frac{(1-s)s^{\frac{\alpha}{1-\alpha}}}{\delta^{\frac{\alpha}{1-\alpha}}}
-\end{aligned}
-\]</span></p>
-<p>Thus, consumption per capita at the steady-state is: <span class="math display">\[\boxed{\frac{C^{*}}{L}=\frac{(1-s)s^{\frac{\alpha}{1-\alpha}}}{\delta^{\frac{\alpha}{1-\alpha}}}}.\]</span></p>
-</div>
-<div id="golden-rule" class="section level3">
-<h3><span class="header-section-number">2.2.4</span> Golden Rule</h3>
-<p>Most economists believe that policymakers should not care so much about GDP per person, but rather about consumption per person (however, some people hold a different view - we shall talk about that later). The intuition is simple: if an economy was to produce many goods which were only used for investment purposes (which would be the case if <span class="math inline">\(s = 1\)</span>), then people in this economy would be starving, even though it was actually producing a lot. Investment, ultimately, should serve to increase future consumption.</p>
-<p>The <strong>Golden Rule level of capital accumulation</strong> is such that the level of steady-state consumption per capita is maximized. Again, from the previous section, steady-state consumption per capita is given by: <span class="math display">\[
-\begin{aligned}
-\frac{C^{*}}{L}=\frac{(1-s)s^{\frac{\alpha}{1-\alpha}}}{\delta^{\frac{\alpha}{1-\alpha}}}.
-\end{aligned}
-\]</span></p>
-<p>Maximizing this steady state consumption with respect to the saving rate <span class="math inline">\(s\)</span> consists in finding the maximum of that function with respect to <span class="math inline">\(s\)</span>: <span class="math display">\[\frac{d\left(C^{*}/L\right)}{ds}=0\quad\Rightarrow\quad\frac{d\left[(1-s)s^{\frac{\alpha}{1-\alpha}}\right]}{ds}=0.\]</span> Note that <span class="math inline">\(1/\delta^{\alpha/(1-\alpha)}\)</span> is a constant which does not change anything to the maximization. If you are not convinced that it is equivalent to maximize the function of <span class="math inline">\(s\)</span> without the constant, then you may as well compute the derivative with respect to the whole <span class="math inline">\(C^{*}/L\)</span> expression. The first order condition is therefore: <span class="math display">\[-s^{\frac{\alpha}{1-\alpha}}+\frac{\alpha}{1-\alpha}(1-s)s^{\frac{\alpha}{1-\alpha}-1}=0.\]</span> Noting that we can divide by <span class="math inline">\(s^{\alpha/(1-\alpha)}\)</span> and then doing some algebra allows to get at the Golden Rule saving rate: <span class="math display">\[
-\begin{aligned}
-&amp;-1 + \frac{\alpha}{1-\alpha}(1-s)s^{-1}=0\\
-&amp;\quad \Rightarrow\quad\frac{\alpha}{1-\alpha}\frac{1-s}{s}=1\\
-&amp;\quad \Rightarrow \quad \alpha(1-s)=(1-\alpha)s\\
-&amp;\quad \Rightarrow\quad\alpha-\alpha s=s-\alpha s\\
-&amp;\quad\Rightarrow\quad\boxed{s=\alpha}.
-\end{aligned}
-\]</span></p>
-<p>Therefore, the saving rate corresponding to the Golden Rule level of capital accumulation is equal to <span class="math inline">\(\alpha\)</span> (again, taking <span class="math inline">\(\alpha\)</span> to be equal to roughly 1/3, this would suggest that an economy would optimally need to save about a third of its production every year).</p>
-<p>We can then use the expressions that were found in section <a href="solow.html#cobb-solow-steady-state">2.2.3</a>, substituting out the saving rate <span class="math inline">\(s\)</span> with <span class="math inline">\(\alpha\)</span>.</p>
-<p><strong>Capital per worker.</strong> The Golden Rule level of capital accumulation is then such that capital per worker at the steady-state is: <span class="math display">\[\frac{K^{*}}{L}=\left(\frac{s}{\delta}\right)^{\frac{1}{1-\alpha}}\quad\Rightarrow_{s=\alpha}\quad \boxed{\frac{K^{*}_g}{L}=\left(\frac{\alpha}{\delta}\right)^{\frac{1}{1-\alpha}}}.\]</span></p>
-<p><strong>Output per worker.</strong> At the Golden Rule, steady-state GDP per worker is: <span class="math display">\[\frac{Y^{*}}{L}=\left(\frac{s}{\delta}\right)^{\frac{\alpha}{1-\alpha}}\quad\Rightarrow_{s=\alpha}\quad \boxed{\frac{Y^{*}_g}{L}=\left(\frac{\alpha}{\delta}\right)^{\frac{\alpha}{1-\alpha}}}.\]</span></p>
-<p><strong>Capital-Output Ratio.</strong> At the Golden Rule, the steady-state capital to output ratio is: <span class="math display">\[\frac{K^{*}}{Y^{*}} = \frac{s}{\delta} \quad \Rightarrow_{s=\alpha} \quad \boxed{\frac{K^{*}_g}{Y^{*}_g} = \frac{\alpha}{\delta}}.\]</span></p>
-<p><strong>MPK.</strong> At the Golden Rule, the steady-state Marginal Product of Capital is: <span class="math display">\[
-R^{*}=\frac{\alpha \delta}{s} \quad \Rightarrow_{s=\alpha} \quad \boxed{R^*_g = \delta}.
-\]</span> <em>Note</em>: Another way to see that for the Golden Rule level of capital, the marginal product of capital <span class="math inline">\(R^{*}_g\)</span> necessarily equals the rate of depreciation <span class="math inline">\(\delta\)</span> is to note that maximizing consumption <span class="math inline">\(C^{*}\)</span> is the same as maximizing output minus saving <span class="math inline">\((1-s)Y^{*} = Y^{*} - s Y^{*}\)</span>, and that saving in the steady-state equals depreciation in the steady-state (see above) so that <span class="math inline">\(s Y^{*}=\delta K^{*}\)</span>. Therefore, maximizing consumption <span class="math inline">\(C^{*}\)</span> is maximizing <span class="math inline">\(Y^{*}-\delta K^{*}.\)</span> But the derivative of that expression implies that: <span class="math display">\[
-\begin{aligned}
-&amp;\frac{\partial C^{*}}{\partial K^{*}}=0 \quad \Rightarrow \quad \frac{\partial (Y^{*}-\delta K^{*})}{\partial K^{*}}=0\\
-&amp; \quad \Rightarrow \quad \frac{\partial Y^{*}}{\partial K^{*}}-\delta=0 \quad \Rightarrow \quad R^{*}_g=\delta.
-\end{aligned}
-\]</span> Intuitively, at the steady-state optimum, the annual gain of an additional unit of capital, <span class="math inline">\(\partial Y^{*}/ \partial K^{*}\)</span> in additional output, must equal the cost of paying the resulting annual maintainance cost <span class="math inline">\(\delta\)</span> for this additional unit. If the marginal gain is higher than the marginal cost, then there is not enough capital. Should the marginal gain be lower than the marginal cost, then there would be too much capital. At the optimum, the marginal gain equals the marginal cost, so <span class="math inline">\(R^{*}_g=\delta.\)</span></p>
-<p><strong>Net MPK.</strong> At the Golden Rule, the steady-state net Marginal Product of Capital is: <span class="math display">\[
-r^{*}=\frac{\alpha \delta}{s}-\delta \quad \Rightarrow_{s=\alpha} \quad \boxed{r^*_g = 0}.
-\]</span> Therefore, at the Golden Rule level of capital accumulation, the net marginal product of capital is equal to 0.<br />
-<em>Note</em>: Again, this should be obvious from the previous discussion on <span class="math inline">\(R^{*}_g\)</span>. Maximizing <span class="math inline">\(C^{*}\)</span> is maximizing <span class="math inline">\(Y^{*}-\delta K^{*}\)</span>, and the derivative of this expression is equal to <span class="math inline">\(r^{*}\)</span>. Therefore, at the Golden Rule, the net return is equal to <span class="math inline">\(0\)</span>: <span class="math display">\[\frac{\partial C^{*}}{\partial K^{*}}=0 \quad \Rightarrow \quad \frac{\partial Y^{*}}{\partial K^{*}}-\delta=0 \quad \Rightarrow \quad r^{*}_g=0.\]</span></p>
-<p><strong>Consumption per worker.</strong> Finally, at the Golden Rule, consumption per worker is: <span class="math display">\[
-\begin{aligned}
-\frac{C^{*}}{L}=\frac{(1-s)s^{\frac{\alpha}{1-\alpha}}}{\delta^{\frac{\alpha}{1-\alpha}}} \quad \Rightarrow_{s=\alpha} \quad \boxed{\frac{C^{*}_g}{L}=\frac{(1-\alpha)\alpha^{\frac{\alpha}{1-\alpha}}}{\delta^{\frac{\alpha}{1-\alpha}}}}.
-\end{aligned}
-\]</span></p>
-</div>
-</div>
-<div id="some-data" class="section level2">
-<h2><span class="header-section-number">2.3</span> Some Data</h2>
-<p>Figure <a href="solow.html#fig:gross-sav-inv">2.1</a> plots gross saving and investment in the United States from the World Development Indicators put together by the World Bank. Figure <a href="solow.html#fig:net-sav-inv">2.2</a> plots net saving and gross saving for the U.S.: net saving (gross saving net of depreciation) is slightly higher than 0, but not by much. Figure <a href="solow.html#fig:inv-gdp">2.3</a> plots investment as a % of GDP on a map of the world, while figure <a href="solow.html#fig:sav-gdp">2.4</a> plots gross saving as a % of GDP.</p>
+<div id="nominal-and-real-exchange-rates" class="section level3">
+<h3><span class="header-section-number">12.1.2</span> Nominal and Real Exchange Rates</h3>
+<p>The nominal exchange rate is the price of the domestic currency in terms of foreign currency. For example, and to fix ideas, the Euro-Dollar nominal exchange rate gives the number of euros that one dollar can buy. In other words, it is the price of the U.S. currency in terms of the European currency. On November 19, 2018: <span class="math display">\[E=0.873 \text{ Euro / Dollar.}\]</span></p>
+<p>The real exchange rate is the price of domestic goods in terms foreign goods. For example, the Euro-Dollar real exchange rate gives the number of European goods that U.S. goods can buy. If <span class="math inline">\(P\)</span> is the price of a given good in U.S. dollars, then <span class="math inline">\(E \cdot P\)</span> is a corresponding amount converted in Euros, which allows to buy <span class="math inline">\(E \cdot P/P^{*}\)</span> goods in U.S. dollars. This real exchange rate is denoted by <span class="math inline">\(\epsilon\)</span>: <span class="math display">\[\epsilon=\frac{E \cdot P}{P^{*}}.\]</span></p>
+<p>An increase in <span class="math inline">\(\epsilon\)</span> corresponds to an appreciation. For example, If the price of a new MacBook Pro is $2,650.90 inclusive of tax in the U.S., and the same MacBook Pro has a price equal to 2799 euros in Europe, then the real exchange rate of the U.S. dollar is given by: <span class="math display">\[\epsilon = \frac{0.873 \cdot 2650.90}{2799}=0.827.\]</span> This real exchange rate implies that MacBook Pros are about 17% cheaper to buy in the U.S. When the nominal exchange rate of the U.S. dollar goes up, the real exchange rate also goes up. Of course, MacBook Pros are just one of many examples of goods that can be bought both in the U.S. as well as in Europe. Other goods would give different values for the real exchange rate.</p>
+<p><strong>The Economist’s Big Mac Index.</strong> <em>The Economist</em> magazine has developed a now popular gauge of real exchange rates, based on the price of Big Macs in different cities in the world, which allows to gauge the relative degree of “overvaluation” or “undervaluation” of a currency. Figure <a href="monetary-policy.html#fig:big-mac-economist-1986">12.1</a> shows the first version of this Big Mac Index. For example, the Big Mac was then worth 370 Japanese Yen, which given that the price of the Big Mac in the United States was $1.6 at the time implied that if the prices of the Big Macs were equalized across countries, then 1 dollar should have been worth <strong>370/1.6 = 231 yens</strong> at the time. This is the column “Implied purchasing power parity of the dollar”. However, the observed yen-dollar exchange rate at the time was such that 1 dollar could in fact only buy <strong>154 yens</strong> at the time. This implied an undervaluation of the U.S. dollar equal to <span class="math inline">\((154-231)/231=-33.3\)</span>% of what Big Macs should have suggested it should be.</p>
 
-<div class="figure" style="text-align: center"><span id="fig:gross-sav-inv"></span>
-<img src="econ102-ucla-2018F-geerolf_files/figure-html/gross-sav-inv-1.pdf" alt="Gross Savings and Investment in the U.S. (WDI)." width="100%" height="100%" />
+<div class="figure" style="text-align: center"><span id="fig:big-mac-economist-1986"></span>
+<img src="figures/big-mac-index-1986-economist.jpg" alt="Screenshot of The Economist Website, 2018." width="50%" height="100%" />
 <p class="caption">
-Figure 2.1: <span style="font-variant: small-caps;">Gross Savings and Investment in the U.S. (WDI)</span>.
+Figure 12.1: <span style="font-variant: small-caps;">Screenshot of The Economist Website, 2018</span>.
 </p>
 </div>
+<p>Figure <a href="monetary-policy.html#fig:big-mac-economist-now">12.2</a> shows the big mac index nowadays. It can be observed that GDP per person is a powerful predictor of the level of real exchange rates (at least according to big macs): richer countries have higher real exchange rates on average. You can see this when you do tourism: life is cheaper in poorer countries than in richer ones, when converted to a common currency.</p>
 
-<div class="figure" style="text-align: center"><span id="fig:net-sav-inv"></span>
-<img src="econ102-ucla-2018F-geerolf_files/figure-html/net-sav-inv-1.pdf" alt="Net Savings and Gross savings (WDI)." width="100%" height="100%" />
+<div class="figure" style="text-align: center"><span id="fig:big-mac-economist-now"></span>
+<img src="figures/big-mac-index.jpg" alt="Screenshot of The Economist Website, 2018." width="100%" height="100%" />
 <p class="caption">
-Figure 2.2: <span style="font-variant: small-caps;">Net Savings and Gross savings (WDI)</span>.
-</p>
-</div>
-
-<div class="figure" style="text-align: center"><span id="fig:inv-gdp"></span>
-<img src="econ102-ucla-2018F-geerolf_files/figure-html/inv-gdp-1.pdf" alt="Investment (% of GDP), 2016." width="100%" height="100%" />
-<p class="caption">
-Figure 2.3: <span style="font-variant: small-caps;">Investment (% of GDP), 2016</span>.
-</p>
-</div>
-
-<div class="figure" style="text-align: center"><span id="fig:sav-gdp"></span>
-<img src="econ102-ucla-2018F-geerolf_files/figure-html/sav-gdp-1.pdf" alt="Gross Saving (% of GDP), 2016." width="100%" height="100%" />
-<p class="caption">
-Figure 2.4: <span style="font-variant: small-caps;">Gross Saving (% of GDP), 2016</span>.
+Figure 12.2: <span style="font-variant: small-caps;">Screenshot of The Economist Website, 2018</span>.
 </p>
 </div>
 </div>
-<div id="readings---to-go-further-1" class="section level2 unnumbered">
+<div id="multilateral-exchange-rates" class="section level3">
+<h3><span class="header-section-number">12.1.3</span> Multilateral Exchange Rates</h3>
+<p>In practice, trade is not bilateral, which complicates somewhat the measurement of real exchange rates, and the assessment of competitiveness. Multilateral exchange rates require data on the geographic composition of different country’s trades, in order to properly weight different exchange rates.</p>
+</div>
+<div id="uncovered-interest-parity" class="section level3">
+<h3><span class="header-section-number">12.1.4</span> Uncovered Interest Parity</h3>
+<p>The uncovered interest parity relation is based on the assumption that capital can move freely. If this is so, then investors need to be indifferent between investing in the country’s financial assets, at interest rate <span class="math inline">\(i_t\)</span>, or in foreign country’s financial assets, at interest rate <span class="math inline">\(i_t^{*}\)</span>.</p>
+<p>For concreteness, and to fix ideas, onsider a U.S. investor’s decision thinking about holding U.S. one year bonds yielding <span class="math inline">\(i_t\)</span> or U.K. one-year bonds yielding <span class="math inline">\(i_t^{*}\)</span> instead. Arbitrage implies: <span class="math display">\[1+i_{t}=\left(E_{t}\right)\left(1+i_{t}^{*}\right)\left(\frac{1}{E_{t+1}^{e}}\right)\quad\Rightarrow\quad\boxed{1+i_{t}=\left(1+i_{t}^{*}\right)\frac{E_{t}}{E_{t+1}^{e}}},\]</span> which is called the uncovered interest parity relation or the interest parity relation. This arbitrage relationship comes from trading off the following two options, which therefore must have the same returns: - investing in the home country’s bonds at interest rate <span class="math inline">\(i_t\)</span>. One dollar then yields <span class="math inline">\(i_t\)</span>. - or alternatively, converting this dollar into pounds at exchange rate <span class="math inline">\(E_t\)</span>, investing it in U.K. bonds, earning interest rate <span class="math inline">\(i_t^{*}\)</span>, and then converting it back into dollars (with <span class="math inline">\(E_t \cdot (1+i_t^{*})\)</span> pounds, one expects to get <span class="math inline">\(E_t \cdot (1+i_t^{*})/E_{t+1}^e\)</span> dollars).</p>
+<p>Assuming that expectations of future exchange rates are fixed at a certain level so that <span class="math inline">\(E_{t+1}^e = \bar{E}\)</span>, then this equation implies that: <span class="math display">\[\boxed{E_{t}=\frac{{1+i_{t}}}{1+i_{t}^{*}}\bar{E}}.\]</span></p>
+<p>Therefore:</p>
+<ul>
+<li>when the nominal interest rate goes up, the nominal exchange rate appreciates.</li>
+<li>when the nominal interest rate goes down, the nominal exchange rate depreciates.</li>
+</ul>
+<p>Therefore, the uncovered interest parity equation explains why an easing of monetary policy (lowering of interest rates <span class="math inline">\(i\)</span>) leads to a depreciation of the currency, while a tightening of monetary policy (increase in interest rates) leads to an appreciation of the currency. To the extent that in the short run, movements of real exchange rates are largely determined by the movements of nominal exchange rates, we can understand how monetary policy can influence the level of real exchange rates. In turn, this impacts the competitiveness of its exports, and therefore potentially increases aggregate demand through the boost to net exports <span class="math inline">\(NX\)</span>.</p>
+</div>
+</div>
+<div id="the-credit-channel" class="section level2">
+<h2><span class="header-section-number">12.2</span> The Credit Channel</h2>
+<p>Another very important channel through which monetary policy works is through its effect on the U.S. mortgage markets. There is no better example of this than the last financial crisis.</p>
+<p>In the U.S. and in the U.K., many homeowners borrow at a rate close to the rate set by the Federal Reserve. There are two ways through which monetary policy potentially affects aggregate demand of households:</p>
+<ol style="list-style-type: decimal">
+<li><p>With adjustable rate mortgages, the payments of these borrowers with a mortgage automatically follow short term interest rates. When interest rates go up, these payments increase. When interest rates go down, these payments de decrease.</p></li>
+<li><p>Even with fixed rate mortgages, most households may refinance their loans when interest rate go down; which provides a powerful potential stimulative effect of monetary policy. Indeed, refinancing then allows them to reduce their mortgage payments and increase disposable income. Of course, creditors lose on the other side, but they tend to have much lower marginal propensities to consume.</p></li>
+</ol>
+<p>Figure <a href="monetary-policy.html#fig:GuerrieriUhlig2016-fig17-small">12.3</a> shows that the Federal Funds Rate were kept low for a very long time (Alan Greenspan was then Chairman of the Federal Reserve, from 1987 to 2006), which led to a lot of refinancing activity, and helped boost consumption.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:GuerrieriUhlig2016-fig17-small"></span>
+<img src="figures/GuerrieriUhlig2016-fig17-small.jpg" alt="Fed Funds Rates." width="100%" height="100%" />
+<p class="caption">
+Figure 12.3: <span style="font-variant: small-caps;">Fed Funds Rates</span>.
+</p>
+</div>
+<p>It also led to the buying of many new homes. Many new homeowners were taking on loans at very low interest rates, not realizing that they would not be able to repay them when the Federal Reserve would move interest rates back up. Figure <a href="monetary-policy.html#fig:GuerrieriUhlig2016-fig16-small">12.4</a> shows that many delinquent borrowers during the crisis had indeed taken these adjustable rate mortgages. Starting in 2004, the Federal Reserve started raising interest rates, which increased the mortgage payments to households whose mortgages were reset. Some of them could not make these payments, and so had to default.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:GuerrieriUhlig2016-fig16-small"></span>
+<img src="figures/GuerrieriUhlig2016-fig16-small.png" alt="Delinquency Rates on Mortgages: Prime, Subprime, Adjustable, Fixed." width="100%" height="100%" />
+<p class="caption">
+Figure 12.4: <span style="font-variant: small-caps;">Delinquency Rates on Mortgages: Prime, Subprime, Adjustable, Fixed</span>.
+</p>
+</div>
+<p>One factor was one of the Keynesian feedback effect we have been studying all along. Lower disposable income coming from rising interest rates led to lower aggregate demand, which increased unemployment, causing further declines in incomes, which in turn led to more bankruptcies, in a vicious cycle.</p>
+<p>Michael Burry, a former UCLA undergraduate, saw it coming. Please watch his commencement speech before the next lecture.</p>
+<iframe src="https://www.youtube.com/embed/1CLhqjOzoyE" width="100%" height="400px">
+</iframe>
+<p>Christian Bale plays Michael Burry in the <em>Big Short</em>. It really is a great movie, which is also very accurate on the economics. Below are two excerpts if you want to know more what happened - there are many more clips available on Youtube.<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a></p>
+<iframe src="https://www.youtube.com/embed/Cxjdj5_5yNM" width="100%" height="400px">
+</iframe>
+<iframe src="https://www.youtube.com/embed/MesrrYyuoa4" width="100%" height="400px">
+</iframe>
+</div>
+<div id="readings---to-go-further-11" class="section level2 unnumbered">
 <h2>Readings - To go further</h2>
-<p><a href="https://www.wsj.com/articles/humans-1-robots-0-1381098947?tesla=y">Humans 1, Robots 0, <em>Wall Street Journal</em>, October 6, 2013.</a></p>
-<p>(Gated) <a href="https://www.economist.com/finance-and-economics/2018/04/12/economists-understand-little-about-the-causes-of-growth">Economists understand little about the causes of growth, <em>The Economist</em>, April 12, 2018.</a></p>
+<p><a href="https://search.proquest.com/docview/434348749/fulltext">Michael J. Burry, “I Saw the Crisis Coming. Why Didn’t the Fed?”, <em>The New York Times</em>, April 4, 2010.</a></p>
+<p><a href="https://global.oup.com/academic/product/the-globalization-paradox-9780199652525?lang=en&amp;cc=il">Dani Rodrik, “The Globalization Paradox: Why Global Markets, States, and Democracy Can’t Coexist”, Oxford University Press, 2012.</a></p>
 
 </div>
 </div>
+
+
+
 <div class="footnotes">
 <hr />
-<ol start="5">
-<li id="fn5"><p>Of course, population is very important for discussions of relative economic or military power.<a href="solow.html#fnref5">↩</a></p></li>
-<li id="fn6"><p>This is sometimes called the replication argument. By replicating a factory with the same number of workers, and the same machines in them, then the new factory should be able to produce as much.<a href="solow.html#fnref6">↩</a></p></li>
+<ol start="15">
+<li id="fn15"><p>This is not examinable!<a href="monetary-policy.html#fnref15">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -530,8 +472,8 @@ Figure 2.4: <span style="font-variant: small-caps;">Gross Saving (% of GDP), 201
           </div>
         </div>
       </div>
-<a href="intro-cobb.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="two-period.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="open.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pset1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
