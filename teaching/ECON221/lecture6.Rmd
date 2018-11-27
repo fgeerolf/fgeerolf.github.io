@@ -1,5 +1,5 @@
 ---
-title: \href{https://fgeerolf.github.io/teaching/ECON221/lecture6.pdf}{Lecture 6 - Unconventional Asset Pricing}
+title: \href{https://fgeerolf.github.io/teaching/ECON221/lecture6.pdf}{Lecture 6 - Asset Pricing}
 subtitle: \href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018}
 author: \href{https://fgeerolf.github.io/}{François Geerolf}
 header-includes:
@@ -9,7 +9,7 @@ header-includes:
 - \fancyhf{}
 - \fancyfoot[C]{\thepage}
 - \fancyhead[L]{\href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018 - Geerolf}}
-- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/lecture6.pdf}{Unconventional Asset Pricing}}
+- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/lecture6.pdf}{Asset Pricing}}
 output:
   html_document: default
   pdf_document:
@@ -22,18 +22,13 @@ bibliography: 221.bib
 
 # Introduction {-}
 
-During this lecture, I present the basic theory of asset pricing based on risk aversion, which underlies most textbook asset pricing theory. Two very good, complementary treatments of these approaches, are being offered in @cochrane_asset_2005 and @campbell_financial_2017.
+During this lecture, I presented the basic theory of asset pricing based on risk aversion, which underlies most textbook asset pricing theory. Two very good, complementary treatments of these approaches, are being offered in @cochrane_asset_2005 and @campbell_financial_2017.
 
 I then go through two models offering an "unorthodox" theory of intermediary-based asset pricing, presented in two unpublished papers (@geerolf_leverage_2015 and @geerolf_asset_2017). In @geerolf_asset_2017, I develop a theory of intermediary-based asset pricing, resulting from different skin in the game constraints. Instead of basing intermediary-based asset pricing on intermediaries' risk aversion, as in @he_intermediary_2013 and @brunnermeier_macroeconomic_2014, the theory is based on the scarcity of these different skin in the game constraints. This has some implications which are very similar to intermediary-based asset pricing, such as the increase in risk premia when intermediaries have less wealth (but not because their marginal utility of wealth is then higher!).
 
 In my unpublished job market paper (@geerolf_leverage_2015), which I did not have time to present in class, I in contrast focus on purely financial assets, whose cash flows do not depend on who is currently holding, or even monitoring, the asset. 
 
  Instead of assuming that risk premia are based on interediaries' risk aversion, I model financial frictions explicitely on my job market paper (@geerolf_leverage_2015) @geerolf_asset_2017
- 
-
-# Asset Pricing based on Risk Aversion
-
-This approach to asset pricing is al
  
  
 # Asset Pricing with Heterogeneous Intermediaries (@geerolf_asset_2017)

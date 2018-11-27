@@ -22,9 +22,9 @@ Lecture 2. [html](lecture2.html) / [pdf](lecture2.pdf) / [R](lecture2.R) / [Rmd]
 Lecture 3. [pdf](lecture3-slides.pdf)    
 Lecture 4. [pdf](lecture4-slides.pdf)     
 Lecture 5. [pdf](lecture5-slides.pdf)     
-Lecture 6.  
-Lecture 7.  
-Lecture 8.  
+Lecture 6. [pdf](lecture6-slides.pdf)  
+Lecture 7. [pdf](lecture7-slides.pdf)  
+Lecture 8. [pdf](lecture8-slides.pdf)   
 Lecture 9. [html](lecture9.html) /  [pdf](lecture9.pdf)  
 Lecture 10. [html](lecture10.html) /  [pdf](lecture10.pdf)  
 
