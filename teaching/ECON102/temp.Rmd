@@ -1,0 +1,320 @@
+---
+github-repo: "fgeerolf/econ102"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+biblio-style: apalike
+link-citations: yes
+title: Lecture 13 - Theoretical Controversies
+subtitle: UCLA - Econ 102 - Fall 2018
+author: François Geerolf
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyfoot[C]{\thepage}
+- \fancyhead[L]{UCLA - Econ 102 - Fall 2018 - Geerolf}
+- \fancyhead[R]{Controversies}
+---
+
+\setcounter{section}{12}
+```{r, message = FALSE, echo = FALSE, warning = FALSE}
+knitr::opts_chunk$set(fig.height = 3.375, fig.width = 6, 
+                      out.width="100%", out.height="100%", fig.align = "center", comment = "#",
+                      echo = FALSE, warning = FALSE, dev = "pdf")
+```
+
+# Theoretical Controversies {#theoretical-controversies}
+
+The lecture notes I have written reflect a decision I took to teach you the part of academic macroeconomics which I believe in the most. As _The Economist Magazine_ [explained in a recent article](https://www.economist.com/finance-and-economics/2018/08/09/why-is-macroeconomics-so-hard-to-teach) on the teaching of macroeconomics titled "Why is macroeconomics so hard to teach?":
+
+> Macroeconomics is difficult to teach partly because its theorists (classical, Keynesian, monetarist, New Classical and New Keynesian, among others) disagree about so much. It is difficult also because the textbooks disagree about so little. To reach the widest possible audience, most cover similar material: a miscellany of models that are not always consistent with each other or even with themselves. The result is that many professors must teach things they do not believe.
+
+This is one reason why I have chosen to not use a textbook, and write my own lecture notes.[^price-college] At the same time, I think that at this stage I should tell you exactly about what the theoretical controversies in macroeconomics are. There is substantial disagreement among macroeconomists, surrounding even the most basic questions such as what the cause of unemployment is, whether we should have fiscal stimulus when a recession comes (Austrian economists, for instance, think we should not), whether the trade deficit is a problem (as Donald Trump believes very strongly) or whether public debt is too high and we must work towards achieving government surpluses.
+
+[^price-college]: Another important reason being cost. The inflation rate for college textbooks has been on average $(914.9/315.9)^{1/16}-1 \approx$ 6.9% between 2000 and 2016 (a 16 year period), according to [this data](https://db.nomics.world/BLS/pc/PCU511130511130F21); while at the same time, CPI inflation between 2000 and 2016 has been on average $(244.5/178.8)^{1/16}-1 \approx$ 2% (see [here](https://db.nomics.world/BLS/cu/CUUR0000SA0L1E)).
+
+Even though I know how uncomfortable it is to be taught that we just don't know, and that you probably did not go to college to be told that, I want you to be more informed citizens, and to keep an open mind. I also wish that my macroeconomics instructors had told me that the models they were teaching me were, as _The Economist_ magazine wrote "not always consistent with each other or even with themselves" (this is what I think of the IS-LM model, for instance). Even though some experts sometimes talk very assertively, the truth is that some of the basic questions still are being hotly debated. According to Edgar Fiedler, who was Assistant Secretary of the Treasury for Economic Policy during the presidencies of Richard Nixon and Gerald Ford between 1971 and 1975:
+
+> Ask five economists and you'll get five different answers - six if one went to Harvard.
+
+Similarly, Joan Robinson famously said that:
+
+> The purpose of studying economics is not to acquire a set of ready-made answers to economic questions, but to learn how to avoid being deceived by economists.
+
+During this lecture, we will therefore briefly allude to some of the alternative theories, and discuss what the big theoretical controversies are. I believe that I should not give you with a false impression that macroeconomics has reached a set of definitive answers. Inevitably, this lecture will by nature be a patchwork of different approaches, which are not necessarily consistent with one another. I will try to give you a "map of the land" of what the theoretical controversies are. I think it should be useful for you to read the _Wall Street Journal_, _The Economist_, _The New York Times_. But first, let us discuss the fun educational video: Keynes VS Hayek which I asked you to watch for today.
+
+## Keynes VS Hayek
+
+Figure \@ref(fig:keynes-vs-hayek) is an educational video to give you the main debates between the Keynesian and the so-called "Austrian" school of macroeconomics. For the Austrian school of thought, which has a very pro-market leaning (for example, Ron Paul is an admirer of Friedrich Hayek, a major proponent of this school of thought), the problem with recessions is not the bust but the preceding boom. Therefore, doing a fiscal stimulus, or lowering monetary policy rates during a crisis, is only making macroeconomic problems worse. According to them, business cycles are caused by malinvestments, and too low interest rates during the boom phase.
+
+(ref:keynes-vs-hayek) <span style="font-variant:small-caps;">Keynes VS Hayek Rap Battle</span>.
+
+```{r keynes-vs-hayek, fig.align = "center", fig.cap="(ref:keynes-vs-hayek)", echo = FALSE}
+if( knitr:::is_latex_output() ) {
+  print("Sorry I don't know how to embed videos in PDF: https://www.youtube.com/embed/d0nERTFo-Sk")
+} else if(knitr:::is_html_output()) {
+    knitr::include_url("https://www.youtube.com/embed/d0nERTFo-Sk")
+} else{
+  print("Sorry I don't know how to embed videos in PDF: https://www.youtube.com/embed/d0nERTFo-Sk")
+  }
+```
+
+I believe that this Hayekian view is more influential in policy circles, than in academia. The questions asked by Austrian economists is, I believe, a perfectly. About this Keynes Vs Hayek rap battle, I should warn you that it is misrepresenting Keynesian economics in the way that it is associated to the "sticky wage" issue. As we see in the next section, this is a view of Keynesian economics based on the neoclassical synthesis, which for some economists is perhaps not the best possible representation of Keynes' thought (Joan Robinson famously called it "bastard Keynesianism") - even though I believe that it is also fair to say, that John Maynard Keynes was himself not always the most clear of all.
+
+
+Michael Burry's view is a bit like that too right? He talks about the excesses, the federal Reserve not containing the binge enough.
+
+(ref:michael-burry) <span style="font-variant:small-caps;">Michael Burry's 2012 UCLA Commencement Speech</span>.
+
+```{r michael-burry, fig.align = "center", fig.cap="(ref:michael-burry)", echo = FALSE}
+if( knitr:::is_latex_output() ) {
+  print("Sorry I don't know how to embed videos in PDF: https://www.youtube.com/embed/1CLhqjOzoyE")
+} else if(knitr:::is_html_output()) {
+    knitr::include_url("https://www.youtube.com/embed/1CLhqjOzoyE")
+} else{
+  print("Sorry I don't know how to embed videos in PDF: https://www.youtube.com/embed/1CLhqjOzoyE")
+  }
+```
+
+Gregory Zuckerman, a journalist at the Wall Street Journal, writes in "The Greatest Trade Ever". You can read the following exerpts on [Google Books](https://books.google.com/books?id=TPx0sJJsHa8C&pg=PA76&lpg=PA76&dq=other+times+he+suggested+that+most+of+the+undergraduate+body+was+lazy+michael+burry&source=bl&ots=NsemK6gFGB&sig=L3ZgKRO-_NNE3Bkrs616XN20Mbk&hl=en&sa=X&ved=2ahUKEwj4osnxkPjeAhWpi1QKHVvNAtgQ6AEwAHoECAoQAQ#v=onepage&q=other%20times%20he%20suggested%20that%20most%20of%20the%20undergraduate%20body%20was%20lazy%20michael%20burry&f=false).
+
+> Partly to please his father, Michael enrolled in premed courses at UCLA, like many of his classmates. But he couldn't seem to blend in with the other students, feeling out of place in sunny Southern California. On most nights, classmates headed out to party while Burry waved good-bye 1s from the dorm's study area.
+
+> Burry seemed cocky and tactless to some, and he couldn't figure out how to change the perception. It was as if he were missing some sensitivity chip. During his freshman year, he remarked that the school's premed classes seemed too easy. Other times he suggested that most of the undergraduate body was lazy, and he ridiculed the lengths that classmates took to be accepted by various fraternities and sororities.
+
+> He forced himself to listen rather than dominate conversations but continued to feel strangely disconnected from his classmates. Years later, Burry would be diagnosed with Asperger's syndrome, a variant of autism characterized by difficulties in social interactions.
+
+> His relationships with UCLA's faculty sometimes were just as strained. As a junior majoring in English, he was accused by a teaching assistant of plagiarizing a term paper. The instructor didn't have any proof; he simply said, "All I know is an undergraduate didn't write this."
+
+> Around this time, Burry rediscovered a passion for the stock market, drawn by what he considered to be the meritocracy of investing. It didn't matter if a mutual-fund manager was perceived as arrogant or was socially awkward, Burry figured, just as long as he produced good returns. Making a lot of money seemed among the most concrete and objective signs of success.
+He opened a brokerage account with his summer earnings and skipped lectures to focus on his portfolio, purchasing class notes near the end of each quarter to help cram before final exams. Burry soon switched his major to economics, while still juggling premed courses. 
+
+Burry seemed cocky and tactless to some, and he couldn't figure out how to change the perception. 
+
+Idea that there is actually mal-investment.
+
+One narrative of the financial crisis for example is that there was bad credit
+
+Cf Hyman Minsky: stabilzing an unstable economy.
+
+the idea is consistent with obverlapping generations models of dynamic ineffciiency actually: Ponzi schemes are actually potentially a good thing if really, you are in a Keynesian situation of mising aggregate demand. 
+
+
+The issue of course is that you're raising consumptipn in an unsustainnable fashion
+
+empirically indee the housinng market is very! importat tp the macroeconmy.
+
+See the Big Short
+
+Talk about Monetary Policy
+
+
+### Quotes from Keynes VS Hayek
+
+hayek uses his metro card and keynes buys a limousine
+
+J.M. Keynes was very pretentious actually. "I am the agenda."
+
+Freddie, Keynes. F.A. Keynes
+
+we oppose each other philisophically
+
+i want to stir pockets
+
+play low interest rates (no it's the anilmal spirits
+
+1929 the  i crash
+
+we didn't bounce back - result of sticy wages
+
+had a real plan. boost aggregate demand. I want to stir pockets. 
+
+Play low interest rates. You see it's all about spending. If that flow is getting low, we need more govern,ment spending. Like a say
+
+SAving is destruction. Don't keep money in your pocket or that growth will never lift. 
+
+THe monetary
+
+War, digging ditches
+
+cenral bank: central bank . 
+
+Deficits could be the cure you'll be 
+
+Econ profession. 
+
+We're all keynesians now. I want to stir pockets i want them set free.
+
+Too much agregattion -inore oman action, and justifictaion
+
+Bailouts
+ Deatj and a bunch
+ 
+ don't look for a ciure
+ 
+ real savings comes first if you wanna invest. The market coordinate time andinterest
+ 
+ 
+ The place you should study isn't the bust
+ 
+ malinvestie,t wreck the economy. The fed set
+ 
+ That money is confused for new loanable funds. 
+ the boom plants the seeds for its future destruction
+ 
+ 
+ the boom was a binge, that' s a fact. 
+ 
+ you must cease to invest - odon't use the printing press
+ 
+ and that credit crucnh ain't no liquidity trap
+ 
+ i want to stir pockets i want them set free
+ 
+ The ideas of economists and political philosophers 
+
+## The Neoclassical Synthesis and the Phillips Curve
+
+A majority of Keynesian economists, though not all, have come to adopt a vision of Keynesian economics based on what is called the "neoclassical synthesis", a tradition born at MIT and sometimes also called "American Keynesianism", or new-Keynesian economics. To quote from the third edition of his _Economics_ textbook, Paul Samuelson, a major proponent of that approach, was writing in 1955 that:
+
+> In recent years 90 percent of American economists have stopped being ‘Keynesian economists’ or ‘anti-Keynesian economists.’ Instead they have worked towards a syn- thesis of whatever is valuable in older economics and in modern theories of income determination. The result might be called neo-classical synthesis and is accepted in its broad outlines by all but about 5 per cent of extreme left wing and right wing writers. (Samuelson 1955: 212)
+
+This school of thought holds that the economy is Keynesian in the short-run, and Neoclassical in the long run. This approach is one which is often taught in _Intermediate Macro courses_ in the form of what is called the AS-AD approach. What I would then have taught you, according to this approach, is that in the long run, output is actually determined by technology. 
+
+
+In the 1970s, the Phillips Curve, or the alleged negative relationship between unemployment and inflation, started to break down. Keynesian economists who had embraced the neoclassical synthesis were caught off guard. Keynesian economics started to lose its appeal, even though the version of Keynesian economics which was then rejected had very little resemblance to what John Maynard Keynes had actually been saying. As we saw during this class, Jonn Maynard Keynes was actually much more worried about the issue of too much capital accumulation, or an excess of saving over investment, than about sticky wages. In fact, he did not at all think that wages should be lowered during recessions, as the video "Keynes VS Hayek" suggests. He was arguing exactly the contrary; to hime, if wages were lowered (the way that neoclassical economics would say they should be, following a labor demand shock), then aggregate demand problems would be even more severe, and as a result even more unemployment would follow. For this reason, in lecture \@ref(labor-market) I have chosen to use quotation marks for what we then called "Keynesian" unemployment due to sticky wages. At the same time, Keynesian economics is so associated to sticky wages, or sometimes sticky prices, that I thought you should know that !
+
+
+
+
+Largely because of the failure of this approach to macroeconomics
+
+According to this approach, prices are sticky in the short run but flexible in the long run. Because of markups, firms charge on average a price that is above their marginal costs of production. 
+
+Before he left academia for the policy world, after an exceptional career which led him to become a tenured professor at Harvard University at age 28, Lawrence Summers wrote a piece called "Should Keynesian Economics Dispense with the Phillips curve" (you can read the first pages of this paper on [Google Books](https://books.google.com/books?id=JJm-DAAAQBAJ&pg=PP1&dq=Issues+in+Contemporary+Economics:+Volume+2&hl=en&sa=X&ved=0ahUKEwjEpb7AhfjeAhUjMXwKHdpyBWkQuwUIPzAF#v=onepage&q=Issues%20in%20Contemporary%20Economics%3A%20Volume%202&f=false)), in which he was already criticizing this approach to macroeconomics.
+
+Recently, he has written a paper with Olivier Blanchard, the author of the textbook I advised you to read, called: "Evolution or Revolution"
+
+
+Finally, I want to be clear that the approach to macroeconomics I have taught you by no means is outside of the range of what macroeconomists consider reasonable. For example, it is very close to the views of Lawrence Summers.
+
+there is an important part of the curriculum that is missing from the typical discussions on Keynesian economics: it is that of the Phillips Curve.
+
+
+In doing so, I have left out some parts of the curriculum that I want to talk to you about today. This is useful for you, both to follow discussions on policy, which are influenced by some of these views. I also want to convey the idea that there is currently a rethinnking of policy also be honest that there is currently 
+
+In our approach, we have left this unanswered: in the Keynesian models, output was determined purely by aggregate demand. In the neoclassical approach, outoput was determined purely by aggregate supply.
+
+
+
+## Major issues: Neoclassical Macroeconomuics
+
+I taught macroeconomics without speaking a lot about dynamics, or about expectations. If you go to graduate school, it is likely that you will be taught a very teched up version of lecture \@ref(two-period), where planning by households is very rational, mlargianl propensity to consume is very small, etc. Coming from the criticism of Phillips Curve type of Keynesian analysis, where prices are sticky, the Chicago shcool has said: let say it's purely determined by supply forces instead: 
+
+1. First, Robert Barro: Ricardian equivalence. the timing of taxes does not matter. People anticipate future taxes to come. Idea: to make Keynesian economics irrelavant.
+
+2. Marginal propenisty to consume; how much do people consume, if you give them a check today? If they consume a fraction 0.03 as the permanent income hypothesis suggests, then no Keynesian stimulus is possible. Neoclassical revolution in macro
+
+It's not true
+
+## Long run Keynesian Economics: Secular Stagnation
+
+Initially, both Keynesian economics as well as the firts interpretations was long run Keynesian.
+
+Saving glut from China: US is doing the right thing.
+
+
+Larry Summers: 
+
+> I believe that rather than excessive demand yileding to tempttaion, the larger issue will be insufficient demand produced by a variety of forces that lead to a chronic excess of saving over investment. I would cite as evidence for that concern three types of evidence. First, we have been below target inflation for a long time. Second, the behavior or real interest rates is close to zero over the next 10 years, is substantially suggestive of excess saving over investment. Third, the difficulty now over a long period of time in seeing strong and adequate growth consistent with stable financial conditions. 
+
+> We now believe that the period from 2003 and 2007 involved unsustainable build-ups of asset prices. We know that before that there was a recession in 2000-2001. 
+
+> If you ask what period has the economy grown in a healthy and sustainalble way with sustaiblane financial conditions, that has abeen a significant time
+
+> that perspective needs to inform thought about monetary policy, thought about fiscal policy. 
+
+> Dominant problem is a shortage of demand caused by excess saving over investment: the Keynesian issue that is why I tend towards the revolutiob, rather than the evolution.
+
+
+You can look at this debate with Larry Summers and Olivier Blanchard. I am squarely on Larry Summers'  side:
+
+
+https://www.youtube.com/watch?v=4YwmUg454wI
+
+Central banks have to be prevented from going soft, 
+
+This is an area where Olivier and I are not going to get into agreement. Larry Summers: independance of central banks. Political system had  the temptation. 
+
+Most of the political pressure in central banks
+
+Politicians screw everything up, it's better to have more reasonable people take care of it. 
+
+Political world: has been on the hawkish side of central banks
+
+Isolation from temptation. 
+When the political world is on the hawkish side. Taht's a kind of a problematic argument, in the context of a democracy. 
+
+
+Look for exampe at debt service relative to GDP: it is extraordinarily low by historical standards. 
+I agree with you that one needs to pay apropriate attention to fiscal sustainability. But i think it's appropriate in the same way. 
+
+More on house when the mortgage rate'slaw than when mortgage's rate high.
+
+There is little reason to thik that investment is constrained by the cost of capital. 
+Olivier Blanchard is in favor of an evolution, while Larry Summers 
+
+
+
+## Protectionism?
+
+Keynes and Protection: a policy of protection is desirable to do a Keynesian stimulus. 
+
+Even J.M. Keynes was oscillating between being pro-trade, and advising in favor of the use of tarriffs in certain circumstances. 
+
+As I have said before, if your view is that production should be maximized, then a country sending you free goods, like China is essentially doing, is potentially a cause for concern. On the contrary, Adam Smith was writing very strongly again mercantilists economists of his day, for whom trade was important because it allowed to accumulate gold, and wealth overseas. 
+
+Moreover, as I alluded to in the lecture on the paradox of thrift before, Britain was the main economic power at the beginning of the 19th century. 
+
+
+Or a lecturte on macroeconomic controversies instead: 
+
+- Manufacturing Decline: is it a problem. Navarro VS other economist. Personally, i think that Navarro's veiw can actually be seen as Keynesian in a way. J.M. Keynes' views on protection kept changing however. He was in factor of trade protectionism at some parts of his life, not at other times in his life. Barry Eichengreen 
+
+Dani Rodrik, in particular, has argued
+
+## Financial Crisis
+
+Michael Burry
+
+Models of the Federal Reserve were based on fallacies
+
+His commencement address is, I find, very interesting. He criticizes macroeconomics teaching which he received from professors -- since he was an undergraduate major at UCLA (class of 2002)
+
+"I had bet against America and won," he says
+
+Note that even if he knew, then there still is a question: perhaps there is just too uch capita in teh world
+
+Bankers / creditors always say: it's your fault, you engaged in overconsumption
+
+Keynesian story: there is no other game in town.
+
+## Conclusion
+
+This is a big depressing. But i hope you'll bve a better voter, a better citizen. Whenever someone has strong opinions about public debt or otherwise, it's often just virtue signaling. 
+
+Experts disagree. I think that this savings glut is potentially here to stay for a long time.
+
+
+## Readings - To go further {-}
+
+["Secular Stagnation, Coalmines, Bubbles, and Larry Summers", Paul Krugman,  _New York Times_ Blog Post, November 16, 2013.](https://krugman.blogs.nytimes.com/2013/11/16/secular-stagnation-coalmines-bubbles-and-larry-summers/)
+
+["The Economic Hokum of 'Secular Stagnation'", John B. Taylor, _Wall Street Journal_, January 2, 2014.](https://search.proquest.com/docview/1473347330/6C9B371C00BE4C7BPQ/1?accountid=14512)
+
+["The Age of Secular Stagnation", Larry Summers, _Foreign Affairs_, February 15, 2016.](http://larrysummers.com/2016/02/17/the-age-of-secular-stagnation/)
+
+(Gated) [Why is macroeconomics so hard to teach? _The Economist_, August 9, 2018.](https://www.economist.com/finance-and-economics/2018/08/09/why-is-macroeconomics-so-hard-to-teach)
+
+
