@@ -372,7 +372,7 @@
 <ol start="2" style="list-style-type: decimal">
 <li><p>Writing that <span class="math inline">\(c=c_0+(1-\tau)\cdot (w/p) \cdot l\)</span> and plugging the value of <span class="math inline">\(c\)</span> into the worker’s optimization problem: <span class="math display">\[\max_l \quad c_0 +(1-\tau)\frac{w}{p}l -B\frac{l^{1+\epsilon}}{1+\epsilon}\]</span> The first-order condition (which we can take here as long as <span class="math inline">\(\epsilon&gt;0\)</span>) implies: <span class="math display">\[(1-\tau) \cdot \frac{w}{p} = B\cdot l^{\epsilon} \quad \Rightarrow \quad \boxed{l = \frac{(1-\tau)^{1/\epsilon}}{B^{1/\epsilon}}\left(\frac{w}{p}\right)^{1/\epsilon}}\]</span></p></li>
 <li><p>The number of hours worked is given by replacing out the real wage <span class="math inline">\(w/p\)</span> from the labor demand equation to the labor supply equation, so that: <span class="math display">\[\boxed{l = (1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon}}{B^{1/\epsilon}}}.\]</span> Real pre-tax income is when simply given by the real wage times the number of hours. Since the real wage is simply <span class="math inline">\(A\)</span>, we get: <span class="math display">\[y = \frac{w}{p} \cdot l = A\cdot(1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon}}{B^{1/\epsilon}}.\]</span> Finally: <span class="math display">\[\boxed{y = (1-\tau)^{1/\epsilon}\frac{A^{1/\epsilon+1}}{B^{1/\epsilon}}}.\]</span></p></li>
-<li><p>A numerical application shown on the <a href="https://docs.google.com/spreadsheets/d/1faC3VTuXmo7wo4njkO2ERytzlJmbMgcckVj9ag_Mn6s/edit?usp=sharing">Google Spreadsheet</a> implies that: <span class="math display">\[\underline{l}=(1-\underline{\tau})^{1/\epsilon}\frac{\underline{A}^{1/\epsilon}}{\underline{B}^{1/\epsilon}}\]</span> Therefore: <span class="math display">\[
+<li><p>A numerical application shown on the <a href="https://docs.google.com/spreadsheets/d/1faC3VTuXmo7wo4njkO2ERytzlJmbMgcckVj9ag_Mn6s/edit?usp=sharing">Google Spreadsheet</a> implies that: <span class="math display">\[\underline{l}=(1-\underline{\tau})^{1/\epsilon}\frac{\underline{A}^{1/\epsilon}}{\underline{B}^{1/\epsilon}}.\]</span> Therefore: <span class="math display">\[
 \begin{aligned}
 \underline{l}&amp;=\left(1-\frac{1}{4}\right)^{1/2}\left(\frac{1000000}{28188}\right)^{1/2}\left(\frac{491569855488}{3000000}\right)^{1/2}\\
 \underline{l}&amp;=2088.
@@ -394,22 +394,22 @@
 \end{aligned}
 \]</span> Note that under the assumption of 281 business days in a year, this implies 16 hours a day of work on average (more likely on weekends, or during Thanksgiving!). Income is then given by: <span class="math display">\[
 \begin{aligned}
-\bar{y}&amp;=\bar{A} \bar{l}\\
+\bar{y}&amp;=\bar{A} \cdot \bar{l}\\
 &amp;=\frac{1000000}{6264}\cdot 4176\\
 \bar{y}&amp;\approx666666.66
 \end{aligned}
 \]</span></p></li>
 <li><p>Total output is 20 trillion, 10 trillion coming from the bottom 90% and 10 trillion coming from the top 10%. In million dollars, output of the bottom 90% is: <span class="math display">\[
 \begin{aligned}
-\underline{Y} &amp;= \lambda N \underline{y}\\
-&amp;= (135 \cdot 10^6) \cdot 74074.07\\
+\underline{Y} &amp;= \lambda N \cdot \underline{y}\\
+&amp;\approx (135 \cdot 10^6) \cdot 74074.07\\
 &amp;= 10 \cdot 10^{12}\\
 \underline{Y} &amp;= 10 \text{ trillion}
 \end{aligned}
 \]</span> In million dollars, output of the top 10% is: <span class="math display">\[
 \begin{aligned}
-\bar{Y} &amp;= (1-\lambda) N \bar{y}\\
-&amp;= (15 \cdot 10^6) \cdot 666666.66\\
+\bar{Y} &amp;= (1-\lambda) N \cdot \bar{y}\\
+&amp;\approx (15 \cdot 10^6) \cdot 666666.66\\
 &amp;= 10 \cdot 10^{12}\\
 \bar{Y} &amp;= 10 \text{ trillion}
 \end{aligned}
@@ -422,10 +422,10 @@
 \end{aligned}
 \]</span> which means that this individual pays $7,268 on average per year in taxes. The total taxes paid by this group are: <span class="math display">\[
 \begin{aligned}
-\underline{T} &amp;= \lambda N \underline{t}\\
-&amp;= (135 \cdot 10^6) \cdot 7268\\
-&amp;= 981 \cdot 10^9\\
-\underline{T} &amp;= 981 \text{ billion}
+\underline{T} &amp;= \lambda N \cdot \underline{t}\\
+&amp;\approx (135 \cdot 10^6) \cdot 7268\\
+&amp;\approx 981 \cdot 10^9\\
+\underline{T} &amp;\approx 981 \text{ billion}
 \end{aligned}
 \]</span> The <a href="https://docs.google.com/spreadsheets/d/1faC3VTuXmo7wo4njkO2ERytzlJmbMgcckVj9ag_Mn6s/edit?usp=sharing">Google Spreadsheet</a> shows that lowering the bottom marginal tax rate leads to an increase in hours worked by the bottom 90%, which now is: <span class="math display">\[
 \begin{aligned}
@@ -439,13 +439,13 @@
 \end{aligned}
 \]</span> Therefore, given the lowering of taxes, people decide to work <strong>68.5 hours</strong> more per year - which, accounting for 281 business days in a year, means approximately <strong>15 minutes</strong> more per day. Given the productivity of low income people, which is 35.5 dollars an hour on average (low income here is the bottom 90 %, so their income is not that low!), the increase in annual income given these 15 more minutes of work per day is 2431.75 annual since: <span class="math display">\[
 \begin{aligned}
-\Delta \underline{y} &amp;=  \underline{A} \Delta \underline{h}\\
-&amp;= 35.5 \cdot 68.5\\
-\Delta \underline{y} &amp;= 2431.75.
+\Delta \underline{y} &amp;=  \underline{A} \cdot \Delta \underline{h}\\
+&amp;\approx 35.5 \cdot 68.5\\
+\Delta \underline{y} &amp;\approx 2431.75.
 \end{aligned}
 \]</span> Since there are 135 million people who work this much more, then the total impact on GDP is: <span class="math display">\[
 \begin{aligned}
-\Delta \underline{Y} &amp;= \lambda N \Delta \underline{y}\\
+\Delta \underline{Y} &amp;= \lambda N \cdot \Delta \underline{y}\\
 &amp; \approx (135 \cdot 10^6) \cdot 2431.75\\
 &amp; \approx 328 \cdot 10^9 \\
 \Delta \underline{Y} &amp; \approx  328 \text{ billion}.
@@ -465,10 +465,19 @@
 &amp;  \approx \frac{328}{331}\\
 \text{Ex-ante Multiplier} &amp; \approx 0.99.
 \end{aligned}
-\]</span> <strong>Ex-post tax cut.</strong> The <em>ex-post tax cut</em> is calculated taking into account that the tax reform is cheaper in reality because people increase their labor hours, and they are taxed on this additional income. In other words, there are two effects from the tax cut. First, the marginal tax rate is reduced from 25% to 20%, which applies on all income above $25,000, until the old income <span class="math inline">\(\underline{y}=74074.07\)</span>. Second, all additional income is taxed at rate which is now 20%. Thus, the fall in individual taxes is <span class="math inline">\((74074.07-25000) \cdot 0.05 - \Delta \underline{y} \cdot 0.20=2453.7 - 2431.75 \cdot 0.2 = 2453.7 - 486.35 = 1967.35\)</span>. Therefore, the change in aggregate taxes is given by: <span class="math display">\[
+\]</span> <strong>Ex-post tax cut.</strong> The <em>ex-post tax cut</em> is calculated taking into account that the tax reform is cheaper in reality because people increase their labor hours, and they are taxed on this additional income. In other words, there are two effects from the tax cut. First, the marginal tax rate is reduced from 25% to 20%, which applies on all income above $25,000, until the old income <span class="math inline">\(\underline{y}=74074.07\)</span>, so on the portion <span class="math inline">\(\underline{y}-25000\)</span>. Second, all additional income <span class="math inline">\(\Delta \underline{y}\)</span> is taxed at the marginal tax rate which is now 20%. Thus, the change in individual taxes is: <span class="math display">\[
 \begin{aligned}
-\Delta T &amp;= \lambda N  \cdot \left( (\underline{y}-25000) \cdot 0.05 - \Delta \underline{y} \cdot 0.20 \right)\\
-&amp; \approx - (135 \cdot 10^6) \cdot \left( (74074.07-25000) \cdot 0.05 - \Delta \underline{y} \cdot 0.20 \right)\\
+\Delta t &amp; \approx -(\underline{y}-25000) \cdot 0.05 + \Delta \underline{y} \cdot 0.20 \\
+&amp; \approx -(74074.07-25000) \cdot 0.05 + \Delta \underline{y} \cdot 0.20 \\
+&amp; \approx -2453.7 + 2431.75 \cdot  0.20\\
+&amp; \approx -2453.7 + 486.35 \\
+\Delta t&amp; \approx -1967.35.
+\end{aligned}
+\]</span> Therefore, the change in aggregate taxes is given by: <span class="math display">\[
+\begin{aligned}
+\Delta T &amp;=\lambda  N \cdot \Delta t \\
+&amp; \approx \lambda N  \cdot \left(- (\underline{y}-25000) \cdot 0.05 + \Delta \underline{y} \cdot 0.20 \right)\\
+&amp; \approx (135 \cdot 10^6) \cdot \left( -(74074.07-25000) \cdot 0.05 +\Delta \underline{y} \cdot 0.20 \right)\\
 &amp; \approx - (135 \cdot 10^6) \cdot 1967.35\\
 &amp; \approx -266 \cdot 10^9 \\
 \Delta T &amp; \approx  -266 \text{ billion}.
@@ -505,7 +514,7 @@
 \end{aligned}
 \]</span> Therefore, given the lowering of taxes, high income earners decide to work <strong>203.8 hours</strong> more per year - which, accounting for 281 business days in a year, means approximately <strong>45 minutes</strong> more per day (note that this is more than twice the increase, so it is higher in percentage terms). Given the productivity of high income people, which is 159.64 dollars an hour on average, the increase in annual income given these 45 more minutes of work per day is 32534.6 annual since: <span class="math display">\[
 \begin{aligned}
-\Delta \bar{y} &amp;=  \bar{A} \Delta \bar{h}\\
+\Delta \bar{y} &amp;=  \bar{A} \cdot \Delta \bar{h}\\
 &amp; \approx 159.64 \cdot 203.8\\
 \Delta \bar{y} &amp; \approx 32534.6
 \end{aligned}
