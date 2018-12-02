@@ -336,6 +336,7 @@
 </ul></li>
 <li class="chapter" data-level="R" data-path="pset9-sol.html"><a href="pset9-sol.html"><i class="fa fa-check"></i><b>R</b> Problem Set 9 - Solution</a><ul>
 <li class="chapter" data-level="R.1" data-path="pset9-sol.html"><a href="pset9-sol.html#a-budget-surplus-and-a-trade-deficit-2"><i class="fa fa-check"></i><b>R.1</b> A Budget Surplus and a Trade Deficit</a></li>
+<li class="chapter" data-level="R.2" data-path="pset9-sol.html"><a href="pset9-sol.html#coordination-of-economic-policies-1"><i class="fa fa-check"></i><b>R.2</b> Coordination of Economic Policies</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -529,21 +530,31 @@ S&amp;=(1-t_1)(1-c_1)Y-C_0 - \left(\underline{T}_{0}+\bar{T}_{0}\right)+\left(\u
 \begin{aligned}
 \Delta Y=\frac{\underline{c}_{1}-\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}&gt;0.
 \end{aligned}
-\]</span> Using the value for aggregate taxes <span class="math inline">\(\Delta\underline{T}_{0}+\Delta\bar{T}_{0}=0\)</span>, we showed that: <span class="math display">\[
+\]</span> In the case of the open economy, we get a very similar formula. Indeed, aggregate consumption is given as shown in lecture <a href="redistributive.html#redistributive">9</a> by: <span class="math display">\[C=C_0 -\left(\underline{c}_{1}\underline{T}_0+\bar{c}_{1}\bar{T}_0\right)+c_1 (1-t_1) Y,\]</span> where we have defined the average MPC <span class="math inline">\(c_1\)</span> as a function of <span class="math inline">\(\underline{c}_1\)</span> and <span class="math inline">\(\bar{c}_1\)</span> by: <span class="math display">\[c_{1}\equiv\frac{\lambda\underline{c}_{1}+\left(1-\lambda\right)\gamma\bar{c}_{1}}{\lambda+(1-\lambda)\gamma}.\]</span> Using that <span class="math inline">\(Z\)</span> is <span class="math inline">\(C+I+G+X-M\)</span>, we get: <span class="math display">\[
+\begin{aligned}
+Z   &amp;=C+I+G+X-M\\
+    &amp;=C_0 -\left(\underline{c}_{1}\underline{T}_0+\bar{c}_{1}\bar{T}_0\right)+c_1 (1-t_1) Y + b_{0}+b_{1}Y+G + x_1 Y^{*} - m_1 Y\\
+Z   &amp;=\left[C_0 -\left(\underline{c}_{1}\underline{T}_0+\bar{c}_{1}\bar{T}_0\right)+ b_{0} + G + x_1 Y^{*} \right]+ \left(c_1(1-t_1) + b_1-m_1\right) Y 
+\end{aligned}
+\]</span> Equating output to demand <span class="math inline">\(Z = Y\)</span> gives the value for output: <span class="math display">\[Y=\frac{1}{1-\left(1-t_{1}\right)c_{1}-b_{1}+m_1}\left[C_0-\underline{c}_{1}\underline{T}_{0}-\bar{c}_{1}\bar{T}_{0}+b_{0}+G + x_1 Y^{*}\right]\]</span> A reduction in taxes on the poor <span class="math inline">\(\Delta\underline{T}_{0}&lt;0\)</span>, with an offsetting increase in taxes on high income earners such that <span class="math inline">\(\Delta T_0 = \Delta\underline{T}_{0}+\Delta\bar{T}_{0}=0\)</span> therefore leads to a change in output given by: <span class="math display">\[
+\begin{aligned}
+\Delta Y=\frac{\underline{c}_{1}-\bar{c}_{1}}{1-\left(1-t_{1}\right)c_{1}-b_{1}+m_1}\Delta\bar{T}_{0}&gt;0.
+\end{aligned}
+\]</span> Using the value for aggregate taxes <span class="math inline">\(\Delta\underline{T}_{0}+\Delta\bar{T}_{0}=0\)</span>, we now get that aggregate taxes are higher because of automatic stabilizers, just as in lecture <a href="redistributive.html#redistributive">9</a>: <span class="math display">\[
 \begin{aligned}
 \Delta T&amp;=\Delta\underline{T}_{0}+\Delta\bar{T}_{0}+t_1\Delta Y\\
 &amp;=t_1 \Delta Y\\
-\Delta T&amp;=\frac{t_1\left(\underline{c}_{1}-\bar{c}_{1}\right)}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}.
+\Delta T&amp;=\frac{t_1\left(\underline{c}_{1}-\bar{c}_{1}\right)}{1-\left(1-t_{1}\right)c_{1}-b_{1}+m_1}\Delta\bar{T}_{0}&gt;0.
 \end{aligned}
-\]</span> We also showed that this unambiguously led to a reduction in the public deficit, or an increase in public saving: <span class="math display">\[
+\]</span> This unambiguously leads to a reduction in the public deficit, or an increase in public saving, as in lecture <a href="redistributive.html#redistributive">9</a>, because of automatic stabilizers: <span class="math display">\[
 \begin{aligned}
 \Delta\left(T-G\right)&amp;=\Delta T \\
-\Delta\left(T-G\right)&amp;=\frac{t_1\left(\underline{c}_{1}-\bar{c}_{1}\right)}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}&gt;0.
+\Delta\left(T-G\right)&amp;=\frac{t_1\left(\underline{c}_{1}-\bar{c}_{1}\right)}{1-\left(1-t_{1}\right)c_{1}-b_{1}+m_1}\Delta\bar{T}_{0}&gt;0.
 \end{aligned}
 \]</span> Finally, for the same reason as in the “twin deficits” case, an increase in output leads to a trade deficit because some of the additional demand of the low income falls on imported goods so that: <span class="math display">\[
 \begin{aligned}
 \Delta NX &amp;= -m_1\Delta Y\\
-\Delta NX &amp;=- \frac{m_1\left(\underline{c}_{1}-\bar{c}_{1}\right)}{1-\left(1-t_{1}\right)c_{1}-b_{1}}\Delta\bar{T}_{0}&lt;0
+\Delta NX &amp;=- \frac{m_1\left(\underline{c}_{1}-\bar{c}_{1}\right)}{1-\left(1-t_{1}\right)c_{1}-b_{1}+m_1}\Delta\bar{T}_{0}&lt;0
 \end{aligned}
 \]</span> In other words, we get a trade deficit but a budget surplus. As we shall see during the last lecture of the class, this situation corresponds very well to the U.S. case at the end of the 1990s.</p>
 </div>
