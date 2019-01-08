@@ -1,0 +1,34 @@
+---
+title: "UCLA - Econ 221 - Fall 2018 - Geerolf"
+subtitle: "Topics in Empirical Macro and Finance"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+This website contains all the class material for _Topics in Empirical Macro and Finance (Econ 221)_ I teach in 2nd year Ph.D at UCLA. 
+
+I provide a syllabus for the class and a preliminary timetable below. I give a short introduction to R Statistical Software, which will be useful for the hands-on session (lecture 2), as well as for your replication exercise. I provide some links to miscellaneous resources on researching, writing, presenting, coding, etc.
+
+Syllabus. [html](syllabus.html) / [pdf](syllabus.pdf)  
+Timetable. [html](timetable.html) / [pdf](timetable.pdf)  
+Intro to R. [html](R.html) / [pdf](R.pdf)  
+Miscellaneous resources. [html](useful-resources.html) / [pdf](useful-resources.pdf)
+
+## Lectures
+
+Lecture 1. [pdf](lecture1-slides.pdf)  
+Lecture 2. [html](lecture2.html) / [pdf](lecture2.pdf) / [R](lecture2.R) / [Rmd](lecture2.Rmd)   
+Lecture 3. [pdf](lecture3-slides.pdf)    
+Lecture 4. [pdf](lecture4-slides.pdf)     
+Lecture 5. [pdf](lecture5-slides.pdf)     
+Lecture 6. [pdf](lecture6-slides.pdf)  
+Lecture 7. [pdf](lecture7-slides.pdf)  
+Lecture 8. [pdf](lecture8-slides.pdf)   
+Lecture 9. [html](lecture9.html) /  [pdf](lecture9.pdf)  
+Lecture 10. [html](lecture10.html) /  [pdf](lecture10.pdf)  
+
+## Grading
+
+Replications. [html](papers-to-replicate.html) / [pdf](papers-to-replicate.pdf)  
+Presentations. [html](papers-to-present.html)  / [pdf](papers-to-present.pdf)  

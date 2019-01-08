@@ -1,0 +1,41 @@
+---
+title: \href{https://fgeerolf.github.io/teaching/ECON221/timetable.pdf}{Tentative Timetable}
+subtitle: \href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018}
+author: \href{https://fgeerolf.github.io/}{François Geerolf}
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyhead[L]{\href{syllabus.html}{UCLA - Econ 221 - Fall 2018 - Geerolf}}
+- \fancyfoot[C]{\thepage}
+- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/timetable.pdf}{Tentative Timetable}}
+output:
+  html_document: default
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    toc: no
+---
+
+# Tentative Timetable (preliminary)
+
+Oct 3. Lecture 1 - General Remarks on Empirical Macro and Finance. [slides](lecture1-slides.pdf)
+
+Oct 10. Lecture 2 - Replicating Mian and Sufi. [html](lecture2.html) / [pdf](lecture2.pdf) / [R](lecture2.R)
+
+Oct 17. Lecture 3 - Consumption. [slides](lecture3-slides.pdf)
+
+Oct 24. Lecture 4 - Investment. [slides](lecture4-slides.pdf)
+
+Oct 31. Lecture 5 - Financial Frictions. [slides](lecture5-slides.pdf)
+
+Nov 6. Lecture 6 - Asset Pricing.
+
+Nov 13. Lecture 7 - Low Interest Rate Macroeconomics. 
+
+Nov 20. Lecture 8 - Heterogeneity, Pareto Distributions. 
+
+Nov 27. Presentations 1. [html](lecture9.html) / [pdf](lecture9.pdf)
+
+Dec 5. Presentations 2. [html](lecture10.html) / [pdf](lecture10.pdf)

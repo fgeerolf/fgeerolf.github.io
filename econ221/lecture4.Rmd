@@ -1,0 +1,27 @@
+---
+title: \href{https://fgeerolf.github.io/teaching/ECON221/lecture4.pdf}{Lecture 4 - Investment}
+subtitle: \href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018}
+author: \href{https://fgeerolf.github.io/}{François Geerolf}
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyfoot[C]{\thepage}
+- \fancyhead[L]{\href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018 - Geerolf}}
+- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/lecture4.pdf}{Investment}}
+output:
+  pdf_document:
+    number_sections: true
+    citation_package: natbib
+    fig_caption: yes
+    toc: yes
+  html_document: default
+bibliography: 221.bib
+---
+
+
+# Theory
+
+investment VS accelerator: Tobin's Q.
+What dteremines the capital stock?

@@ -1,0 +1,227 @@
+---
+title: \href{https://fgeerolf.github.io/teaching/ECON221/lecture7-notes.pdf}{Lecture 7 - Low Interest Rates Macro, Long-run Keynesian, etc.}
+subtitle: \href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018}
+author: \href{https://fgeerolf.github.io/}{François Geerolf}
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyfoot[C]{\thepage}
+- \fancyhead[L]{\href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018 - Geerolf}}
+- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/lecture7-notes.pdf}{Low Interest Rates Macro}}
+output:
+  pdf_document:
+    number_sections: true
+    citation_package: natbib
+    fig_caption: yes
+    toc: yes
+  html_document: default
+bibliography: 221.bib
+---
+
+# Introduction {-}
+
+After the war, some Keynesian economists went as far as to consider that there was.... For example, the first model of growth was built by Harrod and Domar, which was a Keynesian economic growth model.
+
+However, the period after the war was largely a period of full employment. Thus, the someber assessments of Keynesian economists had not seem to materialize. @solow_contribution_1956 argued in favor of assuming that saving would always be fully employed, in the sense that there would always be
+
+# J.M. Keynes
+
+Underconsumptionist thought:
+
+- Related to protectionism of Donald Trump.
+- Savings glut of Ben Bernanke
+
+## Some heterodox
+
+[Fiona Maclachlan, “J.A. Hobson and the Economists,” Journal of Post Keynesian Economics 25, no. 2 (2002): 297–308.](https://www.jstor.org/stable/pdf/4538830.pdf)
+
+## The General Theory (@keynes_general_1936)
+
+## 
+
+# Harrod - Domar Model
+
+# Hicksian IS-LM Model: @hicks_mr_1937
+
+
+
+# Neoclassical Synthesis
+
+In the third edition of _Economics_, in 1955, Paul Samuelson wrote:
+
+> In recent years 90 per cent of American Economists have stopped being ‘Keynesian economists’ or ‘anti-Keynesian economists’. Instead they have worked toward a synthesis of whatever is valuable in older economics and in modern theories of income determination. The result might be called neo-classical economics and is accepted in its broad outlines by all but about 5 per cent of extreme left wing and right wing writers.
+
+According to Olivier Blanchard in his [review of the neoclassical synthesis](https://economics.mit.edu/files/677):
+
+> The second main belief was indeed that prices and wages did not adjust very quickly to clear markets. There was broad agreement that markets could not be seen as competitive. But, somewhat surprisingly given the popularity of imperfect competition theories at the time, there was no attempt to think in terms of theories of price and wage setting, with explicit agents setting prices and wages. Instead, the prevailing mode of thinking was in terms of tatonnement, with prices adjusting to excess supply or demand, along the lines of the dynamic processes of adjustment studied by Samuelson in his _Foundations of Economic Analysis_. The Phillips curve, imported to the United States by Samuelson and Solow in 1960, was in that context both a blessing and a curse. It gave strong empirical support to a tatonnement-like relation between the rate of change of nominal wages and the level of unemployment, but it also made less urgent the need for better microeconomic underpinnings of market adjustment. Given the existence of a reliable empirical relation and the perceived difficulty of the theoretical task, it made good sense to work on other and more urgent topics, where the marginal return was higher.
+
+## Trend VS Cycles
+
+If Keynesian effects mostly come from sticky prices, then in the long run, we can abstract from these effects. This allows a very convenient dichotomy between the short run and the long run.
+
+> Because prices and wages eventually adjusted to clear markets, and because policy could avoid prolonged disequilibrium anyway, macroeconomic research could progress along two separate lines. One could study long-run movements in output, employment and capital, ignoring business cycle fluctuations as epiphenomena along the path and using the standard tools of equilibrium analysis.
+
+Interestingly, although this claim was in fact never really proved - and the Harrod-Domar model is one example of a Keynesian model where there are Keynesian problems even in the long run.
+
+The recent renewed attention on secular stagnation issues can be thought of as arising from calling into question these thoughts. 
+
+Before he went to the policy world, Larry Summers in fact strongly challenged these claims
+
+# Solow Growth Model
+
+Certainly because of war destructions, 
+
+> Post-war interest rates were high enough – compared with pre-war rates – to make the liquidity trap less of an issue.
+
+Predicted post-war over-saving to matreialize
+
+> The failure of the widely predicted post-war over-saving to materialize had led to a reassessment of consumption theory. 
+
+## Treasury View
+
+## Sticky Prices Economics
+
+Paul Samuelson and Robert Solow built the neoclassical synthesis
+
+# Phillips Curve
+
+
+
+> The scientific success of the synthesis had been largely due to its empirical success, especially during the Kennedy and the first phase of the Johnson administrations in the United States. As inflation increased in the late 1960s, the empirical success and, in turn, the theoretical foundations of the synthesis were more and more widely questioned.
+
+Inflation increased in the late 1960s
+
+# Overaccumulation of Capital?
+
+## Overlapping-Generations Model
+
+@allais_economie_1947
+
+@samuelson_exact_1958
+
+## @malinvaud_capital_1953
+
+Efficient accumulation of resources?
+
+## 
+
+# 2008-2018: Back to long-run Keynesian?
+
+## Larry Summers' speech
+
+Interestingly, Larry Summers reflects on what he was taught at MIT:
+
+
+In 1991, before moving to the policy world, Larry Summers had written a pretty harsh critique of Phillips Curve based Keynesian economics.
+
+I believe that he has a very strong point when he says:
+
+
+
+
+I try to teach exactly the same things to graduates and undergraduates. I don't really understand why undergraduate macroeconomics and graduate macroeconomics should teach different truths. I encourage you to take a look at [my undergraduate teaching notes here](https://fgeerolf.github.io/teaching/ECON102/) for a reminder on basic macroeconomic issues, which are not necessarily taught in the first year. In particular, you may not have heard about Say's law, the Paradox of Thrift, and other Keynesian concepts. However, these are hard to escape once one starts to think about business cycles.
+
+# Neoclassical Synthesis
+
+I do believe that output can sometimes be demand-determined. However, I am quite skeptical that the neoclassical synthesis can explain everything. In particular, I think that the neo-classicals such as @lucas_after_1978:
+
+> That these predictions were wildly incorrect, and that the doctrine on which they were based is fundamentally flawed, are now simple matters of fact, involving no novelties in economic theory. The task which faces contemporary students of the business cycle is that of sorting through the wreckage, determining which features of that remarkable intellectual event ealted the Keynesian Revolution can be salvaged and put to good use, and which others must be discarded.
+
+Moreover, even Paul Krugman, an ardent proponent of the neoclassical synthesis, has acknowledged the fact that:
+
+
+
+Axel Leijonhufvud, professor emeritus at UCLA, has written a book, called _On Keynesian Economics and the Economics of Keynes_, which is summarized in an AER P&P (@leijonhufvud_keynes_1967) - if you do not know it, you should also read his [masterpiece _Life among the Econ_](http://kimoon.co.kr/gmi/reading/Leijonhufvud-1973.pdf).
+
+> That a model with wage rigidity as its main distinguishing feature should become widely accepted as crystallizing the experience of the unprecedented wage deflation of the Great Depression is one of the more curious aspects of the development of Keynesianism, comparable in this regard to the orthodox view that "money is unimportant" - a conclusion presumably prompted by the worst banking debacle in U.S. history. The emphasis on the "rigidity" of wages, which one finds in the New Economics, reveals the judgment that wages did not fall enough in the early 1930's. Keynes, in contrast, judged that they declined too much by far. It has been noted before that, to Keynes, wage rigidity was a policy recommendation and not a behavioral assumption.
+
+At some point, Paul Samuelson would confidently state that:
+
+>
+
+# Say's Law 
+
+# Phillips Curve
+
+One empirical support for the neoclassical synthesis
+
+
+# Long-run Keynesian theory
+
+Following the neoclassical synthesis, mainstream macroeconomists usually think that the long run is the land of supply-side economics (the Solow growth model, capital accumulation, etc) while the short run is more uncertain. According to New-Keynesian economists, prices are sticky in the short run. According to new-classicals, prices are flexible to a first-order approximation.
+
+
+
+# Balanced growth
+
+The one argument for @cobb_theory_1928 is that there is balanced growth. This is an extremely bad argument !
+
+Labor augmenting technical change explains balanced growth just as well ! 
+
+## @harrod_essay_1939 - @domar_capital_1946 model of growth
+
+@solow_contribution_1956 suggests that the long run is the "land of the margin." However, at the time, in the thirties and fourties, there were reasons to be pessimistic. Not so much during the 1960s, where financial crises had not yet happened.
+
+Interestingly, Harrod-neutral technical change is labor-augmenting. Therefore, the Harrod-Domar model was perfectly aware of that potential issue. Thus, the typical agument in favor of a unitary elasticity, is on very shaky grounds.
+
+The typical argument goes as follows: there has been a large increase in the marginal product of labor in the last century. At the same time, the interest rate has stayed roughly constant. Thus, $w/r$ has risen. If the elasticity between capital and labor was low, then resoutces should have gone to capital. This has not happened (this is because simultaneously the productivity of labor has risen faster than capital)
+$$\frac{wL}{Y}=1-\alpha$$
+
+Moreover, the Keynesian view of the labor market has been based on sticky prices, rather than on a "paradox of thrift" view of growth.
+
+ the capital / labor ratio in the last century. (note this could be accounted for by land) 
+
+Against this backdrop, Flavien Moreau estimates a low elasticity of substitution between capital and labor.
+
+The equations by Sargent: http://www.tomsargent.com/research/Harrod_tom_6.pdf
+
+saving is proportional to national income: 
+$$S_t = s Y_t$$
+
+investment, the demand for saving, is proportional to the growth of national income, 
+
+$$I_t = g(Y_{t+1}-Y_t)$$
+For example, this could arise because we have a fixed proportion production function, so that $K_t$ is just proportional to output.
+
+These conditions imply a necessary condition for the growth of output, compared to that of the saving rate, and the capital/ output ratio (which is, say, 6 in the UNited States)
+
+Domar (1946) attained
+ gs
+the same result in a different model, now often conflated with Harrod’s, and the same
+equation has recently reemerged as Piketty’s Second Fundamental Law of Capitalism.2
+
+saving is proportional to national income
+
+
+# Impacts on taxation issues
+
+Does **class income affect saving propensities**? The answer is necessarily yes.
+
+If, then the rich can be taxed.
+
+This all amounts to: why do the rich save in the first place? Utility for wealth == there is a Pareto improvement in this case. Public debt is a way for them to "feel rich", while at the same time 
+
+Thrift is good for society
+Culture too
+
+However the big issue with public debt is
+
+Paper of Jean Baptiste Michau.
+
+According to neoclassical economics, income taxation must strike a balance between equity and efficiency. Redistributing income leads to efficiency losses, as it dimishes workers' incentives to produce income in the first place. Income redistribution leads to lower output, but also to output that is distributed more equally. According to the first welfare theorem, a market economy leads to a Pareto optimal outcome: it is impossible to make someone better off without making someone else worse off. This basic equity-efficiency trade-off is pervasive in the political debate and underlies much of modern public economics, following @mirrlees_exploration_1971.
+
+However, Keynesian economics provides a mechanism through which more redistribution might actually increase output overall, at the same time as it reduces inequality. The idea that the economy suffers from a shortage of aggregate demand coming from increases in inequality has been put forward recently by mainstream academics such as Raghuram Rajan, former chief economist of the IMF, and now governor at the Bank of England (@rajan_fault_2010), as well as by Robert Reich, US Secretary of Labor from 1993 to 1997 (@reich_aftershock:_2011). 
+
+This was noted by @minsky_john_1976:
+
+> Although class ideas with respect to consumption are alluded to in The General Theory, and although class income affects the saving propensities in the work of Keynesian economists, such as N. Kaldor and J. Robinson, in general in the mainstream Keynesian literature the law for the determination of the surplus (i.e., the consumption function) treats income as a homogeneous glob in determining consumption behavior.
+
+Is income a homogeneous glob in determining consumption behavior? The answer is: no ! Whether the rich or the poor have a higher marginal propensity to consume...
+
+# Keynesian Growth
+
+In the 1990s @solow_contribution_1956
+
+

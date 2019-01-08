@@ -1,0 +1,45 @@
+---
+title: \href{https://fgeerolf.github.io/teaching/ECON221/lecture9.pdf}{Lecture 9 - Presentations 1}
+subtitle: \href{https://fgeerolf.github.io/teaching/ECON221/}{UCLA - Econ 221 - Fall 2018}
+author: \href{https://fgeerolf.github.io/}{François Geerolf}
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyfoot[C]{\thepage}
+- \fancyhead[L]{\href{https://fgeerolf.github.io/teaching/ECON221/index.html}{UCLA - Econ 221 - Fall 2018 - Geerolf}}
+- \fancyhead[R]{\href{https://fgeerolf.github.io/teaching/ECON221/lecture9.pdf}{Presentations 1}}
+output:
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    toc: no
+  html_document: default
+---
+
+# Advice for the Presentation
+
+Most of these papers use regional data in order to eventually answer aggregate questions. You should in particular discuss issues relating to identification of cross-sectional effects, and potential macroeconomic implications of the results. How well do the results square with first-year macro? How do they square with the results we saw in the lectures? What are the advantages and disadvantages of using regional data versus individual level data for the question of interest?
+
+# Schedule
+
+1. [Kerwin Kofi Charles, Erik Hurst, Mariel Schwartz, "The Transformation of Manufacturing and the Decline in U.S. Employment", March 12, 2018.](https://www.nber.org/chapters/c14081.pdf)  [Valerie Ramey's Discussion.](https://www.nber.org/chapters/c14083.pdf)  
+**5:05-5:30PM: Shihan Shen**  
+
+2. [Danny Yagan, “Employment Hysterisis From the Great Recession.”, August 2018.](https://eml.berkeley.edu/~yagan/Hysteresis.pdf)  
+**5:30-5:55PM: Anthony Papac**
+
+3. [Atif R. Mian, Amir Sufi, and Emil Verner, “How Does Credit Supply Expansion Affect the Real Economy? The Productive Capacity and Household Demand Channels,” SSRN Scholarly Paper (Rochester, NY: Social Science Research Network, July 31, 2018)](https://papers.ssrn.com/abstract=2971086)  
+**5:55-6:20PM: Salil Gadgil**
+
+4. [Monetary Policy and the Predictability of Nominal Exchange Rates” by Martin Eichenbaum, Benjamin Johannsen and Sergio Rebelo, February 2018.](https://www.nber.org/papers/w23158). [Adrien Auclert's Discussion.](http://web.stanford.edu/%7Eaauclert/EJR_discussion.pdf)  
+**6:20-6:45PM: Alvaro Boitier**
+
+5. [Suarez Serrato and Wingender (2016) “Estimating Local Fiscal Multipliers.” WP.](http://www.jcsuarez.com/Files/Suarez_Serrato-Wingender-ELFM_Resubmitted_2nd_Round.pdf)  
+**6:45-7:10PM: Sumit Shinde**
+
+6. [Graham McKee and Emil Verner, “The Consumption Response to Extended Unemployment Benefits in the Great Recession,” SSRN Scholarly Paper (Rochester, NY: Social Science Research Network, July 14, 2015).](https://papers.ssrn.com/abstract=2630790)   
+**7:10-7:35PM: Magnus Irie**
+
+
