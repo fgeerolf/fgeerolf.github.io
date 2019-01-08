@@ -1,9 +1,0 @@
----
-github-repo: "fgeerolf/econ102"
-site: bookdown::bookdown_site
-output: bookdown::gitbook
-url: https\://fgeerolf.github.io/econ102/
-biblio-style: apalike
-link-citations: yes
-description: François Geerolf Intermediate Macro Lecture Notes.
-title: Lecture 4 - The Overlapping Generations Model
