@@ -9,7 +9,7 @@ curl_download("http://web.archive.org/web/20100619052721/http://real.wharton.upe
               quiet = FALSE)
 unzip("SUPPLYDATA.zip")
 housing_supply <- read.dta("HOUSING_SUPPLY.dta")
-unlink(c("HOUSING_SUPPLY.dta", "SUPPLYDATA.zip"))
+unlink(c("HOUSING_SUPPLY.dta", "SUPPLYDATA.zip", "readme.txt"))
 
 save(housing_supply, file = "housing_supply.RData")
 
