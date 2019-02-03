@@ -32,5 +32,5 @@ for (year in 2005:2016){
   assign(paste0("zipcode_", year), paste0(year) %>%
            paste0("http://www.nber.org/tax-stats/zipcode/", ., "/zipcode", ., ".csv") %>%
            fread)
-  do.call(save, list(paste0("zipcode_", year), file = paste0("zipcode", year, ".RData")))
+  do.call(save, list(paste0("zipcode_", year), file = paste0("zipcode_", year, ".RData")))
 }
