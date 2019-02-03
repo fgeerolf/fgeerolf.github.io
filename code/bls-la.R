@@ -24,7 +24,7 @@ datasets %>% as.tibble %>% tail(10)
 
 for (i in 2:80){
   file <- datasets[i, "X0"]
-  cat("\nDownloading from BLS Website LA:", file, "\n")
-  assign(file, fread(datasets[i, "X2"]))
+  cat("Downloading from BLS Website LA:", file, "\n")
+  assign(file, datasets[i, "X2"] %>% fread)
   do.call(save, list(file, file = paste0(file, ".RData")))
 }
