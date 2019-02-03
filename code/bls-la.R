@@ -1,4 +1,3 @@
-
 rm(list = ls())
 pklist <- c("tidyverse", "curl", "fredr", "data.table", 
             "pryr", "benchmarkme", "rvest")
