@@ -7,12 +7,6 @@ cat("Model:", get_cpu()$model_name,
     "Go\nNumber of cores:", get_cpu()$no_of_cores, 
     "\nStart: ", format(Sys.time(), "%a %b %d, %Y - %X"), "\n")
 
-CountyCrossWalk_Zillow <- "http://files.zillowstatic.com/research/public/CountyCrossWalk_Zillow.csv" %>%
-  fread %>%
-  select(CountyRegionID_Zillow, fips = FIPS)
-
-save(CountyCrossWalk_Zillow, file = "CountyCrossWalk_Zillow.RData")
-
 curl_download("http://files.zillowstatic.com/research/public/County.zip", 
               destfile = "County.zip", 
               quiet = FALSE)
@@ -26,9 +20,18 @@ for (file in list_files){
   cat("Loading:", file, "\n")
   assign(file, paste0("County/", file, ".csv") %>% 
            fread %>% 
-           gather(variable, value, matches("[0-9][0-9][0-9][0-9]-[0-9][0-9]")))
+           gather(date, value, matches("[0-9][0-9][0-9][0-9]-[0-9][0-9]")))
   do.call(save, list(file, file = paste0(file, ".RData")))
   rm(list = file)
 }
 
 unlink("County", recursive = TRUE)
+
+# Crosswalks --------
+
+
+CountyCrossWalk_Zillow <- "http://files.zillowstatic.com/research/public/CountyCrossWalk_Zillow.csv" %>%
+  fread %>%
+  select(CountyRegionID_Zillow, fips = FIPS)
+
+save(CountyCrossWalk_Zillow, file = "CountyCrossWalk_Zillow.RData")

@@ -20,7 +20,7 @@ for (file in list_files){
   cat("Loading:", file, "\n")
   assign(file, paste0("Zip/", file, ".csv") %>% 
            fread %>% 
-           gather(variable, value, matches("[0-9][0-9][0-9][0-9]-[0-9][0-9]")))
+           gather(date, value, matches("[0-9][0-9][0-9][0-9]-[0-9][0-9]")))
   do.call(save, list(file, file = paste0(file, ".RData")))
   rm(list = file)
 }
