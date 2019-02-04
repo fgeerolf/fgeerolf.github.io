@@ -31,6 +31,9 @@ for (i in 2:81){
 
 # la.data.0 ---------------
 
+`la.data.0.CurrentU05-09` <- `la.data.0.CurrentU05-09` %>%
+  mutate(value = value %>% as.numeric) # For some reason value was a character
+
 la.data.0 <- `la.data.0.CurrentU90-94` %>%
   bind_rows(`la.data.0.CurrentU95-99`) %>%
   bind_rows(`la.data.0.CurrentU00-04`) %>%
