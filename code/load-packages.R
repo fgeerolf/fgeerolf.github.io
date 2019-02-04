@@ -4,4 +4,4 @@ pack.fun <- function(pkg){
   sapply(pkg, require, character.only = TRUE)
 }
 
-pack.fun(pklist); rm(pklist,pack.fun)
+if (exists("pklist")) pack.fun(pklist); rm(pklist,pack.fun)
