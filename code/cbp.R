@@ -20,7 +20,7 @@ for (year in 1986:2016){
   
   cat("Reading...")
   
-  if (!year %in% c(2002, 2007:2016)){
+  if (!year %in% c(2002, 2007, 2008)){
     assign(paste0("cbp_", year), fread(paste0("cbp", yearD, "co.txt")))
     unlink(paste0("cbp", yearD, "co.txt"))
   } else{
