@@ -20,13 +20,13 @@ for (year in 1986:2016){
   
   cat("Reading...")
   
-  if (!year %in% c(2002, 2007)){
+  if (!year %in% c(2002, 2007:2016)){
     assign(paste0("cbp_", year), fread(paste0("cbp", yearD, "co.txt")))
+    unlink(paste0("cbp", yearD, "co.txt"))
   } else{
     assign(paste0("cbp_", year), fread(paste0("Cbp", yearD, "co.txt")))
+    unlink(paste0("Cbp", yearD, "co.txt"))
   }
-  
-  unlink(paste0("cbp", yearD, "co.txt"))
   
   cat(" Saving...\n")
   save(list = paste0("cbp_", year), file = paste0("cbp_", year, ".RData"))
