@@ -21,7 +21,7 @@ for (sheet in list.sheets[1]){
 
 for (sheet in list.sheets[2]){
   assign(sheet, read_excel(ccp.filename, sheet = sheet, skip = 4) %>%
-           select(-X__1) %>%
+           select(-1) %>%
            melt(id.vars = c("state", "county_name", "county_code")) %>%
            mutate(year = as.numeric(substr(paste(variable), 3, 6)) + 0.75) %>%
            select(county_name, county_code, year, value) %>%
