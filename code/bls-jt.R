@@ -18,11 +18,11 @@ datasets <- read_html("https://download.bls.gov/pub/time.series/jt/") %>%
           mutate(X2 = paste0("https://download.bls.gov", X2))) %>%
   mutate_all(paste)
 
-datasets %>% as.tibble
+datasets %>% as_tibble
 
 for (i in 2:18){
   file <- datasets[i, "X0"]
-  cat("\nDownloading from BLS Website JOLTS:", file)
+  cat("Downloading from BLS Website JOLTS:", file, "\n")
   assign(file, datasets[i, "X2"] %>% fread)
   do.call(save, list(file, file = paste0(file, ".RData")))
 }
