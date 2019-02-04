@@ -18,7 +18,7 @@ datasets <- read_html("https://download.bls.gov/pub/time.series/jt/") %>%
           mutate(X2 = paste0("https://download.bls.gov", X2))) %>%
   mutate_all(paste)
 
-datasets %>% as_tibble
+datasets %>% as_tibble %>% print
 
 for (i in 2:18){
   file <- datasets[i, "X0"]
