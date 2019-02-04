@@ -10,7 +10,7 @@ cat("Model:", get_cpu()$model_name,
 for (year in 1986:2016){
   yearD <- year %>% paste %>% substr(3, 4)
   
-  cat("CBP", year, ": Currently downloading...")
+  cat("CBP", year, ": Currently downloading...\n")
   curl_download(paste0("https://www2.census.gov/programs-surveys/cbp/datasets/", year, "/cbp", yearD, "co.zip"), 
                 destfile = paste0("cbp", yearD, "co.zip"), 
                 quiet = FALSE, 
@@ -18,8 +18,14 @@ for (year in 1986:2016){
   unzip(paste0("cbp", yearD, "co.zip"))
   unlink(paste0("cbp", yearD, "co.zip"))
   
-  cat(" Reading...")
-  assign(paste0("cbp_", year), fread(paste0("cbp", yearD, "co.txt")))
+  cat("Reading...")
+  
+  if (!year %in% c(2002, 2007)){
+    assign(paste0("cbp_", year), fread(paste0("cbp", yearD, "co.txt")))
+  } else{
+    assign(paste0("cbp_", year), fread(paste0("Cbp", yearD, "co.txt")))
+  }
+  
   unlink(paste0("cbp", yearD, "co.txt"))
   
   cat(" Saving...\n")
