@@ -26,12 +26,3 @@ for (file in list_files){
 }
 
 unlink("County", recursive = TRUE)
-
-# Crosswalks --------
-
-
-CountyCrossWalk_Zillow <- "http://files.zillowstatic.com/research/public/CountyCrossWalk_Zillow.csv" %>%
-  fread %>%
-  select(CountyRegionID_Zillow, fips = FIPS)
-
-save(CountyCrossWalk_Zillow, file = "CountyCrossWalk_Zillow.RData")
