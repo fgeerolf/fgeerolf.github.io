@@ -1,4 +1,4 @@
-pklist <- c("curl", "tidyverse", "rvest", "data.table", "benchmark")
+pklist <- c("curl", "tidyverse", "rvest", "data.table", "benchmarkme")
 source("https://fgeerolf.github.io/code/load-packages.R")
 
 cat("Model:", get_cpu()$model_name,
