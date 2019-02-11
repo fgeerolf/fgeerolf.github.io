@@ -1,4 +1,3 @@
-rm(list = ls())
 pklist <- c("tidyverse", "gdata")
 source("https://fgeerolf.github.io/code/load-packages.R")
 
@@ -12,6 +11,6 @@ cat("Model:", get_cpu()$model_name,
 shiller <- "http://www.econ.yale.edu/~shiller/data/ie_data.xls" %>%
   read.xls(skip = 6) %>%
   head(-1) %>% # remove last obs
-  mutate(CPI = CPI %>%as.numeric(CPI))
+  mutate(CPI = CPI %>% as.numeric(CPI))
 
 save(shiller, file = "shiller.RData")
