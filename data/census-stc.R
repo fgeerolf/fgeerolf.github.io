@@ -1,6 +1,12 @@
 pklist <- c("curl", "tidyverse", "gdata")
 source("https://fgeerolf.github.io/code/load-packages.R")
 
+cat("Model:", get_cpu()$model_name, 
+    "\nMemory:", round(get_ram()/2^30, digits = 3), 
+    "Go\nNumber of cores:", get_cpu()$no_of_cores, 
+    "\nStart: ", format(Sys.time(), "%a %b %d, %Y - %X"), "\n")
+
+
 curl_download("https://www2.census.gov/programs-surveys/stc/datasets/historical/state_tax_collections.zip", 
               destfile = "state_tax_collections.zip", 
               quiet = FALSE)
