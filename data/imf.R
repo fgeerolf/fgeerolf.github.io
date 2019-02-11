@@ -6,13 +6,7 @@ cat("Model:", get_cpu()$model_name,
     "Go\nNumber of cores:", get_cpu()$no_of_cores,
     "\nStart: ", format(Sys.time(), "%a %b %d, %Y - %X"), "\n")
 
-curl_download("https://www.imf.org/external/pubs/ft/weo/2018/02/weodata/WEOOct2018all.xls", 
-              destfile = "WEOOct2018all.xls",
-              quiet = FALSE)
-
-system("ssconvert WEOOct2018all.xls WEOOct2018all.csv")
-
-WEO <- "WEOOct2018all.csv" %>%
+WEO <- "https://www.imf.org/external/pubs/ft/weo/2018/02/weodata/WEOOct2018all.xls" %>%
   fread(na.strings = "n/a") %>%
   melt(id.vars = c(1:9)) %>% 
   mutate(variable = variable %>% paste %>% substr(1, 4) %>% as.numeric,
@@ -24,5 +18,3 @@ WEO <- "WEOOct2018all.csv" %>%
   mutate(countryname = countryname %>% as.factor)
 
 save(WEO, file = "WEO.RData")
-
-file.remove(c("WEOOct2018all.csv", "WEOOct2018all.xls"))
