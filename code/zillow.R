@@ -1,5 +1,0 @@
-source("https://fgeerolf.github.io/data/zillow-city.R")
-source("https://fgeerolf.github.io/data/zillow-county.R")
-source("https://fgeerolf.github.io/data/zillow-metro.R")
-source("https://fgeerolf.github.io/data/zillow-zip.R")
-source("https://fgeerolf.github.io/data/zillow-crosswalk.R")
