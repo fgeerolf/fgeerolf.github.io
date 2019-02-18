@@ -1,4 +1,4 @@
-pklist <- c("tidyverse", "fredr", "lubridate")
+pklist <- c("tidyverse", "lubridate", "data.table")
 source("http://fgeerolf.com/code/load-packages.R")
 
 # nipa_series -----
