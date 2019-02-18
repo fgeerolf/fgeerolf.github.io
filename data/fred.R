@@ -1,8 +1,7 @@
-rm(list = ls())
 pklist <- c("tidyverse", "fredr", "lubridate")
-source("https://fgeerolf.github.io/code/load-packages.R")
+source("http://fgeerolf.com/code/load-packages.R")
 
-fredr_set_key("564a4e78cdf46ceeaf913616a77a13cb")
+fredr_set_key(fred_key) # fred_key <- "Your FRED Key"
 
 fred <- map_dfr(c("UNRATE", 
                   "FEDFUNDS",
