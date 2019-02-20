@@ -6,7 +6,10 @@ fredr_set_key(fred_key) # fred_key <- "Your FRED Key"
 fred <- map_dfr(c("UNRATE", 
                   "FEDFUNDS",
                   "CSUSHPINSA",
-                  "MDSP"), 
+                  "MDSP",
+                  "CPIAUCNS",
+                  "M0892AUSM156SNBR",
+                  "M0892CUSM156NNBR"), 
                 fredr)
 
 save(fred, file = "fred.RData")
