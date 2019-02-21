@@ -1,5 +1,5 @@
 pklist <- c("tidyverse", "curl", "readstata13")
-source("https://fgeerolf.com/code/load-packages.R")
+source("http://fgeerolf.com/code/load-packages.R")
 
 # DPI 2015 ---------
 
