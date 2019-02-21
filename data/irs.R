@@ -1,0 +1,30 @@
+pklist <- c("tidyverse", "curl", "fredr", "data.table")
+source("http://fgeerolf.com/code/load-packages.R")
+
+names <- c("11incyallagi", "irs_2011", 
+           "12cyallagi", "irs_2012", 
+           "13incyallagi", "irs_2013", 
+           "14incyallagi", "irs_2014",
+           "15incyallagi", "irs_2015",
+           "16incyallagi", "irs_2016") %>%
+  matrix(byrow = TRUE, ncol = 2)
+
+# IRS (2011 - 2016) ----------
+
+for (i in 1:nrow(names)){
+  cat("Downloading", names[i, 1], "and saving as", names[i, 2], "\n")
+  assign(names[i, 2], names[i, 1] %>%
+           paste0("https://www.irs.gov/pub/irs-soi/", ., ".csv") %>%
+           fread)
+  do.call(save, list(names[i, 2], file = paste0(names[i, 2], ".RData")))
+}
+
+# Zipcode (2005 - 2016) ----------
+
+for (year in 2005:2016){
+  cat("Downloading Zipcode from year", year, "\n")
+  assign(paste0("zipcode_", year), paste0(year) %>%
+           paste0("http://www.nber.org/tax-stats/zipcode/", ., "/zipcode", ., ".csv") %>%
+           fread)
+  do.call(save, list(paste0("zipcode_", year), file = paste0("zipcode_", year, ".RData")))
+}
