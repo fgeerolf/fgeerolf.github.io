@@ -1,5 +1,0 @@
-source("http://fgeerolf.com/data/zillow-city.R")
-source("http://fgeerolf.com/data/zillow-county.R")
-source("http://fgeerolf.com/data/zillow-metro.R")
-source("http://fgeerolf.com/data/zillow-zip.R")
-source("http://fgeerolf.com/data/zillow-crosswalk.R")
